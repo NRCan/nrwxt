@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Theme Upgrades module.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function theme_upgrades_install() {
+
+}

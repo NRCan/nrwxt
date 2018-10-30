@@ -1,0 +1,67 @@
+
+#wb-srch {
+  bottom: 0px;
+}
+/* table menu */
+#wb-sm .menu {
+  display: table;
+  table-layout: fixed;
+  margin-bottom: 0;
+  width: 100%; }
+#wb-sm .menu > li {
+  display: table-cell;
+  float: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+#wb-sm .nvbar ul.menu > li:last-of-type,
+#wb-sm .menu > li:last-of-type {
+  border: none;
+}
+#wb-sm .menu > li a {
+  padding-right: 30px;
+  /*text-align: left;*/
+}
+#wb-sm .menu > li a .sm {
+  width: 100%;
+}
+
+#wb-sm .menu > li a .expicon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -5px;
+}
+
+/* flex menu if supported */
+#wb-sm .menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: initial;
+  justify-content: center;
+}
+#wb-sm .menu > li {
+  display: block;
+  flex-grow: 1;
+  height: auto;
+}
+#wb-sm .menu > li a {
+  height: 100%;
+  vertical-align: middle;
+}
+#wb-sm .menu > li a .expicon {
+  top: 20px;
+}
+
+#wb-sm .menu > li a .expicon {
+  top: 20px;
+}
+#wb-sm .nvbar ul.menu .sm.open {
+  left: 0;
+}

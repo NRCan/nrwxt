@@ -1,0 +1,14 @@
+administer theme upgrades:
+  title: 'Administer Theme Upgrades'
+  descrition: 'turn on or off features in the Theme Upgrade module.'
+  restrict access: TRUE
+
+theme upgrades block update date:
+  title: 'Block update date'
+  description: 'If the feature is enabled in the module users with this permission can edit content without the last edit date being changed.'
+  restrict access: TRUE
+
+bypass read more redirect:
+  title: 'Bypass Read More Redirect'
+  description: 'Nodes with the readmore url will redirect if you try to view them directly. Users with this permission will not be redirected.'
+  restrict access: TRUE

@@ -1,0 +1,5 @@
+theme_upgrades.admin:
+  title: 'Theme Upgrade settings'
+  description: 'Configure settings for the Theme Upgrades module.'
+  route_name: theme_upgrades.config
+  parent: 'system.admin_config_development'

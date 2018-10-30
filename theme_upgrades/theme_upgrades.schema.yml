@@ -1,0 +1,14 @@
+theme_upgrades.admin:
+  type: config_object
+  label: 'Theme Upgrades Settings'
+  mapping:
+    loremipsum:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'page title:'
+        source_text:
+          type: text
+          label: 'Source text'
+

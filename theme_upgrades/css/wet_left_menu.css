@@ -1,0 +1,6 @@
+#wb-sm .menu > li a {
+  text-align: left;
+}
+#wb-sm .menu > li a .sm {
+  width: auto;
+}

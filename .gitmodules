@@ -1,3 +1,6 @@
 [submodule "theme_upgrades/bootstrap"]
 	path = theme_upgrades/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "theme_upgrades/wet_boew"]
+	path = theme_upgrades/wet_boew
+	url = https://github.com/wet-boew/wet-boew-experimental.git

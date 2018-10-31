@@ -1,0 +1,3 @@
+[submodule "theme_upgrades/bootstrap"]
+	path = theme_upgrades/bootstrap
+	url = https://github.com/twbs/bootstrap.git

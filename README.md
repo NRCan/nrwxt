@@ -1,7 +1,7 @@
-NRCan Drupal 8 modules
+NRCan Drupal 8/9 modules
 =======================
 
-Custom modules developed at NRCan for the Drupal 8 wxt build.
+Custom modules developed at NRCan for the Drupal WxT build.
 
 Theme Upgrades
 --------------

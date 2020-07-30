@@ -1,7 +1,0 @@
-/*  */
-.page-admin .fieldset-wrapper .form-radios {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
-}
-.page-admin .fieldset-wrapper .form-radios .form-type-radio {
-}

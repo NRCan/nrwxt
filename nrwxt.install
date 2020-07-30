@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall functions for the nrwxt installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function nrwxt_install() {
+  //_nrwxt_setup_themes();
+}
+
+
+/**
+ * Setup the themes.
+ */
+function _nrwxt_setup_themes() {
+  // Set the default and admin theme.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'nrwxt_bootstrap')
+    ->set('admin', 'seven')
+    ->save(TRUE);
+
+  // Enable the admin theme.
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+}

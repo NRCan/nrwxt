@@ -1,0 +1,21 @@
+name: 'NRCan WxT'
+description: 'A Drupal distribution created to leverage the Web Experience Toolkit.'
+type: profile
+core: 8.x
+distribution:
+  name: 'NRCan WxT'
+
+# Base profile
+base profile: wxt
+
+# Language
+keep_english: true
+
+# Required modules
+dependencies:
+  - devel
+
+themes:
+  - bartik
+  - seven
+  - wxt_bootstrap

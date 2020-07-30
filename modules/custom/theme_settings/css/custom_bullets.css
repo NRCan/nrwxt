@@ -1,0 +1,15 @@
+
+ol.list-icon-initialized,
+ul.list-icon-initialized {
+
+}
+
+ol.list-icon li.icon-loaded,
+ul.list-icon li.icon-loaded {
+  display: list-item;
+  padding-left: 5px;
+  list-style: none;
+  position: relative;
+  margin-left: 12px;
+  padding-right: 10px;
+}

@@ -10,10 +10,6 @@
   ],
   "config": {
     "secure-http": false,
-    "prestissimo": {
-      "maxConnections": 10,
-      "minConnections": 5
-    }
   },
   "repositories": [{
       "type": "composer",
@@ -43,20 +39,17 @@
       "html/core": [
         "type:drupal-core"
       ],
+      "html/profiles/{$name}": [
+        "type:drupal-profile"
+      ],
       "html/libraries/{$name}": [
         "type:drupal-console-library",
         "type:drupal-library",
         "type:bower-asset",
         "type:npm-asset"
       ],
-      "html/modules/custom/{$name}": [
-        "drupal/wxt_library"
-      ],
       "html/modules/contrib/{$name}": [
         "type:drupal-module"
-      ],
-      "html/profiles/{$name}": [
-        "type:drupal-profile"
       ],
       "html/themes/contrib/{$name}": [
         "type:drupal-theme"
@@ -65,7 +58,7 @@
         "type:drupal-drush"
       ]
     },
-    "composer-exit-on-patch-failure": true,
+    "composer-exit-on-patch-failure": false,
     "enable-patching": true,
     "patchLevel": {
       "drupal/core": "-p2"
@@ -73,13 +66,15 @@
     "patches": {},
     "patches-ignore": {}
   },
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "^1.2",
+    "drupalwxt/site-wxt": "^3.0",
+    "drush/drush": "^9.0"
+  },
   "require-dev": {
     "drush/drush": "^9.0",
     "drupal/devel": "^1.0"
-  },
-  "require": {
-    "drupalwxt/site-wxt": "^3.0",
-    "drush/drush": "^9.0"
   },
   "autoload": {}
 }

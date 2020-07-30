@@ -78,7 +78,7 @@
     "drupal/devel": "^1.0"
   },
   "require": {
-    "drupalwxt/wxt": "dev-8.x-3.x",
+    "drupalwxt/site-wxt": "^3.0",
     "drush/drush": "^9.0"
   },
   "autoload": {}

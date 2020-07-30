@@ -1,96 +1,94 @@
 {
-    "name": "nrcan/nrwxt",
-    "description": "NRCan deployment template based on the WxT Deployment of Drupal",
-    "type": "drupal-profile",
-    "license": "GPL-2.0+",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "bin": [
-        "wxt-subprofile"
+  "name": "nrcan/nrwxt",
+  "description": "NRCan deployment template based on the WxT Deployment of Drupal",
+  "type": "drupal-profile",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "bin": [
+    "wxt-subprofile"
+  ],
+  "config": {
+    "secure-http": false,
+    "prestissimo": {
+      "maxConnections": 10,
+      "minConnections": 5
+    }
+  },
+  "repositories": [{
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://drupalwxt.github.io/composer-extdeps/"
+    }
+  ],
+  "scripts": {},
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "html/"
+      }
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
     ],
-    "config": {
-        "secure-http": false,
-        "prestissimo": {
-            "maxConnections": 10,
-            "minConnections": 5
-        }
+    "installer-paths": {
+      "html/core": [
+        "type:drupal-core"
+      ],
+      "html/libraries/{$name}": [
+        "type:drupal-console-library",
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "html/modules/custom/{$name}": [
+        "drupal/wxt_library"
+      ],
+      "html/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "html/profiles/{$name}": [
+        "type:drupal-profile"
+      ],
+      "html/themes/custom/{$name}": [
+        "drupal/wxt_bootstrap"
+      ],
+      "html/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "composer",
-            "url": "https://drupalwxt.github.io/composer-extdeps/"
-        }
-    ],
-    "scripts": {
+    "composer-exit-on-patch-failure": true,
+    "enable-patching": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
     },
-    "extra": {
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "html/"
-            }
-        },
-        "installer-types": [
-          "bower-asset",
-          "npm-asset"
-        ],
-        "installer-paths": {
-            "html/core": [
-                "type:drupal-core"
-            ],
-            "html/libraries/{$name}": [
-                "type:drupal-console-library",
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "html/modules/custom/{$name}": [
-                "drupal/wxt_library"
-            ],
-            "html/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "html/profiles/{$name}": [
-                "type:drupal-profile"
-            ],
-            "html/themes/custom/{$name}": [
-                "drupal/wxt_bootstrap"
-            ],
-            "html/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
-        },
-        "composer-exit-on-patch-failure": true,
-        "enable-patching": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
-        "patches": { },
-        "patches-ignore": { }
-    },
-    "require-dev": {
-      "drupal/devel": "^1.0",
-      "drush/drush": "^9.0",
-    },
-    "require": {
-      "drush/drush": "^9.0",
-      "drupalwxt/wxt": "dev-8.x-3.x"
-      "drupal/wxt_bootstrap": "1.24",
-      "composer/installers": "^1.2",
-      "cweagans/composer-patches": "^1.6.7",
-      "drupal-composer/drupal-scaffold": "^2.0.0",
-      "oomphinc/composer-installers-extender": "^1.1",
-      "drupal/core-composer-scaffold": "*",
-    },
-    "autoload": { }
+    "patches": {},
+    "patches-ignore": {}
+  },
+  "require-dev": {
+    "drupal/devel": "^1.0",
+    "drush/drush": "^9.0"
+  },
+  "require": {
+    "drush/drush": "^9.0",
+    "drupalwxt/wxt": "dev-8.x-3.x"
+    "drupal/wxt_bootstrap": "1.24",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6.7",
+    "drupal-composer/drupal-scaffold": "^2.0.0",
+    "oomphinc/composer-installers-extender": "^1.1",
+    "drupal/core-composer-scaffold": "*"
+  },
+  "autoload": {}
 }

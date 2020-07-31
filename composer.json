@@ -9,7 +9,7 @@
     "wxt-subprofile"
   ],
   "config": {
-    "secure-http": false,
+    "secure-http": false
   },
   "repositories": [{
       "type": "composer",

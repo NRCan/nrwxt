@@ -61,10 +61,27 @@
     "composer-exit-on-patch-failure": false,
     "enable-patching": true,
     "patchLevel": {
-      "drupal/core": "-p2"
+        "drupal/core": "-p2"
     },
-    "patches": {},
-    "patches-ignore": {}
+    "patches": { },
+    "patches-ignore": {
+        "acquia/lightning": {
+            "drupal/core": {
+                "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
+                "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                "2914389 - Allow profiles to exclude dependencies of their parent":
+                "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+            }
+        },
+        "drupal/lightning_core": {
+            "drupal/core": {
+                "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
+                "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                "2914389 - Allow profiles to exclude dependencies of their parent":
+                "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+            }
+        }
+    }
   },
   "require": {
     "php": ">=7.1",

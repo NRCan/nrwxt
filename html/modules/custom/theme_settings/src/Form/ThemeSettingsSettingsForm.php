@@ -60,6 +60,13 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
     );
 
     // The features
+    $form['old']['block_update_date'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('Block Update Date Changes'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('block_update_date', 'off'),
+      '#description' => t('If enabled users with the permission set will not update the content edit date when saving changes.'),
+    );
 
     $form['admin']['bootstrap_cards'] = array(
       '#type' => 'radios',
@@ -67,6 +74,22 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#options' => $enable_options,
       '#default_value' => $config->get('bootstrap_cards', 'off'),
       '#description' => t('Backport of Bootstrap 4 cards for the Wet4 themes.'),
+    );
+
+    $form['admin']['custom_bullets'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('Custom list bullets library.'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('custom_bullets', 'on'),
+      '#description' => t('If enabled allow lists, including the feed list on the source homepage, to use custom bullets via a wrapper data tag: data-icon="fa-calendar-o"'),
+    );
+
+    $form['admin']['custom_ga_links'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('Custom Google Analytics for links.'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('custom_ga_links', 'on'),
+      '#description' => t('If enabled add Google Analytics to links via data tag: data-ga="{\'category\':\'campaign\', \'mode\':\'title\'} . If you omit the label it will use the link URL or title based on the mode.'),
     );
 
     $form['old']['left_menu'] = array(
@@ -93,29 +116,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('Enable the WeT5 js library on top of the current theme. DEVELOPMENT CODE. TESTING ONLY.'),
     );
 
-    $form['old']['block_update_date'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Block Update Date Changes'),
-      '#options' => $enable_options,
-      '#default_value' => $config->get('block_update_date', 'off'),
-      '#description' => t('If enabled users with the permission set will not update the content edit date when saving changes.'),
-    );
 
-    $form['old']['custom_bullets'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Custom list bullets library.'),
-      '#options' => $enable_options,
-      '#default_value' => $config->get('custom_bullets', 'on'),
-      '#description' => t('If enabled allow lists, including the feed list on the source homepage, to use custom bullets via a wrapper data tag: data-icon="fa-calendar-o"'),
-    );
-
-    $form['old']['custom_ga_links'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Custom Google Analytics for links.'),
-      '#options' => $enable_options,
-      '#default_value' => $config->get('custom_ga_links', 'on'),
-      '#description' => t('If enabled add Google Analytics to links via data tag: data-ga="{\'category\':\'campaign\', \'mode\':\'title\'} . If you omit the label it will use the link URL or title based on the mode.'),
-    );
 
     return parent::buildForm($form, $form_state);
   }

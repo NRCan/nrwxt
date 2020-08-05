@@ -34,8 +34,7 @@ function theme_settings_wet5() {
 }
 
 function theme_settings_block_update_date() {
-  return \Drupal::config('theme_settings.settings')->get('bootstrap_cards') == 'on';
-  return variable_get('theme_settings_block_update_date', 'off') == 'on';
+  return \Drupal::config('theme_settings.settings')->get('block_update_date') == 'on';
 }
 
 function theme_settings_custom_bullets() {
@@ -51,10 +50,39 @@ function theme_settings_custom_ga_links() {
  *
  */
 function theme_settings_page_attachments(array &$page) {
+  if (theme_settings_bootstrap_cards()) {
+    $page['#attached']['library'][] = 'theme_settings/cards';
+  }
+
   if (theme_settings_custom_bullets()) {
     $page['#attached']['library'][] = 'theme_settings/custom-bullets';
   }
+
+  if (theme_settings_custom_ga_links()) {
+    $page['#attached']['library'][] = 'theme_settings/custom-ga-links';
+  }
+
 }
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (isset($form['type']) && $form['type']['#value'] . '_node_settings' == $form_id) {
+    //dpm($form);
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function theme_settings_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  //if ($entity->getEntityType()->id() == 'page') {}
+
+
+}
+
 
 /**
  * Implements hook_init()

@@ -2,21 +2,19 @@ cards:
   css:
     theme:
       css/cards.css
-
 left-menu:
   css:
     theme:
       css/wet_left_menu.css
-
 wet5:
   css:
     theme:
       css/wet5.css
-
 theme-updates-wet5-library:
   js:
     wet_boew/stacks/src/require.js
-
+  dependencies:
+    - core/jquery
 custom-bullets:
   css:
     component:
@@ -25,7 +23,8 @@ custom-bullets:
     js/custom_bullets.js
   dependencies:
     - core/jquery
-
 custom-ga-links:
   js:
     js/ga_links.js
+  dependencies:
+    - core/jquery

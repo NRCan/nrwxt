@@ -1,30 +1,30 @@
 cards:
   css:
     theme:
-      css/cards.css
+      css/cards.css: {}
 left-menu:
   css:
     theme:
-      css/wet_left_menu.css
+      css/wet_left_menu.css: {}
 wet5:
   css:
     theme:
-      css/wet5.css
+      css/wet5.css: {}
 theme-updates-wet5-library:
   js:
-    wet_boew/stacks/src/require.js
+    wet_boew/stacks/src/require.js: {}
   dependencies:
     - core/jquery
 custom-bullets:
   css:
     component:
-      css/custom_bullets.css
+      css/custom_bullets.css: {}
   js:
-    js/custom_bullets.js
+    js/custom_bullets.js: {}
   dependencies:
     - core/jquery
 custom-ga-links:
   js:
-    js/ga_links.js
+    js/ga_links.js: {}
   dependencies:
     - core/jquery

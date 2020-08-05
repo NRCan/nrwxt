@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Installation functions for Theme Upgrades module.
+ * Installation functions for Theme Settingss module.
  */
 
 use Drupal\user\RoleInterface;
@@ -10,6 +10,6 @@ use Drupal\user\RoleInterface;
 /**
  * Implements hook_install().
  */
-function theme_upgrades_install() {
+function theme_settings_install() {
 
 }

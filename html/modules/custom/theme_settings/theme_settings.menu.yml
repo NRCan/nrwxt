@@ -1,0 +1,5 @@
+theme_settings.admin:
+  title: 'Theme Settings'
+  description: 'Configure settings for the Theme Settingss module.'
+  route_name: theme_settings.config
+  parent: 'system.admin_config_development'

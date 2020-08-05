@@ -1,19 +1,14 @@
-theme-upgrades-cards:
+cards:
   css:
     theme:
       css/cards.css
 
-theme-upgrades-flex-menu:
-  css:
-    theme:
-      css/wet4_internet_menu.css
-
-theme-upgrades-left-menu:
+left-menu:
   css:
     theme:
       css/wet_left_menu.css
 
-theme-upgrades-wet5:
+wet5:
   css:
     theme:
       css/wet5.css
@@ -22,16 +17,15 @@ theme-updates-wet5-library
   js:
     wet_boew/stacks/src/require.js
 
-theme-upgrades-custom-bullets:
+custom-bullets:
   css:
-    theme:
+    component:
       css/custom_bullets.css
   js:
     js/custom_bullets.js
+  dependencies:
+    - core/jquery
 
-theme-upgrades-custom-ga-links:
+custom-ga-links:
   js:
     js/ga_links.js
-
-
-

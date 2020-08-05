@@ -1,6 +1,6 @@
-theme_upgrades.admin:
+theme_settings.admin:
   type: config_object
-  label: 'Theme Upgrades Settings'
+  label: 'Theme Settingss Settings'
   mapping:
     loremipsum:
       type: mapping
@@ -11,4 +11,3 @@ theme_upgrades.admin:
         source_text:
           type: text
           label: 'Source text'
-

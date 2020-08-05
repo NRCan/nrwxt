@@ -1,9 +1,9 @@
-administer theme upgrades:
-  title: 'Administer Theme Upgrades'
-  descrition: 'turn on or off features in the Theme Upgrade module.'
+administer theme settings:
+  title: 'Administer Theme Settingss'
+  descrition: 'turn on or off features in the Theme Settings module.'
   restrict access: TRUE
 
-theme upgrades block update date:
+theme settings block update date:
   title: 'Block update date'
   description: 'If the feature is enabled in the module users with this permission can edit content without the last edit date being changed.'
   restrict access: TRUE

@@ -36,6 +36,8 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       'off' => t('Disabled'),
     );
 
+    // The Groups
+
     $form['admin'] = array(
       '#type' => 'fieldset',
       '#title' => $this->t('Turn Features on or off'),
@@ -50,6 +52,15 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#collapsed' => FALSE,
     );
 
+    $form['old'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Features that have not been migrated yet.'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+
+    // The features
+
     $form['admin']['bootstrap_cards'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Bootstrap Cards'),
@@ -58,15 +69,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#description' => t('Backport of Bootstrap 4 cards for the Wet4 themes.'),
     );
 
-    $form['admin']['flex_menu'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Flex Menu'),
-      '#options' => $enable_options,
-      '#default_value' => $config->get('flex_menu', 'off'),
-      '#description' => t('Backport of Canada.ca flex menu. A nicer menu that still looks like the Web usibility menu. only enable this on the usabiity theme.'),
-    );
-
-    $form['admin']['left_menu'] = array(
+    $form['old']['left_menu'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Left Menu'),
       '#options' => $enable_options,
@@ -74,7 +77,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#description' => t('Left align the root level items in the main menu.'),
     );
 
-    $form['admin']['admin_css'] = array(
+    $form['old']['admin_css'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Admin Theme CSS'),
       '#options' => $enable_options,
@@ -90,7 +93,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#description' => t('Enable the WeT5 js library on top of the current theme. DEVELOPMENT CODE. TESTING ONLY.'),
     );
 
-    $form['admin']['block_update_date'] = array(
+    $form['old']['block_update_date'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Block Update Date Changes'),
       '#options' => $enable_options,
@@ -98,7 +101,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#description' => t('If enabled users with the permission set will not update the content edit date when saving changes.'),
     );
 
-    $form['admin']['custom_bullets'] = array(
+    $form['old']['custom_bullets'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Custom list bullets library.'),
       '#options' => $enable_options,
@@ -106,7 +109,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       '#description' => t('If enabled allow lists, including the feed list on the source homepage, to use custom bullets via a wrapper data tag: data-icon="fa-calendar-o"'),
     );
 
-    $form['admin']['custom_ga_links'] = array(
+    $form['old']['custom_ga_links'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Custom Google Analytics for links.'),
       '#options' => $enable_options,
@@ -124,7 +127,6 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
       // Retrieve the configuration
        $this->configFactory->getEditable('theme_upgrades.settings')
       ->set('bootstrap_cards', $form_state->getValue('bootstrap_cards'))
-      ->set('flex_menu', $form_state->getValue('flex_menu'))
       ->set('left_menu', $form_state->getValue('left_menu'))
       ->set('admin_css', $form_state->getValue('admin_css'))
       ->set('block_update_date', $form_state->getValue('block_update_date'))

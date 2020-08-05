@@ -1,0 +1,19 @@
+# The Settings Page
+theme_settings.config:
+  path: '/admin/config/development/theme_settings'
+  defaults:
+    _form: 'Drupal\theme_settings\Form\ThemeUpgradesSettingsForm'
+    _title: 'Theme Updates Settings'
+  requirements:
+    _permission: 'administer theme settings'
+  options:
+    _admin_route: TRUE
+
+# For testing the card styles
+#theme_settings.cards:
+#  path: '/admin/config/development/theme_settings/cardtest'
+#  defaults:
+#    _controller: '\Drupal\theme_settings\Controller\ThemeUpgradesController::cards'
+#    _title: 'Card Test'
+#  requirements:
+#    _permission: 'administer content'

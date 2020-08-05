@@ -1,0 +1,124 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function theme_settings_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.theme_settings':
+      return t('
+        <h2>This module includes custom and experimental upgrades.</h2>
+        <h3>Instructions</h3>
+        <p>Enable the features you\'d like on the admin page.</p>
+      ');
+  }
+}
+
+
+function theme_settings_bootstrap_cards() {
+  return \Drupal::config('theme_settings.settings')->get('bootstrap_cards') == 'on';
+}
+
+function theme_settings_left_menu() {
+  return \Drupal::config('theme_settings.settings')->get('left_menu') == 'on';
+}
+
+function theme_settings_admin_css() {
+  return \Drupal::config('theme_settings.settings')->get('admin_css') == 'on';
+}
+
+function theme_settings_wet5() {
+  return \Drupal::config('theme_settings.settings')->get('experimental.wet5') == 'on';
+}
+
+function theme_settings_block_update_date() {
+  return \Drupal::config('theme_settings.settings')->get('bootstrap_cards') == 'on';
+  return variable_get('theme_settings_block_update_date', 'off') == 'on';
+}
+
+function theme_settings_custom_bullets() {
+  return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
+}
+
+function theme_settings_custom_ga_links() {
+  return \Drupal::config('theme_settings.settings')->get('custom_ga_links') == 'on';
+}
+
+/**
+ * Implements hook_page_attachments()
+ *
+ */
+function theme_settings_page_attachments(array &$page) {
+  if (theme_settings_custom_bullets()) {
+    $page['#attached']['library'][] = 'theme_settings/custom-bullets';
+  }
+}
+
+/**
+ * Implements hook_init()
+ *
+ * @link https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_init/7.x
+ */
+/*function theme_settings_init() {
+  if (theme_settings_bootstrap_cards()) {
+    drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/cards.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+  }
+  if (theme_settings_left_menu()) {
+    drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/wet_left_menu.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+  }
+  if (theme_settings_wet5()) {
+    drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/wet5.css', array('weight' => CSS_THEME));
+  }
+  if (theme_settings_custom_bullets()) {
+    drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/custom_bullets.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_js(drupal_get_path('module', 'theme_settings') . '/js/custom_bullets.js', array('type' => 'file', 'scope' => 'footer', 'group' => JS_LIBRARY, 'every_page' => TRUE, 'defer' => TRUE));
+  }
+  if (theme_settings_custom_ga_links()) {
+    //drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/ga_link.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_js(drupal_get_path('module', 'theme_settings') . '/js/ga_links.js', array('type' => 'file', 'scope' => 'footer', 'group' => JS_LIBRARY, 'every_page' => TRUE, 'defer' => TRUE));
+  }
+}*/
+
+
+/*function theme_settings_preprocess_html(&$variables) {
+  global $theme;
+
+  // Modify the Admin theme
+  if ($theme === variable_get('admin_theme', 'seven')) {
+    if (theme_settings_admin_css()) {
+      drupal_add_css(drupal_get_path('module', 'theme_settings') . '/css/admin.css', array('weight' => CSS_THEME));
+    }
+  }
+}*/
+
+/**
+ * Implements hook_process_html().
+ *
+ * Add scripts on overall the site which are defined on the settings page.
+ */
+/*function theme_settings_process_html(&$variables) {
+  global $theme;
+
+  // Don't modify the Admin theme
+  if ($theme === variable_get('admin_theme', 'seven')) {
+    return;
+  }
+
+  // WeT5 goes in the footer
+  if (theme_settings_wet5()) {
+    $wet5_require = file_create_url(drupal_get_path('module', 'theme_settings').'/wet_boew/stacks/src/require.js');
+    $wet5_file = file_create_url(drupal_get_path('module', 'theme_settings').'/wet_boew/stacks/src/wb5');
+    $variables['page_bottom'] .= '<script src="'.$wet5_require.'" data-main="'.$wet5_file.'"></script>' . PHP_EOL;
+  }
+
+}*/
+
+/*function theme_settings_redirect_alter($redirect) {
+  // If the variable "pdfexport" is passed in the url then trigger pdf mode and
+  // block redirects so the page loads even if the url has been redirected.
+  if(!empty($_REQUEST['pdfexport']) || !empty($_COOKIE['pdfexport'])) {
+    unset($redirect->redirect);
+  }
+}*/

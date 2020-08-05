@@ -13,7 +13,7 @@ wet5:
     theme:
       css/wet5.css
 
-theme-updates-wet5-library
+theme-updates-wet5-library:
   js:
     wet_boew/stacks/src/require.js
 

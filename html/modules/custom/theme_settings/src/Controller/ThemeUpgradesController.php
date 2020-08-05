@@ -8,7 +8,7 @@ use Drupal\Component\Utility\Html;
 /**
  * Controller routines for theme upgrade pages
  */
-class ThemeUpgradesController extends ControllerBase {
+class ThemeSettingsController extends ControllerBase {
 
   /**
    * Returns the administrative page

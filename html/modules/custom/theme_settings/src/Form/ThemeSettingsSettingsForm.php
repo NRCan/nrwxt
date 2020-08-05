@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configure example settings for this site.
  */
-class ThemeUpgradesSettingsForm extends ConfigFormBase {
+class ThemeSettingsSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */

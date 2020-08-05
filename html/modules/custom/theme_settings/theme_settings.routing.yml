@@ -2,7 +2,7 @@
 theme_settings.config:
   path: '/admin/config/development/theme_settings'
   defaults:
-    _form: 'Drupal\theme_settings\Form\ThemeUpgradesSettingsForm'
+    _form: 'Drupal\theme_settings\Form\ThemeSettingsSettingsForm'
     _title: 'Theme Updates Settings'
   requirements:
     _permission: 'administer theme settings'
@@ -13,7 +13,7 @@ theme_settings.config:
 #theme_settings.cards:
 #  path: '/admin/config/development/theme_settings/cardtest'
 #  defaults:
-#    _controller: '\Drupal\theme_settings\Controller\ThemeUpgradesController::cards'
+#    _controller: '\Drupal\theme_settings\Controller\ThemeSettingsController::cards'
 #    _title: 'Card Test'
 #  requirements:
 #    _permission: 'administer content'

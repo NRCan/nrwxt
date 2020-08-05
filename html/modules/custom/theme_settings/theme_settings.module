@@ -69,7 +69,7 @@ function theme_settings_page_attachments(array &$page) {
  * Implements hook_form_alter().
  */
 function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if (isset($form['type']) && $form['type']['#value'] . '_node_settings' == $form_id) {
+  if (substr($form_id, 0, 5) == 'node_' && substr($form_id, -10) == '_edit_form') {
     ksm($form);
   }
 }

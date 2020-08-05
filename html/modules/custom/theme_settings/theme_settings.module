@@ -70,7 +70,7 @@ function theme_settings_page_attachments(array &$page) {
  */
 function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if (isset($form['type']) && $form['type']['#value'] . '_node_settings' == $form_id) {
-    dpm($form);
+    ksm($form);
   }
 }
 

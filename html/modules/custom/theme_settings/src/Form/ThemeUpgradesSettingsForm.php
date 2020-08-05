@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\theme_upgrades\Form;
+namespace Drupal\theme_settings\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -13,7 +13,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'theme_upgrades_settings';
+    return 'theme_settings_settings';
   }
 
   /**
@@ -21,7 +21,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'theme_upgrades.settings',
+      'theme_settings.settings',
     ];
   }
 
@@ -29,7 +29,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('theme_upgrades.settings');
+    $config = $this->config('theme_settings.settings');
 
     $enable_options = array(
       'on' => t('Enabled'),
@@ -125,7 +125,7 @@ class ThemeUpgradesSettingsForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
       // Retrieve the configuration
-       $this->configFactory->getEditable('theme_upgrades.settings')
+       $this->configFactory->getEditable('theme_settings.settings')
       ->set('bootstrap_cards', $form_state->getValue('bootstrap_cards'))
       ->set('left_menu', $form_state->getValue('left_menu'))
       ->set('admin_css', $form_state->getValue('admin_css'))

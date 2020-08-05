@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\theme_upgrades\Controller;
+namespace Drupal\theme_settings\Controller;
 
 use Drupal\Core\Url;
 use Drupal\Component\Utility\Html;

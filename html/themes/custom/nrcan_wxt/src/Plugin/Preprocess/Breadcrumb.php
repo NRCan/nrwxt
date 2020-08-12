@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\wxt_bootstrap\Plugin\Preprocess;
+namespace Drupal\nrcan_wxt\Plugin\Preprocess;
 
-use Drupal\bootstrap\Plugin\Preprocess\Breadcrumb as BootstrapBreadcrumb;
+use Drupal\wxt_bootstrap\Plugin\Preprocess\Breadcrumb as BootstrapBreadcrumb;
 
 /**
  * Pre-processes variables for the "breadcrumb" theme hook.

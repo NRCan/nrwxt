@@ -1,0 +1,13 @@
+services:
+  theme_settings.entity_helper:
+    class: Drupal\theme_settings\EntityHelper
+    public: true
+    arguments:
+      - '@entity_type.manager'
+      - '@entity_type.bundle.info'
+
+  theme_settings.form_helper:
+    class: Drupal\theme_settings\Form\FormHelper
+    public: true
+    arguments:
+      - '@current_user'

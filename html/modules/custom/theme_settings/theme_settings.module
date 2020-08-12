@@ -1,6 +1,10 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\language\ConfigurableLanguageInterface;
+
 
 /**
  * Implements hook_help().
@@ -65,14 +69,76 @@ function theme_settings_page_attachments(array &$page) {
 }
 
 
+
 /**
  * Implements hook_form_alter().
  */
 function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if (substr($form_id, 0, 5) == 'node_' && substr($form_id, -10) == '_edit_form') {
-    ksm($form);
+  if (substr($form_id, 0, 5) != 'node_' !! substr($form_id, -10) != '_edit_form') {
+    return;
   }
+
+  /** @var Drupal\simple_sitemap\Form\FormHelper $f */
+  $f = \Drupal::service('theme_settings.form_helper');
+  if (!$f->processForm($form_state)) {
+    return;
+  }
+
+  $form['block_update_date'] = [
+    '#type' => 'details',
+    '#group' => isset($form['additional_settings']) ? 'additional_settings' : 'advanced',
+    '#title' => t('Updated Date'),
+    '#description' => $f->getEntityCategory() === 'instance' ? t('The displayed Updated Date can be overidden.') : '',
+    '#weight' => 10,
+  ];
+
+  $f->displayEntitySettings($form['block_update_date'])
+  // todo: do not show setting when creating new bundle.
+    ->displayRegenerateNow($form['block_update_date']);
+
+  // Add submission handler.
+  if (isset($form['actions']['submit']['#submit'])) {
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action !== 'preview'
+        && isset($form['actions'][$action]['#type'])
+        && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'theme_settings_block_update_date_form_submit';
+      }
+    }
+  }
+  // Fix for account page rendering other submit handlers not usable.
+  else {
+    $form['#submit'][] = 'theme_settings_block_update_date_form_submit';
+  }
+
 }
+/**
+ * Form submission handler called in hook_form_alter.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function theme_settings_block_update_date_form_submit($form, FormStateInterface &$form_state) {
+
+  /** @var Drupal\simple_sitemap\Form\FormHelper $f */
+  $f = \Drupal::service('theme_settings.form_helper');
+  if (!$f->processForm($form_state)) {
+    return;
+  }
+
+  $values = $form_state->getValues();
+
+  // Fix for values appearing in a sub array on a commerce product entity.
+  $values = isset($values['theme_settings']) ? $values['theme_settings'] : $values;
+
+  // Only make changes in DB if sitemap settings actually changed.
+  if ($f->valuesChanged($form, $values)) {
+    
+
+  }
+
+}
+
 
 /**
  * Implements hook_entity_presave().

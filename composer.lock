@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b35458756162ec81e4bb48e21cdc6652",
+    "content-hash": "811973d1030999112127b6f084edc112",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -305,7 +305,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -2507,17 +2507,11 @@
         },
         {
             "name": "drupal/backup_migrate",
-            "version": "5.0.0-rc1",
+            "version": "dev-5.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/backup_migrate.git",
-                "reference": "5.0.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/backup_migrate-5.0.0-rc1.zip",
-                "reference": "5.0.0-rc1",
-                "shasum": "8a20a97a6115acf8573d0abfafc34ae83940794e"
+                "reference": "e93a73601e4b0dd42f9d518208a9f9976649e32b"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -2527,12 +2521,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-5.0.x": "5.0.x-dev"
+                },
                 "drupal": {
-                    "version": "5.0.0-rc1",
-                    "datestamp": "1591984755",
+                    "version": "5.0.x-dev",
+                    "datestamp": "1591984135",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2569,7 +2566,8 @@
                 "source": "https://git.drupalcode.org/project/backup_migrate",
                 "issues": "https://www.drupal.org/project/issues/backup_migrate",
                 "slack": "https://drupal.slack.com/messages/C7C4M4QJV/details/"
-            }
+            },
+            "time": "2020-06-12T17:48:36+00:00"
         },
         {
             "name": "drupal/bg_image_formatter",
@@ -6469,6 +6467,82 @@
             "homepage": "https://www.drupal.org/project/media_entity_twitter",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_entity_twitter"
+            }
+        },
+        {
+            "name": "drupal/memcache",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/memcache.git",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "f70fd9c5d5dda510d2b802dea887044eddf5278b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1590610774",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-2.x": "2.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
+                {
+                    "name": "Jeremy",
+                    "homepage": "https://www.drupal.org/user/409"
+                },
+                {
+                    "name": "bdragon",
+                    "homepage": "https://www.drupal.org/user/53081"
+                },
+                {
+                    "name": "catch",
+                    "homepage": "https://www.drupal.org/user/35733"
+                },
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "jvandyk",
+                    "homepage": "https://www.drupal.org/user/2375"
+                },
+                {
+                    "name": "robertDouglass",
+                    "homepage": "https://www.drupal.org/user/5449"
+                }
+            ],
+            "description": "High performance integration with memcache.",
+            "homepage": "http://drupal.org/project/memcache",
+            "support": {
+                "source": "https://git.drupalcode.org/project/memcache",
+                "issues": "https://www.drupal.org/project/issues/memcache"
             }
         },
         {
@@ -14769,7 +14843,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/backup_migrate": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

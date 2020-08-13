@@ -17,18 +17,9 @@ class Breadcrumb extends BootstrapBreadcrumb {
    * {@inheritdoc}
    */
   public function preprocess(array &$variables, $hook, array $info) {
-    /** @var \Drupal\wxt_library\LibraryService $wxt */
-    $wxt = \Drupal::service('wxt_library.service_wxt');
-    $library_path = $wxt->getLibraryPath();
+    kint($variables);
 
-    // Language Handling.
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $language_prefix = \Drupal::config('language.negotiation')->get('url.prefixes');
-    $variables['language'] = $language;
-    $variables['language_prefix'] = $language_prefix[$language];
-    $variables['library_path'] = $library_path;
-
-    parent::preprocess($variables, $hook, $info);
+    //parent::preprocess($variables, $hook, $info);
   }
 
 }

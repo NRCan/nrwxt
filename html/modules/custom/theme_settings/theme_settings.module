@@ -2,6 +2,9 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\language\ConfigurableLanguageInterface;
 
@@ -113,24 +116,31 @@ function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
 
 }
 
-// From Open Plus Transport Canada work
-// https://github.com/tc-ca/drupalwxt-internet
-//
-function theme_settings_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
+/**
+ * Implements hook_system_breadcrumb_alter()
+ *
+ * From Open Plus Transport Canada work
+ * https://github.com/tc-ca/drupalwxt-internet
+ */
+function theme_settings_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
   if (!empty($breadcrumb) && !\Drupal::service('router.admin_context')->isAdminRoute()) {
     $links = $breadcrumb->getLinks();
     array_shift($links);
 
     // Load the site name out of configuration.
     $config = \Drupal::config('system.site');
-    $site_name = $config->get('name');
+    $site_name = $config->get('name'); // This pulls in the current language
 
     $node = $route_match->getParameter('node');
     $new_links = [];
+
+    // Build the canada.ca "home" link
     $title = 'Canada.ca';
     $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $url = Url::fromUri('https://www.canada.ca/' . $lang . '.html');
     $new_links[] = Link::fromTextAndUrl(t($title), $url);
+
+    // If not the Institution front page then add the site link
     if (!\Drupal::service('path.matcher')->isFrontPage()) {
       $new_links[] = Link::fromTextAndUrl($site_name, Url::fromRoute('<front>'));
     }

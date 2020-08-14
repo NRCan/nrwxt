@@ -2,7 +2,7 @@
 
 namespace Drupal\nrcan_wxt\Plugin\Preprocess;
 
-use Drupal\wxt_bootstrap\Plugin\Preprocess\PreprocessBase;
+use Drupal\bootstrap\Plugin\Preprocess\PreprocessBase;
 
 /**
  * Pre-processes variables for the "block" theme hook.

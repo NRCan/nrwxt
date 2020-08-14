@@ -62,8 +62,8 @@ class Block extends PreprocessBase {
 
     $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
 
-    kint($variables);
-
+    //kint($variables);
+    
     parent::preprocess($variables, $hook, $info);
   }
 

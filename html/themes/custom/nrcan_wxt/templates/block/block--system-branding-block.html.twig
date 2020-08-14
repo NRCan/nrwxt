@@ -15,13 +15,13 @@
  * @ingroup templates
  */
 #}
+{% block content %}
 <!--
 site_logo = {{ site_logo }}
 site_name = {{ site_name }}
 site_slogan = {{ site_slogan }}
 logo_svg = {{ logo_svg }}
 -->
-{% block content %}
   {% if site_logo %}
     <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ logo_svg }}" alt="{{ 'Government of Canada'|t }}" />

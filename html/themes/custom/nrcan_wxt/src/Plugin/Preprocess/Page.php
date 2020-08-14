@@ -54,7 +54,7 @@ class Page extends BootstrapPage {
     }
 
     // Footer Navigation (gcweb).
-    kint($wxt_active);
+    //$wxt_active = gcweb for modern sites
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {
       // CDN handling.
       $gcweb_cdn = $this->theme->getSetting('wxt_gcweb_cdn');
@@ -89,6 +89,8 @@ class Page extends BootstrapPage {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.png';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.svg';
+
+      kint($variables);
     }
     elseif ($wxt_active == 'gc_intranet') {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';

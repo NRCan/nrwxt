@@ -90,8 +90,6 @@ class Page extends BootstrapPage {
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.png';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.svg';
       $variables['logo_home_link'] = Url::fromUri('https://www.canada.ca/' . $language . '.html');
-
-      kint($variables);
     }
     elseif ($wxt_active == 'gc_intranet') {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';

@@ -16,7 +16,7 @@ function theme_settings_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'help.page.theme_settings':
       return t('
-        <h2>This module includes custom and experimental upgrades.</h2>
+        <h2>This module includes custom and experimental upgrades as well as some NRCan helper features. </h2>
         <h3>Instructions</h3>
         <p>Enable the features you\'d like on the admin page.</p>
       ');
@@ -28,6 +28,16 @@ function theme_settings_bootstrap_cards() {
   return \Drupal::config('theme_settings.settings')->get('bootstrap_cards') == 'on';
 }
 
+function theme_settings_custom_bullets() {
+  return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
+}
+
+function theme_settings_custom_ga_links() {
+  return \Drupal::config('theme_settings.settings')->get('custom_ga_links') == 'on';
+}
+
+// --- --- ---
+
 function theme_settings_left_menu() {
   return \Drupal::config('theme_settings.settings')->get('left_menu') == 'on';
 }
@@ -36,20 +46,8 @@ function theme_settings_admin_css() {
   return \Drupal::config('theme_settings.settings')->get('admin_css') == 'on';
 }
 
-function theme_settings_wet5() {
-  return \Drupal::config('theme_settings.settings')->get('experimental.wet5') == 'on';
-}
-
 function theme_settings_block_update_date() {
   return \Drupal::config('theme_settings.settings')->get('block_update_date') == 'on';
-}
-
-function theme_settings_custom_bullets() {
-  return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
-}
-
-function theme_settings_custom_ga_links() {
-  return \Drupal::config('theme_settings.settings')->get('custom_ga_links') == 'on';
 }
 
 /**
@@ -80,8 +78,8 @@ function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
   if (substr($form_id, 0, 5) != 'node_' || substr($form_id, -10) != '_edit_form') {
     return;
   }
-
   /** @var Drupal\simple_sitemap\Form\FormHelper $f */
+  /*
   $f = \Drupal::service('theme_settings.form_helper');
   if (!$f->processForm($form_state)) {
     return;
@@ -113,7 +111,7 @@ function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
   else {
     $form['#submit'][] = 'theme_settings_block_update_date_form_submit';
   }
-
+*/
 }
 
 /**

@@ -54,6 +54,7 @@ class Page extends BootstrapPage {
     }
 
     // Footer Navigation (gcweb).
+    kint($wxt_active);
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {
       // CDN handling.
       $gcweb_cdn = $this->theme->getSetting('wxt_gcweb_cdn');

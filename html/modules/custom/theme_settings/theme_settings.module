@@ -112,6 +112,41 @@ function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
   }
 
 }
+
+// From Open Plus Transport Canada work
+// https://github.com/tc-ca/drupalwxt-internet
+//
+function theme_settings_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
+  if (!empty($breadcrumb) && !\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $links = $breadcrumb->getLinks();
+    array_shift($links);
+
+    // Load the site name out of configuration.
+    $config = \Drupal::config('system.site');
+    $site_name = $config->get('name');
+
+    $node = $route_match->getParameter('node');
+    $new_links = [];
+    $title = 'Canada.ca';
+    $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $url = Url::fromUri('https://www.canada.ca/' . $lang . '.html');
+    $new_links[] = Link::fromTextAndUrl(t($title), $url);
+    if (!\Drupal::service('path.matcher')->isFrontPage()) {
+      $new_links[] = Link::fromTextAndUrl($site_name, Url::fromRoute('<front>'));
+    }
+
+    // remove search from breadcrumb
+    if ($route_match->getRouteName() == 'view.site_search.page_1') {
+      $links = [];
+    }
+
+    $breadcrumb = new Breadcrumb();
+    $breadcrumb->setLinks(array_merge($new_links, $links));
+    $breadcrumb->addCacheContexts(['route']);
+  }
+}
+
+
 /**
  * Form submission handler called in hook_form_alter.
  *

@@ -81,11 +81,13 @@
     "drupalwxt/site-wxt": "^3.0",
     "drush/drush": "^9.0",
     "drupal/backup_migrate": "5.0.x-dev",
-    "drupal/memcache": "^2.1"
+    "drupal/memcache": "^2.1",
+    "drupal/libraries": "^3.0@alpha",
+    "drupal/filebrowser": "^2.2",
+    "drupal/devel": "^2.1"
   },
   "require-dev": {
-    "drush/drush": "^9.0",
-    "drupal/devel": "^1.0"
+    "drush/drush": "^9.0"
   },
   "autoload": {}
 }

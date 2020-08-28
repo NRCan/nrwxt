@@ -151,8 +151,8 @@ class Page extends BootstrapPage {
       if (is_dir($files_path)) {
         $bg_image_path = $files_path . '/*.*';
         $data = glob($bg_image_path);
-        foreach($data as &$file) {
-          $file = strtr($base_path, array(
+        foreach($data as &$banner_file) {
+          $banner_file = strtr($banner_file, array(
             $base_path => $base_url,
           ));
         }

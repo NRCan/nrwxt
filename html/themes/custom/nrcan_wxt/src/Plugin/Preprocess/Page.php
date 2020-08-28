@@ -90,7 +90,8 @@ class Page extends BootstrapPage {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.png';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.svg';
-      $variables['logo_home_link'] = Url::fromUri('https://www.canada.ca/' . $language . '.html');
+      //$variables['logo_home_link'] = Url::fromUri('https://www.canada.ca/' . $language . '.html');
+      $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
     }
     elseif ($wxt_active == 'gc_intranet') {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';
@@ -114,7 +115,7 @@ class Page extends BootstrapPage {
       $background_settings = json_encode($backgrounds);
 
       $build['#attached']['library'][] = 'nrcan_wxt/library_name';
-      $build['#attached']['drupalSettings']['nrcan_wxt']['homepage_banners'] = $background_settings;
+      $build['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
       /*
       <script>
       (function($) {
@@ -140,10 +141,11 @@ class Page extends BootstrapPage {
       $data = $cache->data;
     }
     else {
-      $base_path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://") . '/');
-      $folder = 'images/homepage_banners/';
+      $base_path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
+      kint($base_path);
+      $folder = 'images/homepage_banners';
       $files_path = $base_path . '/' . $folder;
-      kint($files_path);
+      //kint($files_path);
       if (is_dir($files_path)) {
         $bg_image_path = $files_path . '/*.*';
       }
@@ -152,6 +154,12 @@ class Page extends BootstrapPage {
         $bg_image_path = 'https://www.canada.ca/content/dam/cra-arc/images/CRAHQexterior-white.jpg';
       }
       $data = glob($bg_image_path);
+      foreach($data as &$file) {
+        $file = strtr($base_path, array(
+          $base_path => 'public://'
+        ));
+        $file = file_create_url($file);
+      }
 
       \Drupal::cache()
         ->set($cid, $data);

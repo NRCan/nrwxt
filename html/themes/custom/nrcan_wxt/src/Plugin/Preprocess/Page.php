@@ -18,6 +18,8 @@ class Page extends BootstrapPage {
    */
   public function preprocess(array &$variables, $hook, array $info) {
 
+    $page = &$variables['page'];
+
     /** @var \Drupal\wxt_library\LibraryService $wxt */
     $wxt = \Drupal::service('wxt_library.service_wxt');
     $wxt_active = $wxt->getLibraryName();
@@ -98,26 +100,25 @@ class Page extends BootstrapPage {
     }
     /* */
     // Check if we're the homepage and if we are then do the check for banner images
-      if ($variables['is_front']) {
+    if ($variables['is_front']) {
       $backgrounds = self::get_bg_random(TRUE);
-    }
-    $page = &$variables['page'];
-    if (count($backgrounds) == 1) {
-      $page['#attached']['html_head'][] = [
-        [
-          '#tag' => 'style',
-          '#value' => '.ip-cover-img { { background-image: ' . $backgrounds[0] . '; }',
-        ],
-        'nrcan_wxt'
-      ];
-    }
-    else {
-      $background_settings = json_encode($backgrounds);
+      if (count($backgrounds) == 1) {
+        $page['#attached']['html_head'][] = [
+          [
+            '#tag' => 'style',
+            '#value' => '.ip-cover-img { { background-image: ' . $backgrounds[0] . '; }',
+          ],
+          'nrcan_wxt'
+        ];
+      }
+      else {
+        $background_settings = json_encode($backgrounds);
 
-      $page['#attached']['library'][] = 'nrcan_wxt/homepage_banners';
-      $page['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
-      kint($page['#attached']);
+        $page['#attached']['library'][] = 'nrcan_wxt/homepage_banners';
+        $page['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
+        kint($page['#attached']);
 
+      }
     }
 
 

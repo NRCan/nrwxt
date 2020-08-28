@@ -116,6 +116,7 @@ class Page extends BootstrapPage {
 
       $build['#attached']['library'][] = 'nrcan_wxt/library_name';
       $build['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
+      kint($build['#attached']['drupalSettings']);
       /*
       <script>
       (function($) {
@@ -142,24 +143,26 @@ class Page extends BootstrapPage {
     }
     else {
       $base_path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
-      kint($base_path);
+      $base_url = file_create_url('public://');
+      //kint($base_path);
       $folder = 'images/homepage_banners';
       $files_path = $base_path . '/' . $folder;
       //kint($files_path);
       if (is_dir($files_path)) {
         $bg_image_path = $files_path . '/*.*';
+        $data = glob($bg_image_path);
+        foreach($data as &$file) {
+          $file = strtr($base_path, array(
+            $base_path => $base_url,
+          ));
+        }
       }
-      // Else use a fallback image
+      // else use a fallback image
       else {
-        $bg_image_path = 'https://www.canada.ca/content/dam/cra-arc/images/CRAHQexterior-white.jpg';
+        //$bg_image_path = 'https://www.canada.ca/content/dam/cra-arc/images/CRAHQexterior-white.jpg';
+        $data = array();
       }
-      $data = glob($bg_image_path);
-      foreach($data as &$file) {
-        $file = strtr($base_path, array(
-          $base_path => 'public://'
-        ));
-        $file = file_create_url($file);
-      }
+      kint($data);
 
       \Drupal::cache()
         ->set($cid, $data);

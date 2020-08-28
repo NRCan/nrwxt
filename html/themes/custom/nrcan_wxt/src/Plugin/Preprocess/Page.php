@@ -114,9 +114,9 @@ class Page extends BootstrapPage {
     else {
       $background_settings = json_encode($backgrounds);
 
-      $build['#attached']['library'][] = 'nrcan_wxt/library_name';
-      $build['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
-      kint($build['#attached']['drupalSettings']);
+      $page['#attached']['library'][] = 'nrcan_wxt/library_name';
+      $page['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
+      kint($page['#attached']['drupalSettings']);
       /*
       <script>
       (function($) {

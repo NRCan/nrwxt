@@ -20,9 +20,9 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return [
+    return array(
       'theme_settings.settings',
-    ];
+    );
   }
 
   /**
@@ -108,14 +108,6 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('Some CSS updates for the admin theme (put radios/checkboxes in columns etc.)'),
     );
 
-    $form['experimental']['wet5'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Enable Wet5 test code'),
-      '#options' => $enable_options,
-      '#default_value' => $config->get('experimental.wet5', 'off'),
-      '#description' => t('Enable the WeT5 js library on top of the current theme. DEVELOPMENT CODE. TESTING ONLY.'),
-    );
-
 
 
     return parent::buildForm($form, $form_state);
@@ -133,7 +125,6 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('block_update_date', $form_state->getValue('block_update_date'))
       ->set('custom_bullets', $form_state->getValue('custom_bullets'))
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
-      ->set('experimental.wet5', $form_state->getValue('wet5'))
       ->save();
 
     parent::submitForm($form, $form_state);

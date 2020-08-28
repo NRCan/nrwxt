@@ -52,6 +52,7 @@ class Page extends BootstrapPage {
     if (!$page_match) {
       $variables['page']['search'] = '';
     }
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 
     // Footer Navigation (gcweb).
     //$wxt_active = gcweb for modern sites
@@ -94,8 +95,72 @@ class Page extends BootstrapPage {
     elseif ($wxt_active == 'gc_intranet') {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';
     }
+    /* */
+    // Check if we're the homepage and if we are then do the check for banner images
+      if ($variables['is_front']) {
+      $backgrounds = self::get_bg_random(TRUE);
+    }
+    $page = &$variables['page'];
+    if (count($backgrounds) == 1) {
+      $page['#attached']['html_head'][] = [
+        [
+          '#tag' => 'style',
+          '#value' => '.ip-cover-img { { background-image: ' . $backgrounds[0] . '; }',
+        ],
+        'nrcan_wxt'
+      ];
+    }
+    else {
+      $background_settings = json_encode($backgrounds);
+
+      $build['#attached']['library'][] = 'nrcan_wxt/library_name';
+      $build['#attached']['drupalSettings']['nrcan_wxt']['homepage_banners'] = $background_settings;
+      /*
+      <script>
+      (function($) {
+        var bg_images = <?php print json_encode($backgrounds); ?>;
+        $('.ip-cover-img').addClass('bg-initialized').css({'background-image': 'url(' + bg_images[Math.floor(Math.random() * bg_images.length)] + ')'});
+      })(jQuery);
+      </script>
+      */
+
+    }
+
+
+    /* */
 
     parent::preprocess($variables, $hook, $info);
+  }
+
+  private static function get_bg_random($return_all = FALSE) {
+    $cid = 'get_bg_random_backgrounds';
+    $data = NULL;
+    if ($cache = \Drupal::cache()
+      ->get($cid)) {
+      $data = $cache->data;
+    }
+    else {
+      $base_path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://") . '/');
+      $folder = 'images/homepage_banners/';
+      $files_path = $base_path . '/' . $folder;
+      kint($files_path);
+      if (is_dir($files_path)) {
+        $bg_image_path = $files_path . '/*.*';
+      }
+      // Else use a fallback image
+      else {
+        $bg_image_path = 'https://www.canada.ca/content/dam/cra-arc/images/CRAHQexterior-white.jpg';
+      }
+      $data = glob($bg_image_path);
+
+      \Drupal::cache()
+        ->set($cid, $data);
+    }
+    if ($return_all) {
+      return $data;
+    }
+    kint($data);
+    return $data[array_rand($data)];
   }
 
 }

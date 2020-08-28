@@ -114,17 +114,9 @@ class Page extends BootstrapPage {
     else {
       $background_settings = json_encode($backgrounds);
 
-      $page['#attached']['library'][] = 'nrcan_wxt/library_name';
+      $page['#attached']['library'][] = 'nrcan_wxt/homepage_banners';
       $page['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
-      kint($page['#attached']['drupalSettings']);
-      /*
-      <script>
-      (function($) {
-        var bg_images = <?php print json_encode($backgrounds); ?>;
-        $('.ip-cover-img').addClass('bg-initialized').css({'background-image': 'url(' + bg_images[Math.floor(Math.random() * bg_images.length)] + ')'});
-      })(jQuery);
-      </script>
-      */
+      kint($page['#attached']);
 
     }
 
@@ -162,15 +154,14 @@ class Page extends BootstrapPage {
         //$bg_image_path = 'https://www.canada.ca/content/dam/cra-arc/images/CRAHQexterior-white.jpg';
         $data = array();
       }
-      kint($data);
 
       \Drupal::cache()
         ->set($cid, $data);
     }
+    //kint($data);
     if ($return_all) {
       return $data;
     }
-    kint($data);
     return $data[array_rand($data)];
   }
 

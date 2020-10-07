@@ -106,7 +106,7 @@ class Page extends BootstrapPage {
         $page['#attached']['html_head'][] = [
           [
             '#tag' => 'style',
-            '#value' => '.ip-cover-img { { background-image: ' . $backgrounds[0] . '; }',
+            '#value' => '.ip-cover-img { background-image: ' . $backgrounds[0] . '; }',
           ],
           'nrcan_wxt'
         ];

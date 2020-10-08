@@ -84,7 +84,9 @@
     "drupal/memcache": "^2.1",
     "drupal/libraries": "^3.0@alpha",
     "drupal/filebrowser": "^2.2",
-    "drupal/devel": "^2.1"
+    "drupal/devel": "^2.1",
+    "drupal/tome": "^1.4",
+    "drupal/password_policy": "^3.0"
   },
   "require-dev": {
     "drush/drush": "^9.0"

@@ -76,6 +76,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('Backport of Bootstrap 4 cards for the Wet4 themes.'),
     );
 
+    $form['admin']['osdp'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('OSDP Theme'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('osdp', 'off'),
+      '#description' => t('OSDP custom theme elements.'),
+    );
+
     $form['admin']['custom_bullets'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Custom list bullets library.'),

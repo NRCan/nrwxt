@@ -2,6 +2,10 @@ cards:
   css:
     theme:
       css/cards.css: {}
+osdp:
+  css:
+    theme:
+      css/osdp.css: {}
 left-menu:
   css:
     theme:

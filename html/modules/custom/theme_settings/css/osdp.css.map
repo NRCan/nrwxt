@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "osdp.css",
+	"sources": [
+		"../scss/osdp.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACE,iBADe,CACf,YAAY,CAAC;EACX,MAAM,EAAE,SAAS;CAClB"
+}

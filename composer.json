@@ -86,7 +86,8 @@
     "drupal/filebrowser": "^2.2",
     "drupal/devel": "^2.1",
     "drupal/tome": "^1.4",
-    "drupal/password_policy": "^3.0"
+    "drupal/password_policy": "^3.0",
+    "drupal/wxt_library": "^1.20"
   },
   "require-dev": {
     "drush/drush": "^9.0"

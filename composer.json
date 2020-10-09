@@ -78,7 +78,7 @@
   "require": {
     "php": ">=7.1",
     "composer/installers": "^1.2",
-    "drupalwxt/site-wxt": "^3.0",
+    "drupalwxt/wxt-project": "8.x-dev",
     "drush/drush": "^9.0",
     "drupal/backup_migrate": "^5.0",
     "drupal/memcache": "^2.1",

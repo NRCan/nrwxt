@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "637235dfb9162416fa60ab12dce874d1",
+    "content-hash": "856df00c37f0aa83f2ce24ef60e67790",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -185,16 +185,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.158.5",
+            "version": "3.158.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "dae8d62d976adc737d9daf4817ac36de6d53c3e8"
+                "reference": "4e912c1ae4d4b3538ada36ac1478f980f9bdf329"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/dae8d62d976adc737d9daf4817ac36de6d53c3e8",
-                "reference": "dae8d62d976adc737d9daf4817ac36de6d53c3e8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e912c1ae4d4b3538ada36ac1478f980f9bdf329",
+                "reference": "4e912c1ae4d4b3538ada36ac1478f980f9bdf329",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +266,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-10-08T18:13:24+00:00"
+            "time": "2020-10-09T18:11:48+00:00"
         },
         {
             "name": "bower-asset/cropper",
@@ -9989,118 +9989,8 @@
             }
         },
         {
-            "name": "drupalwxt/site-wxt",
-            "version": "3.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupalwxt/site-wxt.git",
-                "reference": "0306c2b30a90f8a11de1b00b36e9dc1d863d6127"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/site-wxt/zipball/0306c2b30a90f8a11de1b00b36e9dc1d863d6127",
-                "reference": "0306c2b30a90f8a11de1b00b36e9dc1d863d6127",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.2",
-                "cweagans/composer-patches": "^1.6.7",
-                "drupal/core-composer-scaffold": "*",
-                "drupalwxt/wxt": "dev-8.x-3.x",
-                "drush/drush": "^9.0",
-                "oomphinc/composer-installers-extender": "^1.1"
-            },
-            "require-dev": {
-                "behat/behat": "^3.0",
-                "behat/mink": "~1.7",
-                "behat/mink-extension": "*",
-                "behat/mink-goutte-driver": "*",
-                "behat/mink-selenium2-driver": "*",
-                "composer/composer": "^1.4",
-                "drupal/coder": "8.3.8",
-                "drupal/console": "~1.9.0",
-                "drupal/drupal-extension": "~3.4.0",
-                "jcalderonzumba/gastonjs": "~1.0.2",
-                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-                "mikey179/vfsstream": "~1.2",
-                "pdepend/pdepend": "2.1.0",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "^4.8.35 || ^6.1",
-                "sebastian/phpcpd": "*",
-                "squizlabs/php_codesniffer": "3.*",
-                "symfony/css-selector": "~2.8|~3.0",
-                "symfony/phpunit-bridge": "^3.4.3"
-            },
-            "type": "project",
-            "extra": {
-                "drupal-scaffold": {
-                    "locations": {
-                        "web-root": "html/"
-                    }
-                },
-                "installer-types": [
-                    "bower-asset",
-                    "npm-asset"
-                ],
-                "installer-paths": {
-                    "html/core": [
-                        "type:drupal-core"
-                    ],
-                    "html/libraries/{$name}": [
-                        "type:drupal-console-library",
-                        "type:drupal-library",
-                        "type:bower-asset",
-                        "type:npm-asset"
-                    ],
-                    "html/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "html/profiles/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "html/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ]
-                },
-                "composer-exit-on-patch-failure": true,
-                "enable-patching": true,
-                "patchLevel": {
-                    "drupal/core": "-p2"
-                },
-                "patches": [],
-                "patches-ignore": {
-                    "acquia/lightning": {
-                        "drupal/core": {
-                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                        }
-                    },
-                    "drupal/lightning_core": {
-                        "drupal/core": {
-                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
-                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                        }
-                    }
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "scripts/ScriptHandler.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Project template for Drupal 8 sites built with the WxT distribution.",
-            "time": "2020-06-20T00:04:24+00:00"
-        },
-        {
             "name": "drupalwxt/wxt",
-            "version": "dev-8.x-3.x",
+            "version": "3.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
@@ -10331,6 +10221,116 @@
             ],
             "description": "Project template for Drupal 8 sites built with the WxT distribution.",
             "time": "2020-10-07T11:43:14+00:00"
+        },
+        {
+            "name": "drupalwxt/wxt-project",
+            "version": "8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupalwxt/wxt-project.git",
+                "reference": "1b9ba0d5726dba1505b8a60cbfdcaa94339509e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupalwxt/wxt-project/zipball/1b9ba0d5726dba1505b8a60cbfdcaa94339509e9",
+                "reference": "1b9ba0d5726dba1505b8a60cbfdcaa94339509e9",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.2",
+                "cweagans/composer-patches": "^1.6.7",
+                "drupal/core-composer-scaffold": "*",
+                "drupalwxt/wxt": "3.0.14",
+                "drush/drush": "^9.0",
+                "oomphinc/composer-installers-extender": "^1.1"
+            },
+            "require-dev": {
+                "behat/behat": "^3.0",
+                "behat/mink": "~1.7",
+                "behat/mink-extension": "*",
+                "behat/mink-goutte-driver": "*",
+                "behat/mink-selenium2-driver": "*",
+                "composer/composer": "^1.4",
+                "drupal/coder": "^8.3.7",
+                "drupal/console": "~1.9.0",
+                "drupal/drupal-extension": "~3.4.0",
+                "jcalderonzumba/gastonjs": "~1.0.2",
+                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+                "mikey179/vfsstream": "~1.2",
+                "pdepend/pdepend": "2.1.0",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^4.8.35 || ^6.1",
+                "sebastian/phpcpd": "*",
+                "squizlabs/php_codesniffer": "3.*",
+                "symfony/css-selector": "~2.8|~3.0",
+                "symfony/phpunit-bridge": "^3.4.3"
+            },
+            "type": "project",
+            "extra": {
+                "drupal-scaffold": {
+                    "locations": {
+                        "web-root": "html/"
+                    }
+                },
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "html/core": [
+                        "type:drupal-core"
+                    ],
+                    "html/libraries/{$name}": [
+                        "type:drupal-console-library",
+                        "type:drupal-library",
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ],
+                    "html/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "html/profiles/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "html/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "composer-exit-on-patch-failure": true,
+                "enable-patching": true,
+                "patchLevel": {
+                    "drupal/core": "-p2"
+                },
+                "patches": [],
+                "patches-ignore": {
+                    "acquia/lightning": {
+                        "drupal/core": {
+                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                        }
+                    },
+                    "drupal/lightning_core": {
+                        "drupal/core": {
+                            "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+                            "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "scripts/ScriptHandler.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Project template for Drupal 8 sites built with the WxT distribution.",
+            "time": "2020-10-07T13:06:30+00:00"
         },
         {
             "name": "drush/drush",
@@ -12513,16 +12513,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.35.0",
+            "version": "v3.35.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "db2cca8e8691f48c1e27a543e1cee97e760c0742"
+                "reference": "82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/db2cca8e8691f48c1e27a543e1cee97e760c0742",
-                "reference": "db2cca8e8691f48c1e27a543e1cee97e760c0742",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35",
+                "reference": "82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35",
                 "shasum": ""
             },
             "type": "library",
@@ -12566,7 +12566,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2020-10-01T18:14:37+00:00"
+            "time": "2020-10-08T23:06:37+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -15314,6 +15314,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupalwxt/wxt-project": 20,
         "drupal/libraries": 15
     },
     "prefer-stable": true,

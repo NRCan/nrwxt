@@ -116,7 +116,7 @@ class Page extends BootstrapPage {
 
         $page['#attached']['library'][] = 'nrcan_wxt/homepage_banners';
         $page['#attached']['drupalSettings']['nrcanWxt']['homepageBanners'] = $background_settings;
-        kint($page['#attached']);
+        //kint($page['#attached']);
 
       }
     }

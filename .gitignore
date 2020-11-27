@@ -9,10 +9,10 @@ composer.lock
 !html
 html/*
 
-!html/modules/custom/*
+!html/modules/custom
 html/modules
 
-!html/thmes/custom/*
+!html/thmes/custom
 html/thmes
 
 vendor

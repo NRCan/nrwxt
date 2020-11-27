@@ -139,9 +139,12 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('left_menu', $form_state->getValue('left_menu'))
       ->set('admin_css', $form_state->getValue('admin_css'))
       ->set('block_update_date', $form_state->getValue('block_update_date'))
+      ->set('osdp', $form_state->getValue('osdp'))
+      ->set('match_height', $form_state->getValue('match_height'))
       ->set('custom_bullets', $form_state->getValue('custom_bullets'))
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->save();
+
 
     parent::submitForm($form, $form_state);
   }

@@ -6,14 +6,14 @@ files_private/
 
 # Composer files
 composer.lock
-!html
+!html/
 html/*
 
-html/modules
-!html/modules/custom/*
+#html/modules
+!html/modules/custom/
 
-html/thmes
-!html/thmes/custom/*
+#html/themes
+!html/themes/custom/
 
 vendor
 */*/*/vendor

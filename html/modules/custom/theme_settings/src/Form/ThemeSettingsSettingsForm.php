@@ -92,6 +92,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('If enabled allow lists, including the feed list on the source homepage, to use custom bullets via a wrapper data tag: data-icon="fa-calendar-o"'),
     );
 
+    $form['admin']['match_height'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('Match Height library.'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('match_height', 'on'),
+      '#description' => t('If enabled include the js match heigh library to include the intelligent equal height script.'),
+    );
+
     $form['admin']['custom_ga_links'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Custom Google Analytics for links.'),

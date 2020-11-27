@@ -36,6 +36,11 @@ function theme_settings_custom_bullets() {
   return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
 }
 
+function theme_settings_match_height() {
+  return \Drupal::config('theme_settings.settings')->get('match_height') == 'on';
+}
+
+
 function theme_settings_custom_ga_links() {
   return \Drupal::config('theme_settings.settings')->get('custom_ga_links') == 'on';
 }
@@ -68,6 +73,10 @@ function theme_settings_page_attachments(array &$page) {
 
   if (theme_settings_custom_bullets()) {
     $page['#attached']['library'][] = 'theme_settings/custom-bullets';
+  }
+
+  if (theme_settings_match_height()) {
+    $page['#attached']['library'][] = 'theme_settings/match-height';
   }
 
   if (theme_settings_custom_ga_links()) {

@@ -19,6 +19,11 @@ theme-updates-wet5-library:
     wet_boew/stacks/src/require.js: {}
   dependencies:
     - core/jquery
+match-height:
+  js:
+    match_height/dist/jquery.matchHeight-min.js: {}
+  dependencies:
+    - core/jquery
 custom-bullets:
   css:
     component:

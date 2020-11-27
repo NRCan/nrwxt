@@ -108,6 +108,8 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('If enabled add Google Analytics to links via data tag: data-ga="{\'category\':\'campaign\', \'mode\':\'title\'} . If you omit the label it will use the link URL or title based on the mode.'),
     );
 
+
+
     $form['old']['left_menu'] = array(
       '#type' => 'radios',
       '#title' => $this->t('Left Menu'),

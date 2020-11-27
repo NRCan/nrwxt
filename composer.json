@@ -121,7 +121,7 @@
         "drush/drush": "^9.0",
         "drupalwxt/wxt": "3.0.15",
         "drupal/backup_migrate": "^5.0",
-        "drupal/memcache": "^2.1",
+        "drupal/memcache": "^2.2",
         "drupal/libraries": "^3.0@alpha",
         "drupal/filebrowser": "^2.2",
         "drupal/devel": "^4.0",

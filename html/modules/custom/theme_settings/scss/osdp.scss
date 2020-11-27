@@ -4,8 +4,12 @@
   }
 }
 
+.button-big-centered-wrapper {
+  display: inline-table;
+}
+
 a, button {
-  &.button-height-60 {
+  &.button-big-centered {
     min-height: 68px;
     display: table-cell;
     vertical-align: middle;

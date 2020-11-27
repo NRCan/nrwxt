@@ -2,7 +2,11 @@
   margin: 1em 0 0 0;
 }
 
-a.button-height-60, button.button-height-60 {
+.button-big-centered-wrapper {
+  display: inline-table;
+}
+
+a.button-big-centered, button.button-big-centered {
   min-height: 68px;
   display: table-cell;
   vertical-align: middle;

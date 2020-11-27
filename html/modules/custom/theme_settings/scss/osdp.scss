@@ -4,6 +4,11 @@
   }
 }
 
-.button-height-60 {
-  min-height: 68px;
+a, button {
+  &.button-height-60 {
+    min-height: 68px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
 }

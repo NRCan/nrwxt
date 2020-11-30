@@ -1,2 +1,6 @@
+.region-branding ul.nav > li > a {
+  display: inline-block;
+  padding: 0;
+}
 
 /*# sourceMappingURL=style.css.map */

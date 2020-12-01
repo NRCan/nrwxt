@@ -17,23 +17,29 @@ a, button {
 
 }
 
-
-.field--name-body .float-icon {
-  display: none;
-  @media (min-width: 768px) {
-    position: absolute;
-    top: -86px;
-    right: 0;
-    background: white;
-    padding: 10px;
-    width: 134px;
-    height: 134px;
-    &:after {
-      content: " ";
+.field--name-body {
+  .float-icon {
+    display: none;
+    @media (min-width: 768px) {
       display: block;
-      width: 134px;
-      height: 67px;
+      position: absolute;
+      top: -77px;
+      right: 0;
       background: white;
+      padding: 10px;
+      width: 134px;
+      height: 134px;
+      &:after {
+        content: " ";
+        display: block;
+        width: 134px;
+        height: 67px;
+        background: white;
+      }
     }
+  }
+  .float-icon-shield {
+    display: block;
+    padding-right: 154px;
   }
 }

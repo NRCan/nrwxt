@@ -18,8 +18,9 @@ a.button-big-centered, button.button-big-centered {
 
 @media (min-width: 768px) {
   .field--name-body .float-icon {
+    display: block;
     position: absolute;
-    top: -86px;
+    top: -77px;
     right: 0;
     background: white;
     padding: 10px;
@@ -33,6 +34,11 @@ a.button-big-centered, button.button-big-centered {
     height: 67px;
     background: white;
   }
+}
+
+.field--name-body .float-icon-shield {
+  display: block;
+  padding-right: 154px;
 }
 
 /*# sourceMappingURL=osdp.css.map */

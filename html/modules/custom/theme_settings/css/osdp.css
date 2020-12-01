@@ -12,4 +12,27 @@ a.button-big-centered, button.button-big-centered {
   vertical-align: middle;
 }
 
+.field--name-body .float-icon {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .field--name-body .float-icon {
+    position: absolute;
+    top: -86px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    width: 134px;
+    height: 134px;
+  }
+  .field--name-body .float-icon:after {
+    content: " ";
+    display: block;
+    width: 134px;
+    height: 67px;
+    background: white;
+  }
+}
+
 /*# sourceMappingURL=osdp.css.map */

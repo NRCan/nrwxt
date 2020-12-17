@@ -2,13 +2,18 @@
 test-results
 scripts/local
 scripts/drupal
-files_private/
+files_private
+private_files
 
 # Composer files
 composer.lock
 vendor
 */*/*/vendor
 */*/vendor
+
+# Server files
+private_files
+static_osdp
 
 # Ignore Development Files
 compass_app_log.txt
@@ -22,6 +27,7 @@ compass_app_log.txt
 *.swp
 *.vi
 *.sass-cache
+ttt*
 
 # Node
 node_modules/

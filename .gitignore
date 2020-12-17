@@ -11,6 +11,10 @@ vendor
 */*/*/vendor
 */*/vendor
 
+# Server files
+private_files
+static_osdp
+
 # Ignore Development Files
 compass_app_log.txt
 *.DS_Store

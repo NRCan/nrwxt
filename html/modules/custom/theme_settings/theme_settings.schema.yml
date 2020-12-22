@@ -1,13 +1,3 @@
 theme_settings.admin:
   type: config_object
-  label: 'Theme Settingss Settings'
-  mapping:
-    loremipsum:
-      type: mapping
-      mapping:
-        page_title:
-          type: text
-          label: 'page title:'
-        source_text:
-          type: text
-          label: 'Source text'
+  label: 'Theme Settings Settings'

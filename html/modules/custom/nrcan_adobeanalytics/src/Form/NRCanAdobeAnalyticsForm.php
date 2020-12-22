@@ -24,9 +24,12 @@ class NRCanAdobeAnalyticsForm extends ConfigFormBase {
 
     // AA enabled
     $form['enabled'] = [
-      '#type' => 'radio',
+      '#type' => 'radios',
       '#title' => $this->t('Module Enabled'),
-      '#options' => ['on' => $this->t('Enabled'), 'off' => $this->t('Disabled')],
+      '#options' => [
+        'on' => $this->t('Enabled'),
+        'off' => $this->t('Disabled')
+      ],
       '#default_value' => $config->get('nrcan_adobeanalytics.enabled'),
       '#description' => $this->t('If enabled then the header/footer code will be included for anonymous users.'),
     ];

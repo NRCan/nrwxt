@@ -35,7 +35,7 @@ class NRCanAdobeAnalyticsForm extends ConfigFormBase {
     ];
     // Header Code
     $form['header_code'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Header Code'),
       '#default_value' => $config->get('nrcan_adobeanalytics.header_code'),
       '#description' => $this->t('For inclusion in the header'),

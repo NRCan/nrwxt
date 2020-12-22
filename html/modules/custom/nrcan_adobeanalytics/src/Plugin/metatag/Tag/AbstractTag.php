@@ -19,6 +19,6 @@ use Drupal\metatag\Plugin\metatag\Tag\MetaNameBase;
  *   multiple = FALSE
  * )
  */
-class AbstractService extends MetaNameBase {
+class Service extends MetaNameBase {
   // Nothing here yet. Just a placeholder class for a plugin.
 }

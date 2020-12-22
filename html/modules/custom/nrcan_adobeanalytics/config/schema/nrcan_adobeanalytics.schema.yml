@@ -1,0 +1,23 @@
+nrcan_adobeanalytics.settings:
+  type: config_object
+  label: 'NRCan Adobe Analytics settings'
+  mapping:
+    nrcan_adobeanalytics:
+      type: mapping
+      mapping:
+        enabled:
+          type: radio
+          label: 'Module Enabled'
+        header_code:
+          type: text
+          label: 'Header Code'
+        footer_code:
+          type: text
+          label: 'Footer Code'
+
+metatag.metatag_tag.dcterms_service:
+  type: label
+  label: 'Dublin Core: Service'
+metatag.metatag_tag.dcterms_access_rights:
+  type: label
+  label: 'Dublin Core: Access Rights'

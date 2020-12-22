@@ -125,7 +125,11 @@
         "drupal/libraries": "^3.0@alpha",
         "drupal/filebrowser": "^2.2",
         "drupal/devel": "^4.0",
-        "drupal/tome": "^1.4"
+        "drupal/tome": "^1.4",
+        "drupal/recaptcha_element": "^1.0",
+        "drupal/purge": "^3.0",
+        "drupal/varnish_purge": "^2.0",
+        "drupal/google_analytics": "^3.1"
     },
     "autoload": {
         "classmap": [

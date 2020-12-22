@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\nrcan_adobeanalytics\Plugin\metatag\Service;
+namespace Drupal\nrcan_adobeanalytics\Plugin\metatag\Tag;
 
 use Drupal\metatag\Plugin\metatag\Tag\MetaNameBase;
 

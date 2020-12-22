@@ -5,13 +5,13 @@ namespace Drupal\nrcan_adobeanalytics\Plugin\metatag\Tag;
 use Drupal\metatag\Plugin\metatag\Tag\MetaNameBase;
 
 /**
- * The Dublin Core "Abstract" meta tag.
+ * The Dublin Core "Service" meta tag.
  *
  * @MetatagTag(
  *   id = "dcterms_service",
- *   label = @Translation("Abstract"),
- *   description = @Translation("A summary of the resource."),
- *   name = "dcterms.abstract",
+ *   label = @Translation("Service"),
+ *   description = @Translation("Adobe Anayltics Service Code. NRCAN, OSDP, etc"),
+ *   name = "dcterms.service",
  *   group = "dublin_core_advanced",
  *   weight = 6,
  *   type = "label",

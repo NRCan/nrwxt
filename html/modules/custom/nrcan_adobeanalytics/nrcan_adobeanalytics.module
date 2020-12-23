@@ -22,14 +22,34 @@ function nrcan_adobeanalytics_is_enabled() {
   return \Drupal::config('nrcan_adobeanalytics')->get('enabled') == 'on';
 }
 
+function nrcan_adobeanalytics_get_header() {
+  if (nrcan_adobeanalytics_is_enabled()){
+    return \Drupal::config('nrcan_adobeanalytics')->get('header_code');
+  }
+  return FALSE;
+}
+
+function nrcan_adobeanalytics_get_footer() {
+  if (nrcan_adobeanalytics_is_enabled()){
+    return \Drupal::config('nrcan_adobeanalytics')->get('footer_code');
+  }
+  return FALSE;
+}
+
 /*
  * Implements hook_library_info_alter().
  */
 function nrcan_adobeanalytics_library_info_alter(&$libraries, $extension) {
+  kint($libraries);
+  kint($extension);
+  /*if (isset($types['table'])) {
+    $types['table']['#attached']['library'][] = 'your_module/library_name';
+  }
+
   if ($extension === 'nrcan_adobeanalytics' && isset($libraries['nrcan-adobeanalytics'])) {
 
 
-  }
+  }*/
 }
 
 

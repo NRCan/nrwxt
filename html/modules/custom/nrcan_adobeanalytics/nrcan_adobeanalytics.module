@@ -40,16 +40,16 @@ function nrcan_adobeanalytics_get_footer() {
  * Implements hook_library_info_alter().
  */
 function nrcan_adobeanalytics_library_info_alter(&$libraries, $extension) {
-  kint($libraries);
-  kint($extension);
-  /*if (isset($types['table'])) {
-    $types['table']['#attached']['library'][] = 'your_module/library_name';
+  if ($extension === 'nrcan_adobeanalytics') {
+    //kint($libraries);
+    //kint($extension);
+    //foreach ($libraries['jquery.farbtastic']['js'] as $source => $options) {
+    //}
   }
 
   if ($extension === 'nrcan_adobeanalytics' && isset($libraries['nrcan-adobeanalytics'])) {
 
-
-  }*/
+  }
 }
 
 
@@ -58,9 +58,10 @@ function nrcan_adobeanalytics_library_info_alter(&$libraries, $extension) {
  *
  */
 function nrcan_adobeanalytics_page_attachments(array &$page) {
+  //if (\Drupal::currentUser()->isAnonymous() && nrcan_adobeanalytics_is_enabled()) {
   if (nrcan_adobeanalytics_is_enabled()) {
     $page['#attached']['library'][] = 'nrcan-adobeanalytics/header';
-    $page['#attached']['library'][] = 'nrcan-adobeanalytics/footer';
+    //$page['#attached']['library'][] = 'nrcan-adobeanalytics/footer';
   }
 
 }

@@ -35,10 +35,10 @@ class NRCanAdobeAnalyticsForm extends ConfigFormBase {
     ];
     // Header Code
     $form['header_code'] = [
-      '#type' => 'textarea',
+      '#type' => 'text',
       '#title' => $this->t('Header Code'),
       '#default_value' => $config->get('nrcan_adobeanalytics.header_code'),
-      '#description' => $this->t('For inclusion in the header'),
+      '#description' => $this->t('Just the URL of the JS file to include. This is added as an external JS library.'),
     ];
     // Footer Code
     $form['footer_code'] = [

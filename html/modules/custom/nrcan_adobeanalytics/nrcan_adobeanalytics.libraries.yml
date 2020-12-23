@@ -1,6 +1,8 @@
 header:
+  remote: //assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-f7c3e6060667.min.js
   version: 1.x
   js:
+    //assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-f7c3e6060667.min.js: { type: external, minified: true }
   dependencies:
     - core/jquery
 footer:

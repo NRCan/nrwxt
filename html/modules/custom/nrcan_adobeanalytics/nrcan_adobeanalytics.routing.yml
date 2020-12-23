@@ -1,9 +1,0 @@
-adobeanalytics.form:
-  path: '/admin/config/search/nrcan-adobeanalytics'
-  defaults:
-    _form: '\Drupal\nrcan_adobeanalytics\Form\NRCanAdobeAnalyticsForm'
-    _title: 'Configre Adobe Analytics'
-  requirements:
-    _permission: 'administer site configuration'
-  options:
-    _admin_route: TRUE

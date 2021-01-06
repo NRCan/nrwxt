@@ -37,14 +37,14 @@ a.button-big-centered, button.button-big-centered {
   padding-right: 154px;
 }
 
-.well {
+body .well {
   box-shadow: none;
   border-radius: 0;
   border: none;
 }
 
-.well.bg-info {
-  background-color: #bdd7ee !important;
+body .well.bg-info {
+  background-color: #bdd7ee;
 }
 
 /*# sourceMappingURL=osdp.css.map */

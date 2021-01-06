@@ -39,11 +39,11 @@ a, button {
   }
 }
 
-.well {
+body .well {
   box-shadow: none;
   border-radius: 0;
   border: none;
   &.bg-info {
-    background-color: #bdd7ee !important;
+    background-color: #bdd7ee;
   }
 }

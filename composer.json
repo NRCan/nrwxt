@@ -129,7 +129,8 @@
         "drupal/recaptcha_element": "^1.0",
         "drupal/purge": "^3.0",
         "drupal/varnish_purge": "^2.0",
-        "drupal/google_analytics": "^3.1"
+        "drupal/google_analytics": "^3.1",
+        "drupal/header_and_footer_scripts": "^2.2"
     },
     "autoload": {
         "classmap": [

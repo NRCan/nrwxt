@@ -39,9 +39,11 @@ a, button {
   }
 }
 
-.well.bg-info {
-  background-color: #bdd7ee;
+.well {
   box-shadow: none;
   border-radius: 0;
   border: none;
+  .bg-info {
+    background-color: #bdd7ee !important;
+  }
 }

@@ -43,10 +43,6 @@ body .well {
   border: none;
 }
 
-body .well.bg-info {
-  background-color: #bdd7ee;
-}
-
 .disclaimer {
   font-style: italic;
   line-height: 1.35em;

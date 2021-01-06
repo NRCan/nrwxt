@@ -37,4 +37,11 @@ a.button-big-centered, button.button-big-centered {
   padding-right: 154px;
 }
 
+.well.bg-info {
+  background-color: #bdd7ee;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+}
+
 /*# sourceMappingURL=osdp.css.map */

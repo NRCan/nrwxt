@@ -43,7 +43,7 @@ a.button-big-centered, button.button-big-centered {
   border: none;
 }
 
-.well .bg-info {
+.well.bg-info {
   background-color: #bdd7ee !important;
 }
 

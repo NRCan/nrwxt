@@ -43,7 +43,7 @@ a, button {
   box-shadow: none;
   border-radius: 0;
   border: none;
-  .bg-info {
+  &.bg-info {
     background-color: #bdd7ee !important;
   }
 }

@@ -96,7 +96,7 @@
         "patches": {
           "drupal/core": {
               "3089902 - Use SELECT VERSION(); rather than PDO attribute to determine server version.":
-              "https://www.drupal.org/files/issues/2020-11-24/3089902-71.patch"
+              "https://www.drupal.org/files/issues/2020-03-02/fix_mysql8_azure-3089902-16.patch"
             }
         },
         "patches-ignore": {

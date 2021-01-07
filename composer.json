@@ -12,7 +12,7 @@
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
-        "drupal/memcache": "^2.2",
+        "drupal/memcache": "^2.1",
         "drupal/purge": "^3.0",
         "drupal/varnish_purge": "^2.0",
         "drupal/variationcache": "^1.0",

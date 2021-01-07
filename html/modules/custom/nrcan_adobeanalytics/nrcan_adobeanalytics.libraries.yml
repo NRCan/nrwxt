@@ -1,0 +1,10 @@
+header:
+  version: 1.x
+  js:
+  dependencies:
+    - core/jquery
+footer:
+  version: 1.x
+  js:
+  dependencies:
+    - core/jquery

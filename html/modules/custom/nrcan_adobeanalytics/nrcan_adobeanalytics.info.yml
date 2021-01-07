@@ -1,0 +1,9 @@
+name: NRCan Adobe Analytics
+type: module
+description: 'Adobe Analytics module for Principal Publisher AA'
+package: NRCan
+core: ^8 || ^9
+dependencies:
+  - metatag:metatag
+  - metatag:metatag_dc
+configure: adobeanalytics.form

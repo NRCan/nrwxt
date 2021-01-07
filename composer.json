@@ -14,7 +14,8 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/memcache": "^2.2",
         "drupal/devel": "^4.0",
-        "drupal/tome": "^1.4"
+        "drupal/tome": "^1.4",
+        "drupal/variationcache": "^1.0"
     },
     "require-dev": {
       "drupal/core-dev": "^9",

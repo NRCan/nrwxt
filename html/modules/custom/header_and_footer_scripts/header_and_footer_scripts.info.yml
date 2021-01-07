@@ -1,0 +1,5 @@
+name: Header and Footer Scripts (NRCan D9)
+description: This plugin allows you to add the scripts and styles on overall site from the front-end. No need to open files and add them there.
+package: NRCan
+type: module
+configure: header_and_footer_scripts.admin.header

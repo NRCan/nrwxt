@@ -17,7 +17,6 @@
         "drupal/varnish_purge": "^2.0",
         "drupal/variationcache": "^1.0",
         "drupal/devel": "^4.0",
-        "drupal/header_and_footer_scripts": "^2.2",
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
         "drupal/tome": "^1.4"

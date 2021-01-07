@@ -88,7 +88,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": { },
+        "patches": {
+          "drupal/core": {
+              "3089902 - Use SELECT VERSION(); rather than PDO attribute to determine server version.":
+              "https://www.drupal.org/files/issues/2020-11-24/3089902-71.patch"
+            }
+        },
         "patches-ignore": {
             "acquia/lightning": {
                 "drupal/core": {

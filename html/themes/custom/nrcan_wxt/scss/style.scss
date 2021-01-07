@@ -8,3 +8,19 @@
     }
   }
 }
+
+// Allow wells to take on the bg colours
+.well {
+  &.bg-success {
+    background-color: #dff0d8;
+  }
+  &.bg-info {
+    background-color: #d9edf7;
+  }
+  &.bg-warning {
+    background-color: #fcf8e3;
+  }
+  &.bg-danger {
+    background-color: #f2dede;
+  }
+}

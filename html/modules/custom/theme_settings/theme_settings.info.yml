@@ -1,6 +1,6 @@
 name: 'Theme Settings (Cards, FontAwesome, etc)'
 type: module
 description: 'Backport of the Bootstrap v4 cards, Menu update for Web Usibility, Wet5 demo and more.'
-core_version_requirement: ^8 || ^9
+core: 8.x
 package: 'NRCan'
 configure: theme_settings.config

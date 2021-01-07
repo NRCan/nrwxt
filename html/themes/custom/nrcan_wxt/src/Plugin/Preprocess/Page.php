@@ -135,7 +135,7 @@ class Page extends BootstrapPage {
       $data = $cache->data;
     }
     else {
-      $base_path = \Drupal::service('file_system')->realpath(\Drupal::config('system.file')->get('default_scheme') . "://");
+      $base_path = \Drupal::service('file_system')->realpath(file_default_scheme() . "://");
       $base_url = file_create_url('public://');
       //kint($base_path);
       $folder = 'images/homepage_banners';

@@ -37,4 +37,18 @@ a.button-big-centered, button.button-big-centered {
   padding-right: 154px;
 }
 
+body .well {
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+}
+
+.disclaimer {
+  font-style: italic;
+  line-height: 1.35em;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=osdp.css.map */

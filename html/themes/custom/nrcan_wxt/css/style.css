@@ -3,4 +3,20 @@
   padding: 0;
 }
 
+.well.bg-success {
+  background-color: #dff0d8;
+}
+
+.well.bg-info {
+  background-color: #d9edf7;
+}
+
+.well.bg-warning {
+  background-color: #fcf8e3;
+}
+
+.well.bg-danger {
+  background-color: #f2dede;
+}
+
 /*# sourceMappingURL=style.css.map */

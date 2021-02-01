@@ -95,10 +95,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-          "drupal/core": {
-              "3089902 - Use SELECT VERSION(); rather than PDO attribute to determine server version.":
-              "https://www.drupal.org/files/issues/2020-11-24/3089902-71.patch"
-            },
             "drupal/header_and_footer_scripts": {
               "header_and_footer_scripts - Drupal 9 Compatibility":
               "https://www.drupal.org/files/issues/2020-05-23/header_and_footer_scripts.2.2.rector.patch"

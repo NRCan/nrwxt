@@ -9,8 +9,9 @@
   }
 }
 
-// Allow wells to take on the bg colours
-.well {
+// Allow wells and panel headers to take on the bg colours
+.well,
+.panel-default>.panel-heading {
   &.bg-success {
     background-color: #dff0d8;
   }

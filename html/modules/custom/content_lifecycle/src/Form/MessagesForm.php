@@ -33,6 +33,13 @@ class MessagesForm extends ConfigFormBase {
    */  
   public function buildForm(array $form, FormStateInterface $form_state) {  
     $config = $this->config('content_lifecycle.adminsettings');  
+    $terms = $this ->getpageowners();
+
+    $options = [];
+     foreach ($terms as $tid => $term){
+       $options[$tid] = $term -> getName();
+     }
+    kint($options); 
 
     $form['content_lifecycle_message'] = [  
       '#type' => 'textarea',  
@@ -62,6 +69,21 @@ class MessagesForm extends ConfigFormBase {
       ->set('content_lifecycle_message', $form_state->getValue('content_lifecycle_message'))  
       ->save();  
   }  
+
+private function getpageowners(){
+  
+  $query = \Drupal::entityQuery('taxonomy_term');
+  $query->condition('vid', "page_owners");
+  $query->sort('weight');
+  $tids = $query->execute();
+  $terms = \Drupal\taxonomy\Entity\Term::loadMultiple($tids);
+  #kint($terms);
+
+return $terms; 
+
+}
+
+
 
 
 }

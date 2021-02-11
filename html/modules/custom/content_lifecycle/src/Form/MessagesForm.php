@@ -39,12 +39,20 @@ class MessagesForm extends ConfigFormBase {
      foreach ($terms as $tid => $term){
        $options[$tid] = $term -> getName();
      }
-    kint($options); 
+    #kint($options); 
+
+    $form['example_select'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Page Owner'),
+      '#options' => [$options],
+      '#description' => $this->t('Set the pages to a selected Page Owner'),  
+      
+      ];
 
     $form['content_lifecycle_message'] = [  
       '#type' => 'textarea',  
-      '#title' => $this->t('Welcome message'),  
-      '#description' => $this->t('Welcome message display to users when they login'),  
+      '#title' => $this->t('Page nids *'),  
+      '#description' => $this->t('Enter nids, one per line, of page to set to this page owner. The script will update both english and french versions to the same owner.'),  
       '#default_value' => $config->get('content_lifecycle_message'),  
     ];  
 

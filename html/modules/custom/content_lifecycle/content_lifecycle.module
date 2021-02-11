@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * @file
+ * Contains content_lifecycle.module.
+ */
+
+function content_lifecycle_user_login($account) {  
+  $config = \Drupal::config('content_lifecycle.adminsettings');  
+  drupal_set_message($config->get('content_lifecycle_message'));  
+}  

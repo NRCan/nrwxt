@@ -1,0 +1,9 @@
+content_lifecycle.admin_settings_form:  
+  path: '/admin/content/page_owner'  
+  defaults:  
+    _form: '\Drupal\content_lifecycle\Form\MessagesForm'  
+    _title: 'MessagesForm'  
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE  

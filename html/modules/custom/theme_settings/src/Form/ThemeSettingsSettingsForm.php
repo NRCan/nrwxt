@@ -147,7 +147,6 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->save();
 
-
     parent::submitForm($form, $form_state);
   }
 }

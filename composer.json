@@ -8,18 +8,19 @@
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.0.x-dev",
+        "drupalwxt/wxt": "4.0.1",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
-        "drupal/memcache": "^2.1",
+        "drupal/memcache": "2.1",
         "drupal/purge": "^3.0",
         "drupal/varnish_purge": "^2.0",
         "drupal/variationcache": "^1.0",
         "drupal/devel": "^4.0",
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
-        "drupal/tome": "^1.4"
+        "drupal/tome": "^1.4",
+        "drupal/recaptcha": "^3.0"
     },
     "require-dev": {
       "drupal/core-dev": "^9",
@@ -94,10 +95,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-          "drupal/core": {
-              "3089902 - Use SELECT VERSION(); rather than PDO attribute to determine server version.":
-              "https://www.drupal.org/files/issues/2020-11-24/3089902-71.patch"
-            },
             "drupal/header_and_footer_scripts": {
               "header_and_footer_scripts - Drupal 9 Compatibility":
               "https://www.drupal.org/files/issues/2020-05-23/header_and_footer_scripts.2.2.rector.patch"

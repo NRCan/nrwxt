@@ -36,19 +36,16 @@ ttt*
 node_modules/
 bower_components/
 
-
 # SASS
 .sass-cache
 *.sass-cache*
 **/sass/*.css
 /.gitattributes
 
-
 # Drupal
 html/*
 !html/modules/custom/
 !html/themes/custom/
-
 
 # Custom
 docker

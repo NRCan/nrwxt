@@ -16,7 +16,8 @@ class ThemeSettingsController extends ControllerBase {
    * @return array
    *   A render array representing the administrative page content.
    */
-  public function adminOverview() {
+  public function adminOverview()
+  {
     $rows = [];
 
     $headers = [t('Book'), t('Operations')];

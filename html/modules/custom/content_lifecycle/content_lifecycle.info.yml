@@ -1,0 +1,6 @@
+name: Content Lifecycle 
+type: module  
+description: Display a message when a user logs in  
+core_version_requirement: ^8 || ^9
+package: 'NRCan'
+configure: content_lifecycle.admin_settings_form  

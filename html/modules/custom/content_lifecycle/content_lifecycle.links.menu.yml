@@ -1,0 +1,6 @@
+content_lifecycle.admin_settings_form:  
+  title: 'Welcome message configuration'  
+  route_name: content_lifecycle.admin_settings_form  
+  description: 'content_lifecycle message admin'  
+  parent: system.admin_config_system  
+  weight: 99  

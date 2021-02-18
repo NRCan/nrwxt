@@ -1,3 +1,3 @@
-.region-branding ul.nav>li>a{display:inline-block;padding:0}.well.bg-success{background-color:#dff0d8}.well.bg-info{background-color:#d9edf7}.well.bg-warning{background-color:#fcf8e3}.well.bg-danger{background-color:#f2dede}
+.region-branding ul.nav>li>a{display:inline-block;padding:0}.well.bg-success,.panel-default>.panel-heading.bg-success{background-color:#dff0d8}.well.bg-info,.panel-default>.panel-heading.bg-info{background-color:#d9edf7}.well.bg-warning,.panel-default>.panel-heading.bg-warning{background-color:#fcf8e3}.well.bg-danger,.panel-default>.panel-heading.bg-danger{background-color:#f2dede}
 
 /*# sourceMappingURL=style.min.css.map */

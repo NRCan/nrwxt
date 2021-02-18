@@ -6,7 +6,10 @@ files_private
 private_files
 
 # Composer files
-composer.lock
+html/*
+!html/modules/
+!html/themes/
+
 vendor
 */*/*/vendor
 */*/vendor
@@ -33,11 +36,22 @@ ttt*
 node_modules/
 bower_components/
 
-# PhpStorm
-.idea
 
 # SASS
 .sass-cache
 *.sass-cache*
 **/sass/*.css
 /.gitattributes
+
+
+# Drupal
+html/*
+!html/modules/custom/
+!html/themes/custom/
+
+
+# Custom
+docker
+
+# Postgres
+*.backup

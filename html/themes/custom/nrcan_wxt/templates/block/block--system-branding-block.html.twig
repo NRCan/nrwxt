@@ -23,9 +23,13 @@
   logo_svg = {{ logo_svg }}
   logo_home_link = {{ logo_home_link }}
 -->
-  {% if site_logo %}
-    <a class="logo navbar-btn pull-left" href="{{ logo_home_link }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Government of Canada'|t }}" />
-    </a>
-  {% endif %}
+  <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+    <div class="brand col-xs-9 col-sm-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+      <a href="{{ logo_home_link }}" property="url">
+        <img src="{{ logo_svg }}" class="logo-en" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+      </a>
+      <meta property="name" content="Government of Canada">
+      <meta property="areaServed" typeof="Country" content="Canada">
+      <link property="logo" href="{{ logo_svg }}">
+    </div>
 {% endblock %}

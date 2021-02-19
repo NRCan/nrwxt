@@ -17,17 +17,15 @@
 #}
 {% block content %}
 <!--
-site_logo = {{ site_logo }}
-site_name = {{ site_name }}
-site_slogan = {{ site_slogan }}
-logo_svg = {{ logo_svg }}
-logo_home_link = {{ logo_home_link }}
+  site_logo = {{ site_logo }}
+  site_name = {{ site_name }}
+  site_slogan = {{ site_slogan }}
+  logo_svg = {{ logo_svg }}
+  logo_home_link = {{ logo_home_link }}
 -->
-<div class="brand col-xs-5 col-md-4">
   {% if site_logo %}
-    <a class="logo" href="{{ logo_home_link }}" rel="home">
-      <img id="header-logo" src="{{ logo_svg }}" alt="{{ 'Government of Canada'|t }}" />
+    <a class="logo navbar-btn pull-left" href="{{ logo_home_link }}" rel="home">
+      <img src="{{ site_logo }}" alt="{{ 'Government of Canada'|t }}" />
     </a>
   {% endif %}
-</div>
 {% endblock %}

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.region-banner {
+  margin: 10px 0;
+}
+
 .well.bg-success,
 .panel-default > .panel-heading.bg-success {
   background-color: #dff0d8;

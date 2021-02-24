@@ -5,11 +5,6 @@ scripts/drupal
 files_private
 private_files
 
-# Composer files
-html/*
-!html/modules/
-!html/themes/
-
 vendor
 */*/*/vendor
 */*/vendor
@@ -44,11 +39,22 @@ bower_components/
 
 # Drupal
 html/*
-!html/modules/custom/
-!html/themes/custom/
+!html/modules/custom
+!html/modules/custom/*
+!html/themes/custom
+!html/themes/custom/*
 
 # Custom
 docker
 
 # Postgres
 *.backup
+
+# WxT
+test-results
+files_private/
+
+# Tarball
+*.tar.gz
+/.editorconfig
+

@@ -275,3 +275,28 @@ function theme_settings_entity_presave(Drupal\Core\Entity\EntityInterface $entit
     unset($redirect->redirect);
   }
 }*/
+
+
+/**
+ * Implements hook_language_selection_page_data_alter().
+ **/
+function theme_settings_language_selection_page_data_alter(&$data) {
+  $block_entity = Drupal\block_content\Entity\BlockContent::load(11);// BLOCK_ID
+  $block_view = \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block_entity, 'full');
+  if ($block_view) {
+    $data['background'] = $block_view;
+  }
+  // Load the site name out of configuration.
+  $original_language = \Drupal::configFactory()->getLanguage();
+  $config = \Drupal::config('system.site');
+  $variables['site_name_en'] = $config->get('name');
+
+  $language = \Drupal::languageManager()->getLanguage('fr');
+  \Drupal::configFactory()->setLanguage($language);
+  $config_fr = \Drupal::config('system.site');
+  $variables['site_name_fr'] = $config_fr->get('name');
+
+  \Drupal::configFactory()->setLanguage($original_language);
+}
+
+

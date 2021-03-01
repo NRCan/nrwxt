@@ -37,6 +37,9 @@ bower_components/
 **/sass/*.css
 /.gitattributes
 
+#PhPStorm
+.idea
+
 # Drupal
 html/*
 !html/modules/custom

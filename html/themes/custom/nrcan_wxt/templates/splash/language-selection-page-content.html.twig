@@ -22,13 +22,30 @@
         <meta property="areaServed" typeof="Country" content="Canada">
       </div>
     </div>
+    {% if site_name_en is not empty %}
     <div class="row">
       <section class="col-xs-6 text-right">
         <h2 class="h3">{{ site_name_en }}</h2>
-        <p><a href="./en" class="btn btn-primary">English</a></p>
       </section>
       <section class="col-xs-6" lang="fr">
         <h2 class="h3">{{ site_name_fr }}</h2>
+      </section>
+    </div>
+    {% else %}
+    <div class="row">
+      <section class="col-xs-6 text-right">
+        <h2 class="wb-inv">Government of Canada</h2>
+      </section>
+      <section class="col-xs-6" lang="fr">
+        <h2 class="wb-inv">Gouvernement du Canada</h2>
+      </section>
+    </div>
+    {% endif %}
+    <div class="row">
+      <section class="col-xs-6 text-right">
+        <p><a href="./en" class="btn btn-primary">English</a></p>
+      </section>
+      <section class="col-xs-6" lang="fr">
         <p><a href="./fr" class="btn btn-primary">Français</a></p>
       </section>
     </div>

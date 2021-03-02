@@ -294,17 +294,15 @@ function theme_settings_language_selection_page_condition_info_alter(&$data) {
  * Implements hook_theme().
  */
 function theme_settings_theme($existing, $type, $theme, $path) {
+  dpm([$existing, $type, $theme, $path]);
   ddm([$existing, $type, $theme, $path]);
-  /*return [
-    'language_selection_page_content' => [
-      'render element' => 'custom_page',
-      'path' => $path . '/templates',
-      'template' => 'language-selection-page-content',
-      'variables' => [
-        'destination' => NULL,
-        'configure_url' => Url::fromRoute('language.negotiation'),
-        'language_links' => '',
-      ],
-    ],
-  ];*/
+  if(empty($existing['language_selection_page_content']['variables'])) {
+    return;
+  }
+  $variables = &$existing['language_selection_page_content']['variables'];
+  $splash_config = \Drupal::config('theme_settings.splash');
+
+  $variables['site_name_en'] = $splash_config->get('site_name_en');
+  $variables['site_name_fr'] = $splash_config->get('site_name_fr');
+
 }

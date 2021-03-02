@@ -31,3 +31,4 @@ function nrcan_wxt_bootstrap_preprocess_page(&$variables) {
 
   $variables['splash_bg'] = $splash_config->get('splash_bg');
 }
+

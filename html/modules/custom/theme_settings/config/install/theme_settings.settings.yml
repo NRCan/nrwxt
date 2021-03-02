@@ -1,9 +1,18 @@
-admin_css:          'on'
-block_update_date:  'off'
-bootstrap_cards:    'off'
-custom_bullets:     'on'
-match_height:       'on'
-custom_ga_links:    'on'
-experimental:
-  wet5:             'off'
-left_menu:          'on'
+settings:
+  block_update_date: off
+  bootstrap_cards: off
+  osdp: off
+  custom_bullets: on
+  match_height: on
+  custom_ga_links: on
+  left_menu: on
+  admin_css: on
+
+splash:
+  site_name:
+    en: ''
+    fr: ''
+  splash_bg: "<div id=\"bg\"><img alt=\"\" class=\"img-responsive\" src=\"https://www.nrcan.gc.ca/sites/all/themes/canadaca/assets/splash/sp-bg-4.png\" /></div>"
+  tc_link:
+    en: 'https://www.canada.ca/en/transparency/terms.html'
+    fr: 'https://www.canada.ca/fr/transparence/avis.html'

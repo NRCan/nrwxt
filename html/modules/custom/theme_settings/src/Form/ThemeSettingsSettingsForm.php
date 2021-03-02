@@ -120,14 +120,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
     $form['splash']['site_name_en'] = [
       '#type' => 'textarea',
       '#title' => $this->t('English Site Name'),
-      '#default_value' => $splash_config->get('site_name_en'),
+      '#default_value' => $splash_config->get('site_name.en'),
       '#description' => t('English Site Name on the Splash page'),
     ];
 
     $form['splash']['site_name_fr'] = [
       '#type' => 'textarea',
       '#title' => $this->t('French Site Name'),
-      '#default_value' => $splash_config->get('site_name_fr'),
+      '#default_value' => $splash_config->get('site_name.fr'),
       '#description' => t('French Site Name on the Splash page'),
     ];
 
@@ -138,6 +138,19 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('HTML to render the background. See GCWeb theme for example'),
     ];
 
+    $form['splash']['splash_tc_en'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('English Terms & Conditions link'),
+      '#default_value' => $splash_config->get('tc_link.en'),
+      '#description' => t('the full url of the splash page T&C link'),
+    ];
+
+    $form['splash']['splash_tc_fr'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('French Terms & Conditions link'),
+      '#default_value' => $splash_config->get('tc_link.fr'),
+      '#description' => t('the full url of the splash page T&C link'),
+    ];
 
 
     $form['old']['left_menu'] = [
@@ -178,9 +191,11 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
 
     // Save the plash configurations.
     $this->configFactory->getEditable('theme_settings.splash')
-      ->set('site_name_en', $form_state->getValue('site_name_en'))
-      ->set('site_name_fr', $form_state->getValue('site_name_fr'))
+      ->set('site_name.en', $form_state->getValue('site_name_en'))
+      ->set('site_name.fr', $form_state->getValue('site_name_fr'))
       ->set('splash_bg', $form_state->getValue('splash_bg'))
+      ->set('tc_link.en', $form_state->getValue('splash_tc_en'))
+      ->set('tc_link.fr', $form_state->getValue('splash_tc_fr'))
       ->save();
 
     parent::submitForm($form, $form_state);

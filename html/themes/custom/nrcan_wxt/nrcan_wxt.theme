@@ -18,24 +18,6 @@ function nrcan_wxt_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
-
-
-/**
- * Implements hook_preprocess_page.
- */
-function nrcan_wxt_preprocess_page(&$variables) {
-  //$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-  // $langauge would be en or fr
-
-  $splash_config = \Drupal::config('theme_settings.splash');
-
-  $variables['splash_bg'] = $splash_config->get('splash_bg');
-  $variables['site_name_en'] = $splash_config->get('site_name_en');
-  $variables['site_name_fr'] = $splash_config->get('site_name_fr');
-
-  dpm($variables);
-}
-
 /**
  * Implements template_preprocess_language_selection_page_content().
  **/

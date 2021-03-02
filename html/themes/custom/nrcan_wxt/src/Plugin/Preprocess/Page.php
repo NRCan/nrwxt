@@ -56,8 +56,13 @@ class Page extends BootstrapPage {
     }
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
 
+    $splash_config = \Drupal::config('theme_settings.splash');
+    $variables['splash_bg'] = $splash_config->get('splash_bg');
+    $variables['site_name_en'] = $splash_config->get('site_name_en');
+    $variables['site_name_fr'] = $splash_config->get('site_name_fr');
+
     // Footer Navigation (gcweb).
-    //$wxt_active = gcweb for modern sites
+    //$wxt_active = gcweb for modern sites.
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {
       // CDN handling.
       $gcweb_cdn = $this->theme->getSetting('wxt_gcweb_cdn');

@@ -61,6 +61,8 @@ class Page extends BootstrapPage {
     $variables['site_name_en'] = $splash_config->get('site_name_en');
     $variables['site_name_fr'] = $splash_config->get('site_name_fr');
 
+    kint($variables);
+    
     // Footer Navigation (gcweb).
     //$wxt_active = gcweb for modern sites.
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {

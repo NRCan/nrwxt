@@ -61,8 +61,8 @@ class Page extends BootstrapPage {
     $variables['site_name_en'] = $splash_config->get('site_name_en');
     $variables['site_name_fr'] = $splash_config->get('site_name_fr');
 
-    kint($variables);
-    
+    //kint($variables);
+
     // Footer Navigation (gcweb).
     //$wxt_active = gcweb for modern sites.
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {
@@ -99,7 +99,6 @@ class Page extends BootstrapPage {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.png';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.svg';
-      //$variables['logo_home_link'] = Url::fromUri('https://www.canada.ca/' . $language . '.html');
       $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
     }
     elseif ($wxt_active == 'gc_intranet') {

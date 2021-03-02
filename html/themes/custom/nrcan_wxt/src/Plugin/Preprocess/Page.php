@@ -58,8 +58,10 @@ class Page extends BootstrapPage {
 
     $splash_config = \Drupal::config('theme_settings.splash');
     $variables['splash_bg'] = $splash_config->get('splash_bg');
-    $variables['site_name_en'] = $splash_config->get('site_name_en');
-    $variables['site_name_fr'] = $splash_config->get('site_name_fr');
+    $variables['site_name_en'] = $splash_config->get('site_name.en');
+    $variables['site_name_fr'] = $splash_config->get('site_name.fr');
+    $variables['tc_link_en'] = $splash_config->get('tc_link.en');
+    $variables['tc_link_fr'] = $splash_config->get('tc_link.fr');
 
     //kint($variables);
 

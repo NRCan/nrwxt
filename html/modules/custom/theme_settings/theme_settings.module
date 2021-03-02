@@ -278,21 +278,20 @@ function theme_settings_entity_presave(Drupal\Core\Entity\EntityInterface $entit
 
 
 /**
- * Implements hook_language_selection_page_condition_info_alter().
+ * Implements template_preprocess_language_selection_page_content().
  **/
-/*
-function theme_settings_language_selection_page_condition_info_alter(&$data) {
+function theme_settings_preprocess_language_selection_page_condition_info_alter(&$variables) {
   $splash_config = \Drupal::config('theme_settings.splash');
-  //$splash_config->get('site_name_en');
-  //$splash_config->get('site_name_fr');
-  //$splash_config->get('splash_bg');
+
+  $variables['site_name_en'] = $splash_config->get('site_name_en');
+  $variables['site_name_fr'] = $splash_config->get('site_name_fr');
 }
-// */
 
 
 /**
  * Implements hook_theme().
  */
+/*
 function theme_settings_theme($existing, $type, $theme, $path) {
   dpm([$existing, $type, $theme, $path]);
   ddm([$existing, $type, $theme, $path]);
@@ -314,3 +313,4 @@ function theme_settings_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+// */

@@ -280,8 +280,10 @@ function theme_settings_entity_presave(Drupal\Core\Entity\EntityInterface $entit
 /**
  * Implements template_preprocess_language_selection_page_content().
  **/
-function theme_settings_preprocess_language_selection_page_condition_info_alter(&$variables) {
+function theme_settings_preprocess_language_selection_page_content(&$variables) {
   $splash_config = \Drupal::config('theme_settings.splash');
+
+  dpm($variables);
 
   $variables['site_name_en'] = $splash_config->get('site_name_en');
   $variables['site_name_fr'] = $splash_config->get('site_name_fr');

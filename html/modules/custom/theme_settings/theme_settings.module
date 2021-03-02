@@ -281,7 +281,7 @@ function theme_settings_entity_presave(Drupal\Core\Entity\EntityInterface $entit
  * Implements hook_language_selection_page_condition_info_alter().
  **/
 function theme_settings_language_selection_page_condition_info_alter(&$data) {
-  $splash_config = $this->config('theme_settings.splash');
+  $splash_config = \Drupal::config('theme_settings.splash');
   /*
   $splash_config->get('site_name_en');
   $splash_config->get('site_name_fr');

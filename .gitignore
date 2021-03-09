@@ -5,10 +5,10 @@ scripts/drupal
 files_private/
 
 # Composer files
-composer.lock
 vendor
 */*/*/vendor
 */*/vendor
+static_osdp
 
 # Ignore Development Files
 compass_app_log.txt
@@ -22,6 +22,7 @@ compass_app_log.txt
 *.swp
 *.vi
 *.sass-cache
+ttt*
 
 # Node
 node_modules/
@@ -35,3 +36,18 @@ bower_components/
 *.sass-cache*
 **/sass/*.css
 /.gitattributes
+
+# Drupal
+html/*
+!html/modules/custom
+!html/modules/custom/*
+!html/themes/custom
+!html/themes/custom/*
+
+# Custom
+docker
+
+# WxT
+test-results
+files_private/
+

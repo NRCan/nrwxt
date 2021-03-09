@@ -1,3 +1,15 @@
 modules/contrib
 themes/contrib
 /autoload.php
+/.csslintrc
+/.eslintignore
+/.eslintrc.json
+/.ht.router.php
+/.htaccess
+/INSTALL.txt
+/README.txt
+/example.gitignore
+/index.php
+/robots.txt
+/update.php
+/web.config

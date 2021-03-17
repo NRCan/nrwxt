@@ -1,33 +1,24 @@
 .region-branding ul.nav > li > a {
   display: inline-block;
-  padding: 0;
-}
+  padding: 0; }
 
 .region-banner {
-  margin: 10px 0;
-}
+  margin: 10px 0; }
+
 .gcweb-menu {
-  margin-top: 4px;
-}
+  margin-top: 4px; }
 
 .well.bg-success,
 .panel-default > .panel-heading.bg-success {
-  background-color: #dff0d8;
-}
-
+  background-color: #dff0d8; }
 .well.bg-info,
 .panel-default > .panel-heading.bg-info {
-  background-color: #d9edf7;
-}
-
+  background-color: #d9edf7; }
 .well.bg-warning,
 .panel-default > .panel-heading.bg-warning {
-  background-color: #fcf8e3;
-}
-
+  background-color: #fcf8e3; }
 .well.bg-danger,
 .panel-default > .panel-heading.bg-danger {
-  background-color: #f2dede;
-}
+  background-color: #f2dede; }
 
 /*# sourceMappingURL=style.css.map */

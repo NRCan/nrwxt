@@ -17,20 +17,12 @@ a, button {
     display: none;
     @media (min-width: 768px) {
       display: block;
-      position: absolute;
-      top: -77px;
-      right: 0;
+      float: right;
+      margin-top: -87px;
       background: white;
       padding: 10px;
       width: 134px;
       height: 134px;
-      &:after {
-        content: " ";
-        display: block;
-        width: 134px;
-        height: 67px;
-        background: white;
-      }
     }
   }
   .float-icon-shield {
@@ -46,6 +38,10 @@ body .well {
   &.bg-info {
     //background-color: #bdd7ee;
   }
+}
+
+.well.bluebox {
+  background: #bdd7ee;
 }
 
 .disclaimer {

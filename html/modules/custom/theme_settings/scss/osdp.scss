@@ -5,8 +5,8 @@
 
 a, button {
   &.button-big-centered {
-    min-height: 68px;
-    display: table-cell;
+    min-height: 50px;
+    display: block;
     vertical-align: middle;
   }
 

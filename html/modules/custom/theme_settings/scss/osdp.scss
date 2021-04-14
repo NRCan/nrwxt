@@ -1,6 +1,9 @@
 
 .button-big-centered-wrapper {
   display: inline-table;
+  &.full-width {
+    width: 100%;
+  }
 }
 
 a, button {
@@ -9,7 +12,6 @@ a, button {
     display: table-cell;
     vertical-align: middle;
   }
-
 }
 
 .field--name-body {

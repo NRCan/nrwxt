@@ -1,9 +1,10 @@
 .button-big-centered-wrapper {
   display: inline-table; }
+  .button-big-centered-wrapper.full-width {
+    width: 100%; }
 
 a.button-big-centered, button.button-big-centered {
   min-height: 50px;
-  display: block;
   display: table-cell;
   vertical-align: middle; }
 

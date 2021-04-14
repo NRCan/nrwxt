@@ -21,7 +21,7 @@ theme-updates-wet5-library:
     - core/jquery
 match-height:
   js:
-    match_height/dist/jquery.matchHeight-min.js: {}
+    match_height/dist/jquery.matchHeight.js: {}
   dependencies:
     - core/jquery
 custom-bullets:

@@ -1,6 +1,11 @@
 h1 {
     border: none;
 }
+.well.bg-info,
+.panel-default > .panel-heading.bg-info {
+    background-color: #DEEBF7;
+}
+
 
 .button-big-centered-wrapper {
   display: inline-table;

@@ -1,5 +1,5 @@
 h1 {
-  border: none; }
+  border: none !important; }
 
 .well.bg-info,
 .panel-default > .panel-heading.bg-info {

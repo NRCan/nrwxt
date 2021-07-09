@@ -25,7 +25,8 @@
         "drupal/language_selection_page": "^2.7",
         "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "aws/aws-sdk-php": "~3.0",
-        "drupal/cloudfront_purger": "^1.2"
+        "drupal/cloudfront_purger": "^1.2",
+        "drupal/public_preview": "^1.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

@@ -175,7 +175,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -3085,17 +3085,17 @@
         },
         {
             "name": "drupal/ckeditor_details",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor_details.git",
-                "reference": "2.0.2"
+                "reference": "2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor_details-2.0.2.zip",
-                "reference": "2.0.2",
-                "shasum": "263bc276ad1d1b343028eeefa6919c18d0b434be"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_details-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "cc6ccf56dc8f72b45ca3571eb01a1d412a3d7f69"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -3103,8 +3103,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.2",
-                    "datestamp": "1598392574",
+                    "version": "2.0.3",
+                    "datestamp": "1626026034",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

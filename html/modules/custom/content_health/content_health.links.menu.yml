@@ -1,0 +1,5 @@
+content_health.form:
+  title: 'Content Health settings'
+  description: 'Configure settings for the Content Health module.'
+  route_name: content_health.form
+  parent: 'system.admin_config_development'

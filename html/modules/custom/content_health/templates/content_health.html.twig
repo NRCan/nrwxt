@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to print the Report a Problem button.
+ *
+ * Available variables:
+ *   - source_text
+ *
+ * @see template_preprocess_content_health()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="content_health">
+  {% for item in source_text %}
+    <p>{{ item }}</p>
+  {% endfor %}
+</div>

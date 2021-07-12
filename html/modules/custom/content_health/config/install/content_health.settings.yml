@@ -1,0 +1,4 @@
+content_health:
+  report_button_text: "Report a problem or mistake on this page"
+  report_button_title: "Report a problem";
+  report_button_target_url: "https://www.nrcan.gc.ca/report-problem";

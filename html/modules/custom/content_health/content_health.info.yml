@@ -1,0 +1,8 @@
+name: NRCan Page Feedback
+type: module
+description: 'Generates the feedback form (and eventually other Content Health features)'
+package: NRCan
+core: 9.x
+configure: content_health.form
+dependencies:
+  - block

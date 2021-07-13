@@ -8,11 +8,11 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 
 /**
- * Provides a Report a problem block with which you can generate dummy text anywhere.
+ * Provides a Report a problem block
  *
  * @Block(
- *   id = "content_health_block",
- *   admin_label = @Translation("Report a problem block"),
+ *   id = "content_health_report_block",
+ *   admin_label = @Translation("NRCan Report a problem block"),
  * )
  */
 class ContentHealthReportBlock extends BlockBase {
@@ -21,24 +21,23 @@ class ContentHealthReportBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    // Return the form @ Form/ContentHealthReportBlockForm.php.
-    return \Drupal::formBuilder()->getForm('Drupal\content_health\Form\ContentHealthReportBlockForm');
+    return [
+      '#markup' => $this->t('REPORT A PROBLEM BLOCK'),
+    ];
+
   }
 
   /**
    * {@inheritdoc}
    */
   protected function blockAccess(AccountInterface $account) {
-    return AccessResult::allowedIfHasPermission($account, 'content health admin');
+    return AccessResult::allowedIfHasPermission($account, 'access content');
   }
 
   /**
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-
-    $form = parent::blockForm($form, $form_state);
-
     $config = $this->getConfiguration();
 
     return $form;

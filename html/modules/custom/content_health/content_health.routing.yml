@@ -1,10 +1,3 @@
-content_health.generate:
-  path: '/content_health/generate/{paragraphs}/{phrases}'
-  defaults:
-    _controller: '\Drupal\content_health\Controller\ContentHealthReportController::generate'
-  requirements:
-    _permission: 'content health admin'
-
 content_health.report_form:
   path: '/admin/config/development/content_health/report_problem'
   defaults:

@@ -8,7 +8,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 
 /**
- * Provides a Report a problem block
+ * Provides a Report a problem block.
+ *
+ * https://www.webwash.net/programmatically-create-block-drupal-8/
  *
  * @Block(
  *   id = "content_health_report_block",

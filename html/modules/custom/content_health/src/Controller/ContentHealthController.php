@@ -6,7 +6,7 @@ use Drupal\Component\Utility\Html;
 /**
  * Controller routines for Lorem ipsum pages.
  */
-class ContentHealthController {
+class ContentHealthReportController {
   /**
    * Constructs Lorem ipsum text with arguments.
    *

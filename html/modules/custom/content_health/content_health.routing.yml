@@ -1,12 +1,12 @@
 content_health.generate:
   path: '/content_health/generate/{paragraphs}/{phrases}'
   defaults:
-    _controller: '\Drupal\content_health\Controller\content_healthController::generate'
+    _controller: '\Drupal\content_health\Controller\ContentHealthReportController::generate'
   requirements:
     _permission: 'generate lorem ipsum'
 
 content_health.report_form:
-  path: '/admin/config/development/content_health'
+  path: '/admin/config/development/content_health/report_problem'
   defaults:
     _form: '\Drupal\content_health\Form\ContentHealthReportConfigForm'
     _title: 'Lorem ipsum settings'

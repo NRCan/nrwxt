@@ -1,5 +1,5 @@
-content_health.form:
+content_health.report_form:
   title: 'Content Health settings'
   description: 'Configure settings for the Content Health module.'
-  route_name: content_health.form
+  route_name: content_health.report_form
   parent: 'system.admin_config_development'

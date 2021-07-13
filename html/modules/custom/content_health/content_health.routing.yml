@@ -5,7 +5,7 @@ content_health.generate:
   requirements:
     _permission: 'generate lorem ipsum'
 
-content_health.form:
+content_health.report_form:
   path: '/admin/config/development/content_health'
   defaults:
     _form: '\Drupal\content_health\Form\ContentHealthReportConfigForm'

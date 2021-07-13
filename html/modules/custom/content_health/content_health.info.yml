@@ -3,6 +3,6 @@ type: module
 description: 'Generates the feedback form (and eventually other Content Health features)'
 package: NRCan
 core_version_requirement: ^8 || ^9
-configure: content_health.form
+configure: content_health.report_form
 dependencies:
   - block

@@ -9,7 +9,7 @@ use Drupal\Core\Url;
 /**
  * Report a problem block form
  */
-class ContentHealthReportForm extends FormBase {
+class ContentHealthReportBlockForm extends FormBase {
 
   /**
    * {@inheritdoc}

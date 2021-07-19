@@ -101,9 +101,21 @@ class ContentHealthReportBlock extends BlockBase {
 HTML;
 
     return [
-      '#type' => 'inline_template',
-      '#template' => $template,
-      '#context' => $data
+      // '#type' => 'inline_template',
+      // '#template' => $template,
+      '#theme' => 'feedback_form',
+      '#context' => $data,
+      '#report_button_text' => $data['report_button_text'],
+      '#timestamp' => $data['timestamp'],
+      '#report_button_target_url' => $data['report_button_target_url'],
+      '#title' => $data['title'],
+      '#current_url' => $data['current_url'],
+      '#nid' => $data['nid'],
+      '#lang' => $data['lang'],
+      '#report_button_title' => $data['report_button_title'],
+      '#website' => $data['website'],
+      '#row_html' => $data['row_html'],
+      '#thanks' => $data['thanks'],
     ];
 
 

@@ -37,10 +37,7 @@ class ContentHealthReportBlock extends BlockBase {
       $nid = $node->id();
     }
     $request = \Drupal::request();
-    $title = FALSE;
-    if ($route = $request->attributes->get(RouteObjectInterface::ROUTE_OBJECT)) {
-      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
-    }
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
     $lang = \Drupal::languageManager()->getCurrentLanguage()->getName();
     $date = new DrupalDateTime('now');
     $timestamp = $date->format('Y-m-d H:i:s');
@@ -185,7 +182,7 @@ HTML;
    */
   protected function getReportThanks() {
     $thankyoutext = t('Thank you for your help!');
-    $contacttext = content_health_get_report_contact(FALSE);
+    $contacttext = $this->getReportContact();
     return "                <h3>{$thankyoutext}</h3>
                     <p>{$contacttext}</p>\n";
   }

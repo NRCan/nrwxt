@@ -45,7 +45,7 @@ class ContentHealthReportBlock extends BlockBase {
     if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
       $data['title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
     }
-    $data['language'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+    $data['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $data['timestamp'] = new DrupalDateTime('now');
 
     $rows = $this->getFormRows();

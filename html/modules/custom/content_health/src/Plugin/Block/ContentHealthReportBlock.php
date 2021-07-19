@@ -27,46 +27,31 @@ class ContentHealthReportBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $output = '';
+    $data = [];
+    $data['current_url'] = Url::fromRoute('<current>', [], ['absolute' => 'true'])->toString();
 
-    $current_url = Url::fromRoute('<current>', [], ['absolute' => 'true'])->toString();
+    $config = $this->config('content_health.settings');
+    $data['report_button_title'] = $config->get('content_health.report_button_title');
+    $data['report_button_text'] = $config->get('content_health.report_button_text');
+    $data['report_button_target_url'] = $config->get('content_health.report_button_target_url');
 
-    $nid = FALSE;
+    $data['nid'] = FALSE;
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface) {
-      $nid = $node->id();
+      $data['nid'] = $node->id();
     }
-    $title = FALSE;
+    $data['title'] = FALSE;
     $request = \Drupal::request();
     if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
-      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+      $data['title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
     }
-    $lang = \Drupal::languageManager()->getCurrentLanguage()->getName();
-    $date = new DrupalDateTime('now');
-    $timestamp = $date->format('Y-m-d H:i:s');
-
-    $reportproblem = t('Report a problem on this page');
-    $pleaseselect = t('Please select all that apply:');
-    $submitbtn = t('Submit');
-
-    $metadata = [];
-    if ($title) {
-      $metadata[] = '<input type="hidden" name="pageTitle" value="'.$title.'">';
-    }
-    $metadata[] = '<input type="hidden" name="submissionPage" value="' . $current_url . '">';
-    $metadata[] = '<input type="hidden" name="currentPage" value="' . $current_url . '">';
-    $metadata[] = '<input type="hidden" name="submissionWebsite" value="' . $_SERVER['HTTP_HOST'] . '">';
-    //$metadata[] = '<!-- Current URL ' . $current_url . '-->';
-    //$metadata[] = '<!-- HTTP_HOST ' . $_SERVER['HTTP_HOST'] . '-->';
-    //$metadata[] = '<!-- NID ' . $nid . '-->';
-    $metadata[] = '<input type="hidden" name="nid" value="' . $nid . '">';
-    $metadata[] = '<input type="hidden" name="lang" value="' . $lang . '">';
-    $metadata_html = implode("\n", $metadata);
+    $data['language'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+    $data['timestamp'] = new DrupalDateTime('now');
 
     $rows = $this->getFormRows();
-    $row_html = '';
+    $data['row_html'] = '';
     foreach ($rows as &$row) {
-      $row_html .= "
+      $data['row_html'] .= "
         <div class=\"checkbox\">
           <label for=\"{$row['id']}\"><input name=\"{$row['name']}\" id=\"{$row['id']}\" type=\"checkbox\" value=\"Yes\">
           {$row['text']}
@@ -75,50 +60,55 @@ class ContentHealthReportBlock extends BlockBase {
         <!-- -->";
     }
 
+    $data['website'] = $_SERVER['HTTP_HOST'];
+    $data['thanks'] = $this->getReportThanks();
 
-    $thanks = $this->getReportThanks();
-    if (FALSE) {
-      $comment_label = t('Comment');
-      $comment_placeholder = t('You may include a short comment with your submission.');
-      $comment_personal = t('Please don’t include any personal information in your comment.');
-      $contacttext = $this->getReportContact();
-      $row_html .= '
-<div>
-  <label id="feedback-label" for="comment">'.$comment_label.'</label>
-  <textarea id="comment" name="comment" class="form-control form-textarea" placeholder="'.$comment_placeholder.'" cols="50" rows="4" maxlength="500" pattern=".{2,500}"></textarea>
-  <span class="text-muted small">'.$comment_personal.$contacttext.'</span>
-</div>
-';
-    }
-    $output =<<<HTML
-          <div>
-            <div class="gc-rprt-prblm">
-              <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
-                <form id="gc-rprt-prblm-form" action="{$formtarget}" method="POST">
-                  {$metadata_html}
-                  <input name="subject" type="hidden" value="{$reportproblem}">
-                  <fieldset>
-                    <legend><span class="field-name">{$pleaseselect}</span></legend>
-                    {$row_html}
-                  </fieldset>
-                  <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>{$submitbtn}</button>
-                </form>
-              </div>
-              <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
-                {$thanks}
-              </div>
+    $template =<<<HTML
+        <div id="feedback-button" class="pagedetails container hidden-print">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-4">
+              <details class="brdr-0">
+                <summary class="btn btn-default text-center">{{ report_button_text|t }}</summary>
+                <div class="clearfix"></div>
+                <div class="well row">
+                  <!-- {{ timestamp|date("Y-m-d H:i:s") }} -->
+                  <div>
+                    <div class="gc-rprt-prblm">
+                      <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+                        <form id="gc-rprt-prblm-form" action="{{ report_button_target_url|t }}" method="POST">
+                        {% if title %}
+                        <input type="hidden" name="pageTitle" value="{{ title }}">
+                        {% if field_image %}
+                        <input type="hidden" name="submissionPage" value="{{ current_url }}">
+                        <input type="hidden" name="currentPage" value="{{ current_url }}">
+                        <input type="hidden" name="submissionWebsite" value="{{ website }}">
+                        <input type="hidden" name="nid" value="{{ nid }}">
+                        <input type="hidden" name="lang" value="{{ lang }}">
+                          <input name="subject" type="hidden" value="{{ report_button_title|t }}">
+                          <fieldset>
+                            <legend><span class="field-name">{{ 'Please select all that apply:'|t }}</span></legend>
+                            {{ row_html|raw }}
+                          </fieldset>
+                          <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>{{ 'Submit'|t }}</button>
+                        </form>
+                      </div>
+                      <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+                        {{ thanks }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
+            {$share_link}
           </div>
+        </div>
 HTML;
 
     return [
-      //'#type' => 'markup',
-      //'#markup' => $output,
       '#type' => 'inline_template',
-      '#template' => '{{ somecontent }}',
-      '#context' => [
-        'somecontent' => $output
-      ],
+      '#template' => $template,
+      '#context' => $data
     ];
 
 
@@ -195,7 +185,7 @@ HTML;
     $thankyoutext = t('Thank you for your help!');
     $contacttext = $this->getReportContact();
     return "                <h3>{$thankyoutext}</h3>
-                    <p>{$contacttext}</p>\n";
+                    {$contacttext}\n";
   }
 
   /**

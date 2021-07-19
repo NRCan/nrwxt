@@ -110,10 +110,18 @@ class ContentHealthReportBlock extends BlockBase {
             </div>
           </div>
 HTML;
+
     return [
-      '#type' => 'markup',
-      '#markup' => $output,
+      //'#type' => 'markup',
+      //'#markup' => $output,
+      '#type' => 'inline_template',
+      '#template' => '{{ somecontent }}',
+      '#context' => [
+        'somecontent' => $output
+      ],
     ];
+
+
 
   }
 

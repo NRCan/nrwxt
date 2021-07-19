@@ -36,8 +36,11 @@ class ContentHealthReportBlock extends BlockBase {
     if ($node instanceof NodeInterface) {
       $nid = $node->id();
     }
+    $title = FALSE;
     $request = \Drupal::request();
-    $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+      $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+    }
     $lang = \Drupal::languageManager()->getCurrentLanguage()->getName();
     $date = new DrupalDateTime('now');
     $timestamp = $date->format('Y-m-d H:i:s');

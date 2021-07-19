@@ -24,6 +24,7 @@ class ContentHealthReportBlock extends BlockBase {
    */
   public function build() {
     return [
+      '#type' => 'markup',
       '#markup' => $this->t('REPORT A PROBLEM BLOCK'),
     ];
 
@@ -50,6 +51,12 @@ class ContentHealthReportBlock extends BlockBase {
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
     $this->setConfigurationValue('content_health_report_block_settings', $form_state->getValue('content_health_report_block_settings'));
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockValidate($form, FormStateInterface $form_state) {
   }
 
 }

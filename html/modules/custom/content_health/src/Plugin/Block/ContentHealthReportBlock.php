@@ -168,10 +168,10 @@ HTML;
    * Return the contact link and text.
    */
   protected function getReportContact() {
-    $lang = $GLOBALS['language']->language;
+    $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $contact_url = array(
-      'en' => variable_get('system_contact_en', 'https://contact-contactez.nrcan-rncan.gc.ca/index.cfm?lang=eng'),
-      'fr' => variable_get('system_contact_fr', 'https://contact-contactez.nrcan-rncan.gc.ca/index.cfm?lang=fra'),
+      'en' => 'https://contact-contactez.nrcan-rncan.gc.ca/index.cfm?lang=eng',
+      'fr' => 'https://contact-contactez.nrcan-rncan.gc.ca/index.cfm?lang=fra',
     );
     $contacttext= t('You will not receive a reply. For enquiries,&nbsp;<a href="@url">contact us</a>.', array('@url' => $contact_url[$lang]));
     return "                <p>{$contacttext}</p>";

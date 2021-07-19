@@ -33,7 +33,7 @@ function content_health_theme($existing, $type, $theme, $path) {
         'title' => NULL,
         'current_url' => NULL,
         'nid' => NULL,
-        'lang' => NULL,
+        'language' => NULL,
         'report_button_title' => NULL,
         'website' => NULL,
         'row_html' => NULL,

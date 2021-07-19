@@ -74,7 +74,7 @@ class ContentHealthReportBlock extends BlockBase {
       '#title' => $data['title'],
       '#current_url' => $data['current_url'],
       '#nid' => $data['nid'],
-      '#lang' => $data['lang'],
+      '#language' => $data['language'],
       '#report_button_title' => $data['report_button_title'],
       '#website' => $data['website'],
       '#row_html' => $data['row_html'],

@@ -16,8 +16,8 @@
               <input type="hidden" name="currentPage" value="{{ current_url }}">
               <input type="hidden" name="submissionWebsite" value="{{ website }}">
               <input type="hidden" name="nid" value="{{ nid }}">
-              <input type="hidden" name="lang" value="{{ lang }}">
-              <input name="subject" type="hidden" value="{{ report_button_title|t }}">
+              <input type="hidden" name="lang" value="{{ language }}">
+              <input type="hidden" name="subject" value="{{ report_button_title|t }}">
               <fieldset>
                 <legend><span class="field-name">{{ 'Please select all that apply:'|t }}</span></legend>
                 {{ row_html|raw }}

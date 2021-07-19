@@ -150,6 +150,10 @@ msgstr "Signaler un problème ou une erreur sur cette page"
 msgid "Report a problem on this page"
 msgstr "Signaler un problème sur cette page"
 
+#: Plain Title
+msgid "Report a problem"
+msgstr "Signaler un problème"
+
 #: content_health.report.inc:36
 msgid "Please select all that apply:"
 msgstr "Veuillez sélectionner toutes les cases qui s'appliquent :"

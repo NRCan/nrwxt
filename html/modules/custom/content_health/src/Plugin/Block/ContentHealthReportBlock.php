@@ -30,7 +30,7 @@ class ContentHealthReportBlock extends BlockBase {
     $data = [];
     $data['current_url'] = Url::fromRoute('<current>', [], ['absolute' => 'true'])->toString();
 
-    $config = $this->config('content_health.settings');
+    $config = \Drupal::config('content_health.settings');
     $data['report_button_title'] = $config->get('content_health.report_button_title');
     $data['report_button_text'] = $config->get('content_health.report_button_text');
     $data['report_button_target_url'] = $config->get('content_health.report_button_target_url');
@@ -64,44 +64,39 @@ class ContentHealthReportBlock extends BlockBase {
     $data['thanks'] = $this->getReportThanks();
 
     $template =<<<HTML
-        <div id="feedback-button" class="pagedetails container hidden-print">
-          <div class="row">
-            <div class="col-sm-6 col-md-5 col-lg-4">
-              <details class="brdr-0">
-                <summary class="btn btn-default text-center">{{ report_button_text|t }}</summary>
-                <div class="clearfix"></div>
-                <div class="well row">
-                  <!-- {{ timestamp|date("Y-m-d H:i:s") }} -->
-                  <div>
-                    <div class="gc-rprt-prblm">
-                      <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
-                        <form id="gc-rprt-prblm-form" action="{{ report_button_target_url|t }}" method="POST">
-                        {% if title %}
-                        <input type="hidden" name="pageTitle" value="{{ title }}">
-                        {% if field_image %}
-                        <input type="hidden" name="submissionPage" value="{{ current_url }}">
-                        <input type="hidden" name="currentPage" value="{{ current_url }}">
-                        <input type="hidden" name="submissionWebsite" value="{{ website }}">
-                        <input type="hidden" name="nid" value="{{ nid }}">
-                        <input type="hidden" name="lang" value="{{ lang }}">
-                          <input name="subject" type="hidden" value="{{ report_button_title|t }}">
-                          <fieldset>
-                            <legend><span class="field-name">{{ 'Please select all that apply:'|t }}</span></legend>
-                            {{ row_html|raw }}
-                          </fieldset>
-                          <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>{{ 'Submit'|t }}</button>
-                        </form>
-                      </div>
-                      <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
-                        {{ thanks }}
-                      </div>
+        <div id="feedback-button" class="hidden-print">
+            <details class="brdr-0">
+              <summary class="btn btn-default text-center">{{ report_button_text|t }}</summary>
+              <div class="clearfix"></div>
+              <div class="well row">
+                <!-- {{ timestamp|date("Y-m-d H:i:s") }} -->
+                <div>
+                  <div class="gc-rprt-prblm">
+                    <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+                      <form id="gc-rprt-prblm-form" action="{{ report_button_target_url|t }}" method="POST">
+                      {% if title %}
+                      <input type="hidden" name="pageTitle" value="{{ title }}">
+                      {% if field_image %}
+                      <input type="hidden" name="submissionPage" value="{{ current_url }}">
+                      <input type="hidden" name="currentPage" value="{{ current_url }}">
+                      <input type="hidden" name="submissionWebsite" value="{{ website }}">
+                      <input type="hidden" name="nid" value="{{ nid }}">
+                      <input type="hidden" name="lang" value="{{ lang }}">
+                        <input name="subject" type="hidden" value="{{ report_button_title|t }}">
+                        <fieldset>
+                          <legend><span class="field-name">{{ 'Please select all that apply:'|t }}</span></legend>
+                          {{ row_html|raw }}
+                        </fieldset>
+                        <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>{{ 'Submit'|t }}</button>
+                      </form>
+                    </div>
+                    <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+                      {{ thanks }}
                     </div>
                   </div>
                 </div>
-              </details>
-            </div>
-            {$share_link}
-          </div>
+              </div>
+            </details>
         </div>
 HTML;
 

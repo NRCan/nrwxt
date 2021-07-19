@@ -25,11 +25,20 @@ function content_health_help($route_name, RouteMatchInterface $route_match) {
  */
 function content_health_theme($existing, $type, $theme, $path) {
   $variables = [
-    'content_health' => [
+    'feedback_form' => [
       'variables' => [
-        'source_text' => NULL,
+        'report_button_text' => NULL,
+        'timestamp' => NULL,
+        'report_button_target_url' => NULL,
+        'title' => NULL,
+        'current_url' => NULL,
+        'nid' => NULL,
+        'lang' => NULL,
+        'report_button_title' => NULL,
+        'website' => NULL,
+        'row_html' => NULL,
+        'thanks' => NULL,
       ],
-      'template' => 'content_health',
     ],
   ];
   return $variables;

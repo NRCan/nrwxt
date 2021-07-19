@@ -73,10 +73,10 @@ class ContentHealthReportBlock extends BlockBase {
                 <div>
                   <div class="gc-rprt-prblm">
                     <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
-                      <form id="gc-rprt-prblm-form" action="{{ report_button_target_url|t }}" method="POST">
+                      <form id="gc-rprt-prblm-form" action="{{ report_button_target_url }}" method="POST">
                       {% if title %}
                       <input type="hidden" name="pageTitle" value="{{ title }}">
-                      {% if field_image %}
+                      {% endif %}
                       <input type="hidden" name="submissionPage" value="{{ current_url }}">
                       <input type="hidden" name="currentPage" value="{{ current_url }}">
                       <input type="hidden" name="submissionWebsite" value="{{ website }}">

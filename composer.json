@@ -9,6 +9,7 @@
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
         "drupalwxt/wxt": "4.1.x-dev",
+        "nrwxt/migrations": "*",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
@@ -51,6 +52,19 @@
         {
             "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nrwxt/migrations",
+                "version": "0.0.1",
+                "type": "drupal-custom-module",
+                "source": {
+                    "url": "https://github.com/NRCan/drupal-9-migrations.git",
+                    "type": "git",
+                    "reference": "development"
+                },
+            }
         }
     ],
     "scripts": {
@@ -83,6 +97,9 @@
             ],
             "html/modules/contrib/{$name}": [
                 "type:drupal-module"
+            ],
+            "html/modules/custom/{$name}": [
+                "type:drupal-custom-module"
             ],
             "html/profiles/{$name}": [
                 "type:drupal-profile"

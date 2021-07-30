@@ -27,7 +27,9 @@
         "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "aws/aws-sdk-php": "~3.0",
         "drupal/cloudfront_purger": "^1.2",
-        "drupal/public_preview": "^1.0@beta"
+        "drupal/public_preview": "^1.0@beta",
+        "drupal/field_group": "^3.1",
+        "drupal/shs": "2.0.x-dev@dev"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -57,13 +59,13 @@
             "type": "package",
             "package": {
                 "name": "nrwxt/migrations",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "type": "drupal-custom-module",
                 "source": {
                     "url": "https://github.com/NRCan/drupal-9-migrations.git",
                     "type": "git",
                     "reference": "development"
-                },
+                }
             }
         }
     ],

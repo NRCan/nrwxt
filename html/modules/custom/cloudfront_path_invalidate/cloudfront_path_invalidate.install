@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * CloudFRont Path invalidate install file.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function cloudfront_path_invalidate_uninstall() {
+  \Drupal::configFactory()->getEditable('cloudfront_path_invalidate.settings')->delete();
+}

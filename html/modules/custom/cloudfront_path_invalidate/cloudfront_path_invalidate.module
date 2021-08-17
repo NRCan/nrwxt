@@ -1,0 +1,133 @@
+<?php
+
+/**
+ * @file
+ * CloudFront Path invalidate D8 hooks file.
+ */
+
+use Drupal\cloudfront_path_invalidate\Form\CloudfrontPathInvalidateInvalidationPage;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_path_update().
+ */
+function cloudfront_path_invalidate_path_insert($path) {
+  $cl = new CloudfrontPathInvalidateInvalidationPage();
+  $paths = [
+    $path['alias'],
+    $path['source'],
+  ];
+  if (\Drupal::moduleHandler()->moduleExists('language')) {
+    $lan_enab = array_keys(\Drupal::languageManager()->getLanguages());
+    $temp_paths = $paths;
+    for ($i = 0; $i < count($lan_enab); $i++) {
+      foreach ($temp_paths as $path) {
+        array_push($paths, '/' . $lan_enab[$i] . $path);
+      }
+    }
+  }
+  $cl->cloudfrontPathInvalidateInvalidateOnCloudfront($paths);
+}
+
+/**
+ * Implements hook_path_delete().
+ */
+function cloudfront_path_invalidate_path_delete($path) {
+  $cl = new CloudfrontPathInvalidateInvalidationPage();
+  $paths = [
+    $path['alias'],
+    $path['source'],
+  ];
+  if (\Drupal::moduleHandler()->moduleExists('language')) {
+    $lan_enab = array_keys(\Drupal::languageManager()->getLanguages());
+    $temp_paths = $paths;
+    for ($i = 0; $i < count($lan_enab); $i++) {
+      foreach ($temp_paths as $path) {
+        array_push($paths, '/' . $lan_enab[$i] . $path);
+      }
+    }
+  }
+  $cl->cloudfrontPathInvalidateInvalidateOnCloudfront($paths);
+}
+
+/**
+ * Implements hook_path_update().
+ */
+function cloudfront_path_invalidate_path_update($path) {
+  $cl = new CloudfrontPathInvalidateInvalidationPage();
+  $paths = [
+    $path['alias'],
+    $path['source'],
+  ];
+  if (\Drupal::moduleHandler()->moduleExists('language')) {
+    $lan_enab = array_keys(\Drupal::languageManager()->getLanguages());
+    $temp_paths = $paths;
+    for ($i = 0; $i < count($lan_enab); $i++) {
+      foreach ($temp_paths as $path) {
+        array_push($paths, '/' . $lan_enab[$i] . $path);
+      }
+    }
+  }
+  $cl->cloudfrontPathInvalidateInvalidateOnCloudfront($paths);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function cloudfront_path_invalidate_entity_update(EntityInterface $entity) {
+  $cl = new CloudfrontPathInvalidateInvalidationPage();
+  $paths = [
+    '/node/' . $entity->id(),
+    \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $entity->id()),
+  ];
+  if (\Drupal::moduleHandler()->moduleExists('language')) {
+    $lan_enab = array_keys(\Drupal::languageManager()->getLanguages());
+    $temp_paths = $paths;
+    for ($i = 0; $i < count($lan_enab); $i++) {
+      foreach ($temp_paths as $path) {
+        array_push($paths, '/' . $lan_enab[$i] . $path);
+      }
+    }
+  }
+  $cl->cloudfrontPathInvalidateInvalidateOnCloudfront($paths);
+}
+
+/**
+ * Implements hook_help().
+ */
+function cloudfront_path_invalidate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cloudfront_path_invalidate':
+
+      $filepath = dirname(__FILE__) . '/README.md';
+      if (file_exists($filepath)) {
+        $readme = file_get_contents($filepath);
+      }
+      else {
+        $filepath = dirname(__FILE__) . '/README.txt';
+        if (file_exists($filepath)) {
+          $readme = file_get_contents($filepath);
+        }
+      }
+      if (!isset($readme)) {
+        return NULL;
+      }
+      if (\Drupal::moduleHandler()->moduleExists('markdown')) {
+        $filters = module_invoke('markdown', 'filter_info');
+        $info = $filters['filter_markdown'];
+
+        if (function_exists($info['process callback'])) {
+          $output = $info['process callback']($readme, NULL);
+        }
+        else {
+          $output = '<pre>' . $readme . '</pre>';
+        }
+      }
+      else {
+        $output = '<pre>' . $readme . '</pre>';
+      }
+
+      return $output;
+  }
+}

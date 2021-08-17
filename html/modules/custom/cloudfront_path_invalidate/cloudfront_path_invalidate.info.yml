@@ -1,0 +1,10 @@
+name: 'CloudFront Path Invalidate (NRCan)'
+description: 'Contains hooks for invalidation of paths on AWS cloudfront CDN'
+package: NRCan
+dependencies:
+  path: 'drupal:path'
+  token: 'token:token'
+  pathauto: 'pathauto:pathauto'
+core_version_requirement: ^8 || ^9
+type: module
+configure: cloudfront_path_invalidate.settings

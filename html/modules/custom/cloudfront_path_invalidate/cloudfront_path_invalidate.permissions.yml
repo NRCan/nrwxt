@@ -1,0 +1,3 @@
+'administer cloudfront_path_invalidate':
+  title: 'CloudFront Path Invalidate'
+  description: "Contains hooks for invalidation of paths on AWS cloudfront"

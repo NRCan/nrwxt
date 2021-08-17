@@ -2,7 +2,7 @@
     "name": "nrcan/nrwxt",
     "description": "NRCan deployment template based on the WxT Deployment of Drupal",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -26,7 +26,9 @@
         "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "aws/aws-sdk-php": "~3.0",
         "drupal/cloudfront_purger": "^1.2",
-        "drupal/public_preview": "^1.0@beta"
+        "drupal/public_preview": "^1.0@beta",
+        "drupal/field_group": "^3.2",
+        "drupal/shs": "2.0.x-dev@dev"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

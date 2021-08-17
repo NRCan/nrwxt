@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "9e131ac3f5f029ccb1fec1709b7d3791",
+=======
+    "content-hash": "8414ec10cabd3e9d82b36e2258a7061d",
+>>>>>>> master
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,6 +68,7 @@
         },
         {
             "name": "aws/aws-sdk-php",
+<<<<<<< HEAD
             "version": "3.189.0",
             "source": {
                 "type": "git",
@@ -74,6 +79,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f1f9e6cc3f5df8ef53a46d590985ca1b8dabb0f8",
                 "reference": "f1f9e6cc3f5df8ef53a46d590985ca1b8dabb0f8",
+=======
+            "version": "3.190.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "4e641e25cc8f4d04002404afe050e25035fad0f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e641e25cc8f4d04002404afe050e25035fad0f3",
+                "reference": "4e641e25cc8f4d04002404afe050e25035fad0f3",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -148,9 +165,15 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/aws/aws-sdk-php/tree/3.189.0"
             },
             "time": "2021-08-10T18:17:34+00:00"
+=======
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.3"
+            },
+            "time": "2021-08-16T18:13:42+00:00"
+>>>>>>> master
         },
         {
             "name": "bower-asset/cropper",
@@ -3128,69 +3151,6 @@
             }
         },
         {
-            "name": "drupal/cloudfront_purger",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/cloudfront_purger.git",
-                "reference": "8.x-1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/cloudfront_purger-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "cdc31a14fe189c590ecc76149a72b664e7e71c92"
-            },
-            "require": {
-                "aws/aws-sdk-php": "~3.0",
-                "drupal/core": "^8.7.7 || ^9",
-                "drupal/purge": "^3.0@beta",
-                "drupal/purge_queuer_url": "^1.0@RC"
-            },
-            "require-dev": {
-                "drupal/coder": "~8.0",
-                "squizlabs/php_codesniffer": "~2.7"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1587084496",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "dpi",
-                    "homepage": "https://www.drupal.org/user/81431"
-                },
-                {
-                    "name": "jibran",
-                    "homepage": "https://www.drupal.org/user/1198144"
-                },
-                {
-                    "name": "kim.pepper",
-                    "homepage": "https://www.drupal.org/user/370574"
-                }
-            ],
-            "description": "Provides a Purger for use with AWS CloudFront",
-            "homepage": "https://www.drupal.org/project/cloudfront_purger",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://github.com/previousnext/cloudfront_purger",
-                "issues": "http://drupal.org/project/issues/cloudfront_purger"
-            }
-        },
-        {
             "name": "drupal/config_rewrite",
             "version": "1.4.0",
             "source": {
@@ -3420,6 +3380,7 @@
         },
         {
             "name": "drupal/core",
+<<<<<<< HEAD
             "version": "9.1.11",
             "source": {
                 "type": "git",
@@ -3430,6 +3391,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core/zipball/34249d59f0846760ecf361ae3ae2b29eaf758f19",
                 "reference": "34249d59f0846760ecf361ae3ae2b29eaf758f19",
+=======
+            "version": "9.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal/core.git",
+                "reference": "adf13d6d0e95f5eeaed9afc4e3d2bade2f4946cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal/core/zipball/adf13d6d0e95f5eeaed9afc4e3d2bade2f4946cc",
+                "reference": "adf13d6d0e95f5eeaed9afc4e3d2bade2f4946cc",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -3666,6 +3639,7 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/drupal/core/tree/9.1.11"
             },
             "time": "2021-07-20T21:42:58+00:00"
@@ -3673,6 +3647,15 @@
         {
             "name": "drupal/core-composer-scaffold",
             "version": "9.2.3",
+=======
+                "source": "https://github.com/drupal/core/tree/9.1.12"
+            },
+            "time": "2021-08-12T17:48:24+00:00"
+        },
+        {
+            "name": "drupal/core-composer-scaffold",
+            "version": "9.2.4",
+>>>>>>> master
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3716,7 +3699,11 @@
                 "drupal"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.3"
+=======
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.4"
+>>>>>>> master
             },
             "time": "2021-07-10T22:39:33+00:00"
         },
@@ -8429,116 +8416,6 @@
             }
         },
         {
-            "name": "drupal/purge",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/purge.git",
-                "reference": "8.x-3.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
-                "reference": "8.x-3.0",
-                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
-            },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9",
-                "php": ">=7.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.0",
-                    "datestamp": "1590744318",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-8.x-3.x": "3.x-dev"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Niels van Mourik",
-                    "homepage": "http://www.nielsvm.org"
-                },
-                {
-                    "name": "djbobbydrake",
-                    "homepage": "https://www.drupal.org/user/336378"
-                },
-                {
-                    "name": "nielsvm",
-                    "homepage": "https://www.drupal.org/user/163285"
-                }
-            ],
-            "description": "Provides a generic external cache invalidation API and queue service.",
-            "homepage": "https://www.drupal.org/project/purge",
-            "support": {
-                "source": "https://git.drupalcode.org/project/purge"
-            }
-        },
-        {
-            "name": "drupal/purge_queuer_url",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/purge_queuer_url.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/purge_queuer_url-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "f0008bf6477f4ed119a709d114673396e16e7336"
-            },
-            "require": {
-                "drupal/core": "^8.8.6 || ^9",
-                "drupal/purge": "^3.0.0",
-                "php": ">=7.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1590746554",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-8.x-1.x": "1.x-dev"
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Niels van Mourik",
-                    "homepage": "http://www.nielsvm.org"
-                }
-            ],
-            "description": "Queues URLs or paths to your Purge queue utilizing a traffic database.",
-            "homepage": "https://www.drupal.org/project/purge_queuer_url",
-            "support": {
-                "source": "https://git.drupalcode.org/project/purge_queuer_url"
-            }
-        },
-        {
             "name": "drupal/recaptcha",
             "version": "3.0.0",
             "source": {
@@ -9769,66 +9646,6 @@
             }
         },
         {
-            "name": "drupal/varnish_purge",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/varnish_purge.git",
-                "reference": "8.x-2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "695eb7d81816e013e81d36207cfac162dd3cbe9f"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "require-dev": {
-                "drupal/purge": "*",
-                "drupal/purge_tokens": "*",
-                "drupal/varnish_purger-varnish_purger": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1615977068",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "MiSc",
-                    "homepage": "https://www.drupal.org/user/382892"
-                },
-                {
-                    "name": "deadbeef",
-                    "homepage": "https://www.drupal.org/user/93644"
-                },
-                {
-                    "name": "javivf",
-                    "homepage": "https://www.drupal.org/user/2789335"
-                },
-                {
-                    "name": "littlethoughts",
-                    "homepage": "https://www.drupal.org/user/2479724"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/varnish_purge",
-            "support": {
-                "source": "https://git.drupalcode.org/project/varnish_purge"
-            }
-        },
-        {
             "name": "drupal/video_embed_field",
             "version": "2.4.0",
             "source": {
@@ -10289,7 +10106,11 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_bootstrap.git",
+<<<<<<< HEAD
                 "reference": "c3c63c67f568f86df962d2e0c1a8fd37c809e758"
+=======
+                "reference": "646d979770bd14577ad894c0eb3dffaefedfbe56"
+>>>>>>> master
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.0",
@@ -10303,8 +10124,13 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
+<<<<<<< HEAD
                     "version": "8.x-5.x-dev",
                     "datestamp": "1627082347",
+=======
+                    "version": "8.x-5.0+2-dev",
+                    "datestamp": "1628196350",
+>>>>>>> master
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -10401,7 +10227,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_library.git",
-                "reference": "d3bc5abea69c1e90273fa3cecf3547a019f43b2a"
+                "reference": "ad8178a01c3e7793d7288e97a8a05d50d0a2f93c"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -10409,13 +10235,14 @@
                 "drupal/core": "8.* || 9.*",
                 "oomphinc/composer-installers-extender": "^1.1 || ^2",
                 "wet-boew/theme-base": "4.0.27",
-                "wet-boew/theme-gc-intranet": "4.0.27",
-                "wet-boew/theme-gcweb": "9.3.0",
+                "wet-boew/theme-gc-intranet": "4.0.43",
+                "wet-boew/theme-gc-intranet-legacy": "4.0.27",
+                "wet-boew/theme-gcweb": "9.4.1",
                 "wet-boew/theme-gcweb-legacy": "4.0.29",
                 "wet-boew/theme-gcwu-fegc": "4.0.27",
                 "wet-boew/theme-ogpl": "4.0.27",
                 "wet-boew/theme-wet-boew": "4.0.41",
-                "wet-boew/wet-boew": "4.0.42.2"
+                "wet-boew/wet-boew": "4.0.43.1"
             },
             "type": "drupal-module",
             "extra": {
@@ -10423,8 +10250,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-5.x-dev",
-                    "datestamp": "1624024157",
+                    "version": "8.x-5.0+1-dev",
+                    "datestamp": "1628883800",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -10511,12 +10338,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
+<<<<<<< HEAD
                 "reference": "d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1",
                 "reference": "d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1",
+=======
+                "reference": "5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9",
+                "reference": "5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -10529,7 +10365,11 @@
                 "drupal/ckeditor_codemirror": "2.3",
                 "drupal/ckeditor_details": "^2.0.2",
                 "drupal/config_rewrite": "1.4",
+<<<<<<< HEAD
                 "drupal/core": "9.1.11",
+=======
+                "drupal/core": "9.1.12",
+>>>>>>> master
                 "drupal/core_context": "1.0-beta4",
                 "drupal/ctools": "^3.7",
                 "drupal/diff": "1.0",
@@ -10733,7 +10573,11 @@
                 "issues": "https://github.com/drupalwxt/wxt/issues",
                 "source": "https://github.com/drupalwxt/wxt/tree/4.1.x"
             },
+<<<<<<< HEAD
             "time": "2021-08-10T16:00:31+00:00"
+=======
+            "time": "2021-08-14T03:45:48+00:00"
+>>>>>>> master
         },
         {
             "name": "drush/drush",
@@ -16255,6 +16099,20 @@
         },
         {
             "name": "wet-boew/theme-gc-intranet",
+            "version": "v4.0.43",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupalwxt/themes-cdn.git",
+                "reference": "v4.0.43-theme-gc-intranet"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://github.com/drupalwxt/themes-cdn/archive/v4.0.43-theme-gc-intranet.tar.gz"
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "wet-boew/theme-gc-intranet-legacy",
             "version": "v4.0.27",
             "source": {
                 "type": "git",
@@ -16269,15 +16127,15 @@
         },
         {
             "name": "wet-boew/theme-gcweb",
-            "version": "v9.3.0",
+            "version": "v9.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wet-boew/themes-cdn.git",
-                "reference": "v9.3.0-gcweb"
+                "reference": "v9.4.1-gcweb"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://github.com/wet-boew/themes-cdn/archive/v9.3.0-gcweb.tar.gz"
+                "url": "https://github.com/wet-boew/themes-cdn/archive/v9.4.1-gcweb.tar.gz"
             },
             "type": "drupal-library"
         },
@@ -16339,15 +16197,15 @@
         },
         {
             "name": "wet-boew/wet-boew",
-            "version": "v4.0.42.2",
+            "version": "v4.0.43.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wet-boew/wet-boew-cdn.git",
-                "reference": "v4.0.42.2"
+                "reference": "v4.0.43.1"
             },
             "dist": {
                 "type": "tar",
-                "url": "https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.42.2.tar.gz"
+                "url": "https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.43.1.tar.gz"
             },
             "type": "drupal-library"
         }
@@ -17226,7 +17084,11 @@
         },
         {
             "name": "drupal/core-dev",
+<<<<<<< HEAD
             "version": "9.2.3",
+=======
+            "version": "9.2.4",
+>>>>>>> master
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -17272,7 +17134,11 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/drupal/core-dev/tree/9.2.3"
+=======
+                "source": "https://github.com/drupal/core-dev/tree/9.2.4"
+>>>>>>> master
             },
             "time": "2021-06-01T16:41:50+00:00"
         },

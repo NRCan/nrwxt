@@ -54,6 +54,12 @@ class CloudfrontPathInvalidateKeysSettingsPage extends ConfigFormBase {
       '#required' => TRUE,
       '#default_value' => $config->get('cloudfront_path_invalidate_distribution'),
     ];
+
+    $form['cloudfront_path_invalidate_access'] = [
+      '#markup' => $this->t('Note that the AWS IAM user credentials are set in the environment and are not configurable here'),
+    ];
+
+    /*
     $form['cloudfront_path_invalidate_access'] = [
       '#type' => 'password',
       '#title' => $this->t('Access Key'),
@@ -70,9 +76,10 @@ class CloudfrontPathInvalidateKeysSettingsPage extends ConfigFormBase {
         'value' => $config->get('cloudfront_path_invalidate_secret'),
       ],
     ];
+    */
     $form['cloudfront_path_invalidate_homapage'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Homepage node_id or url_alias. This will include "/" 
+      '#title' => $this->t('Homepage node_id or url_alias. This will include "/"
     with invalidation paths listed below. (eg. node/1234)'),
       '#default_value' => $config->get('cloudfront_path_invalidate_homapage'),
     ];
@@ -88,7 +95,7 @@ path/one, path/two'),
     ];
     $form['cloudfront_path_invalidate_host_provider'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Please select you host provider (this will clear 
+      '#title' => $this->t('Please select you host provider (this will clear
     varnish cache)'),
       '#options' => [
         $this->t('Acquia'),

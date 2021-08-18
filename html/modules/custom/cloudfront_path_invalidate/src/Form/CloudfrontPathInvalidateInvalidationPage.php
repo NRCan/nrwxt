@@ -54,10 +54,11 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
    */
   public function cloudfrontPathInvalidateInvalidateOnCloudfront($paths) {
     $distribution = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_distribution');
-    $access_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_access');
-    $secret_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_secret');
+    //$access_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_access');
+    //$secret_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_secret');
 
-    if ($distribution == '' || $access_key == '' || $secret_key == '') {
+    //if ($distribution == '' || $access_key == '' || $secret_key == '') {
+    if ($distribution == '') {
       return FALSE;
     }
 
@@ -99,7 +100,7 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     $callerReference = date('U') + $i;
     $quantity = count($paths);
 
-    $cloudFrontClient = new Aws\CloudFront\CloudFrontClient([
+    $cloudFrontClient = new CloudFrontClient([
       'profile' => 'default',
       'version' => '2018-06-18',
       'region' => 'ca-central-1'

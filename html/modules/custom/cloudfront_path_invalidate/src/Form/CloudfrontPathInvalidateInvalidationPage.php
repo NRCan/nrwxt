@@ -201,7 +201,7 @@ EOD;
     $values = $form_state->getValues();
 
     // Save the last form value to the session so we can reuse it
-    $_SESSION['cloudfront_path_invalidate_invalidation_value'] = 'cloudfront_path_invalidate_invalidation_url'];
+    $_SESSION['cloudfront_path_invalidate_invalidation_value'] = $values['cloudfront_path_invalidate_invalidation_url'];
 
     $paths = [];
     $paths_raw = htmlspecialchars($values['cloudfront_path_invalidate_invalidation_url'],

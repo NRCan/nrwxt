@@ -108,7 +108,7 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
 
     $response = $this->createInvalidation($cloudFrontClient, $distribution, $callerReference, $paths, $quantity);
 
-    kpr($response);
+    //kpr($response);
 
     /*
     $xmlpaths = array();

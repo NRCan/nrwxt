@@ -53,20 +53,21 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
    * Main function that clears CDN and varnish cache.
    */
   public function cloudfrontPathInvalidateInvalidateOnCloudfront($paths) {
-    $distribution = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_distribution');
-    //$access_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_access');
-    //$secret_key = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_secret');
+    $config = $this->config('cloudfront_path_invalidate.settings');
+    $distribution = $config->get('cloudfront_path_invalidate_distribution');
+    //$access_key = $config->get('cloudfront_path_invalidate_access');
+    //$secret_key = $config->get('cloudfront_path_invalidate_secret');
 
     //if ($distribution == '' || $access_key == '' || $secret_key == '') {
     if ($distribution == '') {
       return FALSE;
     }
 
-    if (in_array($this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_homapage'), $paths)) {
+    if (in_array($config->get('cloudfront_path_invalidate_homapage'), $paths)) {
       array_push($paths, "");
     }
-    if ($this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_related_paths') != '') {
-      $related_paths = preg_split('/\n|\r\n?/', $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_related_paths'));
+    if ($config->get('cloudfront_path_invalidate_related_paths') != '') {
+      $related_paths = preg_split('/\n|\r\n?/', $config->get('cloudfront_path_invalidate_related_paths'));
       foreach ($related_paths as $onepath) {
         $add_path = explode(',', $onepath);
         $add_path[0] = trim($add_path[0]);
@@ -81,7 +82,7 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     // Adding "/" to all paths and stripping out http://domain.com domains so it's just clean paths
     array_walk($paths,
       function (&$value, $key) {
-         = '/https?:\/\/.*\/(.*)/i';
+        $pattern = '/https?:\/\/.*\/(.*)/i';
         if (preg_match($pattern, $value, $matches) === 1) {
           $value = $matches[0];
         }
@@ -92,16 +93,16 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     );
 
     $_SESSION['cloudfront_path_invalidate_invalidation_value'] = implode("\n", $paths);
-    $profile = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_profile');
+    $profile = $config->get('cloudfront_path_invalidate_profile');
     if (!$profile) {
       $profile = 'default';
     }
-    $region = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_region');
+    $region = $config->get('cloudfront_path_invalidate_region');
     if (!$region) {
       $region = 'ca-central-1';
     }
 
-    if ($this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_host_provider') == 1) {
+    if ($config->get('cloudfront_path_invalidate_host_provider') == 1) {
       pantheon_clear_edge_paths($paths);
     }
     $i = rand();
@@ -111,7 +112,7 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     $cloudFrontClient = new CloudFrontClient([
       'profile' => $profile,
       'version' => '2018-06-18',
-      'region' => $region
+      'region' => $region,
     ]);
 
     $response = $this->createInvalidation($cloudFrontClient, $distribution, $callerReference, $paths, $quantity);
@@ -122,7 +123,7 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     $xmlpaths = array();
 
     foreach ($paths as &$url) {
-      if ($this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_host_provider') == 0) {
+      if ($config->get('cloudfront_path_invalidate_host_provider') == 0) {
         $service = _acquia_purge_service();
         $service->addPath($url);
         if ($service->lockAcquire()) {

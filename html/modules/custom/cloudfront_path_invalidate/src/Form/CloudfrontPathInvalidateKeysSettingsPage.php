@@ -59,20 +59,29 @@ class CloudfrontPathInvalidateKeysSettingsPage extends ConfigFormBase {
       '#markup' => $this->t('Note that the AWS IAM user credentials are set in the environment (/usr/share/httpd/.aws/credentials) and are not configurable here'),
     ];
 
+    $profile = $config->get('cloudfront_path_invalidate_profile');
+    if (!$profile) {
+      $profile = 'default';
+    }
     $form['cloudfront_path_invalidate_profile'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Credential Profile'),
       '#required' => TRUE,
       '#attributes' => [
-        'value' => $config->get('cloudfront_path_invalidate_profile'),
+        'value' => $profile,
       ],
     ];
+
+    $region = $config->get('cloudfront_path_invalidate_region');
+    if (!$region) {
+      $region = 'ca-central-1';
+    }
     $form['cloudfront_path_invalidate_region'] = [
       '#type' => 'textfield',
       '#title' => $this->t('AWS Region'),
       '#required' => TRUE,
       '#attributes' => [
-        'value' => $config->get('cloudfront_path_invalidate_region'),
+        'value' => $region,
       ],
     ];
 

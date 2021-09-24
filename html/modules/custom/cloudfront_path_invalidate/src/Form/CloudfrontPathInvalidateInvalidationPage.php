@@ -81,8 +81,8 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     // Adding "/" to all paths and stripping out http://domain.com domains so it's just clean paths
     array_walk($paths,
       function (&$value, $key) {
-        $pattern = '/https?:\/\/.*\/(.*)/i';
-        if (preg_match($value, $url, $matches) === 1) {
+         = '/https?:\/\/.*\/(.*)/i';
+        if (preg_match($pattern, $value, $matches) === 1) {
           $value = $matches[0];
         }
         if ($value[0] != '/') {
@@ -92,6 +92,14 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     );
 
     $_SESSION['cloudfront_path_invalidate_invalidation_value'] = implode("\n", $paths);
+    $profile = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_profile');
+    if (!$profile) {
+      $profile = 'default';
+    }
+    $region = $this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_region');
+    if (!$region) {
+      $region = 'ca-central-1';
+    }
 
     if ($this->config('cloudfront_path_invalidate.settings')->get('cloudfront_path_invalidate_host_provider') == 1) {
       pantheon_clear_edge_paths($paths);
@@ -101,9 +109,9 @@ class CloudfrontPathInvalidateInvalidationPage extends FormBase {
     $quantity = count($paths);
 
     $cloudFrontClient = new CloudFrontClient([
-      'profile' => 'default',
+      'profile' => $profile,
       'version' => '2018-06-18',
-      'region' => 'ca-central-1'
+      'region' => $region
     ]);
 
     $response = $this->createInvalidation($cloudFrontClient, $distribution, $callerReference, $paths, $quantity);

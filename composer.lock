@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "9e131ac3f5f029ccb1fec1709b7d3791",
-=======
-    "content-hash": "8414ec10cabd3e9d82b36e2258a7061d",
->>>>>>> master
+    "content-hash": "19a04c8d3518f3f418a976ad9df64c1d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -68,29 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-<<<<<<< HEAD
-            "version": "3.189.0",
+            "version": "3.190.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f1f9e6cc3f5df8ef53a46d590985ca1b8dabb0f8"
+                "reference": "c2063c78310b45e378f1bdad9fe6e9191f36439c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f1f9e6cc3f5df8ef53a46d590985ca1b8dabb0f8",
-                "reference": "f1f9e6cc3f5df8ef53a46d590985ca1b8dabb0f8",
-=======
-            "version": "3.190.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4e641e25cc8f4d04002404afe050e25035fad0f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e641e25cc8f4d04002404afe050e25035fad0f3",
-                "reference": "4e641e25cc8f4d04002404afe050e25035fad0f3",
->>>>>>> master
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c2063c78310b45e378f1bdad9fe6e9191f36439c",
+                "reference": "c2063c78310b45e378f1bdad9fe6e9191f36439c",
                 "shasum": ""
             },
             "require": {
@@ -165,15 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.189.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.5"
             },
-            "time": "2021-08-10T18:17:34+00:00"
-=======
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.3"
-            },
-            "time": "2021-08-16T18:13:42+00:00"
->>>>>>> master
+            "time": "2021-08-18T18:24:08+00:00"
         },
         {
             "name": "bower-asset/cropper",
@@ -198,7 +175,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -3380,18 +3357,6 @@
         },
         {
             "name": "drupal/core",
-<<<<<<< HEAD
-            "version": "9.1.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core.git",
-                "reference": "34249d59f0846760ecf361ae3ae2b29eaf758f19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/34249d59f0846760ecf361ae3ae2b29eaf758f19",
-                "reference": "34249d59f0846760ecf361ae3ae2b29eaf758f19",
-=======
             "version": "9.1.12",
             "source": {
                 "type": "git",
@@ -3402,7 +3367,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupal/core/zipball/adf13d6d0e95f5eeaed9afc4e3d2bade2f4946cc",
                 "reference": "adf13d6d0e95f5eeaed9afc4e3d2bade2f4946cc",
->>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -3639,15 +3603,6 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/drupal/core/tree/9.1.11"
-            },
-            "time": "2021-07-20T21:42:58+00:00"
-        },
-        {
-            "name": "drupal/core-composer-scaffold",
-            "version": "9.2.3",
-=======
                 "source": "https://github.com/drupal/core/tree/9.1.12"
             },
             "time": "2021-08-12T17:48:24+00:00"
@@ -3655,7 +3610,6 @@
         {
             "name": "drupal/core-composer-scaffold",
             "version": "9.2.4",
->>>>>>> master
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3699,11 +3653,7 @@
                 "drupal"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.3"
-=======
                 "source": "https://github.com/drupal/core-composer-scaffold/tree/9.2.4"
->>>>>>> master
             },
             "time": "2021-07-10T22:39:33+00:00"
         },
@@ -8416,6 +8366,62 @@
             }
         },
         {
+            "name": "drupal/purge",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "php": ">=7.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1590744318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-3.x": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Niels van Mourik",
+                    "homepage": "http://www.nielsvm.org"
+                },
+                {
+                    "name": "djbobbydrake",
+                    "homepage": "https://www.drupal.org/user/336378"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Provides a generic external cache invalidation API and queue service.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge"
+            }
+        },
+        {
             "name": "drupal/recaptcha",
             "version": "3.0.0",
             "source": {
@@ -10106,11 +10112,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wxt_bootstrap.git",
-<<<<<<< HEAD
-                "reference": "c3c63c67f568f86df962d2e0c1a8fd37c809e758"
-=======
                 "reference": "646d979770bd14577ad894c0eb3dffaefedfbe56"
->>>>>>> master
             },
             "require": {
                 "cweagans/composer-patches": "^1.6.0",
@@ -10124,13 +10126,8 @@
                     "dev-5.x": "5.x-dev"
                 },
                 "drupal": {
-<<<<<<< HEAD
-                    "version": "8.x-5.x-dev",
-                    "datestamp": "1627082347",
-=======
                     "version": "8.x-5.0+2-dev",
                     "datestamp": "1628196350",
->>>>>>> master
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -10338,21 +10335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-<<<<<<< HEAD
-                "reference": "d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1",
-                "reference": "d53a96ff15b59d6bc5f49123a0e7a9e3f582afb1",
-=======
                 "reference": "5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9",
                 "reference": "5916cc52e76673d87e96f3c0ebc0b9b3abb8ecb9",
->>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -10365,11 +10353,7 @@
                 "drupal/ckeditor_codemirror": "2.3",
                 "drupal/ckeditor_details": "^2.0.2",
                 "drupal/config_rewrite": "1.4",
-<<<<<<< HEAD
-                "drupal/core": "9.1.11",
-=======
                 "drupal/core": "9.1.12",
->>>>>>> master
                 "drupal/core_context": "1.0-beta4",
                 "drupal/ctools": "^3.7",
                 "drupal/diff": "1.0",
@@ -10573,11 +10557,7 @@
                 "issues": "https://github.com/drupalwxt/wxt/issues",
                 "source": "https://github.com/drupalwxt/wxt/tree/4.1.x"
             },
-<<<<<<< HEAD
-            "time": "2021-08-10T16:00:31+00:00"
-=======
             "time": "2021-08-14T03:45:48+00:00"
->>>>>>> master
         },
         {
             "name": "drush/drush",
@@ -12203,16 +12183,6 @@
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "nrwxt/migrations",
-            "version": "0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/NRCan/drupal-9-migrations.git",
-                "reference": "development"
-            },
-            "type": "drupal-custom-module"
         },
         {
             "name": "oomphinc/composer-installers-extender",
@@ -17084,11 +17054,7 @@
         },
         {
             "name": "drupal/core-dev",
-<<<<<<< HEAD
-            "version": "9.2.3",
-=======
             "version": "9.2.4",
->>>>>>> master
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -17134,11 +17100,7 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/drupal/core-dev/tree/9.2.3"
-=======
                 "source": "https://github.com/drupal/core-dev/tree/9.2.4"
->>>>>>> master
             },
             "time": "2021-06-01T16:41:50+00:00"
         },

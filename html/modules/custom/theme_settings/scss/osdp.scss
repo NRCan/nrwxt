@@ -60,3 +60,17 @@ body .well {
   font-weight: 700;
   font-size: 14px;
 }
+
+.osdp-icon-grid {
+  a {
+    text-decoration: none;
+    span {
+      text-decoration: underline;
+    }
+    &:hover, &:active {
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+}

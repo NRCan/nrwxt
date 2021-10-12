@@ -66,11 +66,11 @@ body .well {
     text-decoration: none;
     span {
       text-decoration: underline;
+      padding-left: 10px;
     }
     &:hover, &:active {
       text-decoration: none;
       span {
-        /* text-decoration: none; */
         text-decoration: underline;
       }
     }

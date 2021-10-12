@@ -47,11 +47,11 @@ body .well {
 .osdp-icon-grid a {
   text-decoration: none; }
   .osdp-icon-grid a span {
-    text-decoration: underline; }
+    text-decoration: underline;
+    padding-left: 10px; }
   .osdp-icon-grid a:hover, .osdp-icon-grid a:active {
     text-decoration: none; }
     .osdp-icon-grid a:hover span, .osdp-icon-grid a:active span {
-      /* text-decoration: none; */
       text-decoration: underline; }
 
 /*# sourceMappingURL=osdp.css.map */

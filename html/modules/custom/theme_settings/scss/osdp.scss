@@ -68,7 +68,7 @@ body .well {
       text-decoration: underline;
       padding-left: 10px;
     }
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
       text-decoration: none;
       span {
         text-decoration: underline;

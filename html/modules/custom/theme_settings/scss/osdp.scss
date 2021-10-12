@@ -68,8 +68,10 @@ body .well {
       text-decoration: underline;
     }
     &:hover, &:active {
+      text-decoration: none;
       span {
-        text-decoration: none;
+        /* text-decoration: none; */
+        text-decoration: underline;
       }
     }
   }

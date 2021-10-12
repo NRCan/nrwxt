@@ -35,7 +35,7 @@ class Page extends BootstrapPage {
     // WxT homepage special handling for container-fluid.
     if (!empty($variables['node'])) {
       $node = $variables['node'];
-      if ($node->hasField('layout_builder__layout')) {
+      if (is_object($node) && $node->hasField('layout_builder__layout')) {
         $field = $node->layout_builder__layout;
         if ($field->count() > 0) {
           $layout = $field->getSection(0)->getLayoutId();

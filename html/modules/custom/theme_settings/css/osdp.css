@@ -1,9 +1,18 @@
+h1 {
+  border: none !important; }
+
+.well.bg-info,
+.panel-default > .panel-heading.bg-info {
+  background-color: #DEEBF7; }
+
 .button-big-centered-wrapper {
   display: inline-table; }
+  .button-big-centered-wrapper.full-width {
+    width: 100%; }
 
 a.button-big-centered, button.button-big-centered {
   min-height: 50px;
-  display: block;
+  display: table-cell;
   vertical-align: middle; }
 
 .field--name-body .float-icon {
@@ -12,9 +21,8 @@ a.button-big-centered, button.button-big-centered {
     .field--name-body .float-icon {
       display: block;
       float: right;
-      margin-top: -87px;
+      margin-top: -134px;
       background: white;
-      padding: 10px;
       width: 134px;
       height: 134px; } }
 .field--name-body .float-icon-shield {
@@ -35,5 +43,15 @@ body .well {
   margin: 10px 0;
   font-weight: 700;
   font-size: 14px; }
+
+.osdp-icon-grid a {
+  text-decoration: none; }
+  .osdp-icon-grid a span {
+    text-decoration: underline;
+    padding-left: 10px; }
+  .osdp-icon-grid a:hover, .osdp-icon-grid a:active, .osdp-icon-grid a:focus {
+    text-decoration: none; }
+    .osdp-icon-grid a:hover span, .osdp-icon-grid a:active span, .osdp-icon-grid a:focus span {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=osdp.css.map */

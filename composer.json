@@ -2,19 +2,17 @@
     "name": "nrcan/nrwxt",
     "description": "NRCan deployment template based on the WxT Deployment of Drupal",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.0.1",
+        "drupalwxt/wxt": "4.1.1",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
         "drupal/memcache": "2.1",
-        "drupal/purge": "^3.0",
-        "drupal/varnish_purge": "^2.0",
         "drupal/variationcache": "^1.0",
         "drupal/devel": "^4.0",
         "drupal/recaptcha_element": "^1.0",
@@ -22,12 +20,19 @@
         "drupal/tome": "^1.4",
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
-        "drupal/language_selection_page": "^2.7"
+        "drupal/language_selection_page": "^2.7",
+        "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
+        "aws/aws-sdk-php": "~3.0",
+        "drupal/public_preview": "^1.0@beta",
+        "drupal/field_group": "^3.2",
+        "drupal/shs": "2.0.x-dev@dev",
+        "drupal/purge": "^3.0",
+        "drupal/linkit": "^6.0@beta"
     },
     "require-dev": {
-      "drupal/core-dev": "^9",
-      "drupal/drupal-extension": "^4.1.0",
-      "squizlabs/php_codesniffer": "^3.3"
+        "drupal/core-dev": "^9",
+        "drupal/drupal-extension": "^4.1.0",
+        "squizlabs/php_codesniffer": "^3.3"
     },
     "config": {
         "secure-http": false,
@@ -36,8 +41,7 @@
             "minConnections": 5
         }
     },
-    "repositories": [
-        {
+    "repositories": [ {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
@@ -48,6 +52,19 @@
         {
             "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nrwxt/migrations",
+                "version": "0.0.2",
+                "type": "drupal-custom-module",
+                "source": {
+                    "url": "https://github.com/NRCan/drupal-9-migrations.git",
+                    "type": "git",
+                    "reference": "development"
+                }
+            }
         }
     ],
     "scripts": {
@@ -72,7 +89,7 @@
             "html/core": [
                 "type:drupal-core"
             ],
-            "html/libraries/{$name}" : [
+            "html/libraries/{$name}": [
                 "type:drupal-console-library",
                 "type:drupal-library",
                 "type:bower-asset",
@@ -80,6 +97,9 @@
             ],
             "html/modules/contrib/{$name}": [
                 "type:drupal-module"
+            ],
+            "html/modules/custom/{$name}": [
+                "type:drupal-custom-module"
             ],
             "html/profiles/{$name}": [
                 "type:drupal-profile"
@@ -97,26 +117,24 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/header_and_footer_scripts": {
-              "header_and_footer_scripts - Drupal 9 Compatibility":
-              "https://www.drupal.org/files/issues/2020-05-23/header_and_footer_scripts.2.2.rector.patch"
-            }
+          "drupal/header_and_footer_scripts": {
+              "header_and_footer_scripts - Drupal 9 Compatibility": "https://www.drupal.org/files/issues/2020-05-23/header_and_footer_scripts.2.2.rector.patch"
+          },
+          "drupal/linkit": {
+              "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
+          }
         },
         "patches-ignore": {
             "acquia/lightning": {
                 "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
-                    "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent":
-                    "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
+                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
             },
             "drupal/lightning_core": {
                 "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order":
-                    "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent":
-                    "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
+                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
             }
         }

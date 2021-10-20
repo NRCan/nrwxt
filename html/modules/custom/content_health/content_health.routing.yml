@@ -1,0 +1,7 @@
+content_health.report_form:
+  path: '/admin/config/development/content_health/report_problem'
+  defaults:
+    _form: '\Drupal\content_health\Form\ContentHealthReportConfigForm'
+    _title: 'Report a Problem Settings'
+  requirements:
+    _permission: 'administer site configuration'

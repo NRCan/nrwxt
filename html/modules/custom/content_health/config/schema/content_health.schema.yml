@@ -1,0 +1,23 @@
+content_health.settings:
+  type: config_object
+  label: 'Lorem Ipsum settings'
+  mapping:
+    content_health:
+      type: mapping
+      mapping:
+        report_button_title:
+          type: text
+          label: 'Report a problem block title:'
+        report_button_text:
+          type: text
+          label: 'Report a problem button text:'
+        report_button_target_url:
+          type: text
+          label: 'Report a problem form target URL:'
+block.settings.content_health_block:
+  type: block_settings
+  label: 'Report a problem block'
+  mapping:
+    content_health_report_block_settings:
+      type: text
+      label: 'Report a problem block settings'

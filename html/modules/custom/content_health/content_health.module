@@ -1,0 +1,63 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function content_health_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.content_health':
+      return t('
+        <h2>Content Health - NRCan Page Feedback</h2>
+        <h3>Instructions</h3>
+        <p>Unpack in the <em>modules</em> folder (currently in the root of your Drupal 9 installation) and enable in <strong>/admin/modules</strong>.</p>
+
+        <p>Then....</p>
+
+      ');
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function content_health_theme($existing, $type, $theme, $path) {
+  $variables = [
+    'feedback_form' => [
+      'variables' => [
+        'report_button_text' => NULL,
+        'timestamp' => NULL,
+        'report_button_target_url' => NULL,
+        'title' => NULL,
+        'current_url' => NULL,
+        'nid' => NULL,
+        'language' => NULL,
+        'report_button_title' => NULL,
+        'website' => NULL,
+        'row_html' => NULL,
+        'thanks' => NULL,
+      ],
+    ],
+  ];
+  return $variables;
+}
+
+/**
+ * Template preprocess function for Report a Problem.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - source_text
+ */
+function template_preprocess_content_health(&$variables) {
+  $punctuation = array('. ', '! ', '? ', '... ', ': ', '; ');
+  for ($i = 0; $i < count($variables['source_text']); $i++) {
+    $big_text = explode('. ', $variables['source_text'][$i]);
+    for ($j = 0; $j < count($big_text) - 1; $j++) {
+      $big_text[$j] .= $punctuation[floor(mt_rand(0, count($punctuation) - 1))];
+    }
+    $variables['source_text'][$i] = implode('', $big_text);
+  }
+}

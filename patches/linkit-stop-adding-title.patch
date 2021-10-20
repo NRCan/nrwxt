@@ -1,0 +1,21 @@
+diff --git a/src/Plugin/Filter/LinkitFilter.php b/src/Plugin/Filter/LinkitFilter.php
+index f272303..a3d2d7d 100644
+--- a/src/Plugin/Filter/LinkitFilter.php
++++ b/src/Plugin/Filter/LinkitFilter.php
+@@ -122,14 +122,14 @@ class LinkitFilter extends FilterBase implements ContainerFactoryPluginInterface
+             $element->setAttribute('href', $url->getGeneratedUrl() . $query . $anchor);
+
+             // Set the appropriate title attribute.
+-            if ($this->settings['title'] && !$element->getAttribute('title')) {
++            /*if ($this->settings['title'] && !$element->getAttribute('title')) {
+               $access = $entity->access('view', NULL, TRUE);
+               if (!$access->isForbidden()) {
+                 $element->setAttribute('title', $entity->label());
+               }
+               // Cache the linked entity access for the current user.
+               $result->addCacheableDependency($access);
+-            }
++            }*/
+
+             // The processed text now depends on:
+             $result

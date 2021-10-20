@@ -1,15 +1,25 @@
+h1 {
+    border: none !important;
+}
+.well.bg-info,
+.panel-default > .panel-heading.bg-info {
+    background-color: #DEEBF7;
+}
+
 
 .button-big-centered-wrapper {
   display: inline-table;
+  &.full-width {
+    width: 100%;
+  }
 }
 
 a, button {
   &.button-big-centered {
     min-height: 50px;
-    display: block;
+    display: table-cell;
     vertical-align: middle;
   }
-
 }
 
 .field--name-body {
@@ -18,9 +28,8 @@ a, button {
     @media (min-width: 768px) {
       display: block;
       float: right;
-      margin-top: -87px;
+      margin-top: -134px;
       background: white;
-      padding: 10px;
       width: 134px;
       height: 134px;
     }
@@ -50,4 +59,20 @@ body .well {
   margin: 10px 0;
   font-weight: 700;
   font-size: 14px;
+}
+
+.osdp-icon-grid {
+  a {
+    text-decoration: none;
+    span {
+      text-decoration: underline;
+      padding-left: 10px;
+    }
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
 }

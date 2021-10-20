@@ -67,6 +67,7 @@ function theme_settings_page_attachments(array &$page) {
   if (theme_settings_bootstrap_cards()) {
     $page['#attached']['library'][] = 'theme_settings/cards';
   }
+
   if (theme_settings_osdp()) {
     $page['#attached']['library'][] = 'theme_settings/osdp';
   }

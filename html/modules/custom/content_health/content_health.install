@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for Lorem ipsum module.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function content_health_install() {
+  user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
+    'content health admin' => TRUE,
+  ));
+}

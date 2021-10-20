@@ -1,0 +1,9 @@
+#This file creates tabs
+cloudfront_path_invalidate.settings:
+  route_name: cloudfront_path_invalidate.settings
+  title: 'CloudFront Path Invalidation'
+  base_route: cloudfront_path_invalidate.tab_menu
+cloudfront_path_invalidate.settings2:
+  route_name: cloudfront_path_invalidate.settings2
+  title: 'CloudFront Keys/Host provider Settings'
+  base_route: cloudfront_path_invalidate.tab_menu

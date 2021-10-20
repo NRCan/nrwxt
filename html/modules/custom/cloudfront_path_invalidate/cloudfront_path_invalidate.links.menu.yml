@@ -1,0 +1,17 @@
+#Through this file we add links to /admin/config page
+cloudfront_path_invalidate.admin:
+  title: 'AWS CDN Invalidate Single Path'
+  description: 'To invalidate single path Local'
+  parent: system.admin_config_development
+  expanded: 1
+  route_name: cloudfront_path_invalidate.settings
+  weight: 99
+  type: MENU_LOCAL_TASK
+cloudfront_path_invalidate.admin2:
+  title: 'AWS CDN Setup Keys'
+  description: 'Setup Keys for AWS CDN Local'
+  parent: system.admin_config_development
+  expanded: 1
+  route_name: cloudfront_path_invalidate.settings2
+  weight: 100
+  type: MENU_LOCAL_TASK

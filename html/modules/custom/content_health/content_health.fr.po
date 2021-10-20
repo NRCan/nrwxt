@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-03-05 15:04-0500\n"
+"PO-Revision-Date: 2019-03-05 15:04-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: content_health.admin.inc:15 content_health.module:312
+msgid "Resolved"
+msgstr "Plainte réglée"
+
+#: content_health.admin.inc:16;80;171;385 content_health.module:313
+msgid "Type"
+msgstr "Type"
+
+#: content_health.admin.inc:17;84;183 content_health.module:314
+msgid "Sub-Type"
+msgstr "Sous-type "
+
+#: content_health.admin.inc:18;88 content_health.module:315
+msgid "Date"
+msgstr "Date"
+
+#: content_health.admin.inc:19;92 content_health.module:316
+msgid "Message"
+msgstr "Message"
+
+#: content_health.admin.inc:21;96 content_health.module:317
+msgid "User"
+msgstr "Utilisateur"
+
+#: content_health.admin.inc:57 content_health.module:356
+msgid "No log messages available."
+msgstr "Aucun message de journal disponible"
+
+#: content_health.admin.inc:100;107
+msgid "Related Page"
+msgstr "Page associés"
+
+#: content_health.admin.inc:113
+msgid "Extended Message"
+msgstr "Message étendu"
+
+#: content_health.admin.inc:241
+msgid "Filter log messages"
+msgstr "Filtrer les messages du journal"
+
+#: content_health.admin.inc:264;281;297
+msgid "Filter"
+msgstr "Filtre"
+
+#: content_health.admin.inc:269;304
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: content_health.admin.inc:284
+msgid "You must select something to filter by."
+msgstr "Vous devez sélectionner quelque chose à filtrer."
+
+#: content_health.admin.inc:320;327
+msgid "Clear log messages"
+msgstr "Effacer les messages du journal"
+
+#: content_health.admin.inc:321
+msgid "This will permanently remove the log messages from the database."
+msgstr "Cela supprimera définitivement les messages du journal de la base de données."
+
+#: content_health.admin.inc:343
+msgid "Content Health log cleared."
+msgstr "Journal de santé du contenu effacé."
+
+#: content_health.admin.inc:384
+msgid "Title"
+msgstr "Titre"
+
+#: content_health.admin.inc:386
+msgid "Author"
+msgstr "Auteur"
+
+#: content_health.admin.inc:387
+msgid "Status"
+msgstr "Statut"
+
+#: content_health.admin.inc:388
+msgid "Updated"
+msgstr "Mis à jour"
+
+#: content_health.admin.inc:390
+msgid "Operations"
+msgstr "Opérations"
+
+#: content_health.admin.inc:414
+msgid "published"
+msgstr "publié"
+
+#: content_health.admin.inc:414
+msgid "not published"
+msgstr "non publié"
+
+#: content_health.admin.inc:420
+msgid "view"
+msgstr "voir"
+
+#: content_health.admin.inc:425
+msgid "edit"
+msgstr "éditer"
+
+#: content_health.admin.inc:432
+msgid "delete"
+msgstr "supprimer"
+
+#: content_health.admin.inc:465
+msgid "No content available."
+msgstr "Pas de contenu disponible."
+
+#: content_health.config.inc:10
+msgid "Enabled"
+msgstr "Activée"
+
+#: content_health.config.inc:11
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: content_health.config.inc:16
+msgid "Turn Features on or off"
+msgstr "Activer ou désactiver des fonctionnalités"
+
+#: content_health.config.inc:23
+msgid "Page Feedback Form"
+msgstr "Formulaire de commentaires sur les pages"
+
+#: content_health.config.inc:26
+msgid "Enable the Feedback form on content"
+msgstr "Activer le formulaire de commentaires sur le contenu"
+
+#: content_health.pages.inc:16
+msgid "Submissions Today: @count"
+msgstr "Soumissions aujourd'hui : @count"
+
+#: content_health.report.inc:35
+msgid "Report a problem or mistake on this page"
+msgstr "Signaler un problème ou une erreur sur cette page"
+
+#: content_health.report.inc
+msgid "Report a problem on this page"
+msgstr "Signaler un problème sur cette page"
+
+#: Plain Title
+msgid "Report a problem"
+msgstr "Signaler un problème"
+
+#: content_health.report.inc:36
+msgid "Please select all that apply:"
+msgstr "Veuillez sélectionner toutes les cases qui s'appliquent :"
+
+#: content_health.report.inc:37
+msgid "Submit"
+msgstr "Soumettre"
+
+#: content_health.report.inc:70
+msgid "Comment"
+msgstr "Commentaire"
+
+#: content_health.report.inc:71
+msgid "You may include a short comment with your submission."
+msgstr "Vous pouvez inclure un court commentaire avec votre soumission."
+
+#: content_health.report.inc:72
+msgid "Please don’t include any personal information in your comment."
+msgstr "Merci de ne pas inclure d’informations personnelles dans votre commentaire."
+
+#: content_health.report.inc:152
+msgid "A link, button or video is not working"
+msgstr "Un lien, un bouton ou une vidéo ne fonctionne pas"
+
+#: content_health.report.inc:158
+msgid "It has a spelling mistake"
+msgstr "Il y a une erreur d'orthographe ou de grammaire"
+
+#: content_health.report.inc:164
+msgid "Information is missing"
+msgstr "Les renseignements sont incomplets"
+
+#: content_health.report.inc:170
+msgid "Information is outdated or wrong"
+msgstr "L'information n'est plus à jour ou est erronée"
+
+#: content_health.report.inc:176
+msgid "I can't find what I'm looking for"
+msgstr "Je n'arrive pas à trouver ce que je cherche"
+
+#: content_health.report.inc:182
+msgid "Other issue not in this list"
+msgstr "Autre problème qui ne figure pas sur cette liste"
+
+#: content_health.report.inc:194
+msgid "You will not receive a reply. For enquiries,&nbsp;<a href=\"@url\">contact us</a>."
+msgstr "Vous ne recevrez pas de réponse. Pour toute demande, <a href=\"@url\">contactez-nous</a>."
+
+#: content_health.report.inc:199 content_health.module:41
+msgid "Thank you for your help!"
+msgstr "Merci de votre aide!"
+
+#: content_health.report.inc:250
+msgid "Submission Flags:"
+msgstr "Articles soumis :"
+
+#: content_health.report.inc:260
+msgid "Comment:"
+msgstr "Commentaire :"
+
+#: content_health.module:32
+msgid "What is wrong with the page you were on?"
+msgstr "Quel est le problème avec la page sur laquelle vous vous trouviez?"
+
+#: content_health.module:53;60
+msgid "Content Health Config"
+msgstr "Configuration de la santé du contenu"
+
+#: content_health.module:66
+msgid "Top Pages"
+msgstr ""
+
+#: content_health.module:76
+msgid "Log"
+msgstr "Le journal"
+
+#: content_health.module:84
+msgid "Log Details"
+msgstr "Détails du journal"
+
+#: content_health.module:117
+msgid "Administer Content Health"
+msgstr "Administrer la santé du contenu"
+
+#: content_health.module:120
+msgid "Access Content Health Reports"
+msgstr "Administrer la santé du contenu"
+
+#: content_health.module:123
+msgid "Access Content Health Feedback Form"
+msgstr "Accéder au formulaire de commentaires sur l'état du contenu"
+
+#: content_health.module:226
+msgid "Health Log"
+msgstr "Journal de santé"
+
+#: content_health.module:377
+msgid "Resolve flagged submissions"
+msgstr "Résoudre les soumissions signalées"
+
+#: content_health.module:389
+msgid "No node specified to resolve submissions"
+msgstr "Aucun noeud spécifié pour résoudre les soumissions"
+
+#: (duplicate) content_health.install:68
+msgid "Page Owners"
+msgstr "Propriétaires de pages"
+
+#: (duplicate) content_health.install:70
+msgid "Content"
+msgstr "Contenu"
+
+#: (duplicate) content_health.install:292 ;308
+msgid "Page Owner"
+msgstr "Propriétaire de la page"
+
+#: content_health.info:0
+msgid "Content Health tracking"
+msgstr ""
+
+#: content_health.info:0
+msgid "Adds a field to the Page content type for tracking content owners and reviews. Also provides some reports."
+msgstr ""
+
+# Date modified
+msgid "Date modified:"
+msgstr "Date de modification :"
+
+# Search the website
+msgid "Search the website"
+msgstr "Recherchez sur le site"
+
+# Most requested
+msgid "Most requested"
+msgstr "En demande"
+
+# Features
+msgid "Features"
+msgstr "En vedette"
+
+# Featured:
+msgid "Featured:"
+msgstr "En vedette :"
+
+# Login Page
+msgid "Use your NRN login name and not your email address."
+msgstr "Utilisez votre nom de connexion NRN et non votre adresse courriel."
+
+# Login Page
+msgid "Enter your @s username."
+msgstr "Entrez votre nom d'utilisateur pour @s."
+
+# Submission URL
+msgid "https://www.nrcan.gc.ca/report-problem"
+msgstr "https://www.rncan.gc.ca/signaler-probleme"

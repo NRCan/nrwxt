@@ -1,0 +1,35 @@
+{# content_health/templates/feedback-form.html.twig #}
+<div id="feedback-button" class="hidden-print">
+  <details class="brdr-0">
+    <summary class="btn btn-default text-center">{{ report_button_text|t }}</summary>
+    <div class="clearfix"></div>
+    <div class="well row">
+      <!-- {{ timestamp|date("Y-m-d H:i:s") }} -->
+      <div>
+        <div class="gc-rprt-prblm">
+          <div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+            <form id="gc-rprt-prblm-form" action="{{ report_button_target_url }}" method="POST">
+              {% if title %}
+                <input type="hidden" name="pageTitle" value="{{ title }}">
+              {% endif %}
+              <input type="hidden" name="submissionPage" value="{{ current_url }}">
+              <input type="hidden" name="currentPage" value="{{ current_url }}">
+              <input type="hidden" name="submissionWebsite" value="{{ website }}">
+              <input type="hidden" name="nid" value="{{ nid }}">
+              <input type="hidden" name="lang" value="{{ language }}">
+              <input type="hidden" name="subject" value="{{ report_button_title|t }}">
+              <fieldset>
+                <legend><span class="field-name">{{ 'Please select all that apply:'|t }}</span></legend>
+                {{ row_html|raw }}
+              </fieldset>
+              <button data-wb5-click="postback@#gc-rprt-prblm-form@" type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>{{ 'Submit'|t }}</button>
+            </form>
+          </div>
+          <div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+            {{ thanks }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</div>

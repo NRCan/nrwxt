@@ -8,7 +8,7 @@
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.1.1",
+        "drupalwxt/wxt": "4.2.x-dev",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
@@ -136,6 +136,11 @@
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
                 }
+            },
+            "drupal/lightning": {
+               "drupal/metatag": {
+                    "Enter drupal/metatag patch 2955407 description here": "https://www.drupal.org/files/issues/2020-12-18/Issue-2955407-Static-caching-for-token-processing-ic.patch"
+               }
             }
         }
     },

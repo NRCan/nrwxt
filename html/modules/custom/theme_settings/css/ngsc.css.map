@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/ngsc.scss"],"names":[],"mappings":"AAEA;EACI;;;AAqBF;EACE,YAjBO;;AAmBT;EACE,YAhBS;;AAkBX;EACE,YAfQ;;AAiBV;EACE,YAdU","file":"ngsc.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/ngsc.scss"],"names":[],"mappings":"AAEA;EACI;;;AAuBF;EACE,OApBS;EAqBT,YAlBO;;AAoBT;EACE,OAxBS;EAyBT,YAlBS;;AAoBX;EACE,OA5BS;EA6BT,YAlBQ;;AAoBV;EACE,OAhCS;EAiCT,YAlBU","file":"ngsc.css"}

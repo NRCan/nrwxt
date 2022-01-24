@@ -3,15 +3,19 @@ h1 {
 }
 
 .well.ngsc-red {
+  color: #ffffff;
   background: #843c0c;
 }
 .well.ngsc-green {
+  color: #ffffff;
   background: #385723;
 }
 .well.ngsc-blue {
+  color: #ffffff;
   background: #1f4e79;
 }
 .well.ngsc-yellow {
+  color: #ffffff;
   background: #7f6009;
 }
 

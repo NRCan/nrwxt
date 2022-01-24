@@ -5,6 +5,8 @@ h1 {
 }
 
 // Colours
+$ngsc-white: #ffffff;
+
 // Who we are
 $ngsc-red: rgb(132, 60, 12);
 $ngsc-red-dark: color.scale($ngsc-red, $lightness: -10%, $saturation: 10%);
@@ -23,15 +25,19 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 
 .well {
   &.ngsc-red {
+    color: $ngsc-white;
     background: $ngsc-red;
   }
   &.ngsc-green {
+    color: $ngsc-white;
     background: $ngsc-green;
   }
   &.ngsc-blue {
+    color: $ngsc-white;
     background: $ngsc-blue;
   }
   &.ngsc-yellow {
+    color: $ngsc-white;
     background: $ngsc-yellow;
   }
 }

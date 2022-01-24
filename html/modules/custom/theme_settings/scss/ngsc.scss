@@ -42,3 +42,34 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
   }
 }
 
+
+
+// Float Icon
+
+.field--name-body {
+  .float-icon {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      float: left;
+      margin-top: -134px;
+      background: $ngsc-blue;
+      width: 134px;
+      height: 134px;
+    }
+    &.ngsc-red {
+      background: $ngsc-red;
+    }
+    &.ngsc-green {
+      background: $ngsc-green;
+    }
+    &.ngsc-blue {
+      background: $ngsc-blue;
+    }
+    &.ngsc-yellow {
+      background: $ngsc-yellow;
+    }
+  }
+}
+
+

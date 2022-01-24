@@ -1,0 +1,34 @@
+@use "sass:color";
+
+h1 {
+    border: none !important;
+}
+
+// Colours
+$ngsc-red: #FF0000;
+$ngsc-red-dark: color.scale($ngsc-red, $lightness: -10%, $saturation: 10%);
+
+$ngsc-green: #00FF00;
+$ngsc-green-dark: color.scale($ngsc-green, $lightness: -10%, $saturation: 10%);
+
+$ngsc-blue: #0000FF;
+$ngsc-blue-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
+
+$ngsc-yellow: #0000FF;
+$ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
+
+.well {
+  &.ngsc-red {
+    background: $ngsc-red;
+  }
+  &.ngsc-green {
+    background: $ngsc-green;
+  }
+  &.ngsc-blue {
+    background: $ngsc-blue;
+  }
+  &.ngsc-yellow {
+    background: $ngsc-yellow;
+  }
+}
+

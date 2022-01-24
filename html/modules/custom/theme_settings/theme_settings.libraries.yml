@@ -6,6 +6,10 @@ osdp:
   css:
     theme:
       css/osdp.css: {}
+ngsc:
+  css:
+    theme:
+      css/ngsc.css: {}
 left-menu:
   css:
     theme:

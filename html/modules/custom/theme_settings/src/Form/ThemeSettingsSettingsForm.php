@@ -84,6 +84,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('OSDP custom theme elements.'),
     ];
 
+    $form['admin']['ngsc'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('NGSC Theme'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('ngsc'),
+      '#description' => t('NGSC custom theme elements.'),
+    ];
+
     $form['admin']['custom_bullets'] = [
       '#type' => 'radios',
       '#title' => $this->t('Custom list bullets library.'),

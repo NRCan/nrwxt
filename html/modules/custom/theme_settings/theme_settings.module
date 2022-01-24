@@ -32,6 +32,10 @@ function theme_settings_osdp() {
   return \Drupal::config('theme_settings.settings')->get('osdp') == 'on';
 }
 
+function theme_settings_ngsc() {
+  return \Drupal::config('theme_settings.settings')->get('ngsc') == 'on';
+}
+
 function theme_settings_custom_bullets() {
   return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
 }
@@ -70,6 +74,10 @@ function theme_settings_page_attachments(array &$page) {
 
   if (theme_settings_osdp()) {
     $page['#attached']['library'][] = 'theme_settings/osdp';
+  }
+
+  if (theme_settings_ngsc()) {
+    $page['#attached']['library'][] = 'theme_settings/ngsc';
   }
 
   if (theme_settings_custom_bullets()) {

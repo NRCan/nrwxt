@@ -2,6 +2,7 @@ settings:
   block_update_date: off
   bootstrap_cards: off
   osdp: off
+  ngsc: off
   custom_bullets: on
   match_height: on
   custom_ga_links: on

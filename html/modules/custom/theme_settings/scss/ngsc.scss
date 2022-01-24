@@ -5,16 +5,20 @@ h1 {
 }
 
 // Colours
-$ngsc-red: #FF0000;
+// Who we are
+$ngsc-red: rgb(132, 60, 12);
 $ngsc-red-dark: color.scale($ngsc-red, $lightness: -10%, $saturation: 10%);
 
-$ngsc-green: #00FF00;
+// Publications
+$ngsc-green: rgb(56, 87, 35);
 $ngsc-green-dark: color.scale($ngsc-green, $lightness: -10%, $saturation: 10%);
 
-$ngsc-blue: #0000FF;
+// PGS & Home
+$ngsc-blue: rgb(31, 78, 121);
 $ngsc-blue-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 
-$ngsc-yellow: #0000FF;
+// Contact Us
+$ngsc-yellow: rgb(127, 96, 9);
 $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 
 .well {

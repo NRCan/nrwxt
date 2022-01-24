@@ -195,6 +195,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('custom_bullets', $form_state->getValue('custom_bullets'))
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->set('osdp', $form_state->getValue('osdp'))
+      ->set('ngsc', $form_state->getValue('ngsc'))
       ->save();
 
     // Save the plash configurations.

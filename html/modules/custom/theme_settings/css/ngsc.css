@@ -53,11 +53,48 @@ h1 {
 .field--name-body .float-icon-wrapper.ngsc-green {
   background: #385723;
 }
-.field--name-body .float-icon-wrapper.ngsc-blue {
-  background: #1f4e79;
-}
 .field--name-body .float-icon-wrapper.ngsc-yellow {
   background: #7f6009;
+}
+
+@media (min-width: 768px) {
+  .ngsc-icon-title {
+    position: relative;
+  }
+  .ngsc-icon-title .field--name-body .float-icon-wrapper {
+    position: absolute;
+    top: -28px;
+    left: 0;
+  }
+  .ngsc-icon-title h1 {
+    position: relative;
+    left: 130px;
+  }
+}
+
+#wb-sm {
+  background: #1f4e79;
+}
+#wb-sm .menu > li a:focus, #wb-sm .menu > li a:hover {
+  background: #194670;
+}
+#wb-sm.ngsc-red {
+  background: #843c0c;
+}
+#wb-sm.ngsc-red .menu > li a:focus, #wb-sm.ngsc-red .menu > li a:hover {
+  background: #78360a;
+}
+#wb-sm.ngsc-green {
+  background: #385723;
+}
+#wb-sm.ngsc-green .menu > li a:focus, #wb-sm.ngsc-green .menu > li a:hover {
+  background: #32511c;
+}
+#wb-sm.ngsc-yellow {
+  background: #7f6009;
+}
+#wb-sm.ngsc-yellow .menu > li a:focus, #wb-sm.ngsc-yellow .menu > li a:hover {
+  background: #194670;
 }
 
 /*# sourceMappingURL=ngsc.css.map */

@@ -45,7 +45,6 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 
 
 // Float Icon
-
 .field--name-body {
   .float-icon-wrapper {
     display: none;
@@ -79,7 +78,6 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
       background: $ngsc-green;
     }
     &.ngsc-blue {
-      background: $ngsc-blue;
     }
     &.ngsc-yellow {
       background: $ngsc-yellow;
@@ -87,5 +85,47 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
   }
 }
 
+.ngsc-icon-title {
+  @media (min-width: 768px) {
+    position: relative;
+    .field--name-body {
+      .float-icon-wrapper {
+        position: absolute;
+        top: -28px;
+        left: 0;
+      }
+    }
+    h1 {
+      position: relative;
+      left: 130px;
+    }
+  }
+}
 
 
+#wb-sm {
+  background: $ngsc-blue;
+  .menu>li a:focus, .menu>li a:hover {
+    background: $ngsc-blue-dark;
+  }
+  &.ngsc-red {
+    background: $ngsc-red;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-red-dark;
+    }
+  }
+  &.ngsc-green {
+    background: $ngsc-green;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-green-dark;
+    }
+  }
+  &.ngsc-blue {
+  }
+  &.ngsc-yellow {
+    background: $ngsc-yellow;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-yellow-dark;
+    }
+  }
+}

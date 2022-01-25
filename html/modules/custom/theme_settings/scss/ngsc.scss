@@ -106,18 +106,18 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 #wb-sm {
   background: $ngsc-blue;
   .menu>li a:focus, .menu>li a:hover {
-    background: $ngsc-blue-dark;
+    background: $ngsc-blue-dark !important;
   }
   &.ngsc-red {
     background: $ngsc-red;
     .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-red-dark;
+      background: $ngsc-red-dark !important;
     }
   }
   &.ngsc-green {
     background: $ngsc-green;
     .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-green-dark;
+      background: $ngsc-green-dark !important;
     }
   }
   &.ngsc-blue {
@@ -125,7 +125,7 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
   &.ngsc-yellow {
     background: $ngsc-yellow;
     .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-yellow-dark;
+      background: $ngsc-yellow-dark !important;
     }
   }
 }

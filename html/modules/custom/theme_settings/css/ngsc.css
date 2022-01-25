@@ -76,25 +76,25 @@ h1 {
   background: #1f4e79;
 }
 #wb-sm .menu > li a:focus, #wb-sm .menu > li a:hover {
-  background: #194670;
+  background: #194670 !important;
 }
 #wb-sm.ngsc-red {
   background: #843c0c;
 }
 #wb-sm.ngsc-red .menu > li a:focus, #wb-sm.ngsc-red .menu > li a:hover {
-  background: #78360a;
+  background: #78360a !important;
 }
 #wb-sm.ngsc-green {
   background: #385723;
 }
 #wb-sm.ngsc-green .menu > li a:focus, #wb-sm.ngsc-green .menu > li a:hover {
-  background: #32511c;
+  background: #32511c !important;
 }
 #wb-sm.ngsc-yellow {
   background: #7f6009;
 }
 #wb-sm.ngsc-yellow .menu > li a:focus, #wb-sm.ngsc-yellow .menu > li a:hover {
-  background: #194670;
+  background: #194670 !important;
 }
 
 /*# sourceMappingURL=ngsc.css.map */

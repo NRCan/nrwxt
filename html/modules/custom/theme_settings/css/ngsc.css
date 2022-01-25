@@ -19,29 +19,44 @@ h1 {
   background: #7f6009;
 }
 
-.field--name-body .float-icon {
+.field--name-body .float-icon-wrapper {
   display: none;
+  float: left;
+  margin-top: -134px;
+  background: #1f4e79;
+  width: 115px;
+  height: 115px;
+  padding: 15px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
 }
 @media (min-width: 768px) {
-  .field--name-body .float-icon {
+  .field--name-body .float-icon-wrapper {
     display: block;
-    float: left;
-    margin-top: -134px;
-    background: #1f4e79;
-    width: 134px;
-    height: 134px;
   }
 }
-.field--name-body .float-icon.ngsc-red {
+.field--name-body .float-icon-wrapper .float-icon {
+  width: 66px;
+  margin: auto;
+  top: 0;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin-left: -25%;
+}
+.field--name-body .float-icon-wrapper.ngsc-red {
   background: #843c0c;
 }
-.field--name-body .float-icon.ngsc-green {
+.field--name-body .float-icon-wrapper.ngsc-green {
   background: #385723;
 }
-.field--name-body .float-icon.ngsc-blue {
+.field--name-body .float-icon-wrapper.ngsc-blue {
   background: #1f4e79;
 }
-.field--name-body .float-icon.ngsc-yellow {
+.field--name-body .float-icon-wrapper.ngsc-yellow {
   background: #7f6009;
 }
 

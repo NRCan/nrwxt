@@ -47,15 +47,30 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 // Float Icon
 
 .field--name-body {
-  .float-icon {
+  .float-icon-wrapper {
     display: none;
     @media (min-width: 768px) {
       display: block;
-      float: left;
-      margin-top: -134px;
-      background: $ngsc-blue;
-      width: 134px;
-      height: 134px;
+    }
+    float: left;
+    margin-top: -134px;
+    background: $ngsc-blue;
+    width: 115px;
+    height: 115px;
+    padding: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    .float-icon {
+      width: 66px;
+      margin: auto;
+      top: 0;
+      height: auto;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin-left: -25%;
     }
     &.ngsc-red {
       background: $ngsc-red;
@@ -71,5 +86,6 @@ $ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
     }
   }
 }
+
 
 

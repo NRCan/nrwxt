@@ -21,7 +21,7 @@ $ngsc-blue-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
 
 // Contact Us
 $ngsc-yellow: rgb(127, 96, 9);
-$ngsc-yellow-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
+$ngsc-yellow-dark: color.scale($ngsc-yellow, $lightness: -10%, $saturation: 10%);
 
 .well {
   &.ngsc-red {

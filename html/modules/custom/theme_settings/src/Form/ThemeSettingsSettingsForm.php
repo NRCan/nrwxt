@@ -92,6 +92,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('NGSC custom theme elements.'),
     ];
 
+    $form['admin']['hide_gc_menu'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Hide GC Menu'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('hide_gc_menu'),
+      '#description' => t('Hides the entire GC Menu bar.'),
+    ];
+
     $form['admin']['custom_bullets'] = [
       '#type' => 'radios',
       '#title' => $this->t('Custom list bullets library.'),
@@ -210,6 +218,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->set('osdp', $form_state->getValue('osdp'))
       ->set('ngsc', $form_state->getValue('ngsc'))
+      ->set('hide_gc_menu', $form_state->getValue('hide_gc_menu'))
       ->save();
 
     // Save the plash configurations.

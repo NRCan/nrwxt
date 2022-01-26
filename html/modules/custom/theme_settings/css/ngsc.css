@@ -20,8 +20,7 @@ h1 {
 }
 
 header .brand img, header .brand object {
-  height: auto;
-  max-height: 70px;
+  max-height: 70px !important;
 }
 
 .field--name-body .float-icon-wrapper {

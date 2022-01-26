@@ -44,8 +44,7 @@ $ngsc-yellow-dark: color.scale($ngsc-yellow, $lightness: -10%, $saturation: 10%)
 
 // Larger Banner
 header .brand img, header .brand object {
-  height: auto;
-  max-height: 70px;
+  max-height: 70px !important;
 }
 
 // Float Icon

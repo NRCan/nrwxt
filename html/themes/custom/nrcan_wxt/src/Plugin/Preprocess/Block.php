@@ -55,7 +55,7 @@ class Block extends PreprocessBase {
     $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
 
     // NRCan Theme overrides
-    $splash_config = \Drupal::config('theme_settings.splash');
+    /*$splash_config = \Drupal::config('theme_settings.splash');
     $site_name = $splash_config->get('site_name.'.$language);
     $site_fip = $splash_config->get('site_fip.'.$language);
 
@@ -66,7 +66,7 @@ class Block extends PreprocessBase {
       $variables['logo_svg'] = $site_fip;
       $variables['site_name'] = $site_name;
       $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
-    }
+    }*/
 
 
     if (isset($variables['plugin_id']) && $variables['plugin_id'] == 'wxt_language_block:language_interface') {

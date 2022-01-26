@@ -97,7 +97,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#title' => $this->t('Hide GC Menu'),
       '#options' => $enable_options,
       '#default_value' => $config->get('hide_gc_menu'),
-      '#description' => t('Hides the entire GC Menu bar.'),
+      '#description' => t('if enabled hides the entire GC Menu bar.'),
     ];
 
     $form['admin']['custom_bullets'] = [

@@ -47,6 +47,13 @@ header .brand img, header .brand object {
   max-height: 70px !important;
 }
 
+#wb-sm .menu > li a:hover, #wb-sm .menu > li a:focus {
+  outline-offset: -2px;
+  outline-style: inset;
+  outline-width: 2px;
+  outline: none !important;
+}
+
 // Float Icon
 .field--name-body {
   .float-icon-wrapper {

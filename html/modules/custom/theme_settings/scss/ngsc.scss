@@ -64,16 +64,18 @@ header .brand img, header .brand object {
   }
 }
 
-#mb-pnl {
-  &.btn-ngsc-menu {
-    border: 1px solid $ngsc-blue-dark;
-    background: $ngsc-blue;
-    color: $ngsc-white;
-    &:focus,&:hover,&:active {
-      background: $ngsc-white;
-      color: $ngsc-blue;
-    }
+/* Hamburger */
+.btn-ngsc-menu {
+  border: 1px solid $ngsc-blue-dark;
+  background: $ngsc-blue;
+  color: $ngsc-white;
+  &:focus,&:hover,&:active {
+    background: $ngsc-white;
+    color: $ngsc-blue;
   }
+}
+
+#mb-pnl {
   .modal-header {
     display: none;
   }

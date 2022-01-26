@@ -115,7 +115,7 @@ class Page extends BootstrapPage {
         $variables['logo'] = $site_fip;
         $variables['logo_svg'] = $site_fip;
         $variables['site_name'] = $site_name;
-        $variables['logo_home_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
+        $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
       }
 
     }

@@ -19,6 +19,11 @@ h1 {
   background: #7f6009;
 }
 
+header .brand img, header .brand object {
+  height: auto;
+  max-height: 70px;
+}
+
 .field--name-body .float-icon-wrapper {
   display: none;
   float: left;

@@ -102,6 +102,21 @@ class Page extends BootstrapPage {
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.png';
       $variables['logo_bottom_svg'] = $library_path . '/assets/wmms-blk' . '.svg';
       $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
+
+
+      // NRCan Theme overrides
+      $variables['site_name'] = t('Government of Canada');
+      $splash_config = \Drupal::config('theme_settings.splash');
+      $site_name = $splash_config->get('site_name.'.$language);
+      $site_fip = $splash_config->get('site_fip.'.$language);
+
+      if ($site_fip) {
+        $variables['logo'] = $site_fip;
+        $variables['logo_svg'] = $site_fip;
+        $variables['site_name'] = $site_name;
+        $variables['logo_home_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
+      }
+
     }
     elseif ($wxt_active == 'gc_intranet') {
       $variables['logo_svg'] = $library_path . '/assets/sig-blk-' . $language . '.svg';

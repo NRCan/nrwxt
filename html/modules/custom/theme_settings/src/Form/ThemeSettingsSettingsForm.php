@@ -120,7 +120,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
 
     $form['splash'] = [
       '#type' => 'fieldset',
-      '#title' => $this->t('Splash Page'),
+      '#title' => $this->t('Splash Page & Header'),
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
     ];
@@ -137,6 +137,20 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#title' => $this->t('French Site Name'),
       '#default_value' => $splash_config->get('site_name.fr'),
       '#description' => t('French Site Name on the Splash page'),
+    ];
+
+    $form['splash']['site_fip_en'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('English Header Logo (FIP)'),
+      '#default_value' => $splash_config->get('site_fip.en'),
+      '#description' => t('English logo for the top right throughout the site. Leave blank for default.'),
+    ];
+
+    $form['splash']['site_fip_fr'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('French Header Logo (FIP)'),
+      '#default_value' => $splash_config->get('site_fip.fr'),
+      '#description' => t('French logo for the top right throughout the site. Leave blank for default.'),
     ];
 
     $form['splash']['splash_bg'] = [
@@ -202,6 +216,8 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
     $this->configFactory->getEditable('theme_settings.splash')
       ->set('site_name.en', $form_state->getValue('site_name_en'))
       ->set('site_name.fr', $form_state->getValue('site_name_fr'))
+      ->set('site_fip.en', $form_state->getValue('site_fip_en'))
+      ->set('site_fip.fr', $form_state->getValue('site_fip_fr'))
       ->set('splash_bg', $form_state->getValue('splash_bg'))
       ->set('tc_link.en', $form_state->getValue('splash_tc_en'))
       ->set('tc_link.fr', $form_state->getValue('splash_tc_fr'))

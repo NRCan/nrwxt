@@ -49,6 +49,23 @@ class Block extends PreprocessBase {
       }
     }
 
+    // Defaults
+    $variables['site_link'] = 'https://canada.ca';
+    $variables['site_name'] = 'Government of Canada';
+
+    // NRCan Theme overrides
+    $splash_config = $this->config('theme_settings.splash');
+    $site_name = $splash_config->get('site_name.'.$language);
+    $site_fip = $splash_config->get('site_fip.'.$language);
+
+    if ($site_fip) {
+      unset($variables['logo_svg']);
+      $variables['logo'] = $site_fip;
+      $variables['site_name'] = $site_name;
+      $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE];
+    }
+
+
     if (isset($variables['plugin_id']) && $variables['plugin_id'] == 'wxt_language_block:language_interface') {
       /** @var \Drupal\wxt_library\LibraryService $wxt */
       $wxt = \Drupal::service('wxt_library.service_wxt');

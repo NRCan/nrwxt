@@ -52,6 +52,7 @@ class Block extends PreprocessBase {
     // Defaults
     $variables['site_link'] = 'https://canada.ca';
     $variables['site_name'] = t('Government of Canada');
+    $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
 
     // NRCan Theme overrides
     $splash_config = \Drupal::config('theme_settings.splash');
@@ -78,8 +79,6 @@ class Block extends PreprocessBase {
         $variables['logo_sig_svg'] = $library_path . '/assets/sig-' . $language . '.svg';
       }
     }
-
-    $variables['logo_home_link'] = 'https://www.canada.ca/' . $language . '.html';
 
     parent::preprocess($variables, $hook, $info);
   }

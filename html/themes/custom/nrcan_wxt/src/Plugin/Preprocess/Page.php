@@ -65,6 +65,15 @@ class Page extends BootstrapPage {
 
     //kint($variables);
 
+    //NRCan menu
+    $variables['nrwxt_hide_menu'] = FALSE;
+    $settings_config = \Drupal::config('theme_settings.settings');
+    $hide_menu = $settings_config->get('hide_gc_menu');
+    if ($hide_menu == 'on') {
+      $variables['nrwxt_hide_menu'] = TRUE;
+    }
+
+
     // Footer Navigation (gcweb).
     //$wxt_active = gcweb for modern sites.
     if ($wxt_active == 'gcweb' || $wxt_active == 'gcweb_legacy' || $wxt_active == 'gcwu_fegc') {

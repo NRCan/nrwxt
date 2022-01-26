@@ -28,10 +28,17 @@
 
 #}
 {% block content %}
+  {% if nrwxt_logo == true %}
+    <a href="{{ logo_home_link }}" property="url" class="brand">
+      <img src="{{ logo_svg }}" class="logo-{{ language }}" alt="{{ site_name }}" property="logo">
+    </a>
+    <link property="logo" href="{{ logo_svg }}">
+  {% else %}
   <a href="{{ logo_home_link }}" property="url" class="brand">
-    <img src="{{ logo_svg }}" class="logo-{{ language.getId() }}" alt="{{ 'Government of Canada'|t }}" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+    <img src="{{ logo_svg }}" class="logo-{{ language }}" alt="{{ 'Government of Canada'|t }}" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
   </a>
   <meta property="name" content="Government of Canada">
   <meta property="areaServed" typeof="Country" content="Canada">
   <link property="logo" href="{{ logo_svg }}">
+  {% endif %}
 {% endblock %}

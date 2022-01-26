@@ -111,6 +111,7 @@ class Page extends BootstrapPage {
       $site_fip = $splash_config->get('site_fip.'.$language);
 
       if ($site_fip) {
+        $variables['nrwxt_logo'] = TRUE;
         $variables['logo'] = $site_fip;
         $variables['logo_svg'] = $site_fip;
         $variables['site_name'] = $site_name;

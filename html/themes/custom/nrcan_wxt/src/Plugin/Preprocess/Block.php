@@ -58,7 +58,9 @@ class Block extends PreprocessBase {
     $site_name = $splash_config->get('site_name.'.$language);
     $site_fip = $splash_config->get('site_fip.'.$language);
 
+    $variables['nrwxt_logo'] = FALSE;
     if ($site_fip) {
+      $variables['nrwxt_logo'] = TRUE;
       $variables['logo'] = $site_fip;
       $variables['logo_svg'] = $site_fip;
       $variables['site_name'] = $site_name;

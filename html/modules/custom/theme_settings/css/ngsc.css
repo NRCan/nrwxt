@@ -35,21 +35,18 @@ header .brand img, header .brand object {
   #wb-glb-mn {
     margin: 0 !important;
     position: absolute;
-    top: -88px;
+    top: -97px;
     right: 29px;
   }
 }
 /* Hamburger */
 .btn-ngsc-menu {
-  border: 1px solid #194670;
-  background: #1f4e79;
-  color: #ffffff;
-}
-.btn-ngsc-menu:focus, .btn-ngsc-menu:hover, .btn-ngsc-menu:active {
-  background: #ffffff;
+  padding: 0 5px !important;
+  font-size: 1.5em;
+  background: none;
   color: #1f4e79;
+  border: none !important;
 }
-
 #mb-pnl .modal-header {
   display: none;
 }
@@ -61,7 +58,7 @@ header .brand img, header .brand object {
 }
 #mb-pnl .modal-body .lng-ofr {
   text-align: left;
-  padding: 15px 0 0 30p;
+  padding: 15px 0 0 30px;
 }
 #mb-pnl .modal-footer {
   margin-top: -47px;

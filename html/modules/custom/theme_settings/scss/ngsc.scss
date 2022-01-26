@@ -59,19 +59,19 @@ header .brand img, header .brand object {
   #wb-glb-mn {
     margin: 0 !important;
     position: absolute;
-    top: -88px;
+    top: -97px;
     right: 29px;
   }
 }
 
 /* Hamburger */
 .btn-ngsc-menu {
-  border: 1px solid $ngsc-blue-dark;
-  background: $ngsc-blue;
-  color: $ngsc-white;
+  padding: 0 5px !important;
+  font-size: 1.5em;
+  background: none;
+  color: $ngsc-blue;
+  border: none !important;
   &:focus,&:hover,&:active {
-    background: $ngsc-white;
-    color: $ngsc-blue;
   }
 }
 
@@ -86,7 +86,7 @@ header .brand img, header .brand object {
     }
     .lng-ofr {
       text-align: left;
-      padding: 15px 0 0 30p;
+      padding: 15px 0 0 30px;
     }
   }
   .modal-footer {

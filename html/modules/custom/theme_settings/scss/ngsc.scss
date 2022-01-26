@@ -81,6 +81,7 @@ header .brand img, header .brand object {
       background: $ngsc-green;
     }
     &.ngsc-blue {
+      background: $ngsc-blue;
     }
     &.ngsc-yellow {
       background: $ngsc-yellow;
@@ -107,7 +108,7 @@ header .brand img, header .brand object {
 
 
 #wb-sm {
-  background: $ngsc-blue;
+  background: $ngsc-blue !important;
   .menu>li a:focus, .menu>li a:hover {
     background: $ngsc-blue-dark !important;
   }
@@ -124,6 +125,10 @@ header .brand img, header .brand object {
     }
   }
   &.ngsc-blue {
+    background: $ngsc-blue !important;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-blue-dark !important;
+    }
   }
   &.ngsc-yellow {
     background: $ngsc-yellow;

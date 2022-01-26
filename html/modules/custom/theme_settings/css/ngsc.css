@@ -57,6 +57,9 @@ header .brand img, header .brand object {
 .field--name-body .float-icon-wrapper.ngsc-green {
   background: #385723;
 }
+.field--name-body .float-icon-wrapper.ngsc-blue {
+  background: #1f4e79;
+}
 .field--name-body .float-icon-wrapper.ngsc-yellow {
   background: #7f6009;
 }
@@ -77,7 +80,7 @@ header .brand img, header .brand object {
 }
 
 #wb-sm {
-  background: #1f4e79;
+  background: #1f4e79 !important;
 }
 #wb-sm .menu > li a:focus, #wb-sm .menu > li a:hover {
   background: #194670 !important;
@@ -93,6 +96,12 @@ header .brand img, header .brand object {
 }
 #wb-sm.ngsc-green .menu > li a:focus, #wb-sm.ngsc-green .menu > li a:hover {
   background: #32511c !important;
+}
+#wb-sm.ngsc-blue {
+  background: #1f4e79 !important;
+}
+#wb-sm.ngsc-blue .menu > li a:focus, #wb-sm.ngsc-blue .menu > li a:hover {
+  background: #194670 !important;
 }
 #wb-sm.ngsc-yellow {
   background: #7f6009;

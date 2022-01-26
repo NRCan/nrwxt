@@ -62,7 +62,7 @@ class Block extends PreprocessBase {
       unset($variables['logo_svg']);
       $variables['logo'] = $site_fip;
       $variables['site_name'] = $site_name;
-      $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE];
+      $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
     }
 
 

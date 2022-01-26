@@ -30,6 +30,38 @@ header .brand img, header .brand object {
   outline: none !important;
 }
 
+/* Tidy up the mobile menu */
+@media screen and (max-width: 767px) {
+  #wb-glb-mn {
+    margin-top: -15px;
+  }
+}
+#mb-pnl {
+  border: 1px solid #194670;
+  background: #1f4e79;
+  color: #ffffff;
+}
+#mb-pnl:focus, #mb-pnl:hover, #mb-pnl:active {
+  background: #ffffff;
+  color: #1f4e79;
+}
+#mb-pnl .modal-header {
+  display: none;
+}
+#mb-pnl .modal-body {
+  padding-top: 37px;
+}
+#mb-pnl .modal-body li {
+  line-height: 1;
+}
+#mb-pnl .modal-body .lng-ofr {
+  text-align: left;
+  padding: 15px 0 0 30p;
+}
+#mb-pnl .modal-footer {
+  margin-top: -47px;
+}
+
 .field--name-body .float-icon-wrapper {
   display: none;
   float: left;

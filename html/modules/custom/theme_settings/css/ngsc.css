@@ -33,15 +33,18 @@ header .brand img, header .brand object {
 /* Tidy up the mobile menu */
 @media screen and (max-width: 767px) {
   #wb-glb-mn {
-    margin-top: -15px;
+    margin: 0 !important;
+    position: absolute;
+    top: -88px;
+    right: 29px;
   }
 }
-#mb-pnl {
+#mb-pnl.btn-ngsc-menu {
   border: 1px solid #194670;
   background: #1f4e79;
   color: #ffffff;
 }
-#mb-pnl:focus, #mb-pnl:hover, #mb-pnl:active {
+#mb-pnl.btn-ngsc-menu:focus, #mb-pnl.btn-ngsc-menu:hover, #mb-pnl.btn-ngsc-menu:active {
   background: #ffffff;
   color: #1f4e79;
 }

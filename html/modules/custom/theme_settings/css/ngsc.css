@@ -35,8 +35,11 @@ header .brand img, header .brand object {
   #wb-glb-mn {
     margin: 0 !important;
     position: absolute;
-    top: -97px;
+    top: 8px;
     right: 29px;
+  }
+  .user-logged-in #wb-glb-mn {
+    top: -97px;
   }
 }
 /* Hamburger */

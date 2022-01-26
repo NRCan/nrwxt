@@ -79,6 +79,10 @@ header .brand img, header .brand object {
 }
 
 #mb-pnl {
+  visibility: hidden;
+  &.wb-overlay-inited {
+    visibility: initial;
+  }
   .modal-header {
     display: none;
   }

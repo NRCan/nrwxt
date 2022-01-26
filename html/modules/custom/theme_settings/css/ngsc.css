@@ -50,6 +50,12 @@ header .brand img, header .brand object {
   color: #1f4e79;
   border: none !important;
 }
+#mb-pnl {
+  visibility: hidden;
+}
+#mb-pnl.wb-overlay-inited {
+  visibility: initial;
+}
 #mb-pnl .modal-header {
   display: none;
 }

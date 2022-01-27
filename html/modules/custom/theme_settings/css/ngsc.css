@@ -30,6 +30,10 @@ header .brand img, header .brand object {
   outline: none !important;
 }
 
+#wb-info .landscape {
+  background: #1f4e79 !important;
+}
+
 /* Tidy up the mobile menu */
 @media screen and (max-width: 767px) {
   #wb-glb-mn {

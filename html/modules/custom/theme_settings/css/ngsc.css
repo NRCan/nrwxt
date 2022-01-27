@@ -120,12 +120,13 @@ header .brand img, header .brand object {
   }
   .ngsc-icon-title .field--name-body .float-icon-wrapper {
     position: absolute;
-    top: -28px;
+    top: 20px;
     left: 0;
   }
   .ngsc-icon-title h1 {
     position: relative;
     left: 130px;
+    padding-bottom: 21px;
   }
 }
 

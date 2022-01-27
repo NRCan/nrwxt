@@ -149,6 +149,7 @@ header .brand img, header .brand object {
 }
 
 .ngsc-icon-title {
+  overflow: hidden;
   @media (min-width: 768px) {
     position: relative;
     .field--name-body {

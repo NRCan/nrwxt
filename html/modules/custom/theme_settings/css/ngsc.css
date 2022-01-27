@@ -118,6 +118,9 @@ header .brand img, header .brand object {
   background: #7f6009;
 }
 
+.ngsc-icon-title {
+  overflow: hidden;
+}
 @media (min-width: 768px) {
   .ngsc-icon-title {
     position: relative;

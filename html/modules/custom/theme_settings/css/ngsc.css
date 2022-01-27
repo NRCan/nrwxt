@@ -120,7 +120,6 @@ header .brand img, header .brand object {
 
 @media (min-width: 768px) {
   .ngsc-icon-title {
-    overflow: hidden;
     position: relative;
   }
   .ngsc-icon-title .field--name-body .float-icon-wrapper {

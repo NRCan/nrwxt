@@ -152,6 +152,9 @@ header .brand img, header .brand object {
         position: absolute;
         top: 10px;
         left: 0;
+        .user-logged-in & {
+          top: -60px;
+        }
       }
     }
     h1 {

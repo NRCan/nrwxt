@@ -118,11 +118,9 @@ header .brand img, header .brand object {
   background: #7f6009;
 }
 
-.ngsc-icon-title {
-  overflow: hidden;
-}
 @media (min-width: 768px) {
   .ngsc-icon-title {
+    overflow: hidden;
     position: relative;
   }
   .ngsc-icon-title .field--name-body .float-icon-wrapper {
@@ -134,9 +132,8 @@ header .brand img, header .brand object {
     top: -60px;
   }
   .ngsc-icon-title h1 {
-    position: relative;
-    left: 130px;
     padding-bottom: 31px;
+    padding-left: 130px;
   }
 }
 

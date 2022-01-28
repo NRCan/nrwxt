@@ -167,4 +167,21 @@ header .brand img, header .brand object {
   background: #735707 !important;
 }
 
+.ngsc-banner {
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+}
+.ngsc-banner.bg-left {
+  background-position: left;
+}
+.ngsc-banner.bg-right {
+  background-position: right;
+}
+@media screen and (min-width: 768px) {
+  .ngsc-banner {
+    min-height: 400px;
+  }
+}
+
 /*# sourceMappingURL=ngsc.css.map */

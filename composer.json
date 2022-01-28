@@ -27,7 +27,9 @@
         "drupal/field_group": "^3.2",
         "drupal/shs": "2.0.x-dev@dev",
         "drupal/purge": "^3.0",
-        "drupal/linkit": "^6.0@beta"
+        "drupal/linkit": "^6.0@beta",
+        "drupal/toolbar_language_switcher": "^2.0@alpha",
+        "drupal/transliterate_filenames": "^1.6"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

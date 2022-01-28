@@ -202,13 +202,20 @@ header .brand img, header .brand object {
 
 .ngsc-banner {
   background-size: cover;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
   min-height: 250px;
   &.bg-left {
-    background-position: left;
+    background-position-x: left;
   }
   &.bg-right {
-    background-position: right;
+    background-position-x: right;
+  }
+  &.bg-top {
+    background-position-y: top;
+  }
+  &.bg-bottom {
+    background-position-y: bottom;
   }
   @media screen and (min-width: 768px) {
     min-height: 400px;

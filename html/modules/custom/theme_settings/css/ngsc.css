@@ -169,14 +169,21 @@ header .brand img, header .brand object {
 
 .ngsc-banner {
   background-size: cover;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: center;
   min-height: 250px;
 }
 .ngsc-banner.bg-left {
-  background-position: left;
+  background-position-x: left;
 }
 .ngsc-banner.bg-right {
-  background-position: right;
+  background-position-x: right;
+}
+.ngsc-banner.bg-top {
+  background-position-y: top;
+}
+.ngsc-banner.bg-bottom {
+  background-position-y: bottom;
 }
 @media screen and (min-width: 768px) {
   .ngsc-banner {

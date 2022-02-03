@@ -167,8 +167,9 @@ header .brand img, header .brand object {
   background: #735707 !important;
 }
 
-.photo-credit {
+.photo-credit, .small.photo-credit {
   font-size: 14px;
+  color: #383838;
 }
 
 .ngsc-banner.wb-bgimg-inited {

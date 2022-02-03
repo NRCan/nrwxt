@@ -167,13 +167,22 @@ header .brand img, header .brand object {
   background: #735707 !important;
 }
 
-.photo-credit, .small.photo-credit {
+.photo-credit, .small.photo-credit, .text-right.small.photo-credit {
   font-size: 14px;
+  line-height: 1.2;
   color: #383838;
 }
+@media screen and (max-width: 767px) {
+  .photo-credit, .small.photo-credit, .text-right.small.photo-credit {
+    margin: 0 5px;
+    text-align: center;
+    margin: 5px;
+  }
+}
 @media screen and (min-width: 768px) {
-  .photo-credit, .small.photo-credit {
+  .photo-credit, .small.photo-credit, .text-right.small.photo-credit {
     margin-right: 5px;
+    text-align: center;
   }
 }
 

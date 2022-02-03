@@ -167,31 +167,35 @@ header .brand img, header .brand object {
   background: #735707 !important;
 }
 
-.ngsc-banner {
+.photo-credit {
+  font-size: 14px;
+}
+
+.ngsc-banner.wb-bgimg-inited {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
   min-height: 250px;
 }
-.ngsc-banner.bg-left {
+.ngsc-banner.wb-bgimg-inited.bg-left {
   background-position-x: left;
 }
-.ngsc-banner.bg-right {
+.ngsc-banner.wb-bgimg-inited.bg-right {
   background-position-x: right;
 }
-.ngsc-banner.bg-top {
+.ngsc-banner.wb-bgimg-inited.bg-top {
   background-position-y: top;
 }
-.ngsc-banner.bg-bottom {
+.ngsc-banner.wb-bgimg-inited.bg-bottom {
   background-position-y: bottom;
 }
 @media screen and (min-width: 768px) {
-  .ngsc-banner {
+  .ngsc-banner.wb-bgimg-inited {
     min-height: 400px;
   }
 }
 @media screen and (min-width: 2000px) {
-  .ngsc-banner {
+  .ngsc-banner.wb-bgimg-inited {
     min-height: 420px;
   }
 }

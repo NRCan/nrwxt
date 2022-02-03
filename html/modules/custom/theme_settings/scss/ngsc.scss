@@ -200,7 +200,11 @@ header .brand img, header .brand object {
   }
 }
 
-.ngsc-banner {
+.photo-credit {
+  font-size: 14px;
+}
+
+.ngsc-banner.wb-bgimg-inited {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;

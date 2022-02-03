@@ -182,7 +182,7 @@ header .brand img, header .brand object {
 @media screen and (min-width: 768px) {
   .photo-credit, .small.photo-credit, .text-right.small.photo-credit {
     margin-right: 5px;
-    text-align: center;
+    text-align: right;
   }
 }
 

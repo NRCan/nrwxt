@@ -171,6 +171,11 @@ header .brand img, header .brand object {
   font-size: 14px;
   color: #383838;
 }
+@media screen and (min-width: 768px) {
+  .photo-credit, .small.photo-credit {
+    margin-right: 5px;
+  }
+}
 
 .ngsc-banner.wb-bgimg-inited {
   background-size: cover;

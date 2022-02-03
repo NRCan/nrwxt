@@ -203,6 +203,9 @@ header .brand img, header .brand object {
 .photo-credit, .small.photo-credit {
   font-size: 14px;
   color: #383838;
+  @media screen and (min-width: 768px) {
+    margin-right: 5px;
+  }
 }
 
 .ngsc-banner.wb-bgimg-inited {

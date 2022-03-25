@@ -37,11 +37,20 @@
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.well.clean-well.bg-white, .well.clean-well.bg-none {
+  border: 1px solid #e3e3e3;
+}
 .well.clean-well > :first-child {
   margin-top: 0;
 }
 .well.clean-well > :last-child {
   margin-bottom: 0;
+}
+.well.bg-none {
+  background: none;
+}
+.well.bg-none .well-link, .well.bg-none .well-text {
+  color: inherit;
 }
 .well.bg-white {
   background-color: #FFFFFF;

@@ -21,7 +21,7 @@
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
         "drupal/language_selection_page": "^2.7",
-        "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
+        "drupal/openid_connect_windows_aad": "1.x-dev@dev",
         "aws/aws-sdk-php": "~3.0",
         "drupal/public_preview": "^1.0@beta",
         "drupal/field_group": "^3.2",
@@ -31,7 +31,10 @@
         "drupal/toolbar_language_switcher": "^2.0@alpha",
         "drupal/transliterate_filenames": "^1.6",
         "wikimedia/composer-merge-plugin": "^2.0",
-        "drupal/file_delete": "1.x-dev@dev"
+        "drupal/file_delete": "1.x-dev@dev",
+        "drupal/moderated_content_bulk_publish": "^2.0",
+        "drupal/openid_connect": "^2.0@alpha",
+        "drupal/key": "^1.15"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -134,23 +137,8 @@
           },
           "drupal/linkit": {
               "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
-          }
-        },
-        "patches-ignore": {
-            "acquia/lightning": {
-                "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                }
-            },
-            "drupal/lightning_core": {
-                "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                }
-            },
-            "drupal/lightning": {
-               "drupal/metatag": {
+          },
+          "drupal/metatag": {
                     "Enter drupal/metatag patch 2955407 description here": "https://www.drupal.org/files/issues/2020-12-18/Issue-2955407-Static-caching-for-token-processing-ic.patch"
                }
             }

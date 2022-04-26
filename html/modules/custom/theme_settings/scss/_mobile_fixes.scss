@@ -1,0 +1,37 @@
+
+/* Tidy up the mobile menu */
+@media screen and (max-width: 767px) {
+  #wb-glb-mn {
+    margin: 0 !important;
+    position: absolute;
+    top: 8px;
+    right: 29px;
+    .user-logged-in & {
+      top: -97px;
+    }
+  }
+}
+
+#mb-pnl {
+  visibility: hidden;
+  &.wb-overlay-inited {
+    visibility: initial;
+  }
+  .modal-header {
+    display: none;
+  }
+  .modal-body {
+    padding-top: 37px;
+    li {
+      line-height: 1;
+    }
+    .lng-ofr {
+      text-align: left;
+      padding: 15px 0 0 30px;
+    }
+  }
+  .modal-footer {
+    //border: none;
+    margin-top: -47px;
+  }
+}

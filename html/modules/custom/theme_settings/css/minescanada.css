@@ -1,0 +1,132 @@
+/* Tidy up the mobile menu */
+@media screen and (max-width: 767px) {
+  #wb-glb-mn {
+    margin: 0 !important;
+    position: absolute;
+    top: 8px;
+    right: 29px;
+  }
+  .user-logged-in #wb-glb-mn {
+    top: -97px;
+  }
+}
+#mb-pnl {
+  visibility: hidden;
+}
+#mb-pnl.wb-overlay-inited {
+  visibility: initial;
+}
+#mb-pnl .modal-header {
+  display: none;
+}
+#mb-pnl .modal-body {
+  padding-top: 37px;
+}
+#mb-pnl .modal-body li {
+  line-height: 1;
+}
+#mb-pnl .modal-body .lng-ofr {
+  text-align: left;
+  padding: 15px 0 0 30px;
+}
+#mb-pnl .modal-footer {
+  margin-top: -47px;
+}
+
+h1 {
+  border: none !important;
+}
+
+.well.mines-blue {
+  color: #ffffff;
+  background: #2687b9;
+}
+.well.mines-green {
+  color: #ffffff;
+  background: #279a63;
+}
+.well.ngsc-blue {
+  color: #ffffff;
+  background: #2687b9;
+}
+.well.mines-purple {
+  color: #ffffff;
+  background: #694f7f;
+}
+
+header .brand img, header .brand object {
+  max-height: 70px !important;
+}
+
+#wb-sm .menu > li a:hover, #wb-sm .menu > li a:focus {
+  outline-offset: -2px;
+  outline-style: inset;
+  outline-width: 2px;
+  outline: none !important;
+}
+
+#wb-info .landscape {
+  background: #2687b9 !important;
+}
+
+#wb-sm {
+  background: #2687b9 !important;
+}
+#wb-sm .menu > li a:focus, #wb-sm .menu > li a:hover {
+  background: #0b72ae !important;
+}
+#wb-sm.mines-blue {
+  background: #2687b9;
+}
+#wb-sm.mines-blue .menu > li a:focus, #wb-sm.mines-blue .menu > li a:hover {
+  background: #0b72ae !important;
+}
+#wb-sm.mines-green {
+  background: #279a63;
+}
+#wb-sm.mines-green .menu > li a:focus, #wb-sm.mines-green .menu > li a:hover {
+  background: #018748 !important;
+}
+#wb-sm.ngsc-blue {
+  background: #2687b9 !important;
+}
+#wb-sm.ngsc-blue .menu > li a:focus, #wb-sm.ngsc-blue .menu > li a:hover {
+  background: #0b72ae !important;
+}
+#wb-sm.mines-purple {
+  background: #694f7f;
+}
+#wb-sm.mines-purple .menu > li a:focus, #wb-sm.mines-purple .menu > li a:hover {
+  background: #4d306a !important;
+}
+
+.ngsc-banner.wb-bgimg-inited {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  min-height: 250px;
+}
+.ngsc-banner.wb-bgimg-inited.bg-left {
+  background-position-x: left;
+}
+.ngsc-banner.wb-bgimg-inited.bg-right {
+  background-position-x: right;
+}
+.ngsc-banner.wb-bgimg-inited.bg-top {
+  background-position-y: top;
+}
+.ngsc-banner.wb-bgimg-inited.bg-bottom {
+  background-position-y: bottom;
+}
+@media screen and (min-width: 768px) {
+  .ngsc-banner.wb-bgimg-inited {
+    min-height: 400px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .ngsc-banner.wb-bgimg-inited {
+    min-height: 420px;
+  }
+}
+
+/*# sourceMappingURL=minescanada.css.map */

@@ -10,6 +10,10 @@ ngsc:
   css:
     theme:
       css/ngsc.css: {}
+minescanada:
+  css:
+    theme:
+      css/minescanada.css: {}
 left-menu:
   css:
     theme:

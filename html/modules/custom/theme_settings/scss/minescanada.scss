@@ -1,0 +1,119 @@
+@use "sass:color";
+@use 'mobile_fixes';
+
+h1 {
+    border: none !important;
+}
+
+// Colours
+$mines-white: #ffffff;
+
+// Mines Dark Slate Blue
+$mines-navy-dark: rgb(38,56,80);
+$mines-navy: color.scale($mines-navy-dark, $lightness: 10%, $saturation: -10%);
+
+// Mines Purple
+$mines-purple: rgb(105,79,127);
+$mines-purple-dark: rgb(77,48,106);
+
+// Mines Green
+$mines-green: rgb(39,154,99);
+$mines-green-dark: rgb(1,135,72);
+
+// Mines Blue
+$mines-blue: rgb(38,135,185);
+$mines-blue-dark: rgb(11,114,174);
+
+
+.well {
+  &.mines-blue {
+    color: $mines-white;
+    background: $mines-blue;
+  }
+  &.mines-green {
+    color: $mines-white;
+    background: $mines-green;
+  }
+  &.ngsc-blue {
+    color: $mines-white;
+    background: $mines-blue;
+  }
+  &.mines-purple {
+    color: $mines-white;
+    background: $mines-purple;
+  }
+}
+
+// Larger Banner
+header .brand img, header .brand object {
+  max-height: 70px !important;
+}
+
+#wb-sm .menu > li a:hover, #wb-sm .menu > li a:focus {
+  outline-offset: -2px;
+  outline-style: inset;
+  outline-width: 2px;
+  outline: none !important;
+}
+
+#wb-info .landscape {
+  background: $mines-blue !important;
+}
+
+// Menu
+
+#wb-sm {
+  background: $mines-blue !important;
+  .menu>li a:focus, .menu>li a:hover {
+    background: $mines-blue-dark !important;
+  }
+  &.mines-blue {
+    background: $mines-blue;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $mines-blue-dark !important;
+    }
+  }
+  &.mines-green {
+    background: $mines-green;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $mines-green-dark !important;
+    }
+  }
+  &.ngsc-blue {
+    background: $mines-blue !important;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $mines-blue-dark !important;
+    }
+  }
+  &.mines-purple {
+    background: $mines-purple;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $mines-purple-dark !important;
+    }
+  }
+}
+
+.ngsc-banner.wb-bgimg-inited {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  min-height: 250px;
+  &.bg-left {
+    background-position-x: left;
+  }
+  &.bg-right {
+    background-position-x: right;
+  }
+  &.bg-top {
+    background-position-y: top;
+  }
+  &.bg-bottom {
+    background-position-y: bottom;
+  }
+  @media screen and (min-width: 768px) {
+    min-height: 400px;
+  }
+  @media screen and (min-width: 2000px) {
+    min-height: 420px;
+  }
+}

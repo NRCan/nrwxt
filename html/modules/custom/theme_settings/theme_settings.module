@@ -36,6 +36,10 @@ function theme_settings_ngsc() {
   return \Drupal::config('theme_settings.settings')->get('ngsc') == 'on';
 }
 
+function theme_settings_minescanada() {
+  return \Drupal::config('theme_settings.settings')->get('minescanada') == 'on';
+}
+
 function theme_settings_custom_bullets() {
   return \Drupal::config('theme_settings.settings')->get('custom_bullets') == 'on';
 }
@@ -78,6 +82,10 @@ function theme_settings_page_attachments(array &$page) {
 
   if (theme_settings_ngsc()) {
     $page['#attached']['library'][] = 'theme_settings/ngsc';
+  }
+
+  if (theme_settings_minescanada()) {
+    $page['#attached']['library'][] = 'theme_settings/minescanada';
   }
 
   if (theme_settings_custom_bullets()) {

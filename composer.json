@@ -17,11 +17,13 @@
         "drupal/devel": "^4.0",
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
+        "drupal/key": "^1.15",
+        "drupal/openid_connect": "^1.2",
+        "drupal/openid_connect_windows_aad": "1.x-dev@dev",
         "drupal/tome": "^1.4",
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
         "drupal/language_selection_page": "^2.7",
-        "drupal/openid_connect_windows_aad": "1.x-dev@dev",
         "aws/aws-sdk-php": "~3.0",
         "drupal/public_preview": "^1.0@beta",
         "drupal/field_group": "^3.2",
@@ -32,9 +34,7 @@
         "drupal/transliterate_filenames": "^1.6",
         "wikimedia/composer-merge-plugin": "^2.0",
         "drupal/file_delete": "1.x-dev@dev",
-        "drupal/moderated_content_bulk_publish": "^2.0",
-        "drupal/openid_connect": "^2.0@alpha",
-        "drupal/key": "^1.15"
+        "drupal/moderated_content_bulk_publish": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -137,16 +137,6 @@
             },
             "drupal/linkit": {
                 "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
-            },
-            "drupal/openid_connect": {
-                "#3011413: Autologin when one client enabled": "https://www.drupal.org/files/issues/2020-06-30/openid_connect-autologin-3011413-36.patch",
-                "#3061438: User is not logged out of the service": "https://www.drupal.org/files/issues/2020-09-09/openid_connect-provider-logout-3061438-35.patch"
-            },
-            "drupal/openid_connect_windows_aad": {
-                "#3153328: Undefined index: map_ad_groups_to_roles": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-3153328-14.patch",
-                "#2944190: Pass along the Azure refresh token": "https://www.drupal.org/files/issues/pass_along_refresh_token_D8-2944190-2.patch",
-                "#3170018: Prepare for OpenID Connect changes": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-3170018-3.patch",
-                "#3169996: Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
             }
         },
         "patches-ignore": {

@@ -1,30 +1,3 @@
-.region-branding ul.nav > li > a {
-  display: inline-block;
-  padding: 0;
-}
-
-.region-banner {
-  margin: 10px 0;
-}
-
-.well.bg-success,
-.panel-default > .panel-heading.bg-success {
-  background-color: #dff0d8;
-}
-.well.bg-info,
-.panel-default > .panel-heading.bg-info {
-  background-color: #d9edf7;
-}
-.well.bg-warning,
-.panel-default > .panel-heading.bg-warning {
-  background-color: #fcf8e3;
-}
-.well.bg-danger,
-.panel-default > .panel-heading.bg-danger {
-  background-color: #f2dede;
-}
-
-/* Wells */
 /* Colours */
 .well .well-link {
   font-weight: bold;
@@ -80,7 +53,6 @@
   color: #843534;
 }
 
-/* Beta theme css */
 .ip-cover-img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -204,5 +176,39 @@ ul.feeds-cont li a {
   }
 }
 /* end beta */
+/* Wells */
+/* Beta theme css */
+.region-branding ul.nav > li > a {
+  display: inline-block;
+  padding: 0;
+}
+
+.region-banner {
+  margin: 10px 0;
+}
+
+.well.bg-success,
+.panel-default > .panel-heading.bg-success {
+  background-color: #dff0d8;
+}
+.well.bg-info,
+.panel-default > .panel-heading.bg-info {
+  background-color: #d9edf7;
+}
+.well.bg-warning,
+.panel-default > .panel-heading.bg-warning {
+  background-color: #fcf8e3;
+}
+.well.bg-danger,
+.panel-default > .panel-heading.bg-danger {
+  background-color: #f2dede;
+}
+
+.contextual-region .contextual .contextual-links li {
+  background-color: #fff;
+}
+.contextual-region .contextual .contextual-links li a {
+  color: #333;
+}
 
 /*# sourceMappingURL=style.css.map */

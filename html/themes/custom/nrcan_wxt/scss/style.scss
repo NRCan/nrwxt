@@ -1,3 +1,10 @@
+/* Wells */
+@use 'wells';
+
+/* Beta theme css */
+@use 'beta';
+
+
 .region-branding {
   ul.nav {
     > li {
@@ -30,10 +37,9 @@
   }
 }
 
-
-
-/* Wells */
-@import 'wells';
-
-/* Beta theme css */
-@import 'beta';
+.contextual-region .contextual .contextual-links li {
+  background-color: #fff;
+  a {
+    color: #333;
+  }
+}

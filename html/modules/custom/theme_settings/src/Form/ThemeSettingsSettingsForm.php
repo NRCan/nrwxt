@@ -92,6 +92,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('NGSC custom theme elements.'),
     ];
 
+    $form['admin']['minescanada'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('MinesCanada Theme'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('minescanada'),
+      '#description' => t('MinesCanada custom theme elements.'),
+    ];
+
     $form['admin']['hide_gc_menu'] = [
       '#type' => 'radios',
       '#title' => $this->t('Hide GC Menu'),

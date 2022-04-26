@@ -137,6 +137,16 @@
             },
             "drupal/linkit": {
                 "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
+            },
+            "drupal/openid_connect": {
+                "#3011413: Autologin when one client enabled": "https://www.drupal.org/files/issues/2020-06-30/openid_connect-autologin-3011413-36.patch",
+                "#3061438: User is not logged out of the service": "https://www.drupal.org/files/issues/2020-09-09/openid_connect-provider-logout-3061438-35.patch"
+            },
+            "drupal/openid_connect_windows_aad": {
+                "#3153328: Undefined index: map_ad_groups_to_roles": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-3153328-14.patch",
+                "#2944190: Pass along the Azure refresh token": "https://www.drupal.org/files/issues/pass_along_refresh_token_D8-2944190-2.patch",
+                "#3170018: Prepare for OpenID Connect changes": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-3170018-3.patch",
+                "#3169996: Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
             }
         },
         "patches-ignore": {

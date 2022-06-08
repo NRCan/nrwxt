@@ -228,4 +228,8 @@ a.button-big-centered, button.button-big-centered {
   vertical-align: middle;
 }
 
+.min-ht-50 {
+  min-height: 50px !important;
+}
+
 /*# sourceMappingURL=ngsc.css.map */

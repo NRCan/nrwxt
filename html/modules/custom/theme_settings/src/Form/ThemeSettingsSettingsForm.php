@@ -226,6 +226,7 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->set('osdp', $form_state->getValue('osdp'))
       ->set('ngsc', $form_state->getValue('ngsc'))
+      ->set('minescanada', $form_state->getValue('minescanada'))
       ->set('hide_gc_menu', $form_state->getValue('hide_gc_menu'))
       ->save();
 

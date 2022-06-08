@@ -30,6 +30,9 @@ $gc-danger-background:  #f2dede;
     &.bg-none {
       border: 1px solid #e3e3e3;
     }
+    &.well-border {
+      border: 1px solid #e3e3e3;
+    }
     > :first-child {
       margin-top: 0;
     }
@@ -38,16 +41,23 @@ $gc-danger-background:  #f2dede;
     }
   }
 
+
   &.bg-none {
     background: none;
     .well-link, .well-text {
       color: inherit;
+    }
+    &.clean-well.well-border {
+      border: 1px solid #e3e3e3;
     }
   }
 
   &.bg-white {
     background-color: #FFFFFF;
     .well-link, .well-text {
+    }
+    &.clean-well.well-border {
+      border: 1px solid #000000;
     }
   }
 
@@ -57,6 +67,9 @@ $gc-danger-background:  #f2dede;
     .well-link, .well-text {
       color: $gc-success-link;
     }
+    &.clean-well.well-border {
+      border: 1px solid $gc-success-border;
+    }
   }
 
   &.bg-info {
@@ -64,6 +77,9 @@ $gc-danger-background:  #f2dede;
 
     .well-link, .well-text {
       color: $gc-info-link;
+    }
+    &.clean-well.well-border {
+      border: 1px solid $gc-info-border;
     }
   }
 
@@ -73,6 +89,9 @@ $gc-danger-background:  #f2dede;
     .well-link, .well-text {
       color: $gc-warning-link;
     }
+    &.clean-well.well-border {
+      border: 1px solid $gc-warning-border;
+    }
   }
 
   &.bg-danger {
@@ -80,6 +99,9 @@ $gc-danger-background:  #f2dede;
 
     .well-link, .well-text {
       color: $gc-danger-link;
+    }
+    &.clean-well.well-border {
+      border: 1px solid $gc-danger-border;
     }
   }
 }

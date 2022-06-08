@@ -13,6 +13,9 @@
 .well.clean-well.bg-white, .well.clean-well.bg-none {
   border: 1px solid #e3e3e3;
 }
+.well.clean-well.well-border {
+  border: 1px solid #e3e3e3;
+}
 .well.clean-well > :first-child {
   margin-top: 0;
 }
@@ -25,8 +28,14 @@
 .well.bg-none .well-link, .well.bg-none .well-text {
   color: inherit;
 }
+.well.bg-none.clean-well.well-border {
+  border: 1px solid #e3e3e3;
+}
 .well.bg-white {
   background-color: #FFFFFF;
+}
+.well.bg-white.clean-well.well-border {
+  border: 1px solid #000000;
 }
 .well.bg-success {
   background-color: #dff0d8;
@@ -34,11 +43,17 @@
 .well.bg-success .well-link, .well.bg-success .well-text {
   color: #2b542c;
 }
+.well.bg-success.clean-well.well-border {
+  border: 1px solid #629339;
+}
 .well.bg-info {
   background-color: #d9edf7;
 }
 .well.bg-info .well-link, .well.bg-info .well-text {
   color: #245269;
+}
+.well.bg-info.clean-well.well-border {
+  border: 1px solid #2392A9;
 }
 .well.bg-warning {
   background-color: #fcf8e3;
@@ -46,11 +61,17 @@
 .well.bg-warning .well-link, .well.bg-warning .well-text {
   color: #66512c;
 }
+.well.bg-warning.clean-well.well-border {
+  border: 1px solid #ba8312;
+}
 .well.bg-danger {
   background-color: #f2dede;
 }
 .well.bg-danger .well-link, .well.bg-danger .well-text {
   color: #843534;
+}
+.well.bg-danger.clean-well.well-border {
+  border: 1px solid #C16171;
 }
 
 .ip-cover-img {

@@ -197,6 +197,10 @@ a.button-big-centered, button.button-big-centered {
   vertical-align: middle;
 }
 
+.btn-ht-70 {
+  height: 70px;
+}
+
 .min-ht-50 {
   min-height: 50px !important;
 }

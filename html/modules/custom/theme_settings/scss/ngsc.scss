@@ -239,3 +239,18 @@ header .brand img, header .brand object {
     min-height: 420px;
   }
 }
+
+.button-big-centered-wrapper {
+  display: inline-table;
+  &.full-width {
+    width: 100%;
+  }
+}
+
+a, button {
+  &.button-big-centered {
+    min-height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

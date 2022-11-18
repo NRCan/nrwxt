@@ -8,7 +8,7 @@
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.2.x-dev",
+        "drupalwxt/wxt": "4.3.4",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
@@ -18,7 +18,7 @@
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
         "drupal/key": "^1.15",
-        "drupal/openid_connect": "2.x-dev@dev",
+        "drupal/openid_connect": "^1.2",
         "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "drupal/tome": "^1.4",
         "drupal/recaptcha": "^3.0",
@@ -35,7 +35,12 @@
         "wikimedia/composer-merge-plugin": "^2.0",
         "drupal/file_delete": "1.x-dev@dev",
         "drupal/moderated_content_bulk_publish": "^2.0",
-        "drupal/externalauth": "^2.0"
+        "drupal/externalauth": "^2.0",
+        "drupal/views_bulk_operations": "^4.1",
+        "drupal/schemata": "^1.0@beta",
+        "drupal/toc_filter": "^2.0",
+        "drupal/bg_image_formatter": "^1.15",
+        "drupal/simple_gmap": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -145,6 +150,11 @@
                 "drupal/core": {
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+                }
+            },
+            "drupalwxt/wxt": {
+                "drupal/moderation_sidebar": {
+                    "3194841 - Discard Draft for a translation edits the base language node": "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
                 }
             },
             "drupal/lightning_core": {

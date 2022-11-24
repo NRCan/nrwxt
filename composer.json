@@ -8,7 +8,7 @@
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.3.4",
+        "drupalwxt/wxt": "4.4.x-dev",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
@@ -18,8 +18,6 @@
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
         "drupal/key": "^1.15",
-        "drupal/openid_connect": "^1.2",
-        "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "drupal/tome": "^1.4",
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
@@ -40,7 +38,11 @@
         "drupal/schemata": "^1.0@beta",
         "drupal/toc_filter": "^2.0",
         "drupal/bg_image_formatter": "^1.15",
-        "drupal/simple_gmap": "^3.0"
+        "drupal/simple_gmap": "^3.0",
+        "drupal/openid_connect_windows_aad": "^2.0@beta",
+        "drupal/schema_metatag": "^2.3",
+        "drupal/token_or": "^2.0",
+        "drupal/migrate_source_html": "^1.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

@@ -5,40 +5,77 @@ h1 {
 }
 
 // Colours
-$ngsc-white: #ffffff;
+$equalby-white: #ffffff;
+$equalby-purple: #330066;
+$equalby-pink: #CD3298;
 
-// Who we are
-$ngsc-red: rgb(132, 60, 12);
-$ngsc-red-dark: color.scale($ngsc-red, $lightness: -10%, $saturation: 10%);
+$equalby-gold: #A27200;
+$equalby-gold-dark: #6f4e01;
 
-// Publications
-$ngsc-green: rgb(56, 87, 35);
-$ngsc-green-dark: color.scale($ngsc-green, $lightness: -10%, $saturation: 10%);
+$equalby-blue: rgb(31, 78, 121);
+$equalby-blue-dark: color.scale($equalby-blue, $lightness: -10%, $saturation: 10%);
 
-// PGS & Home
-$ngsc-blue: rgb(31, 78, 121);
-$ngsc-blue-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
+$equalby-yellow: rgb(127, 96, 9);
+$equalby-yellow-dark: color.scale($equalby-yellow, $lightness: -10%, $saturation: 10%);
 
-// Contact Us
-$ngsc-yellow: rgb(127, 96, 9);
-$ngsc-yellow-dark: color.scale($ngsc-yellow, $lightness: -10%, $saturation: 10%);
+.bg-purble {
+  background-color: #330066;
+}
+
+.border-pink {
+  border-bottom: 10px solid #CD3298;
+}
+
+.btn-gold,main .btn-gold {
+  border: none;
+  background-color: $equalby-gold;
+  font-size: 0.8em;
+  padding: 8px 0;
+  min-height: 54px;
+}
+
+.btn-gold.active,.btn-gold.focus,.btn-gold:active,.btn-gold:focus,.btn-gold:hover,.open>.btn-gold.dropdown-toggle {
+  background-color: $equalby-gold-dark;
+}
+
+
+@media (min-width: 768px) {
+  .equal-height-btns {
+    display:flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  .equal-height-btns > div {
+    width: 33%;
+  }
+
+  .equal-height-btns .btn {
+    display: flex;
+    display: -webkit-flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.imagehover:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
 
 .well {
-  &.ngsc-red {
-    color: $ngsc-white;
-    background: $ngsc-red;
+  &.equalby-blue {
+    color: $equalby-white;
+    background: $equalby-blue;
   }
-  &.ngsc-green {
-    color: $ngsc-white;
-    background: $ngsc-green;
-  }
-  &.ngsc-blue {
-    color: $ngsc-white;
-    background: $ngsc-blue;
-  }
-  &.ngsc-yellow {
-    color: $ngsc-white;
-    background: $ngsc-yellow;
+  &.equalby-yellow {
+    color: $equalby-white;
+    background: $equalby-yellow;
   }
 }
 
@@ -55,7 +92,7 @@ header .brand img, header .brand object {
 }
 
 #wb-info .landscape {
-  background: $ngsc-blue !important;
+  background: $equalby-blue !important;
 }
 
 /* Tidy up the mobile menu */
@@ -72,11 +109,11 @@ header .brand img, header .brand object {
 }
 
 /* Hamburger */
-.btn-ngsc-menu {
+.btn-equalby-menu {
   padding: 0 5px !important;
   font-size: 1.5em;
   background: none;
-  color: $ngsc-blue;
+  color: $equalby-blue;
   border: none !important;
   &:focus,&:hover,&:active {
   }
@@ -115,7 +152,7 @@ header .brand img, header .brand object {
     }
     float: left;
     margin-top: -134px;
-    background: $ngsc-blue;
+    background: $equalby-blue;
     width: 115px;
     height: 115px;
     padding: 15px;
@@ -133,69 +170,31 @@ header .brand img, header .brand object {
       bottom: 0;
       margin-left: -32px;
     }
-    &.ngsc-red {
-      background: $ngsc-red;
+    &.equalby-blue {
+      background: $equalby-blue;
     }
-    &.ngsc-green {
-      background: $ngsc-green;
-    }
-    &.ngsc-blue {
-      background: $ngsc-blue;
-    }
-    &.ngsc-yellow {
-      background: $ngsc-yellow;
-    }
-  }
-}
-
-.ngsc-icon-title {
-  @media (min-width: 768px) {
-    position: relative;
-    .field--name-body {
-      .float-icon-wrapper {
-        position: absolute;
-        top: 10px;
-        left: 0;
-        .user-logged-in & {
-          top: -60px;
-        }
-      }
-    }
-    h1 {
-      padding-bottom: 31px;
-      padding-left: 130px;
+    &.equalby-yellow {
+      background: $equalby-yellow;
     }
   }
 }
 
 
 #wb-sm {
-  background: $ngsc-blue !important;
+  background: $equalby-blue !important;
   .menu>li a:focus, .menu>li a:hover {
-    background: $ngsc-blue-dark !important;
+    background: $equalby-blue-dark !important;
   }
-  &.ngsc-red {
-    background: $ngsc-red;
+  &.equalby-blue {
+    background: $equalby-blue !important;
     .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-red-dark !important;
+      background: $equalby-blue-dark !important;
     }
   }
-  &.ngsc-green {
-    background: $ngsc-green;
+  &.equalby-yellow {
+    background: $equalby-yellow;
     .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-green-dark !important;
-    }
-  }
-  &.ngsc-blue {
-    background: $ngsc-blue !important;
-    .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-blue-dark !important;
-    }
-  }
-  &.ngsc-yellow {
-    background: $ngsc-yellow;
-    .menu>li a:focus, .menu>li a:hover {
-      background: $ngsc-yellow-dark !important;
+      background: $equalby-yellow-dark !important;
     }
   }
 }
@@ -215,7 +214,7 @@ header .brand img, header .brand object {
   }
 }
 
-.ngsc-banner.wb-bgimg-inited {
+.equalby-banner.wb-bgimg-inited {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;

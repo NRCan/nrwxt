@@ -2,19 +2,57 @@ h1 {
   border: none !important;
 }
 
-.well.ngsc-red {
-  color: #ffffff;
-  background: #843c0c;
+.bg-purble {
+  background-color: #330066;
 }
-.well.ngsc-green {
-  color: #ffffff;
-  background: #385723;
+
+.border-pink {
+  border-bottom: 10px solid #CD3298;
 }
-.well.ngsc-blue {
+
+.btn-gold, main .btn-gold {
+  border: none;
+  background-color: #A27200;
+  font-size: 0.8em;
+  padding: 8px 0;
+  min-height: 54px;
+}
+
+.btn-gold.active, .btn-gold.focus, .btn-gold:active, .btn-gold:focus, .btn-gold:hover, .open > .btn-gold.dropdown-toggle {
+  background-color: #6f4e01;
+}
+
+@media (min-width: 768px) {
+  .equal-height-btns {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  .equal-height-btns > div {
+    width: 33%;
+  }
+
+  .equal-height-btns .btn {
+    display: flex;
+    display: -webkit-flex;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.imagehover:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.well.equalby-blue {
   color: #ffffff;
   background: #1f4e79;
 }
-.well.ngsc-yellow {
+.well.equalby-yellow {
   color: #ffffff;
   background: #7f6009;
 }
@@ -47,7 +85,7 @@ header .brand img, header .brand object {
   }
 }
 /* Hamburger */
-.btn-ngsc-menu {
+.btn-equalby-menu {
   padding: 0 5px !important;
   font-size: 1.5em;
   background: none;
@@ -105,35 +143,11 @@ header .brand img, header .brand object {
   bottom: 0;
   margin-left: -32px;
 }
-.field--name-body .float-icon-wrapper.ngsc-red {
-  background: #843c0c;
-}
-.field--name-body .float-icon-wrapper.ngsc-green {
-  background: #385723;
-}
-.field--name-body .float-icon-wrapper.ngsc-blue {
+.field--name-body .float-icon-wrapper.equalby-blue {
   background: #1f4e79;
 }
-.field--name-body .float-icon-wrapper.ngsc-yellow {
+.field--name-body .float-icon-wrapper.equalby-yellow {
   background: #7f6009;
-}
-
-@media (min-width: 768px) {
-  .ngsc-icon-title {
-    position: relative;
-  }
-  .ngsc-icon-title .field--name-body .float-icon-wrapper {
-    position: absolute;
-    top: 10px;
-    left: 0;
-  }
-  .user-logged-in .ngsc-icon-title .field--name-body .float-icon-wrapper {
-    top: -60px;
-  }
-  .ngsc-icon-title h1 {
-    padding-bottom: 31px;
-    padding-left: 130px;
-  }
 }
 
 #wb-sm {
@@ -142,28 +156,16 @@ header .brand img, header .brand object {
 #wb-sm .menu > li a:focus, #wb-sm .menu > li a:hover {
   background: #194670 !important;
 }
-#wb-sm.ngsc-red {
-  background: #843c0c;
-}
-#wb-sm.ngsc-red .menu > li a:focus, #wb-sm.ngsc-red .menu > li a:hover {
-  background: #78360a !important;
-}
-#wb-sm.ngsc-green {
-  background: #385723;
-}
-#wb-sm.ngsc-green .menu > li a:focus, #wb-sm.ngsc-green .menu > li a:hover {
-  background: #32511c !important;
-}
-#wb-sm.ngsc-blue {
+#wb-sm.equalby-blue {
   background: #1f4e79 !important;
 }
-#wb-sm.ngsc-blue .menu > li a:focus, #wb-sm.ngsc-blue .menu > li a:hover {
+#wb-sm.equalby-blue .menu > li a:focus, #wb-sm.equalby-blue .menu > li a:hover {
   background: #194670 !important;
 }
-#wb-sm.ngsc-yellow {
+#wb-sm.equalby-yellow {
   background: #7f6009;
 }
-#wb-sm.ngsc-yellow .menu > li a:focus, #wb-sm.ngsc-yellow .menu > li a:hover {
+#wb-sm.equalby-yellow .menu > li a:focus, #wb-sm.equalby-yellow .menu > li a:hover {
   background: #735707 !important;
 }
 
@@ -186,31 +188,31 @@ header .brand img, header .brand object {
   }
 }
 
-.ngsc-banner.wb-bgimg-inited {
+.equalby-banner.wb-bgimg-inited {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
   min-height: 250px;
 }
-.ngsc-banner.wb-bgimg-inited.bg-left {
+.equalby-banner.wb-bgimg-inited.bg-left {
   background-position-x: left;
 }
-.ngsc-banner.wb-bgimg-inited.bg-right {
+.equalby-banner.wb-bgimg-inited.bg-right {
   background-position-x: right;
 }
-.ngsc-banner.wb-bgimg-inited.bg-top {
+.equalby-banner.wb-bgimg-inited.bg-top {
   background-position-y: top;
 }
-.ngsc-banner.wb-bgimg-inited.bg-bottom {
+.equalby-banner.wb-bgimg-inited.bg-bottom {
   background-position-y: bottom;
 }
 @media screen and (min-width: 768px) {
-  .ngsc-banner.wb-bgimg-inited {
+  .equalby-banner.wb-bgimg-inited {
     min-height: 400px;
   }
 }
 @media screen and (min-width: 2000px) {
-  .ngsc-banner.wb-bgimg-inited {
+  .equalby-banner.wb-bgimg-inited {
     min-height: 420px;
   }
 }

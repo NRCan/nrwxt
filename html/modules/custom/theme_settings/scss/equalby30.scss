@@ -1,0 +1,260 @@
+@use "sass:color";
+
+h1 {
+    border: none !important;
+}
+
+// Colours
+$ngsc-white: #ffffff;
+
+// Who we are
+$ngsc-red: rgb(132, 60, 12);
+$ngsc-red-dark: color.scale($ngsc-red, $lightness: -10%, $saturation: 10%);
+
+// Publications
+$ngsc-green: rgb(56, 87, 35);
+$ngsc-green-dark: color.scale($ngsc-green, $lightness: -10%, $saturation: 10%);
+
+// PGS & Home
+$ngsc-blue: rgb(31, 78, 121);
+$ngsc-blue-dark: color.scale($ngsc-blue, $lightness: -10%, $saturation: 10%);
+
+// Contact Us
+$ngsc-yellow: rgb(127, 96, 9);
+$ngsc-yellow-dark: color.scale($ngsc-yellow, $lightness: -10%, $saturation: 10%);
+
+.well {
+  &.ngsc-red {
+    color: $ngsc-white;
+    background: $ngsc-red;
+  }
+  &.ngsc-green {
+    color: $ngsc-white;
+    background: $ngsc-green;
+  }
+  &.ngsc-blue {
+    color: $ngsc-white;
+    background: $ngsc-blue;
+  }
+  &.ngsc-yellow {
+    color: $ngsc-white;
+    background: $ngsc-yellow;
+  }
+}
+
+// Larger Banner
+header .brand img, header .brand object {
+  max-height: 70px !important;
+}
+
+#wb-sm .menu > li a:hover, #wb-sm .menu > li a:focus {
+  outline-offset: -2px;
+  outline-style: inset;
+  outline-width: 2px;
+  outline: none !important;
+}
+
+#wb-info .landscape {
+  background: $ngsc-blue !important;
+}
+
+/* Tidy up the mobile menu */
+@media screen and (max-width: 767px) {
+  #wb-glb-mn {
+    margin: 0 !important;
+    position: absolute;
+    top: 8px;
+    right: 29px;
+    .user-logged-in & {
+      top: -97px;
+    }
+  }
+}
+
+/* Hamburger */
+.btn-ngsc-menu {
+  padding: 0 5px !important;
+  font-size: 1.5em;
+  background: none;
+  color: $ngsc-blue;
+  border: none !important;
+  &:focus,&:hover,&:active {
+  }
+}
+
+#mb-pnl {
+  visibility: hidden;
+  &.wb-overlay-inited {
+    visibility: initial;
+  }
+  .modal-header {
+    display: none;
+  }
+  .modal-body {
+    padding-top: 37px;
+    li {
+      line-height: 1;
+    }
+    .lng-ofr {
+      text-align: left;
+      padding: 15px 0 0 30px;
+    }
+  }
+  .modal-footer {
+    //border: none;
+    margin-top: -47px;
+  }
+}
+
+// Float Icon
+.field--name-body {
+  .float-icon-wrapper {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+    float: left;
+    margin-top: -134px;
+    background: $ngsc-blue;
+    width: 115px;
+    height: 115px;
+    padding: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    .float-icon {
+      width: 66px;
+      margin: auto;
+      top: 0;
+      height: auto;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin-left: -32px;
+    }
+    &.ngsc-red {
+      background: $ngsc-red;
+    }
+    &.ngsc-green {
+      background: $ngsc-green;
+    }
+    &.ngsc-blue {
+      background: $ngsc-blue;
+    }
+    &.ngsc-yellow {
+      background: $ngsc-yellow;
+    }
+  }
+}
+
+.ngsc-icon-title {
+  @media (min-width: 768px) {
+    position: relative;
+    .field--name-body {
+      .float-icon-wrapper {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        .user-logged-in & {
+          top: -60px;
+        }
+      }
+    }
+    h1 {
+      padding-bottom: 31px;
+      padding-left: 130px;
+    }
+  }
+}
+
+
+#wb-sm {
+  background: $ngsc-blue !important;
+  .menu>li a:focus, .menu>li a:hover {
+    background: $ngsc-blue-dark !important;
+  }
+  &.ngsc-red {
+    background: $ngsc-red;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-red-dark !important;
+    }
+  }
+  &.ngsc-green {
+    background: $ngsc-green;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-green-dark !important;
+    }
+  }
+  &.ngsc-blue {
+    background: $ngsc-blue !important;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-blue-dark !important;
+    }
+  }
+  &.ngsc-yellow {
+    background: $ngsc-yellow;
+    .menu>li a:focus, .menu>li a:hover {
+      background: $ngsc-yellow-dark !important;
+    }
+  }
+}
+
+.photo-credit, .small.photo-credit, .text-right.small.photo-credit {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #383838;
+  @media screen and (max-width: 767px) {
+    margin: 0 5px;
+    text-align: center;
+    margin: 5px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 5px;
+    text-align: right;
+  }
+}
+
+.ngsc-banner.wb-bgimg-inited {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  min-height: 250px;
+  &.bg-left {
+    background-position-x: left;
+  }
+  &.bg-right {
+    background-position-x: right;
+  }
+  &.bg-top {
+    background-position-y: top;
+  }
+  &.bg-bottom {
+    background-position-y: bottom;
+  }
+  @media screen and (min-width: 768px) {
+    min-height: 400px;
+  }
+  @media screen and (min-width: 2000px) {
+    min-height: 420px;
+  }
+}
+
+.button-big-centered-wrapper {
+  display: inline-table;
+  &.full-width {
+    width: 100%;
+  }
+}
+
+a, button {
+  &.button-big-centered {
+    min-height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.min-ht-50 {
+  min-height: 50px !important;
+}

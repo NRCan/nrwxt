@@ -1,0 +1,87 @@
+h1 {
+  border: none !important;
+}
+
+header .brand img, header .brand object {
+  max-height: 70px !important;
+}
+
+h2.purple {
+  background: #6d56a5;
+  color: white;
+  padding: 0 15px;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+/* Hamburger */
+.btn-smr-menu {
+  padding: 0 5px !important;
+  font-size: 1.5em;
+  background: none;
+  color: #6d56a5;
+  border: none !important;
+}
+#mb-pnl {
+  visibility: hidden;
+}
+#mb-pnl.wb-overlay-inited {
+  visibility: initial;
+}
+#mb-pnl .modal-header {
+  display: none;
+}
+#mb-pnl .modal-body {
+  padding-top: 37px;
+}
+#mb-pnl .modal-body li {
+  line-height: 1;
+}
+#mb-pnl .modal-body .lng-ofr {
+  text-align: left;
+  padding: 15px 0 0 30px;
+}
+#mb-pnl .modal-footer {
+  margin-top: -47px;
+}
+
+.field--name-body .float-icon-wrapper {
+  display: none;
+  float: left;
+  margin-top: -134px;
+  background: #6d56a5;
+  width: 115px;
+  height: 115px;
+  padding: 15px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .field--name-body .float-icon-wrapper {
+    display: block;
+  }
+}
+.field--name-body .float-icon-wrapper .float-icon {
+  width: 66px;
+  margin: auto;
+  top: 0;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin-left: -32px;
+}
+
+a.button-big-centered, button.button-big-centered {
+  min-height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.min-ht-50 {
+  min-height: 50px !important;
+}
+
+/*# sourceMappingURL=smr.css.map */

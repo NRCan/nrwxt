@@ -6,6 +6,14 @@ osdp:
   css:
     theme:
       css/osdp.css: {}
+equalby30:
+  css:
+    theme:
+      css/equalby30.css: {}
+smr:
+  css:
+    theme:
+      css/smr.css: {}
 ngsc:
   css:
     theme:

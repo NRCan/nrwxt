@@ -84,6 +84,22 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#description' => t('OSDP custom theme elements.'),
     ];
 
+    $form['admin']['equalby30'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('equalby30 Theme'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('equalby30'),
+      '#description' => t('equalby30 custom theme elements.'),
+    ];
+
+    $form['admin']['smr'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('SMR Theme'),
+      '#options' => $enable_options,
+      '#default_value' => $config->get('smr'),
+      '#description' => t('SMR custom theme elements.'),
+    ];
+
     $form['admin']['ngsc'] = [
       '#type' => 'radios',
       '#title' => $this->t('NGSC Theme'),
@@ -225,6 +241,8 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       ->set('custom_bullets', $form_state->getValue('custom_bullets'))
       ->set('custom_ga_links', $form_state->getValue('custom_ga_links'))
       ->set('osdp', $form_state->getValue('osdp'))
+      ->set('equalby30', $form_state->getValue('equalby30'))
+      ->set('smr', $form_state->getValue('smr'))
       ->set('ngsc', $form_state->getValue('ngsc'))
       ->set('minescanada', $form_state->getValue('minescanada'))
       ->set('hide_gc_menu', $form_state->getValue('hide_gc_menu'))

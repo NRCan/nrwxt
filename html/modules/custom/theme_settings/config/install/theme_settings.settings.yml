@@ -2,6 +2,8 @@ settings:
   block_update_date: off
   bootstrap_cards: off
   osdp: off
+  equalby30: off
+  smr: off
   ngsc: off
   custom_bullets: on
   match_height: on

@@ -32,6 +32,14 @@ function theme_settings_osdp() {
   return \Drupal::config('theme_settings.settings')->get('osdp') == 'on';
 }
 
+function theme_settings_equalby30() {
+  return \Drupal::config('theme_settings.settings')->get('equalby30') == 'on';
+}
+
+function theme_settings_smr() {
+  return \Drupal::config('theme_settings.settings')->get('smr') == 'on';
+}
+
 function theme_settings_ngsc() {
   return \Drupal::config('theme_settings.settings')->get('ngsc') == 'on';
 }
@@ -78,6 +86,14 @@ function theme_settings_page_attachments(array &$page) {
 
   if (theme_settings_osdp()) {
     $page['#attached']['library'][] = 'theme_settings/osdp';
+  }
+
+  if (theme_settings_equalby30)) {
+    $page['#attached']['library'][] = 'theme_settings/equalby30';
+  }
+
+  if (theme_settings_smr()) {
+    $page['#attached']['library'][] = 'theme_settings/smr';
   }
 
   if (theme_settings_ngsc()) {

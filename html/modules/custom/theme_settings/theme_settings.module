@@ -88,7 +88,7 @@ function theme_settings_page_attachments(array &$page) {
     $page['#attached']['library'][] = 'theme_settings/osdp';
   }
 
-  if (theme_settings_equalby30)) {
+  if (theme_settings_equalby30()) {
     $page['#attached']['library'][] = 'theme_settings/equalby30';
   }
 

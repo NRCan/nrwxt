@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cc20c98389b27b8ae0c74505e090d9b",
+    "content-hash": "4fcda53efbc48eedec02b4275667371f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9010,6 +9010,63 @@
                 "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/views_entity_embed",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_entity_embed.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_entity_embed-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "2b9edeaa45dc11272ddece137c3f406d714554e7"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/embed": "^1.0",
+                "drupal/entity_embed": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1663176274",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Milka Petkova",
+                    "homepage": "https://www.drupal.org/user/1443204",
+                    "email": "milka.petkova.88@gmail.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "shelane",
+                    "homepage": "https://www.drupal.org/user/2674989"
+                },
+                {
+                    "name": "skek",
+                    "homepage": "https://www.drupal.org/user/417078"
+                }
+            ],
+            "description": "Allows views to be embedded using a text editor.",
+            "homepage": "https://www.drupal.org/project/views_entity_embed",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_entity_embed",
+                "issues": "https://www.drupal.org/project/issues/views_entity_embed"
             }
         },
         {

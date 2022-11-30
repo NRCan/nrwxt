@@ -175,14 +175,14 @@ class ThemeSettingsSettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('English Header Logo (FIP)'),
       '#default_value' => $splash_config->get('site_fip.en'),
-      '#description' => t('English logo for the top right throughout the site. Leave blank for default.'),
+      '#description' => t('English logo for the top right throughout the site. Leave blank for default, or <none> to hide it.'),
     ];
 
     $form['splash']['site_fip_fr'] = [
       '#type' => 'textarea',
       '#title' => $this->t('French Header Logo (FIP)'),
       '#default_value' => $splash_config->get('site_fip.fr'),
-      '#description' => t('French logo for the top right throughout the site. Leave blank for default.'),
+      '#description' => t('French logo for the top right throughout the site. Leave blank for default, or <none> to hide it.'),
     ];
 
     $form['splash']['splash_bg'] = [

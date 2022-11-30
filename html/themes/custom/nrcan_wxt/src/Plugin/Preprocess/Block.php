@@ -58,6 +58,9 @@ class Block extends PreprocessBase {
     $splash_config = \Drupal::config('theme_settings.splash');
     $site_name = $splash_config->get('site_name.'.$language);
     $site_fip = $splash_config->get('site_fip.'.$language);
+    if ($site_fip == '<none>') {
+      $site_fip = FALSE;
+    }
 
     $variables['nrwxt_logo'] = FALSE;
     if ($site_fip) {

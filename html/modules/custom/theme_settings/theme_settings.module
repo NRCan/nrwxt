@@ -170,7 +170,7 @@ function theme_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
  * https://github.com/tc-ca/drupalwxt-internet
  */
 function theme_settings_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
-  if (!empty($breadcrumb) && !\Drupal::service('router.admin_context')->isAdminRoute()) {
+  /*if (!empty($breadcrumb) && !\Drupal::service('router.admin_context')->isAdminRoute()) {
     $links = $breadcrumb->getLinks();
     array_shift($links);
 
@@ -200,7 +200,7 @@ function theme_settings_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMa
     $breadcrumb = new Breadcrumb();
     $breadcrumb->setLinks(array_merge($new_links, $links));
     $breadcrumb->addCacheContexts(['route']);
-  }
+  }*/
 }
 
 

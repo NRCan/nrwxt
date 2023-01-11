@@ -18,7 +18,6 @@
         "drupal/recaptcha_element": "^1.0",
         "drupal/google_analytics": "^3.1",
         "drupal/key": "^1.15",
-        "drupal/tome": "^1.4",
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
         "drupal/language_selection_page": "^2.7",
@@ -43,7 +42,8 @@
         "drupal/schema_metatag": "^2.3",
         "drupal/token_or": "^2.0",
         "drupal/migrate_source_html": "^1.0",
-        "drupal/views_entity_embed": "^2.0"
+        "drupal/views_entity_embed": "^2.0",
+        "drupal/header_and_footer_scripts": "^3.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -141,9 +141,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/header_and_footer_scripts": {
-                "header_and_footer_scripts - Drupal 9 Compatibility": "https://www.drupal.org/files/issues/2020-05-23/header_and_footer_scripts.2.2.rector.patch"
-            },
             "drupal/linkit": {
                 "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
             }

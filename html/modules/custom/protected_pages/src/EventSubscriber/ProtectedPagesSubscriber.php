@@ -179,7 +179,7 @@ class ProtectedPagesSubscriber implements EventSubscriberInterface {
     // Check all protected pages entries for path match including wildcards.
     $all_protected_pages = $this->protectedPagesStorage->loadAllProtectedPages();
     foreach ($all_protected_pages as $protected_page) {
-      if ($this->pathMatcher->matchPath($current_path, $protected_page->path) && $current_path != '/protected-page') {
+      if ($this->pathMatcher->matchPath($current_path, $protected_page->path) && $current_path != '/protected-page' && $current_path != '/user') {
         $pid = $protected_page->pid;
         break;
       }

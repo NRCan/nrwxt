@@ -1,0 +1,8 @@
+name: 'Protected Pages'
+type: module
+description: 'Allow you to protect pages, private files by secure password. *NRCan edit*'
+configure: protected_pages_settings
+package: 'NRCan'
+core_version_requirement: ^9
+dependencies:
+  - drupal:path_alias

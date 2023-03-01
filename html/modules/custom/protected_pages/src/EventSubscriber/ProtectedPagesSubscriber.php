@@ -176,10 +176,15 @@ class ProtectedPagesSubscriber implements EventSubscriberInterface {
   public function protectedPagesIsPageLocked(string $current_path, string $normal_path) {
     $pid = NULL;
 
+    if (in_array($current_path, ['/protected-page', '/user'])) {
+      // Pages never to protect
+      return;
+    }
+
     // Check all protected pages entries for path match including wildcards.
     $all_protected_pages = $this->protectedPagesStorage->loadAllProtectedPages();
     foreach ($all_protected_pages as $protected_page) {
-      if ($this->pathMatcher->matchPath($current_path, $protected_page->path) && $current_path != '/protected-page' && $current_path != '/user') {
+      if ($this->pathMatcher->matchPath($current_path, $protected_page->path)) {
         $pid = $protected_page->pid;
         break;
       }

@@ -56,7 +56,7 @@
  * @see html.html.twig
  */
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% set container = theme.settings.fluid_container or fluid_container ? 'container-fluid' : 'container' %}
 
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
@@ -64,30 +64,56 @@
 
     {%
       set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
-      ]
+      'navbar',
+      theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+      theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
+    ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
-      <div id="wb-bnr" class="{{ container }}">
+      <div id="wb-bnr" class="container">
         <div class="row">
-          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right">
+          <section id="wb-lng" class="col-xs-3 col-sm-12 pull-right text-right {{ menu_type == 'horizontal' ? 'visible-md visible-lg' : '' }}">
             <h2 class="wb-inv">{{ 'Language selection'|t }}</h2>
             {{ page.language_toggle }}
           </section>
           {{ page.banner }}
+          {% if menu_type == 'horizontal' %}
+            <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs pull-right" id="wb-glb-mn">
+              <h2>{{ 'Search and menus'|t }}</h2>
+              <ul class="list-inline text-right chvrn">
+                <li>
+                  <a href="#mb-pnl" title="{{ 'Search and menus'|t }}" aria-controls="mb-pnl" class="overlay-lnk" role="button">
+                    <span class="glyphicon glyphicon-search">
+                      <span class="glyphicon glyphicon-th-list">
+                        <span class="wb-inv">{{ 'Search and menus'|t }}</span>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div id="mb-pnl"></div>
+            </section>
+          {% endif %}
           {{ page.search }}
         </div>
       </div>
       {% if nrwxt_hide_menu != true %}
-      <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement"><!-- menu -->
-        <div class="{{ container }}">
-          <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
-          <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
-          {{ page.navigation }}
-        </div>
-      </nav>
+      {% if menu_type == 'default' %}
+        <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+          <div class="container">
+            <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
+            <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
+            {{ page.navigation }}
+          </div>
+        </nav>
+      {% elseif menu_type == 'horizontal' %}
+        <nav aria-labelledby="topicsMenu" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl">
+          <div class="pnl-strt {{ container }} nvbar">
+            <h2 id="topicsMenu" class="wb-inv">{{ 'Menu'|t }}</h2>
+            {{ page.navigation }}
+          </div>
+        </nav>
+      {% endif %}
       {% endif %}
       {{ page.breadcrumb }}
     </header>
@@ -110,61 +136,63 @@
       {# Content #}
       {%
         set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-md-6 col-md-push-3',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-md-9 col-md-push-3',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-md-9',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-md-12'
-        ]
+        page.sidebar_first and page.sidebar_second ? 'col-md-6 col-md-push-3',
+        page.sidebar_first and page.sidebar_second is empty ? 'col-md-9 col-md-push-3',
+        page.sidebar_second and page.sidebar_first is empty ? 'col-md-9',
+        page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+      ]
       %}
       <main property="mainContentOfPage" {{ content_attributes.addClass(content_classes, 'main-container', container, 'js-quickedit-main-content') }}>
 
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          {{ page.header }}
-        {% endblock %}
-      {% endif %}
-
-      <section>
-
-        {# Breadcrumbs #}
-        {% if breadcrumb %}
-          {% block breadcrumb %}
-            {{ breadcrumb }}
+        {# Header #}
+        {% if page.header %}
+          {% block header %}
+            {{ page.header }}
           {% endblock %}
         {% endif %}
 
-        {# Action Links #}
-        {% if action_links %}
-          {% block action_links %}
-            <ul class="action-links">{{ action_links }}</ul>
-          {% endblock %}
-        {% endif %}
+        <section>
 
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
-          {% endblock %}
-        {% endif %}
+          {# Breadcrumbs #}
+          {% if breadcrumb %}
+            {% block breadcrumb %}
+              {{ breadcrumb }}
+            {% endblock %}
+          {% endif %}
 
-        {# Content #}
-        {% block content %}
-          <a id="main-content"></a>
-          {{ page.content }}
-          {{ page.content_footer }}
-        {% endblock %}
-      </section>
+          {# Action Links #}
+          {% if action_links %}
+            {% block action_links %}
+              <ul class="action-links">{{ action_links }}</ul>
+            {% endblock %}
+          {% endif %}
+
+          {# Help #}
+          {% if page.help %}
+            {% block help %}
+              {{ page.help }}
+            {% endblock %}
+          {% endif %}
+
+          {# Content #}
+          {% block content %}
+            <a id="main-content"></a>
+            {{ page.content }}
+            <div class="pagedetails-wrapper{{ (is_front and wxt_homepage) or theme.settings.fluid_container or fluid_container ? ' container' : '' }}">
+              {{ page.content_footer }}
+            </div>
+          {% endblock %}
+        </section>
 
       </main>
 
       {# Sidebar First #}
       {%
         set sidebar_first_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-md-3 col-md-pull-6',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-md-3 col-md-pull-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-md-3 col-md-pull-9'
-        ]
+        page.sidebar_first and page.sidebar_second ? 'col-md-3 col-md-pull-6',
+        page.sidebar_first and page.sidebar_second is empty ? 'col-md-3 col-md-pull-9',
+        page.sidebar_second and page.sidebar_first is empty ? 'col-md-3 col-md-pull-9'
+      ]
       %}
       {# Sidebar First #}
       {% if page.sidebar_first %}
@@ -178,10 +206,10 @@
       {# Sidebar Second #}
       {%
         set sidebar_second_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-md-3',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-md-3',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-md-3'
-        ]
+        page.sidebar_first and page.sidebar_second ? 'col-md-3',
+        page.sidebar_first and page.sidebar_second is empty ? 'col-md-3',
+        page.sidebar_second and page.sidebar_first is empty ? 'col-md-3'
+      ]
       %}
       {# Sidebar Second #}
       {% if page.sidebar_second %}
@@ -217,14 +245,13 @@
   {% else %}
     {% block footer %}
       <footer id="wb-info">
+        <h2 class="wb-inv">{{ 'About this site'|t }}</h2>
         <div class="landscape">
-          <div class="{{ container }}">
-            {{ page.footer }}
-          </div>
+          {{ page.footer }}
         </div>
         <div class="brand">
-          <div class="{{ container }}">
-            <div class="row ">
+          <div class="container">
+            <div class="row">
               {{ page.branding }}
               <div class="col-xs-6 visible-sm visible-xs tofpg">
                 <a href="#wb-cont">{{ 'Top of Page'|t }}<span class="glyphicon glyphicon-chevron-up"></span></a>

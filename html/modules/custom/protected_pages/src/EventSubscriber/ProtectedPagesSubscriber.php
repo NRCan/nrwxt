@@ -178,7 +178,7 @@ class ProtectedPagesSubscriber implements EventSubscriberInterface {
 
     if (in_array($current_path, ['/protected-page', '/user', '/user/login'])) {
       // Pages never to protect
-      return;
+      return NULL;
     }
 
     // Check all protected pages entries for path match including wildcards.

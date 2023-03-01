@@ -176,7 +176,7 @@ class ProtectedPagesSubscriber implements EventSubscriberInterface {
   public function protectedPagesIsPageLocked(string $current_path, string $normal_path) {
     $pid = NULL;
 
-    if (in_array($current_path, ['/protected-page', '/user'])) {
+    if (in_array($current_path, ['/protected-page', '/user', '/user/login'])) {
       // Pages never to protect
       return;
     }

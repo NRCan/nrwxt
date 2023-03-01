@@ -29,16 +29,13 @@
 #}
 {% block content %}
   {% if nrwxt_logo == true %}
-  <a href="{{ site_link }}" property="url" class="brand">
-    <img src="{{ logo_svg }}" class="logo-{{ language }}" alt="{{ site_name }}" property="logo">
-  </a>
-  <link property="logo" href="{{ logo_svg }}">
-  {% else %}
-  {% if site_logo %}
+    <a class="logo navbar-btn pull-left" href="{{ site_link) }}" title="{{ 'Home'|t }}" rel="home">
+      <img src="{{ logo_svg }}" alt="{{ site_name }}" />
+    </a>
+  {% else if site_logo %}
     <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>
-  {% endif %}
   {% endif %}
   {% if site_name %}
     <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>

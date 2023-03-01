@@ -8,7 +8,7 @@
     "require": {
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.4.0",
+        "drupalwxt/wxt": "4.5.x-dev",
         "drush/drush": ">=9.7",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "drupal/backup_migrate": "^5.0",
@@ -16,7 +16,7 @@
         "drupal/variationcache": "^1.0",
         "drupal/devel": "^4.0",
         "drupal/recaptcha_element": "^1.0",
-        "drupal/google_analytics": "^3.1",
+        "drupal/google_analytics": "^4.0",
         "drupal/key": "^1.15",
         "drupal/recaptcha": "^3.0",
         "drupal/access_unpublished": "^1.0",
@@ -43,7 +43,13 @@
         "drupal/token_or": "^2.0",
         "drupal/migrate_source_html": "^1.0",
         "drupal/views_entity_embed": "^2.0",
-        "drupal/header_and_footer_scripts": "^3.0"
+        "drupal/header_and_footer_scripts": "^3.0",
+        "drupal/cloudfront_cache_path_invalidate": "^3.0",
+        "drupal/conflict": "^2.0@alpha",
+        "drupal/moderation_dashboard": "^2.1",
+        "drupal/moderation_sidebar": "^1.7",
+        "drupal/tome": "^1.10",
+        "drupal/protected_pages": "1.x-dev@dev"
     },
     "require-dev": {
         "drupal/core-dev": "^9",
@@ -135,7 +141,7 @@
                 "type:drupal-drush"
             ]
         },
-        "composer-exit-on-patch-failure": true,
+        "composer-exit-on-patch-failure": false,
         "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"

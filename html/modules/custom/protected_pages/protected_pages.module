@@ -51,17 +51,28 @@ function protected_pages_file_download($uri) {
   $target = StreamWrapperManager::getTarget($uri);
   $file_path = '/system/files/' . $target;
 
-  $fields = ['pid'];
-  $conditions = [];
-  $conditions['general'][] = [
-    'field' => 'path',
-    'value' => $file_path,
-    'operator' => '=',
-  ];
-
+  $pid = NULL;
   $protected_pages_storage = \Drupal::service('protected_pages.storage');
+  $path_matcher = \Drupal::service('path.matcher');
 
-  $pid = $protected_pages_storage->loadProtectedPage($fields, $conditions, TRUE);
+  // Check all protected pages entries for path match including wildcards.
+  $all_protected_pages = $protected_pages_storage->loadAllProtectedPages();
+  foreach ($all_protected_pages as $protected_page) {
+    if ($path_matcher->matchPath($file_path, $protected_page->path)) {
+      $pid = $protected_page->pid;
+      break;
+    }
+  }
+  if (!$pid) {
+    $fields = ['pid'];
+    $conditions = [];
+    $conditions['general'][] = [
+      'field' => 'path',
+      'value' => $file_path,
+      'operator' => '=',
+    ];
+    $pid = $protected_pages_storage->loadProtectedPage($fields, $conditions, TRUE);
+  }
 
   if (isset($_SESSION['_protected_page']['passwords'][$pid]['expire_time'])) {
     if (time() >= $_SESSION['_protected_page']['passwords'][$pid]['expire_time']) {
@@ -74,7 +85,6 @@ function protected_pages_file_download($uri) {
   }
   if ($pid) {
     $destination_path_array = \Drupal::destination()->getAsArray();
-    $destination_path_array['destination'] = $destination_path_array['destination'] . '/' . $target;
     $destination_path_array['protected_page'] = $pid;
     $response = new RedirectResponse(Url::fromUri('internal:/protected-page', ['query' => $destination_path_array])->toString());
     $response->send();

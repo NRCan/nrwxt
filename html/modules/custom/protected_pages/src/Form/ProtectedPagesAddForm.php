@@ -109,7 +109,7 @@ class ProtectedPagesAddForm extends FormBase {
     $form['rules_list']['path'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Relative path'),
-      '#description' => $this->t('Enter relative Drupal path. For example, "/node/5", "new-events" etc.'),
+      '#description' => $this->t('Enter relative drupal path. For example, "/node/5", "new-events" etc. Use the \'*\' wildcard character to target multiple pages, e.g. "/new-events/*".  For all pages on your site, enter "/*".'),
       '#required' => TRUE,
     ];
     $form['rules_list']['password'] = [
@@ -137,8 +137,9 @@ class ProtectedPagesAddForm extends FormBase {
     else {
       $normal_path = $this->aliasManager->getPathByAlias($form_state->getValue('path'));
       $path_alias = mb_strtolower($this->aliasManager->getAliasByPath($form_state->getValue('path')));
-      if (!$this->pathValidator->isValid($normal_path)) {
-        $form_state->setErrorByName('path', $this->t('Please enter a correct path!'));
+      // If there are no wildcards and the path is invalid.
+      if (substr_count($entered_path, '*') === 0 && !$this->pathValidator->isValid($normal_path)) {
+        $form_state->setErrorByName('path', $this->t('Please enter a valid path.'));
       }
       $fields = ['pid'];
       $conditions = [];
@@ -155,7 +156,7 @@ class ProtectedPagesAddForm extends FormBase {
 
       $pid = $this->protectedPagesStorage->loadProtectedPage($fields, $conditions, TRUE);
       if ($pid) {
-        $form_state->setErrorByName('path', $this->t('Duplicate path entry is not allowed. There is already a path or its alias exists.'));
+        $form_state->setErrorByName('path', $this->t('There is already a path or its alias exists.'));
       }
     }
   }

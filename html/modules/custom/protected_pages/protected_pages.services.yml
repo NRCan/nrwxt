@@ -1,7 +1,7 @@
 services:
   protected_pages.check_protected_page:
     class: Drupal\protected_pages\EventSubscriber\ProtectedPagesSubscriber
-    arguments: ['@path_alias.manager','@current_user','@path.current','@redirect.destination','@request_stack','@protected_pages.storage', '@page_cache_kill_switch']
+    arguments: ['@path_alias.manager','@current_user','@path.current','@redirect.destination','@request_stack','@protected_pages.storage','@page_cache_kill_switch','@path.matcher']
     tags:
       - {name: event_subscriber}
   protected_pages.storage:

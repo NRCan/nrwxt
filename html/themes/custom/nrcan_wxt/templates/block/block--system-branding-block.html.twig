@@ -28,11 +28,12 @@
 
 #}
 {% block content %}
-  {% if nrwxt_logo == true %}
-    <a class="logo navbar-btn pull-left" href="{{ site_link) }}" title="{{ 'Home'|t }}" rel="home">
+  {% if nrwxt_logo %}
+    <a class="logo navbar-btn pull-left" href="{{ site_link }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ logo_svg }}" alt="{{ site_name }}" />
     </a>
-  {% else if site_logo %}
+  {% endif %}
+  {% if site_logo %}
     <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>

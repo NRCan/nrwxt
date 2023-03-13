@@ -49,7 +49,8 @@
         "drupal/moderation_dashboard": "^2.1",
         "drupal/moderation_sidebar": "^1.7",
         "drupal/tome": "^1.10",
-        "drupal/protected_pages": "1.x-dev@dev"
+        "drupal/protected_pages": "1.x-dev@dev",
+        "drupal/jsonapi_views": "^1.1"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

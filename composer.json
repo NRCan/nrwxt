@@ -50,7 +50,12 @@
         "drupal/moderation_sidebar": "^1.7",
         "drupal/tome": "^1.10",
         "drupal/protected_pages": "1.x-dev@dev",
-        "drupal/jsonapi_views": "^1.1"
+        "drupal/jsonapi_views": "^1.1",
+        "drupal/google_tag": "^1.6",
+        "drupal/o365": "^3.0",
+        "drupal/smtp": "1.x-dev@dev",
+        "drupal/mailsystem": "^4.4",
+        "drupal/mimemail": "^1.0@alpha"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

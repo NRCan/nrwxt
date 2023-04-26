@@ -55,7 +55,10 @@
         "drupal/o365": "^3.0",
         "drupal/smtp": "1.x-dev@dev",
         "drupal/mailsystem": "^4.4",
-        "drupal/mimemail": "^1.0@alpha"
+        "drupal/mimemail": "^1.0@alpha",
+        "drupal/phpmailer_smtp": "^2.2",
+        "drupal/honeypot": "^2.1",
+        "drupal/antibot": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^9",

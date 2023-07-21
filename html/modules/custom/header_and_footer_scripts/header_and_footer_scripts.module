@@ -89,6 +89,12 @@ function header_and_footer_scripts_page_top(array &$page_top) {
     }
   }
   if (isset($body_section['scripts']) && !empty($body_section['scripts'])) {
+    $page_top['top_scripts_scripts'] = [
+      '#markup' => $body_section['scripts'],
+    ];
+  }
+  /*
+  if (isset($body_section['scripts']) && !empty($body_section['scripts'])) {
     $output_scripts = preg_split("/(<\/script>|<\/noscript>)/", $body_section['scripts']);
     $i = 1;
     foreach ($output_scripts as $row) {
@@ -146,6 +152,7 @@ function header_and_footer_scripts_page_top(array &$page_top) {
       $i++;
     }
   }
+  */
 }
 
 /**

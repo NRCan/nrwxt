@@ -60,12 +60,13 @@ class Block extends PreprocessBase {
     $site_fip = $splash_config->get('site_fip.'.$language);
 
     $variables['nrwxt_logo'] = FALSE;
-    if ($site_fip) {
+    if (!empty($site_fip)) {
       $variables['nrwxt_logo'] = TRUE;
       $variables['logo'] = $site_fip;
       $variables['logo_svg'] = $site_fip;
       $variables['site_name'] = $site_name;
       $variables['site_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
+      $variables['logo_home_link'] = \Drupal::urlGenerator()->generateFromRoute('<front>', [], ['absolute' => TRUE]);
     }
 
     if (isset($variables['plugin_id']) && $variables['plugin_id'] == 'wxt_language_block:language_interface') {

@@ -17,13 +17,13 @@
 #}
 {% block content %}
   <div class="brand" property="publisher" typeof="GovernmentOrganization">
-    <a href="https://canada.ca/{{ language_prefix }}.html" property="url">
-      <img id="header-logo" src='{{ logo_svg }}' alt="{{ 'Government of Canada'|t }}" property="logo" />
+    <a href="{{ logo_home_link }}" property="url">
+      <img id="header-logo" src='{{ logo_svg }}' alt="{{ site_name }}" property="logo" />
       <span class="wb-inv"> /
         <span lang="{{ language_opposite }}">{{ label_opposite }}</span>
       </span>
     </a>
-    <meta property="name" content="{{ 'Government of Canada'|t }}">
+    <meta property="name" content="{{ site_name }}">
     <meta property="areaServed" typeof="Country" content="Canada">
     <link property="logo" href="/libraries/theme-gcweb/assets/wmms-blk.svg">
   </div>

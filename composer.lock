@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.276.2",
+            "version": "3.277.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "78c9510280512121e8fdaa9538b744778ab48bf9"
+                "reference": "483c9edf258527a6916f7e9fac224fdb2d474aff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/78c9510280512121e8fdaa9538b744778ab48bf9",
-                "reference": "78c9510280512121e8fdaa9538b744778ab48bf9",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/483c9edf258527a6916f7e9fac224fdb2d474aff",
+                "reference": "483c9edf258527a6916f7e9fac224fdb2d474aff",
                 "shasum": ""
             },
             "require": {
@@ -207,9 +207,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.276.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.277.2"
             },
-            "time": "2023-07-20T18:16:37+00:00"
+            "time": "2023-07-28T00:20:24+00:00"
         },
         {
             "name": "bower-asset/cropper",
@@ -2126,20 +2126,20 @@
         },
         {
             "name": "doctrine/reflection",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/reflection.git",
-                "reference": "1034e5e71f89978b80f9c1570e7226f6c3b9b6fb"
+                "reference": "6bcea3e81ab8b3d0abe5fde5300bbc8a968960c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/reflection/zipball/1034e5e71f89978b80f9c1570e7226f6c3b9b6fb",
-                "reference": "1034e5e71f89978b80f9c1570e7226f6c3b9b6fb",
+                "url": "https://api.github.com/repos/doctrine/reflection/zipball/6bcea3e81ab8b3d0abe5fde5300bbc8a968960c7",
+                "reference": "6bcea3e81ab8b3d0abe5fde5300bbc8a968960c7",
                 "shasum": ""
             },
             "require": {
-                "doctrine/annotations": "^1.0",
+                "doctrine/annotations": "^1.0 || ^2.0",
                 "ext-tokenizer": "*",
                 "php": "^7.1 || ^8.0"
             },
@@ -2197,10 +2197,10 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/reflection/issues",
-                "source": "https://github.com/doctrine/reflection/tree/1.2.3"
+                "source": "https://github.com/doctrine/reflection/tree/1.2.4"
             },
             "abandoned": "roave/better-reflection",
-            "time": "2022-05-31T18:46:25+00:00"
+            "time": "2023-07-27T18:11:59+00:00"
         },
         {
             "name": "drupal-ckeditor-libraries-group/fakeobjects",
@@ -3026,17 +3026,17 @@
         },
         {
             "name": "drupal/captcha",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/captcha.git",
-                "reference": "2.0.3"
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/captcha-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "35c1be362c378bd09e219195d09f8e2e189665ed"
+                "url": "https://ftp.drupal.org/files/projects/captcha-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "4a9f49e972b96efced154883b0e833a52ed3c2b4"
             },
             "require": {
                 "drupal/core": ">=9.4 <11"
@@ -3044,8 +3044,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1689779295",
+                    "version": "2.0.4",
+                    "datestamp": "1690471910",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3520,16 +3520,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.5.9",
+            "version": "9.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c3b194f9056a297f6d72e54056c818843cab9aba"
+                "reference": "c84bab7403943fbc4ed90ffcdde4460a94642b06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c3b194f9056a297f6d72e54056c818843cab9aba",
-                "reference": "c3b194f9056a297f6d72e54056c818843cab9aba",
+                "url": "https://api.github.com/repos/drupal/core/zipball/c84bab7403943fbc4ed90ffcdde4460a94642b06",
+                "reference": "c84bab7403943fbc4ed90ffcdde4460a94642b06",
                 "shasum": ""
             },
             "require": {
@@ -3681,9 +3681,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.5.9"
+                "source": "https://github.com/drupal/core/tree/9.5.10"
             },
-            "time": "2023-05-03T13:26:12+00:00"
+            "time": "2023-07-05T09:26:59+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -6932,17 +6932,17 @@
         },
         {
             "name": "drupal/media_pdf_thumbnail",
-            "version": "6.0.0-beta3",
+            "version": "6.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_pdf_thumbnail.git",
-                "reference": "6.0.0-beta3"
+                "reference": "6.0.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_pdf_thumbnail-6.0.0-beta3.zip",
-                "reference": "6.0.0-beta3",
-                "shasum": "88b9094e478518071f9c2756b05d5c09fd92ece3"
+                "url": "https://ftp.drupal.org/files/projects/media_pdf_thumbnail-6.0.0-rc1.zip",
+                "reference": "6.0.0-rc1",
+                "shasum": "8c41a8b24d93f3ebaded22f5a5fa845913643b58"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -6953,11 +6953,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-beta3",
-                    "datestamp": "1683462491",
+                    "version": "6.0.0-rc1",
+                    "datestamp": "1690548058",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -9660,27 +9660,27 @@
         },
         {
             "name": "drupal/token_or",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token_or.git",
-                "reference": "2.1.0"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token_or-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "5025350ee3835cd6786094aa8a441f2e04d17c6c"
+                "url": "https://ftp.drupal.org/files/projects/token_or-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "39be24d96005d2c71d1781e469af835240aa4650"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^8.8 || ^9 || ^10",
                 "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1673019171",
+                    "version": "2.1.1",
+                    "datestamp": "1690298054",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9695,6 +9695,10 @@
                 {
                     "name": "danielbeeke",
                     "homepage": "https://www.drupal.org/user/2484978"
+                },
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
                 },
                 {
                     "name": "pianomansam",
@@ -10949,12 +10953,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-                "reference": "c574454c8c8fa36359a058be12f26dc285d7ccd4"
+                "reference": "6278bfbdc7a4e40b33b4f427f982cb5814cef594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/c574454c8c8fa36359a058be12f26dc285d7ccd4",
-                "reference": "c574454c8c8fa36359a058be12f26dc285d7ccd4",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/6278bfbdc7a4e40b33b4f427f982cb5814cef594",
+                "reference": "6278bfbdc7a4e40b33b4f427f982cb5814cef594",
                 "shasum": ""
             },
             "require": {
@@ -10973,7 +10977,7 @@
                 "drupal/ckeditor_codemirror": "2.4",
                 "drupal/ckeditor_details": "^2.0.2",
                 "drupal/config_rewrite": "1.4",
-                "drupal/core": "9.5.9",
+                "drupal/core": "9.5.10",
                 "drupal/core_context": "1.1",
                 "drupal/crop": "^2.0.0-rc1",
                 "drupal/ctools": "^3.9",
@@ -11101,7 +11105,7 @@
                         "Enter drupal/core patch #850600 description here": "https://www.drupal.org/files/issues/2022-06-08/D94x-postgresql_ssl_dsn-850600-23.patch",
                         "1356276 is continued in 3266057 , this patch 78 is the latest and works better than patch 686 fixes a bug.": "https://www.drupal.org/files/issues/2023-03-03/3266057-110.patch",
                         "Enter drupal/core patch #2559833 description here": "https://www.drupal.org/files/issues/2021-06-02/comment_form_redirect-2559833-87.patch",
-                        "Enter drupal/core patch #2630732 description here": "https://www.drupal.org/files/issues/2022-02-22/D93x-implement_entity_fields_for_migration_dest-2630732.patch",
+                        "Enter drupal/core patch #2630732 description here": "https://www.drupal.org/files/issues/2023-07-26/D95x-2630732-115.patch",
                         "2679775 - Fixes float issue with inline label fields (entity references on most cases).": "https://www.drupal.org/files/issues/2679775-11-inline-labels.patch",
                         "2699157 - Plugin Lazy loading can cause usort warning": "https://www.drupal.org/files/issues/2020-06-22/2699157-38.drupal.Plugin-Lazy-loading-can-cause-usort-warning.patch",
                         "Enter drupal/core patch #2715483 description here": "https://www.drupal.org/files/issues/2020-01-09/regression-2715483-22.patch",
@@ -11199,7 +11203,7 @@
                 "issues": "https://github.com/drupalwxt/wxt/issues",
                 "source": "https://github.com/drupalwxt/wxt/tree/4.5.x"
             },
-            "time": "2023-07-05T19:45:06+00:00"
+            "time": "2023-07-26T14:21:41+00:00"
         },
         {
             "name": "drush/drush",
@@ -12133,41 +12137,41 @@
         },
         {
             "name": "laminas/laminas-feed",
-            "version": "2.20.0",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-feed.git",
-                "reference": "508ebef6e622f2f2ce3dd0559739ffd0dfa3b938"
+                "reference": "52918789a417bc292ccd6fbb4b91bd78a65d50ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/508ebef6e622f2f2ce3dd0559739ffd0dfa3b938",
-                "reference": "508ebef6e622f2f2ce3dd0559739ffd0dfa3b938",
+                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/52918789a417bc292ccd6fbb4b91bd78a65d50ab",
+                "reference": "52918789a417bc292ccd6fbb4b91bd78a65d50ab",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "laminas/laminas-escaper": "^2.9",
-                "laminas/laminas-servicemanager": "^3.14.0",
                 "laminas/laminas-stdlib": "^3.6",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+                "php": "~8.1.0 || ~8.2.0"
             },
             "conflict": {
                 "laminas/laminas-servicemanager": "<3.3",
                 "zendframework/zend-feed": "*"
             },
             "require-dev": {
-                "laminas/laminas-cache": "^2.13.2 || ^3.6",
-                "laminas/laminas-cache-storage-adapter-memory": "^1.1.0 || ^2.1",
-                "laminas/laminas-coding-standard": "~2.4.0",
-                "laminas/laminas-db": "^2.15",
-                "laminas/laminas-http": "^2.17.0",
-                "laminas/laminas-validator": "^2.26",
-                "phpunit/phpunit": "^9.5.25",
-                "psalm/plugin-phpunit": "^0.18.0",
-                "psr/http-message": "^1.0.1",
-                "vimeo/psalm": "^5.1.0"
+                "laminas/laminas-cache": "^2.13.2 || ^3.10.1",
+                "laminas/laminas-cache-storage-adapter-memory": "^1.1.0 || ^2.2",
+                "laminas/laminas-coding-standard": "~2.5.0",
+                "laminas/laminas-db": "^2.18",
+                "laminas/laminas-http": "^2.18",
+                "laminas/laminas-servicemanager": "^3.21.0",
+                "laminas/laminas-validator": "^2.30.1",
+                "phpunit/phpunit": "^10.2.6",
+                "psalm/plugin-phpunit": "^0.18.4",
+                "psr/http-message": "^2.0",
+                "vimeo/psalm": "^5.13.1"
             },
             "suggest": {
                 "laminas/laminas-cache": "Laminas\\Cache component, for optionally caching feeds between requests",
@@ -12209,98 +12213,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-12-03T19:40:30+00:00"
-        },
-        {
-            "name": "laminas/laminas-servicemanager",
-            "version": "3.21.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-servicemanager.git",
-                "reference": "625f2aa3bc6dd02688b2da5155b3a69870812bda"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/625f2aa3bc6dd02688b2da5155b3a69870812bda",
-                "reference": "625f2aa3bc6dd02688b2da5155b3a69870812bda",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-stdlib": "^3.17",
-                "php": "~8.1.0 || ~8.2.0",
-                "psr/container": "^1.0"
-            },
-            "conflict": {
-                "ext-psr": "*",
-                "laminas/laminas-code": "<4.10.0",
-                "zendframework/zend-code": "<3.3.1",
-                "zendframework/zend-servicemanager": "*"
-            },
-            "provide": {
-                "psr/container-implementation": "^1.0"
-            },
-            "replace": {
-                "container-interop/container-interop": "^1.2.0"
-            },
-            "require-dev": {
-                "composer/package-versions-deprecated": "^1.11.99.5",
-                "friendsofphp/proxy-manager-lts": "^1.0.14",
-                "laminas/laminas-code": "^4.10.0",
-                "laminas/laminas-coding-standard": "~2.5.0",
-                "laminas/laminas-container-config-test": "^0.8",
-                "laminas/laminas-dependency-plugin": "^2.2",
-                "mikey179/vfsstream": "^1.6.11",
-                "phpbench/phpbench": "^1.2.9",
-                "phpunit/phpunit": "^10.0.17",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.8.0"
-            },
-            "suggest": {
-                "friendsofphp/proxy-manager-lts": "ProxyManager ^2.1.1 to handle lazy initialization of services"
-            },
-            "bin": [
-                "bin/generate-deps-for-config-factory",
-                "bin/generate-factory-for-class"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/autoload.php"
-                ],
-                "psr-4": {
-                    "Laminas\\ServiceManager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Factory-Driven Dependency Injection Container",
-            "homepage": "https://laminas.dev",
-            "keywords": [
-                "PSR-11",
-                "dependency-injection",
-                "di",
-                "dic",
-                "laminas",
-                "service-manager",
-                "servicemanager"
-            ],
-            "support": {
-                "chat": "https://laminas.dev/chat",
-                "docs": "https://docs.laminas.dev/laminas-servicemanager/",
-                "forum": "https://discourse.laminas.dev",
-                "issues": "https://github.com/laminas/laminas-servicemanager/issues",
-                "rss": "https://github.com/laminas/laminas-servicemanager/releases.atom",
-                "source": "https://github.com/laminas/laminas-servicemanager"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2023-05-14T12:24:54+00:00"
+            "time": "2023-07-24T09:21:16+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -13631,16 +13544,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0"
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/65c39594fbd8c67abfc68bb323f86447bab79cc0",
-                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a2b24135c35852b348894320d47b3902a94bc494",
+                "reference": "a2b24135c35852b348894320d47b3902a94bc494",
                 "shasum": ""
             },
             "require": {
@@ -13672,9 +13585,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.23.0"
             },
-            "time": "2023-06-29T20:46:06+00:00"
+            "time": "2023-07-23T22:17:56+00:00"
         },
         {
             "name": "psr/cache",
@@ -19397,16 +19310,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.26",
+            "version": "9.2.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1"
+                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
-                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/b0a88255cb70d52653d80c890bd7f38740ea50d1",
+                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1",
                 "shasum": ""
             },
             "require": {
@@ -19462,7 +19375,8 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.26"
+                "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.27"
             },
             "funding": [
                 {
@@ -19470,7 +19384,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-06T12:58:08+00:00"
+            "time": "2023-07-26T13:44:30+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -21024,32 +20938,32 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.13.1",
+            "version": "8.13.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "a13c15e20f2d307a1ca8dec5313ec462a4466470"
+                "reference": "4b2af2fb17773656d02fbfb5d18024ebd19fe322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/a13c15e20f2d307a1ca8dec5313ec462a4466470",
-                "reference": "a13c15e20f2d307a1ca8dec5313ec462a4466470",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/4b2af2fb17773656d02fbfb5d18024ebd19fe322",
+                "reference": "4b2af2fb17773656d02fbfb5d18024ebd19fe322",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7 || ^1.0",
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpdoc-parser": "^1.22.0",
+                "phpstan/phpdoc-parser": "^1.23.0",
                 "squizlabs/php_codesniffer": "^3.7.1"
             },
             "require-dev": {
                 "phing/phing": "2.17.4",
                 "php-parallel-lint/php-parallel-lint": "1.3.2",
-                "phpstan/phpstan": "1.10.21",
+                "phpstan/phpstan": "1.10.26",
                 "phpstan/phpstan-deprecation-rules": "1.1.3",
                 "phpstan/phpstan-phpunit": "1.3.13",
                 "phpstan/phpstan-strict-rules": "1.5.1",
-                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.2.2"
+                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.2.6"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -21073,7 +20987,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.13.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.13.4"
             },
             "funding": [
                 {
@@ -21085,7 +20999,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-25T12:52:34+00:00"
+            "time": "2023-07-25T10:28:55+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

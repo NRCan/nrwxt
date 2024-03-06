@@ -773,12 +773,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
-$settings['trusted_host_patterns'] = [
-  '^cps-nrcan-dev\.azurewebsites\.net',
-  '^.+.canada.ca',
-  '^.+.nrcan.gc.ca',
-  '^.+.rncan.gc.ca',
-];
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -870,23 +864,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
-/**
- * Load local development override configuration, if available.
- *
- * Create a settings.local.php file to override variables on secondary (staging,
- * development, etc.) installations of this site.
- *
- * Typical uses of settings.local.php include:
- * - Disabling caching.
- * - Disabling JavaScript/CSS compression.
- * - Rerouting outgoing emails.
- *
- * Keep this code block at the end of this file to take full effect.
- */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+
+$settings['trusted_host_patterns'] = [
+  '^.+\.azurewebsites\.net',
+  '^.+\.canada.ca',
+  '^.+\.nrcan.gc.ca',
+  '^.+\.rncan.gc.ca',
+];
 
 $databases['default']['default'] = array (
   'database' => getenv('DB_NAME'),
@@ -902,8 +886,6 @@ $databases['default']['default'] = array (
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_GXEkAGnxiOApWXfwgfusXYeB1oWbPO4aP6H9AnihtRweQRLXntuTvUNwhz5ZoPmeJ4AbqB6k3g/sync';
 
-
-
 // Redis configuration
 $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
 $settings['redis.connection']['interface'] = 'PhpRedis'; 
@@ -914,3 +896,23 @@ $settings['cache']['default'] = 'cache.backend.redis';
 $settings['redis_compress_length'] = 100;
 $settings['cache_prefix']['default'] = getenv('WEBSITE_SITE_NAME');
 // */
+
+
+/**
+ * Load local development override configuration, if available.
+ *
+ * Create a settings.local.php file to override variables on secondary (staging,
+ * development, etc.) installations of this site.
+ *
+ * Typical uses of settings.local.php include:
+ * - Disabling caching.
+ * - Disabling JavaScript/CSS compression.
+ * - Rerouting outgoing emails.
+ *
+ * Keep this code block at the end of this file to take full effect.
+ */
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+

@@ -17,7 +17,7 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
       id-token: write #This is required for requesting the JWT
-      
+
     steps:
       - uses: actions/checkout@v4
 
@@ -28,16 +28,16 @@ jobs:
 
       - name: Check if composer.json exists
         id: check_files
-        uses: andstor/file-existence-action@v1
+        uses: andstor/file-existence-action@v3
         with:
           files: 'composer.json'
 
       - name: Run composer install if composer.json exists
         if: steps.check_files.outputs.files_exists == 'true'
         run: composer validate --no-check-publish && composer install --prefer-dist --no-progress
-      
+
       - name: Login to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E9877C94768C47CCB742173B1104ABD1 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1E5FB74BCF914AADABEBD97712D3ABD6 }}
@@ -50,4 +50,4 @@ jobs:
           app-name: 'ces-drupal'
           slot-name: 'Production'
           package: .
-          
+

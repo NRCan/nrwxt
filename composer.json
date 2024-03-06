@@ -18,6 +18,9 @@
         "drupal/toolbar_language_switcher": "^2.0@alpha",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/workflow_buttons": "1.x-dev@dev",
+        "drupal/cer": "^5.0@beta",
+        "drupal/feeds": "^3.0@beta",
+        "drupal/feeds_tamper": "^2.0@beta",
         "drupalwxt/wxt": "5.2.x-dev",
         "drush/drush": "^12.4"
     },

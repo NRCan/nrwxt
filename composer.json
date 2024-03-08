@@ -9,6 +9,7 @@
         "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^10.2",
+        "drupal/cshs": "^4.0",
         "drupal/devel": "^5.1",
         "drupal/field_group": "^3.4",
         "drupal/key": "^1.17",

@@ -1,5 +1,0 @@
-adobeanalytics.form:
-  title: 'Adobe Analytics'
-  description: 'Configure settings for the NRCan Adobe Analytics module.'
-  route_name: adobeanalytics.form
-  parent: system.admin_config_search

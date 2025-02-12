@@ -884,7 +884,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_GXEkAGnxiOApWXfwgfusXYeB1oWbPO4aP6H9AnihtRweQRLXntuTvUNwhz5ZoPmeJ4AbqB6k3g/sync';
+$settings['config_sync_directory'] = '../../config/sync';
 
 // Redis configuration
 $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';

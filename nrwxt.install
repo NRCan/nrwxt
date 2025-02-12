@@ -24,7 +24,7 @@ function _nrwxt_setup_themes() {
   // Set the default and admin theme.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'nrwxt_bootstrap')
+    ->set('default', 'nrcan_wxt')
     ->set('admin', 'seven')
     ->save(TRUE);
 

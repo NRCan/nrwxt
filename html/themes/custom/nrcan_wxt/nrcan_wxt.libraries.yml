@@ -2,11 +2,3 @@ framework:
   css:
     theme:
       css/style.css: {}
-
-homepage_banners:
-  version: 1.x
-  js:
-    js/homepage_banner.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupalSettings

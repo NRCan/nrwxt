@@ -1,5 +1,0 @@
-content_health.report_form:
-  title: 'Report a Problem settings'
-  description: 'Configure settings for the eport a Problem module.'
-  route_name: content_health.report_form
-  parent: 'system.admin_config_development'

@@ -1,8 +1,0 @@
-name: NRCan Adobe Analytics
-type: module
-description: 'Provide Adobe Analytics Specific metadata'
-package: NRCan
-core_version_requirement: ^8.8 || ^9
-dependencies:
-  - metatag:metatag
-  - metatag:metatag_dc

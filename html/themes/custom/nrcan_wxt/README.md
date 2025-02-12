@@ -1,4 +1,4 @@
-# WxT NRCan version
+# WxT Starterkit
 
 A WxT starterkit that helps you implement and extend [wxt_bootstrap][wxt_bootstrap] leveraging a sub-theme.
 
@@ -22,7 +22,7 @@ function MODULENAME_modules_installed($modules) {
     if (in_array('wxt', $modules)) {
       \Drupal::configFactory()
         ->getEditable('system.theme')
-        ->set('default', 'THEMENAME')
+        ->set('default', 'nrcan_wxt')
         ->set('admin', 'claro')
         ->save(TRUE);
     }
@@ -59,7 +59,7 @@ url:
 theme:
   visibility: 1
   themes:
-    subtheme: THEMENAME
+    subtheme: nrcan_wxt
     wxt_bootstrap: wxt_bootstrap
 minimized:
   options: 1
@@ -71,19 +71,26 @@ wxt:
   theme: theme-gcweb
 ```
 
-3. Finally if the theme you are extending has custom block templates these won't be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme's name as a prefix. Twig block templates are derived from the block's name, so this breaks the link between these templates and their block. Fixing this problem currently requires a hook in the sub-theme. The THEMENAME.theme has the following contents:
+3. Finally if the theme you are extending has custom block templates these won't be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme's name as a prefix. Twig block templates are derived from the block's name, so this breaks the link between these templates and their block. Fixing this problem currently requires a hook in the sub-theme. The nrcan_wxt.theme has the following contents:
 
 ```php
 <?php
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
-function THEMENAME_theme_suggestions_block_alter(&$suggestions, $variables) {
-
+function nrcan_wxt_theme_suggestions_block_alter(&$suggestions, $variables) {
   // Load theme suggestions for blocks from parent theme.
-  foreach ($suggestions as &$suggestion) {
-    $suggestion = str_replace('THEMENAME_', 'wxt_bootstrap_', $suggestion);
+  // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+  for ($i = 0; $i < count($suggestions); $i++) {
+    if (str_contains($suggestions[$i], 'nrcan_wxt_')) {
+      $new_suggestions = [
+        str_replace('nrcan_wxt_', '', $suggestions[$i]),
+        str_replace('nrcan_wxt_', 'wxt_bootstrap_', $suggestions[$i]),
+      ];
+      array_splice($suggestions, $i, 0, $new_suggestions);
+      $i += 2;
+    }
   }
 }
 

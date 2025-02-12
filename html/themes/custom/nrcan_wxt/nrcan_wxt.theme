@@ -7,25 +7,98 @@
  * Place your custom PHP code in this file.
  */
 
+use Drupal\node\NodeInterface;
+
+
 /**
- * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
 function nrcan_wxt_theme_suggestions_block_alter(&$suggestions, $variables) {
-
   // Load theme suggestions for blocks from parent theme.
-  foreach ($suggestions as &$suggestion) {
-    $suggestion = str_replace('nrcan_wxt_', 'wxt_bootstrap_', $suggestion);
+  // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+  for ($i = 0; $i < count($suggestions); $i++) {
+    if (!empty($suggestions[$i]) && str_contains($suggestions[$i], 'nrcan_wxt_')) {
+      $new_suggestions = [
+        str_replace('nrcan_wxt_', '', $suggestions[$i]),
+        str_replace('nrcan_wxt_', 'wxt_bootstrap_', $suggestions[$i]),
+      ];
+      array_splice($suggestions, $i, 0, $new_suggestions);
+      $i += 2;
+    }
   }
 }
 
 /**
- * Implements template_preprocess_language_selection_page_content().
- **/
-function nrcan_wxt_preprocess_language_selection_page_content(&$variables) {
-  $splash_config = \Drupal::config('theme_settings.splash');
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function nrcan_wxt_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $moduleHandler = \Drupal::service('module_handler');
 
-  $variables['site_name_en'] = $splash_config->get('site_name.en');
-  $variables['site_name_fr'] = $splash_config->get('site_name.fr');
-  $variables['tc_link_en'] = $splash_config->get('tc_link.en');
-  $variables['tc_link_fr'] = $splash_config->get('tc_link.fr');
+  if ($moduleHandler->moduleExists('wxt_ext_book')) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if ($node instanceof NodeInterface) {
+      if (!empty($node->book) && $node->book['bid'] != 0) {
+        /** @var \Drupal\wxt_library\LibraryService $wxt */
+        $wxt = \Drupal::service('wxt_library.service_wxt');
+        $wxt_active = $wxt->getLibraryName();
+
+        if ($node->book['bid'] == $node->id()) {
+          // Theme book index page.
+          $suggestions[] = $variables['theme_hook_original'] . '__book_index';
+          $suggestions[] = $variables['theme_hook_original'] . '__' . $wxt_active . '__book_index';
+        }
+        else {
+          // Theme book child page.
+          $suggestions[] = $variables['theme_hook_original'] . '__book_page';
+          $suggestions[] = $variables['theme_hook_original'] . '__' . $wxt_active . '__book_page';
+        }
+      }
+    }
+  }
 }
+
+/**
+ * Implements hook_preprocess_hook().
+*/
+function nrcan_wxt_preprocess_page(&$variables) {
+
+  // Check if this page is a node.
+  // If not, bail out.
+  if (empty($variables['node'])) {
+    return;
+  }
+
+  $node = $variables['node'];
+
+  // Ensure $node is a fully loaded node obejct.
+  if (!($node instanceof NodeInterface)) {
+    return;
+  }
+
+  // Check if the node type is a Landing page or Event page.
+  // If not, bail out.
+  $node_types = ['landing_page', 'event_page'];
+  if (!in_array($node->bundle(), $node_types)) {
+    return;
+  }
+
+  // Check if the Full width field has been selected.
+  // If yes, set a variable for theming.
+  if (!empty($node->get('field_node_full_width')->getString())) {
+    $variables['full_width'] = 1;
+  }
+}
+
+/**
+* Implements hook_preprocess_page_title().
+*/
+function nrcan_wxt_preprocess_page_title(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  $checkFieldName = 'field_node_secondary_title';
+  if ($node instanceof NodeInterface && $node->hasField($checkFieldName) && !$node->get($checkFieldName)->isEmpty()) {
+    $variables['lead_title'] = $node->get($checkFieldName)->first()->getString();
+  }
+}
+

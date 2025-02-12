@@ -1,6 +1,0 @@
-metatag.metatag_tag.dcterms_service:
-  type: label
-  label: 'Dublin Core: Service'
-metatag.metatag_tag.dcterms_access_rights:
-  type: label
-  label: 'Dublin Core: Access Rights'

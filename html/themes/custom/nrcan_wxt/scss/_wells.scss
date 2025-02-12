@@ -1,43 +1,69 @@
-/* Colours */
-$gc-success-border:     #629339;
-$gc-success-link:       #2b542c;
-$gc-success-background: #dff0d8;
+@use "sass:color";
 
-$gc-info-border:        #2392A9;
-$gc-info-link:          #245269;
-$gc-info-background:    #d9edf7;
+// Allow wells and panel headers to take on the bg colours
+.well,
+.panel-default>.panel-heading {
+  &.bg-success {
+    background-color: #dff0d8;
+  }
+  &.bg-info {
+    background-color: #d9edf7;
+  }
+  &.bg-warning {
+    background-color: #fcf8e3;
+  }
+  &.bg-danger {
+    background-color: #f2dede;
+  }
+}
 
-$gc-warning-border:     #ba8312;
-$gc-warning-link:       #66512c;
-$gc-warning-background: #fcf8e3;
+.bg-grey,
+.bg-ltgrey {
+  background-color: $gc-ltgrey-background;
+}
 
-$gc-danger-border:      #C16171;
-$gc-danger-link:        #843534;
-$gc-danger-background:  #f2dede;
+.bg-dkgrey {
+  background-color: $gc-dkgrey-background;
+}
 
 .well {
+  padding: 24px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
   .well-link {
     font-weight: bold;
   }
+
+  &.well-xl {
+    padding: 32px;
+  }
+
+  &.well-lg {
+    padding: 24px;
+  }
+
+  &.well-sm {
+    padding: 9px;
+  }
+
+  // Tidy up margins on first and last element inside well so you don't have to adjust manually
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // deprecated in favour of global changes
   &.clean-well {
-    padding: 30px;
-    border: none;
+    padding: 24px;
     border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     &.bg-white,
     &.bg-none {
-      border: 1px solid #e3e3e3;
-    }
-    &.well-border {
-      border: 1px solid #e3e3e3;
-    }
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
+      border: 1px solid $gc-ltgrey-border;
     }
   }
 
@@ -46,17 +72,64 @@ $gc-danger-background:  #f2dede;
     .well-link, .well-text {
       color: inherit;
     }
-    &.clean-well.well-border {
-      border: 1px solid #e3e3e3;
-    }
   }
 
   &.bg-white {
     background-color: #FFFFFF;
     .well-link, .well-text {
     }
-    &.clean-well.well-border {
-      border: 1px solid #000000;
+  }
+
+  &.bg-grey,
+  &.bg-ltgrey {
+    background-color: $gc-ltgrey-background;
+    border: 1px solid $gc-ltgrey-border;
+    .well-link, .well-text {
+      color: $gc-ltgrey-link;
+    }
+  }
+
+  &.bg-dkgrey {
+    background-color: $gc-dkgrey-background;
+    border: 1px solid $gc-dkgrey-border;
+    .well-link, .well-text {
+      color: $gc-dkgrey-link;
+    }
+  }
+
+  &.bg-dark {
+    background-color: $gc-dark-background;
+    border: 1px solid $gc-dark-border;
+    .well-link, .well-text {
+      color: $gc-dark-link;
+    }
+  }
+
+  &.bg-darker {
+    background-color: $gc-darker-background;
+    border: 1px solid $gc-darker-border;
+    .well-link, .well-text {
+      color: $gc-darker-link;
+    }
+  }
+
+  &.bg-dark,
+  &.bg-darker {
+    color: $gc-dark-link;
+    a, a:visited {
+      color: #fff;
+    }
+    a:hover, a:focus {
+      color: #b3ffff;
+    }
+  }
+
+  &.bg-primary {
+    color: #fff;
+    background-color: $gc-primary-background;
+
+    .well-link, .well-text {
+      color: $gc-primary-link;
     }
   }
 
@@ -66,9 +139,6 @@ $gc-danger-background:  #f2dede;
     .well-link, .well-text {
       color: $gc-success-link;
     }
-    &.clean-well.well-border {
-      border: 1px solid $gc-success-border;
-    }
   }
 
   &.bg-info {
@@ -76,9 +146,6 @@ $gc-danger-background:  #f2dede;
 
     .well-link, .well-text {
       color: $gc-info-link;
-    }
-    &.clean-well.well-border {
-      border: 1px solid $gc-info-border;
     }
   }
 
@@ -88,9 +155,6 @@ $gc-danger-background:  #f2dede;
     .well-link, .well-text {
       color: $gc-warning-link;
     }
-    &.clean-well.well-border {
-      border: 1px solid $gc-warning-border;
-    }
   }
 
   &.bg-danger {
@@ -98,9 +162,6 @@ $gc-danger-background:  #f2dede;
 
     .well-link, .well-text {
       color: $gc-danger-link;
-    }
-    &.clean-well.well-border {
-      border: 1px solid $gc-danger-border;
     }
   }
 }

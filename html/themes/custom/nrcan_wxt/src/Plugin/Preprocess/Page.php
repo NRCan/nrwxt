@@ -169,7 +169,7 @@ class Page extends BootstrapPage {
     }
     else {
       $base_path = \Drupal::service('file_system')->realpath(\Drupal::config('system.file')->get('default_scheme') . "://");
-      $base_url = file_create_url('public://');
+      $base_url = \Drupal::service('file_url_generator')->generateAbsoluteString('public://');
       //kint($base_path);
       $folder = 'images/homepage_banners';
       $files_path = $base_path . '/' . $folder;

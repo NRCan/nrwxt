@@ -5,6 +5,6 @@ dependencies:
   path: 'drupal:path'
   token: 'token:token'
   pathauto: 'pathauto:pathauto'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^10 || ^11
 type: module
 configure: cloudfront_path_invalidate.settings

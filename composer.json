@@ -6,74 +6,80 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/core-composer-scaffold": "*",
-        "drupalwxt/wxt": "4.5.x-dev",
-        "drush/drush": ">=9.7",
-        "oomphinc/composer-installers-extender": "^1.1 || ^2",
-        "drupal/backup_migrate": "^5.0",
-        "drupal/memcache": "2.1",
-        "drupal/variationcache": "^1.0",
-        "drupal/devel": "^4.0",
-        "drupal/recaptcha_element": "^1.0",
-        "drupal/google_analytics": "^4.0",
-        "drupal/key": "^1.15",
-        "drupal/recaptcha": "^3.0",
-        "drupal/access_unpublished": "^1.0",
-        "drupal/language_selection_page": "^2.7",
-        "aws/aws-sdk-php": "~3.0",
-        "drupal/public_preview": "^1.0@beta",
-        "drupal/field_group": "^3.2",
-        "drupal/shs": "2.0.x-dev@dev",
-        "drupal/purge": "^3.0",
-        "drupal/toolbar_language_switcher": "^2.0@alpha",
-        "drupal/transliterate_filenames": "^1.6",
-        "wikimedia/composer-merge-plugin": "^2.0",
-        "drupal/file_delete": "1.x-dev@dev",
-        "drupal/moderated_content_bulk_publish": "^2.0",
-        "drupal/externalauth": "^2.0",
-        "drupal/views_bulk_operations": "^4.1",
-        "drupal/schemata": "^1.0@beta",
-        "drupal/toc_filter": "^2.0",
-        "drupal/bg_image_formatter": "^1.15",
-        "drupal/simple_gmap": "^3.0",
-        "drupal/openid_connect_windows_aad": "^2.0@beta",
-        "drupal/schema_metatag": "^2.3",
-        "drupal/token_or": "^2.0",
-        "drupal/migrate_source_html": "^1.0",
-        "drupal/views_entity_embed": "^2.0",
-        "drupal/header_and_footer_scripts": "^3.0",
-        "drupal/cloudfront_cache_path_invalidate": "^3.0",
-        "drupal/conflict": "^2.0@alpha",
-        "drupal/moderation_dashboard": "^2.1",
-        "drupal/moderation_sidebar": "^1.7",
-        "drupal/tome": "^1.10",
-        "drupal/protected_pages": "1.x-dev@dev",
-        "drupal/jsonapi_views": "^1.1",
-        "drupal/google_tag": "^1.6",
-        "drupal/o365": "^3.0",
-        "drupal/smtp": "1.x-dev@dev",
-        "drupal/mailsystem": "^4.4",
-        "drupal/mimemail": "^1.0@alpha",
-        "drupal/phpmailer_smtp": "^2.2",
-        "drupal/honeypot": "^2.1",
+        "aws/aws-sdk-php": "^3.369",
+        "composer/installers": "^2.1",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/access_unpublished": "^1.9",
         "drupal/antibot": "^2.0",
-        "drupal/single_content_sync": "^1.3",
-        "drupal/media_entity_download": "^2.2",
-        "lcobucci/clock": "3.0.0",
+        "drupal/backup_migrate": "^5.1",
+        "drupal/bg_image_formatter": "^1.18",
+        "drupal/cloudfront_cache_path_invalidate": "^4.1",
+        "drupal/conflict": "^3.0@beta",
+        "drupal/devel": "^5.4",
+        "drupal/edit_uuid": "^3.0",
+        "drupal/externalauth": "^2.0",
         "drupal/fancy_file_delete": "^2.0",
-        "drupal/media_pdf_thumbnail": "^6.0@RC",
-        "drupal/simplei": "^2.1",
-        "drupal/easy_install": "^10.5",
-        "drupal/edit_uuid": "^2.1",
-        "drupal/simplei": "^2.1"
+        "drupal/field_group": "^3.6",
+        "drupal/file_delete": "^3.0",
+        "drupal/google_analytics": "^4.0",
+        "drupal/google_tag": "^2.0",
+        "drupal/header_and_footer_scripts": "^3.0",
+        "drupal/honeypot": "2.1.4",
+        "drupal/jsonapi_views": "^1.1",
+        "drupal/key": "^1.22",
+        "drupal/language_selection_page": "^3.0",
+        "drupal/mailsystem": "^4.5",
+        "drupal/media_entity_download": "^2.4",
+        "drupal/media_pdf_thumbnail": "^7.0",
+        "drupal/memcache": "^2.7",
+        "drupal/migrate_source_html": "^1.0",
+        "drupal/mimemail": "^2.0",
+        "drupal/moderated_content_bulk_publish": "^2.0",
+        "drupal/moderation_dashboard": "^3.1",
+        "drupal/moderation_sidebar": "^1.8",
+        "drupal/o365": "^5.0",
+        "drupal/openid_connect_windows_aad": "^2.0@beta",
+        "drupal/phpmailer_smtp": "^2.3",
+        "drupal/protected_pages": "^1.9",
+        "drupal/public_preview": "^1.0",
+        "drupal/purge": "^3.6",
+        "drupal/rdf": "^2.1",
+        "drupal/recaptcha": "^3.4",
+        "drupal/recaptcha_element": "^1.1",
+        "drupal/schema_metatag": "^3.0",
+        "drupal/schemata": "^1.0",
+        "drupal/shs": "^2.0",
+        "drupal/simple_gmap": "^4.0",
+        "drupal/simplei": "^3.0",
+        "drupal/single_content_sync": "^1.4",
+        "drupal/smtp": "^1.4",
+        "drupal/toc_filter": "^2.4",
+        "drupal/token_or": "^2.3",
+        "drupal/tome": "^1.14",
+        "drupal/toolbar_language_switcher": "^2.0",
+        "drupal/transliterate_filenames": "^2.0",
+        "drupal/variationcache": "^1.5",
+        "drupal/views_bulk_operations": "^4.4",
+        "drupal/views_entity_embed": "^2.0",
+        "drupalwxt/wxt": "5.6.1",
+        "lcobucci/clock": "^3.5",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "require-dev": {
-        "drupal/core-dev": "^9",
-        "drupal/drupal-extension": "^4.1.0",
-        "squizlabs/php_codesniffer": "^3.3"
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^10.2",
+        "drupal/drupal-extension": "5.0.0-alpha1",
+        "drush/drush": "^12.4.3",
+        "oomphinc/composer-installers-extender": "^1.1 || ^2",
+        "phpspec/prophecy-phpunit": "^2",
+        "squizlabs/php_codesniffer": "3.*",
+        "vlucas/phpdotenv": "^5.1",
+        "webflo/drupal-finder": "^1.2"
     },
     "config": {
+        "discard-changes": true,
+        "sort-packages": true,
         "secure-http": false,
         "prestissimo": {
             "maxConnections": 10,
@@ -82,13 +88,17 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "wikimedia/composer-merge-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
-    "repositories": [ {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
@@ -99,25 +109,10 @@
         {
             "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "nrwxt/migrations",
-                "version": "0.0.2",
-                "type": "drupal-custom-module",
-                "source": {
-                    "url": "https://github.com/NRCan/drupal-9-migrations.git",
-                    "type": "git",
-                    "reference": "development"
-                }
-            }
         }
     ],
     "scripts": {
-        "post-root-package-install": [
-            "DrupalWxT\\WxT\\ScriptHandler::postCreateProject"
-        ],
+        "post-create-project-cmd": "rm -r -f behat.yml",
         "quick-start": [
             "composer install"
         ]
@@ -164,37 +159,11 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/linkit": {
-                "NRCan - Stop LinkIt from adding titles to links. WCAG duplication issue.": "https://raw.githubusercontent.com/NRCan/nrwxt/master/patches/linkit-stop-adding-title.patch"
-            },
-            "drupal/core": {
-                "3259716 - Replace usages of static::class . '::methodName' to first-class callable syntax static::method(...)": "https://www.drupal.org/files/issues/2022-12-14/3259716-63.patch"
+            "drupal/group": {
+                "3401829 - Remove dependency on flexible permissions": "https://www.drupal.org/files/issues/2023-12-20/fixing-flexible-permissions-error-3401829.patch"
             }
-        },
-        "patches-ignore": {
-            "acquia/lightning": {
-                "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                }
-            },
-            "drupalwxt/wxt": {
-                "drupal/moderation_sidebar": {
-                    "3194841 - Discard Draft for a translation edits the base language node": "https://www.drupal.org/files/issues/2021-02-12/3194841-3.patch"
-                }
-            },
-            "drupal/lightning_core": {
-                "drupal/core": {
-                    "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-                    "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
-                }
-            },
-            "drupal/lightning": {
-                "drupal/metatag": {
-                    "Enter drupal/metatag patch 2955407 description here": "https://www.drupal.org/files/issues/2020-12-18/Issue-2955407-Static-caching-for-token-processing-ic.patch"
-                }
-            }
-        },
+         },
+        "patches-ignore": { },
         "merge-plugin": {
             "include": [
                 "web/modules/contrib/webform/composer.libraries.json"

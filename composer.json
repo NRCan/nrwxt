@@ -13,6 +13,7 @@
         "drupal/antibot": "^2.0",
         "drupal/backup_migrate": "^5.1",
         "drupal/bg_image_formatter": "^1.18",
+        "drupal/ckeditor5_fullscreen": "^1.0",
         "drupal/cloudfront_cache_path_invalidate": "^4.1",
         "drupal/conflict": "^3.0@beta",
         "drupal/devel": "^5.4",

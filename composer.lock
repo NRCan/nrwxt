@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12a6de4729d4994623dc56db3e6d7935",
+    "content-hash": "d079c54701ade6ca9465a08f9083404d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2186,6 +2186,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ckeditor4_codemirror",
                 "issues": "https://www.drupal.org/project/issues/ckeditor4_codemirror?version=8.x"
+            }
+        },
+        {
+            "name": "drupal/ckeditor5_fullscreen",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor5_fullscreen.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_fullscreen-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "dcf3090a2f3f5a5d926dd9e99b1685977f1f32d7"
+            },
+            "require": {
+                "drupal/core": "^10  || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1750465073",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "O'Toole, James",
+                    "homepage": "https://www.drupal.org/user/160302",
+                    "email": "james.otoole@ubc.ca"
+                },
+                {
+                    "name": "occupant",
+                    "homepage": "https://www.drupal.org/user/174967"
+                }
+            ],
+            "description": "A Fullscreen / Maximize button for CKeditor5",
+            "homepage": "https://www.drupal.org/project/ckeditor5_fullscreen",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor5_fullscreen"
             }
         },
         {

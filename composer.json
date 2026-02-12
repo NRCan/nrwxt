@@ -1,8 +1,8 @@
 {
     "name": "nrcan/nrwxt",
-    "description": "NRCan deployment template based on the WxT Deployment of Drupal",
+    "description": "Project template for Drupal 11 sites built with the WxT distribution.",
     "type": "project",
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -13,9 +13,12 @@
         "drupal/antibot": "^2.0",
         "drupal/backup_migrate": "^5.1",
         "drupal/bg_image_formatter": "^1.18",
+        "drupal/ckeditor5_fullscreen": "^1.0",
+        "drupal/ckeditor_codemirror": "^3.1",
         "drupal/cloudfront_cache_path_invalidate": "^4.1",
         "drupal/conflict": "^3.0@beta",
-        "drupal/devel": "^5.4",
+        "drupal/core-composer-scaffold": "11.1.*",
+        "drupal/devel": "^5.5",
         "drupal/edit_uuid": "^3.0",
         "drupal/externalauth": "^2.0",
         "drupal/fancy_file_delete": "^2.0",
@@ -25,7 +28,7 @@
         "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^2.0",
         "drupal/header_and_footer_scripts": "^3.0",
-        "drupal/honeypot": "2.1.4",
+        "drupal/honeypot": "^2.2",
         "drupal/jsonapi_views": "^1.1",
         "drupal/key": "^1.22",
         "drupal/language_selection_page": "^3.0",
@@ -33,19 +36,17 @@
         "drupal/media_entity_download": "^2.4",
         "drupal/media_pdf_thumbnail": "^7.0",
         "drupal/memcache": "^2.7",
-        "drupal/migrate_source_html": "^1.0",
         "drupal/mimemail": "^2.0",
         "drupal/moderated_content_bulk_publish": "^2.0",
         "drupal/moderation_dashboard": "^3.1",
         "drupal/moderation_sidebar": "^1.8",
-        "drupal/o365": "^5.0",
+        "drupal/o365": "^6.0@beta",
         "drupal/openid_connect_windows_aad": "^2.0@beta",
-        "drupal/phpmailer_smtp": "^2.3",
+        "drupal/phpmailer_smtp": "^2.4",
         "drupal/protected_pages": "^1.9",
-        "drupal/public_preview": "^1.0",
         "drupal/purge": "^3.6",
         "drupal/quickedit": "^2.0",
-        "drupal/rdf": "^2.1",
+        "drupal/rdf": "^3.0@beta",
         "drupal/recaptcha": "^3.4",
         "drupal/recaptcha_element": "^1.1",
         "drupal/schema_metatag": "^3.0",
@@ -54,25 +55,22 @@
         "drupal/simple_gmap": "^4.0",
         "drupal/simplei": "^3.0",
         "drupal/single_content_sync": "^1.4",
-        "drupal/smtp": "^1.4",
+        "drupal/smtp": "^1.0@dev",
         "drupal/toc_filter": "^2.4",
         "drupal/token_or": "^2.3",
         "drupal/tome": "^1.14",
         "drupal/toolbar_language_switcher": "^2.0",
-        "drupal/transliterate_filenames": "^2.0",
-        "drupal/variationcache": "^1.5",
+        "drupal/variationcache": "^1.0@dev",
         "drupal/views_bulk_operations": "^4.4",
-        "drupal/views_entity_embed": "^2.0",
-        "drupalwxt/wxt": "5.6.1",
-        "lcobucci/clock": "^3.5",
-        "wikimedia/composer-merge-plugin": "^2.1"
+        "drupal/views_entity_embed": "^2.0@dev",
+        "drupalwxt/wxt": "^6.1",
+        "lcobucci/clock": "^3.5"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-        "drupal/coder": "^8.3",
-        "drupal/core-dev": "^10.2",
+        "drupal/core-dev": "11.1.9",
+        "drupal/drupal": "^11.1",
         "drupal/drupal-extension": "5.0.0-alpha1",
-        "drush/drush": "^12.4.3",
+        "drush/drush": "^13.3.3",
         "oomphinc/composer-installers-extender": "^1.1 || ^2",
         "phpspec/prophecy-phpunit": "^2",
         "squizlabs/php_codesniffer": "3.*",
@@ -80,23 +78,22 @@
         "webflo/drupal-finder": "^1.2"
     },
     "config": {
+        "audit": {
+            "block-insecure": false
+        },
         "discard-changes": true,
         "sort-packages": true,
-        "secure-http": false,
-        "prestissimo": {
-            "maxConnections": 10,
-            "minConnections": 5
-        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "tbachert/spi": true,
-            "wikimedia/composer-merge-plugin": true
+            "tbachert/spi": true
         }
     },
     "repositories": [
@@ -111,9 +108,33 @@
         {
             "type": "composer",
             "url": "https://drupalwxt.github.io/composer-extdeps/"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fontawesome/fontawesome",
+                "version": "6.4.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "fontawesome"
+                },
+                "dist": {
+                    "url": "https://use.fontawesome.com/releases/v6.4.2/fontawesome-free-6.4.2-web.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "scripts": {
+        "post-install-cmd": [
+            "@copy-composer-directory"
+        ],
+        "post-update-cmd": [
+            "@copy-composer-directory"
+        ],
+        "copy-composer-directory": [
+            "[ -d vendor/drupal/drupal/composer ] && mkdir -p html/composer && cp -R vendor/drupal/drupal/composer/* html/composer/ || echo 'composer directory not found; skipping copy'"
+        ],
         "post-create-project-cmd": "rm -r -f behat.yml",
         "quick-start": [
             "composer install"
@@ -142,9 +163,6 @@
             "html/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "html/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
             "html/profiles/{$name}": [
                 "type:drupal-profile"
             ],
@@ -155,7 +173,7 @@
                 "type:drupal-drush"
             ]
         },
-        "composer-exit-on-patch-failure": false,
+        "composer-exit-on-patch-failure": true,
         "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"
@@ -163,14 +181,15 @@
         "patches": {
             "drupal/group": {
                 "3401829 - Remove dependency on flexible permissions": "https://www.drupal.org/files/issues/2023-12-20/fixing-flexible-permissions-error-3401829.patch"
+            },
+            "drupal/page_manager": {
+                "3438993 - Some mandatory parameters are missing for route entity.page.devel_load": "https://www.drupal.org/files/issues/2024-08-14/page-manager-3438993-MR34-24.patch"
+            },
+            "drupal/views_entity_embed": {
+                "3472733 - Embed button no using SVG": "https://www.drupal.org/files/issues/2025-12-10/views_entity_embed-.patch-3472733-3.patch"
             }
-         },
-        "patches-ignore": { },
-        "merge-plugin": {
-            "include": [
-                "web/modules/contrib/webform/composer.libraries.json"
-            ]
-        }
+        },
+        "patches-ignore": { }
     },
     "autoload": {
         "classmap": [

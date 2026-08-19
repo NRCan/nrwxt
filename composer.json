@@ -17,12 +17,12 @@
         "drupal/ckeditor_codemirror": "^3.1",
         "drupal/cloudfront_cache_path_invalidate": "^4.1",
         "drupal/conflict": "^3.0@beta",
-        "drupal/core-composer-scaffold": "11.1.*",
+        "drupal/core-composer-scaffold": "11.3.*",
         "drupal/devel": "^5.5",
         "drupal/edit_uuid": "^3.0",
         "drupal/externalauth": "^2.0",
         "drupal/fancy_file_delete": "^2.0",
-        "drupal/field_group": "^3.6",
+        "drupal/field_group": "^4.0",
         "drupal/file_delete": "^3.0",
         "drupal/flexible_permissions": "^2.0",
         "drupal/google_analytics": "^4.0",
@@ -64,7 +64,7 @@
         "drupal/variationcache": "^1.0@dev",
         "drupal/views_bulk_operations": "^4.4",
         "drupal/views_entity_embed": "^2.0@dev",
-        "drupalwxt/wxt": "^6.1",
+        "drupalwxt/wxt": "6.3.0",
         "lcobucci/clock": "^3.5"
     },
     "require-dev": {
@@ -90,6 +90,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
@@ -193,7 +194,19 @@
                 "3472733 - Embed button no using SVG": "https://www.drupal.org/files/issues/2025-12-10/views_entity_embed-.patch-3472733-3.patch"
             }
         },
-        "patches-ignore": { }
+        "patches-ignore": {
+            "drupalwxt/wxt": {
+                "drupal/panels": {
+                    "Enter drupal/panels patch #3577740 description here": "https://www.drupal.org/files/issues/2026-03-07/panels-php8-4-deprecations-3577740-2.patch"
+                },
+                "drupal/page_manager": {
+                    "Enter drupal/page_manager patch #3536704 description here": "https://www.drupal.org/files/issues/2026-03-07/page_manager-php8-4-deprecation-3536704-15.patch"
+                },
+                "drupal/ckeditor_details": {
+                    "3244311 - Allow <details> element to be placed without <div>": "https://www.drupal.org/files/issues/2024-11-15/3244311-9.patch"
+                }
+            } 
+        }
     },
     "autoload": {
         "classmap": [

@@ -249,14 +249,10 @@
         <div class="landscape">
           {{ page.footer }}
         </div>
-        <div class="brand">
-          <div class="container">
-            <div class="row">
+	<div class="gc-sub-footer">
+	  <div class="container d-flex align-items-center">
               {{ page.branding }}
-              <div class="col-xs-6 visible-sm visible-xs tofpg">
-                <a href="#wb-cont">{{ 'Top of Page'|t }}<span class="glyphicon glyphicon-chevron-up"></span></a>
-              </div>
-              <div class="col-xs-6 col-md-2 text-right">
+              <div class="wtrmrk align-self-end">
                 {% if nrwxt_hide_menu != true %}
                 <img src='{{ logo_bottom_svg }}' alt='{{ 'Symbol of the Government of Canada'|t }}' />
                 {% endif %}

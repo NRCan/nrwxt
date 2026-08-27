@@ -1,0 +1,5 @@
+name: NRCan admin
+type: module
+description: 'Custom admin interface code for the CPS NRCan WxT site.'
+package: NRCan
+core_version_requirement: ^11

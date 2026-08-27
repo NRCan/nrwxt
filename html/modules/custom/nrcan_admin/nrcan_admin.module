@@ -1,0 +1,11 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ */
+function nrcan_admin_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) : void {
+  $form['#attached']['library'][] = 'nrcan_admin/nrcan-admin';
+  $form['#attached']['drupalSettings']['nrcan_admin']['enable_dialog_node_edit_form'] = TRUE;
+}

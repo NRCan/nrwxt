@@ -1,0 +1,119 @@
+(function ($, Drupal, drupalSettings) {
+  Drupal.behaviors.nrcan_admin = {
+    attach: function (context, settings) {
+      if (context == document) {
+        if ($('body').hasClass('user-logged-in') && typeof settings.nrcan_admin !== 'undefined') {
+          if (settings.nrcan_admin.enable_dialog_node_edit_form) {
+            // When editing any type of node, display a confirmation dialog any time the state is changing from
+            // non-published to published.
+            if ($('body').hasClass('path-node')) {
+              // Minimal single-dialog guards.
+              var mcbpDialogOpen = window.mcbpDialogOpen || false;
+              var mcbpBypass     = window.mcbpBypass || false;
+              $('#edit-submit').unbind('click.nrcan_admin').bind('click.nrcan_admin', function(e) {
+                // For automated testing purposes you can unbind this click event as follows:
+                // jQuery('*').unbind('click.moderated_content_bulk_publish'); // Disables confirm dialog.
+                // Get the current state. Need to clone this object and remove the label so that we can get just the state.
+                var cur_state = '';
+                var mod_state = $('#edit-moderation-state-0-current').clone();
+                if (mod_state) {
+                  $('label', mod_state).remove();
+                  var cur_state = $(mod_state).text().trim();
+                  cur_state = Drupal.t(cur_state);
+                }
+                var new_state = $('#edit-moderation-state-0-state option:selected').text();
+                new_state = Drupal.t(new_state);
+                // If changing from un-published to published...
+                // If we just confirmed, allow the next submit to pass without dialog.
+                if (window.mcbpBypass) {
+                  window.mcbpBypass = false;
+                  return true;
+                }
+
+                // build a Drupal modal dialog window
+                var msg =  Drupal.t('Are you sure you want to publish this item?');
+                var content  = '<div><p id="version-confirm-form-text">' + msg + '</p></div>';
+                // Prevent multiple dialogs if one is already open.
+                if (window.mcbpDialogOpen) {
+                  e.preventDefault();
+                  return false;
+                }
+
+                confirmationDialog_publish = Drupal.dialog(content, {
+                  dialogClass: 'confirm-dialog',
+                  resizable: false,
+                  closeOnEscape: false,
+                  width:500,
+                  title: Drupal.t('Publish this?'),
+                  buttons: [{
+                    text: Drupal.t('Yes'),
+                    class: 'button button--primary',
+                    click: function click(e) {
+                      // On confirm, mark bypass so the next click/submit doesn't re-open.
+                      window.mcbpBypass = true;
+                      confirmationDialog_publish.close();
+                      $(".node-form #edit-submit, .node-layout-builder-form  #edit-submit, .gin-sticky-form-actions #edit-submit").unbind('click.nrcan_admin');
+                      $(".node-form #edit-submit, .node-layout-builder-form  #edit-submit, .gin-sticky-form-actions #edit-submit").trigger('click.nrcan_admin');
+                      $(e.target).remove();
+                      return true;
+                    },
+                    primary: true
+                  }, {
+                    text: Drupal.t('Cancel'),
+                    class: 'button',
+                    click: function click() {
+                      // Always clear the "open" flag and clean up overlays.
+                      window.mcbpDialogOpen = false;
+                      confirmationDialog_publish.close();
+                    }
+                  }],
+                  create: function () {
+                  },
+                  beforeClose: false,
+                  close: function (event) {
+                    confirmationDialog_publish.close();
+                    $(event.target).parent().parent().find('.ui-widget-overlay').remove();
+                    $(event.target).remove();
+                  }
+                });
+
+                if ((cur_state == '' || cur_state == Drupal.t('Draft')) && (new_state == Drupal.t('Published'))) {
+                  e.preventDefault();
+                  window.mcbpDialogOpen = true;
+                  confirmationDialog_publish.showModal();
+                  return false;
+                }
+                else if ((cur_state == Drupal.t('Published')) && (new_state == Drupal.t('Published'))) {
+                  e.preventDefault();
+                  window.mcbpDialogOpen = true;
+                  confirmationDialog_publish.showModal();
+                  return false;
+                }
+                return true;
+              });
+              $('#edit-create-and-translate').click(function(e) {
+                // Get the current state. Need to clone this object and remove the label so that we can get just the state.
+                var cur_state = '';
+                var mod_state = $('#edit-moderation-state-0-current').clone();
+                if (mod_state) {
+                  $('label', mod_state).remove();
+                  var cur_state = $(mod_state).text().trim();
+                  cur_state = Drupal.t(cur_state);
+                }
+                var new_state = $('#edit-moderation-state-0-state option:selected').text();
+                new_state = Drupal.t(new_state);
+                // If changing from un-published to published...
+                if ((cur_state == '' || cur_state == Drupal.t('Draft')) && (new_state == Drupal.t('Published'))) {
+                  e.preventDefault();
+                  confirmationDialog_publish.showModal();
+                  return false;
+                }
+                return true;
+              });
+            }
+          }
+        }
+      }
+    }
+  };
+})(jQuery, Drupal, drupalSettings);

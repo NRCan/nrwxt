@@ -1,0 +1,8 @@
+nrcan-admin:
+  js:
+    js/nrcan-admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog.ajax #Required for dialogs
+    - core/drupalSettings

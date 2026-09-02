@@ -1,0 +1,15 @@
+uuid: bc206cc4-fda3-4256-bfe1-2c88c48c7ec4
+langcode: en
+status: true
+dependencies:
+  module:
+    - page_manager
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: page_variant.token
+label: Token
+description: ''
+targetEntityType: page_variant
+cache: true

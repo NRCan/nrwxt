@@ -1,0 +1,22 @@
+uuid: d1befe98-5732-430b-b607-b170496c753f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: tKnxXzEgiZt4P1kSKifNzbrryhog9XteiDVXbdjt0rc
+id: nrcan_wxt_content
+theme: nrcan_wxt
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

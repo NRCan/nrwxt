@@ -1,0 +1,35 @@
+uuid: b7ff0ad6-ca84-48d0-9ebd-99577e3aeab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-fr
+  module:
+    - language
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: 1nhZYE3hyLQnicTvd2QGLrWLr6kGUrBxwoapzDoG6Zc
+id: nrcan_wxt_footer_fr
+theme: nrcan_wxt
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-fr'
+settings:
+  id: 'system_menu_block:footer-fr'
+  label: 'Pied de page'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

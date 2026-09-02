@@ -1,0 +1,25 @@
+uuid: 3bb40fbd-8aa2-46cf-b533-2a2e6ec831e0
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: '-SeidwpNofgGPUnt50IcG8RTVByDEkgQ7zrJEgZGw0I'
+id: wxt_bootstrap_branding
+theme: wxt_bootstrap
+region: branding
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

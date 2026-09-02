@@ -1,0 +1,48 @@
+_core:
+  default_config_hash: mO7mxem0JY6zvAroR3ebmv8PCghq7rhAHpmoBlTnb9o
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: profiles/wxt/favicon.ico
+  url: 'https://admin.geologicalsurveys.ca/profiles/wxt/favicon.ico'
+  use_default: false
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: false
+  node_user_picture: false
+logo:
+  path: profiles/wxt/wxt.svg
+  url: ''
+  use_default: false
+cdn_provider: ''
+breadcrumb_home: 1
+schemas:
+  bootstrap: 8000
+  wxt_bootstrap: 8000
+modal_jquery_ui_bridge: 0
+wxt_skip_link_primary_text: 'Skip to main content'
+wxt_skip_link_secondary_text: 'Skip to "About government"'
+table_responsive: '-1'
+region_wells:
+  branding: ''
+  breadcrumb: ''
+  language_toggle: ''
+  banner: ''
+  search: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  content_footer: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+cdn_theme: ''
+cdn_cache_ttl_versions: 0
+cdn_cache_ttl_themes: 0
+cdn_cache_ttl_assets: 0
+cdn_cache_ttl_library: 0
+reset_http_request_cache: ''
+table: ''

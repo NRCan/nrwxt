@@ -1,0 +1,10 @@
+site_name:
+  en: 'Open Science and Data Platform'
+  fr: 'Plateforme de science et de données ouvertes'
+site_fip:
+  en: ''
+  fr: ''
+splash_bg: '<div id="bg"><img alt="" class="img-responsive" src="https://natural-resources.canada.ca/sites/all/themes/canadaca/assets/splash/sp-bg-4.png" /></div>'
+tc_link:
+  en: 'https://www.canada.ca/en/transparency/terms.html'
+  fr: 'https://www.canada.ca/fr/transparence/avis.html'

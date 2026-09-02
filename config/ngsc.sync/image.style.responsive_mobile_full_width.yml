@@ -1,0 +1,17 @@
+uuid: 0d23a9f3-2715-4915-a3aa-f685e94d34bc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MK5qQxANIbw1lCtkB15TzXr6VfNYy8r94H9fInLDEok
+name: responsive_mobile_full_width
+label: 'Responsive mobile full width (768 x 768)'
+effects:
+  7cbcef1e-83fb-467c-9b21-4d1b3b66da48:
+    uuid: 7cbcef1e-83fb-467c-9b21-4d1b3b66da48
+    id: image_scale
+    weight: 1
+    data:
+      width: 768
+      height: 768
+      upscale: false

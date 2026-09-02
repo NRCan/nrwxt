@@ -1,0 +1,29 @@
+uuid: 995dec39-6670-433e-b109-a99d8b2f95e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity_pillar
+    - node.type.action
+    - taxonomy.vocabulary.pillar
+id: node.action.field_activity_pillar
+field_name: field_activity_pillar
+entity_type: node
+bundle: action
+label: 'Activity Pillar'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pillar: pillar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

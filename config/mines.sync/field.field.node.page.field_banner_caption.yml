@@ -1,0 +1,19 @@
+uuid: 291ec48e-3e98-4327-93f8-81baf5854b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_caption
+    - node.type.page
+id: node.page.field_banner_caption
+field_name: field_banner_caption
+entity_type: node
+bundle: page
+label: 'Banner Caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

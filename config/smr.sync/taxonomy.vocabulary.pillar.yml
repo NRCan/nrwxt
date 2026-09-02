@@ -1,0 +1,9 @@
+uuid: ae477216-92e5-412f-af65-304196ca76c4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Activity Pillar'
+vid: pillar
+description: null
+weight: 0
+new_revision: false

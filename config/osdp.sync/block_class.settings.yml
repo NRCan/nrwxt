@@ -1,0 +1,32 @@
+maxlength_block_class_field: 255
+field_type: multiple_textfields
+default_case: standard
+allow_only_letters_and_numbers: false
+block_classes_stored:
+  - col-sm-4
+  - col-md-3
+  - col-sm-offset-2
+  - col-md-offset-4
+  - col-lg-offset-5
+  - col-sm-6
+  - col-md-5
+  - col-lg-4
+  - clearfix
+  - col-md-12
+  - ftr-urlt-lnk
+  - col-md-10
+  - ''
+enable_attributes: true
+enable_auto_complete: true
+qty_classes_per_block: 10
+items_per_page: 50
+enable_special_chars: true
+qty_attributes_per_block: 10
+enable_id_replacement: true
+weight_attributes: null
+weight_class: null
+weight_id: null
+maxlength_attributes: 255
+attribute_keys_stored: '[]'
+attribute_value_stored: '[]'
+attributes_inline: '[]'

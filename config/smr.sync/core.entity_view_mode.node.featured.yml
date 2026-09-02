@@ -1,0 +1,13 @@
+uuid: df63cba5-243a-4f42-9829-ab2948a0fb71
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: r5UzhciCJHwAA2jfUBl8TIFKjPQ99RSSNyq0PFPnjjc
+id: node.featured
+label: Featured
+description: ''
+targetEntityType: node
+cache: true

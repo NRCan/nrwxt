@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: uNOHaKWnoIbi-Q7d7NTqX2PeF_cwCaM9tTmwBoM2COA
+langcode: en
+uuid: c6f994c8-ff13-4d50-95d8-585348b2c3ed
+name: NGSC
+mail: eric.goodwin@nrcan-rncan.gc.ca
+slogan: 'Collaborating to provide geoscience for the public good since 1979'
+page:
+  403: /system/404
+  404: /system/404
+  front: /node/3
+  0: ''
+  1: ''
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

@@ -1,0 +1,17 @@
+uuid: 7782abab-e855-489f-84df-20bea35028de
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ex0rksX5ry0nU1-TxiCKFswk9bQe1wt7YL8v4x3dU6c
+name: carousel
+label: Carousel
+effects:
+  226bdb77-883e-4463-842f-66ad82d74dc2:
+    uuid: 226bdb77-883e-4463-842f-66ad82d74dc2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 730
+      height: 249
+      anchor: center-center

@@ -1,0 +1,18 @@
+uuid: a45d5f51-d612-4c18-95d0-fa29d824796f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.menu_link_content.langcode
+field_name: langcode
+entity_type: menu_link_content
+bundle: menu_link_content
+label: Language
+description: 'The menu link language code.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: language

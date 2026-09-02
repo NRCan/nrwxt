@@ -1,0 +1,10 @@
+uuid: d90d83bb-c97a-42d3-b938-9a6d9f25d31b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zJXzbfNguTL6Y9iAkb1vWGtnrvOoyy2E_54YF7A6t7g
+id: mid-footer
+label: 'Mid footer'
+description: 'Mid footer menu.'
+locked: false

@@ -1,0 +1,8 @@
+uuid: f2ef6fab-09b6-47b6-b7fd-5e09b730876a
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-top-fr
+label: 'Haut de pied de page'
+description: 'Haut de pied de page en francais.'
+locked: false

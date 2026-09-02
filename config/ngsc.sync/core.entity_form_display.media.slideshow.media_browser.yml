@@ -1,0 +1,91 @@
+uuid: 628acf47-9f85-4e2e-ac6b-269e5c3174c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_browser
+    - field.field.media.slideshow.field_media_in_library
+    - field.field.media.slideshow.field_slideshow_style
+    - field.field.media.slideshow.slideshow_items
+    - media.type.slideshow
+  module:
+    - inline_entity_form
+    - path
+_core:
+  default_config_hash: yNJX8FRoNJ6pQgE2qktDG8UsmJ-c-zUM3MKxwnNL9L4
+id: media.slideshow.media_browser
+targetEntityType: media
+bundle: slideshow
+mode: media_browser
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_slideshow_style:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+  slideshow_items:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: media_browser
+      override_labels: true
+      label_singular: Media
+      label_plural: Medias
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_media_in_library: true
+  langcode: true

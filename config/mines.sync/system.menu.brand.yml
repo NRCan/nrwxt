@@ -1,0 +1,10 @@
+uuid: d7769444-a82e-4375-85a6-59cc958df1eb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qwAGI0Lg5j5MpXStFlhlZVUvM6YHw-Yeq5NwJlUl5eQ
+id: brand
+label: 'Brand (bottom footer menu)'
+description: 'Brand Menu used for departmental specific links.'
+locked: false

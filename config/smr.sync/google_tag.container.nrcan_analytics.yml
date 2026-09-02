@@ -1,0 +1,61 @@
+uuid: 58a92b07-ffa5-442b-9398-f4921abb9b3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: nrcan_analytics
+label: 'NRCan Analytics'
+weight: 0
+tag_container_ids:
+  - GTM-KG9WWH6
+advanced_settings:
+  gtm:
+    GTM-KG9WWH6:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: |-
+        google
+        nonGooglePixels
+        nonGoogleScripts
+        nonGoogleIframes
+      blocklist_classes: |-
+        customScripts
+        customPixels
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: |-
+      /admin*
+      /batch*
+      /node/add*
+      /node/*/edit
+      /node/*/delete
+      /node/*/layout
+      /taxonomy/term/*/edit
+      /taxonomy/term/*/layout
+      /user/*/edit*
+      /user/*/cancel*
+      /user/*/layout
+  response_code:
+    id: response_code
+    negate: true
+    response_codes: |-
+      403
+      404
+events:
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  login:
+    method: CMS
+  search: {  }
+  sign_up:
+    method: CMS
+  webform_purchase: {  }

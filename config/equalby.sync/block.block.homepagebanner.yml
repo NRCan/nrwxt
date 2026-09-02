@@ -1,0 +1,32 @@
+uuid: 98c5b429-09f4-49a3-afc1-fb3323a6a6b3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6e0c8c86-c37d-46db-a2e3-ed0b997d9350'
+  module:
+    - block_content
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: homepagebanner
+theme: nrcan_wxt
+region: breadcrumb
+weight: -12
+provider: null
+plugin: 'block_content:6e0c8c86-c37d-46db-a2e3-ed0b997d9350'
+settings:
+  id: 'block_content:6e0c8c86-c37d-46db-a2e3-ed0b997d9350'
+  label: 'Homepage - Banner'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

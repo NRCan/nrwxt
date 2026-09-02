@@ -1,0 +1,20 @@
+label: 'Page de destination'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        title:
+          separator: ', '
+        body:
+          separator: ', '
+      title: 'Page de destination'
+  block_1:
+    display_title: "Page d'accueil"

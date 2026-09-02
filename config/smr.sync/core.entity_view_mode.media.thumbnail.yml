@@ -1,0 +1,17 @@
+uuid: f1e6346c-32d4-426a-a7bd-8d5228201abf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: bk3QzkUtUa0tRDb5ckfIlg-ZlcNpmSzyI6IWSavFLZ4
+id: media.thumbnail
+label: Thumbnail
+description: ''
+targetEntityType: media
+cache: true

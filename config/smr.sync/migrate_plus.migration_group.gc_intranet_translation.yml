@@ -1,0 +1,14 @@
+uuid: af22376c-f71f-42b7-9221-e710c922b4d5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UlKhg5Fgei6Ze9n00h6ngHLYIuFpW-gOPxFIWdBBthc
+id: gc_intranet_translation
+label: 'GC Intranet Migrate'
+description: 'Provides default content and related configuration for Drupal WxT.'
+source_type: 'Embedded data'
+module: null
+shared_configuration:
+  source:
+    key: default

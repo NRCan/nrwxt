@@ -1,0 +1,26 @@
+uuid: f223060b-9d4f-48ef-8b01-a29f66819849
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - file
+    - fontawesome
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access shortcuts'
+  - 'access user profiles'
+  - 'delete own files'
+  - 'post comments'
+  - 'view media'

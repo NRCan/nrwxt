@@ -1,0 +1,14 @@
+uuid: e0f24794-db0b-42f2-9770-dcbd2cc15736
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ja3u2PUMlTs_cKrybchhoS4q8uEcSrc6tcAp67dZTF4
+id: blog
+label: Blog
+description: ''
+use_admin_theme: false
+path: /blog
+access_logic: and
+access_conditions: {  }
+parameters: {  }

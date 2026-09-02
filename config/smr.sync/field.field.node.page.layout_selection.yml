@@ -1,0 +1,23 @@
+uuid: ae5b9f96-6b17-40a1-8a0b-357c52f11a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_selection
+    - node.type.page
+_core:
+  default_config_hash: WFO8UXYvk-W4Q-51yKLjHt0ng49TakB8Af1eLxxSOJQ
+id: node.page.layout_selection
+field_name: layout_selection
+entity_type: node
+bundle: page
+label: Layout
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: layout_library
+  handler_settings: {  }
+field_type: entity_reference

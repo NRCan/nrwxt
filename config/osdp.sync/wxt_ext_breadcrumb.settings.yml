@@ -1,0 +1,10 @@
+en:
+  -
+    en_crumb: Canada.ca
+    en_url: 'https://www.canada.ca/en'
+fr:
+  -
+    fr_crumb: Canada.ca
+    fr_url: 'https://www.canada.ca/fr'
+enable_wxt_breadcrumbs: 1
+enable_app_breadcrumb: 1

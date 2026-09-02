@@ -1,0 +1,20 @@
+uuid: 35ed3011-4966-41b2-92f0-376dc2dd1447
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.revision_translation_affected
+field_name: revision_translation_affected
+entity_type: node
+bundle: landing_page
+label: 'Revision translation affected'
+description: 'Indicates if the last edit of a translation belongs to current revision.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

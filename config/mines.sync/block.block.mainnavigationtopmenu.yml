@@ -1,0 +1,31 @@
+uuid: 026f181d-c2f6-47d9-974e-562fa1fe84d0
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - nrcan_wxt
+id: mainnavigationtopmenu
+theme: nrcan_wxt
+region: breadcrumb
+weight: -5
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 2
+  expand_all_items: true
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

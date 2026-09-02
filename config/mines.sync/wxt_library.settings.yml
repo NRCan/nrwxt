@@ -1,0 +1,30 @@
+_core:
+  default_config_hash: wySaZOTDOfei02XOFjTh44VOsR2nmpjHgm8Yzro2_WI
+theme:
+  visibility: 1
+  themes:
+    wxt_bootstrap: wxt_bootstrap
+    nrcan_wxt: nrcan_wxt
+url:
+  visibility: 0
+  pages:
+    - 'admin*'
+    - 'imagebrowser*'
+    - 'img_assist*'
+    - 'imce*'
+    - 'node/add/*'
+    - 'node/*/edit'
+    - 'print/*'
+    - 'printpdf/*'
+    - system/ajax
+    - 'system/ajax/*'
+minimized:
+  options: 1
+files:
+  types:
+    css: css
+    js: js
+wxt:
+  theme: theme-gcweb
+  intranet_style: 0
+  menu_type: 1

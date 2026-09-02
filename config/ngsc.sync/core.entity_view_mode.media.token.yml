@@ -1,0 +1,15 @@
+uuid: 644b805a-871a-45aa-8ae9-d2a274cbf8b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: media.token
+label: Token
+description: ''
+targetEntityType: media
+cache: true

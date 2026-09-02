@@ -1,0 +1,23 @@
+uuid: 4e0cc4e7-4811-4518-99e9-fbca6cc683d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.action
+  module:
+    - text
+id: node.action.body
+field_name: body
+entity_type: node
+bundle: action
+label: Action
+description: 'The action text'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

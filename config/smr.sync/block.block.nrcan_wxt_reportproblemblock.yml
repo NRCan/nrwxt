@@ -1,0 +1,57 @@
+uuid: 9170a88e-4123-4ab6-ade1-45ee42ab6812
+langcode: en
+status: false
+dependencies:
+  config:
+    - webform.webform.gcweb_report_a_problem
+  module:
+    - block_class
+    - system
+    - wxt_ext_blocks
+    - wxt_ext_webform
+    - wxt_library
+  theme:
+    - nrcan_wxt
+  enforced:
+    module:
+      - wxt_ext_webform
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-5 col-lg-4'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: 2pdAmWUAAJE4zXNLRJF38g2Ls7aMuTWXGWwxTyijAhk
+id: nrcan_wxt_reportproblemblock
+theme: nrcan_wxt
+region: content_footer
+weight: -9
+provider: null
+plugin: report_problem_block
+settings:
+  id: report_problem_block
+  label: 'Report Problem block'
+  label_display: '0'
+  provider: wxt_ext_webform
+  webform_id: gcweb_report_a_problem
+  inline_webform: 1
+  report_problem_settings:
+    webform_id: ''
+    default_data: ''
+    redirect: false
+  default_data:
+    webform_id: contact
+    default_data: ''
+    redirect: true
+  redirect: true
+visibility:
+  panels_title:
+    id: panels_title
+    negate: false
+    context_mapping: {  }
+    enabled: 0
+    is_panelized: {  }
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

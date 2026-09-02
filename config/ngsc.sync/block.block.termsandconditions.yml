@@ -1,0 +1,28 @@
+uuid: be5de5ee-1d5a-4217-8578-42062ccf5453
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0a03c5c8-aa48-47a2-b8f1-dc1e2909e23f'
+  module:
+    - block_content
+    - system
+  theme:
+    - nrcan_wxt
+id: termsandconditions
+theme: nrcan_wxt
+region: content
+weight: -13
+provider: null
+plugin: 'block_content:0a03c5c8-aa48-47a2-b8f1-dc1e2909e23f'
+settings:
+  id: 'block_content:0a03c5c8-aa48-47a2-b8f1-dc1e2909e23f'
+  label: 'Terms and Conditions'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login

@@ -1,0 +1,10 @@
+uuid: 1a4e3da3-9c65-451e-ae1a-61b6d07fb4e9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NMmKnPP6DLJlfth_eTFhVJMPWOOaI4NCpSHqp6ybAoA
+id: carousel
+label: 'WET Carousel'
+revision: false
+description: 'A custom block for displaying images in a WET carousel with links.'

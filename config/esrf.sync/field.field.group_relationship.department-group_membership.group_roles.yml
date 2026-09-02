@@ -1,0 +1,24 @@
+uuid: 637472f0-e23d-4515-8cc7-5fa22c1a5edd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_relationship.group_roles
+    - group.relationship_type.department-group_membership
+_core:
+  default_config_hash: bqp5Z4m1nGcnq7812mzjB7fGDAgK9OFFoVQHj0MCtYQ
+id: group_relationship.department-group_membership.group_roles
+field_name: group_roles
+entity_type: group_relationship
+bundle: department-group_membership
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: department
+field_type: entity_reference

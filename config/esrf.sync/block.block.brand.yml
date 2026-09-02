@@ -1,0 +1,35 @@
+uuid: 93694b71-90b7-4f54-a74b-a2dc7f41e68d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand
+  module:
+    - language
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: PjWPdWsA1jepzjFDOFEzcTVDBUM_TUPEyj7RgNT0LA4
+id: brand
+theme: wxt_bootstrap
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand'
+settings:
+  id: 'system_menu_block:brand'
+  label: 'Government of Canada Corporate'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

@@ -1,0 +1,17 @@
+uuid: 7956119f-a695-4858-b9d9-c3e3fd6b1d84
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2tgOEKzkOYjyAHtutaVGcOkIp_w0Uz_BsRV2ulRDcAQ
+name: responsive_mobile_small
+label: 'Responsive mobile small (160 x 160)'
+effects:
+  c48ed8d6-2c44-4714-8d1b-5243f80c16a1:
+    uuid: c48ed8d6-2c44-4714-8d1b-5243f80c16a1
+    id: image_scale
+    weight: 1
+    data:
+      width: 160
+      height: 160
+      upscale: false

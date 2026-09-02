@@ -1,0 +1,14 @@
+uuid: b1445945-d4a8-4bd6-a89c-3505a220c145
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5r0-3ZUKESlPhfTTsmZPhBp4BXPLo8GNtWnqyO88baQ
+id: department
+label: Department(s)
+description: ''
+new_revision: true
+creator_membership: true
+creator_wizard: true
+creator_roles:
+  - department-admin

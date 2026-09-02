@@ -1,0 +1,18 @@
+uuid: 5f6e108d-dc67-4001-b5fd-2dc015f82445
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_freetags
+id: taxonomy_term.blog_freetags.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: blog_freetags
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

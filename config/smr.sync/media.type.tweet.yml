@@ -1,0 +1,23 @@
+uuid: 856ef270-4790-48cc-9a1e-c9a6a7f5dca0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_twitter
+_core:
+  default_config_hash: CArau7aV65AjOqOCywVOYp3HZLyLwL5J1SWPNPYXRGs
+id: tweet
+label: Tweet
+description: 'Represents a tweet.'
+source: twitter
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: embed_code
+  use_twitter_api: false
+  consumer_key: ''
+  consumer_secret: ''
+  oauth_access_token: ''
+  oauth_access_token_secret: ''
+  generate_thumbnails: false
+field_map: {  }

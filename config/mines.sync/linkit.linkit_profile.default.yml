@@ -1,0 +1,51 @@
+uuid: 75ddfcf9-197e-458a-a506-113cb1a361a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Tt8DtxZ3Nooo0PoWPpJvszA3R_5d8MmpUW7LM_R-BzY
+label: Default
+id: default
+description: 'A default Linkit profile'
+matchers:
+  556010a3-e317-48b3-b4ed-854c10f4b950:
+    id: 'entity:node'
+    uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+    settings:
+      metadata: 'by [node:author] | [node:created:medium]'
+      bundles: {  }
+      group_by_bundle: true
+      substitution_type: canonical
+      limit: 100
+      include_unpublished: true
+    weight: 0
+  c1980679-47f0-4d20-9da9-cfda1ee11610:
+    id: 'entity:media'
+    uuid: c1980679-47f0-4d20-9da9-cfda1ee11610
+    settings:
+      metadata: '[media:field_document:entity:name] - [media:field_document:entity:changed]'
+      bundles:
+        audio_file: audio_file
+        document: document
+        instagram: instagram
+        slideshow: slideshow
+        tweet: tweet
+        video: video
+        video_file: video_file
+      group_by_bundle: false
+      substitution_type: media
+      limit: 100
+    weight: 0
+  5abbc2ab-3c42-4062-9e48-693c43adb8ef:
+    id: 'entity:media'
+    uuid: 5abbc2ab-3c42-4062-9e48-693c43adb8ef
+    settings:
+      metadata: '[media:thumbnail][media:field_document:entity:name] - [media:field_document:entity:changed]'
+      bundles:
+        image: image
+      group_by_bundle: false
+      substitution_type: media
+      limit: 20
+    weight: 0

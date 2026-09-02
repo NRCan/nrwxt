@@ -1,0 +1,10 @@
+uuid: 3a77d972-81e8-4588-8eff-931b57a8ad12
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uRiughk0aVdloRAtWK6vRlQLZW_XtDXE4aJQC5QNTKo
+id: footer-top-fr
+label: 'Haut de pied de page'
+description: 'Haut de pied de page en francais.'
+locked: false

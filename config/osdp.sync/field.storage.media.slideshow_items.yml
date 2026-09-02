@@ -1,0 +1,23 @@
+uuid: 5606c948-1168-41cf-a96b-f08436fcda05
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: WBAR3b3kqdgG6I33lymG0URZ45KPTK74ruE7ZpIjGA4
+id: media.slideshow_items
+field_name: slideshow_items
+entity_type: media
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes:
+  target_id:
+    - target_id
+persist_with_no_fields: false
+custom_storage: false

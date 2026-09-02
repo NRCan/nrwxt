@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: tJen4LHNXb_MDDuT6sj1ORBf3BPdfvSP-v6vA2InekU
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: profiles/wxt/favicon.ico
+  url: /profiles/wxt/favicon.ico
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: profiles/wxt/wxt.svg
+  url: ''
+  use_default: false
+cdn_provider: ''
+breadcrumb_home: 1
+schemas:
+  bootstrap: 8000
+  wxt_bootstrap: 8000
+modal_jquery_ui_bridge: 0
+breadcrumb_title: 0

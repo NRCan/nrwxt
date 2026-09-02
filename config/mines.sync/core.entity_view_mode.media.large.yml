@@ -1,0 +1,17 @@
+uuid: 4d4b52f9-3739-469d-bfea-1d668e1c64c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: cMtRte5vXyXlQB0QB83cdLqbvqCTcY8-eCkHvM7SdFo
+id: media.large
+label: Large
+description: ''
+targetEntityType: media
+cache: true

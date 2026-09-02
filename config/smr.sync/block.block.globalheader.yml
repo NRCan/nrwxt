@@ -1,0 +1,32 @@
+uuid: 74db25c6-f7a4-4463-8f36-726cbc424a53
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:93ddc565-6360-4d82-b94f-d13df033ad47'
+  module:
+    - block_content
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: globalheader
+theme: nrcan_wxt
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'block_content:93ddc565-6360-4d82-b94f-d13df033ad47'
+settings:
+  id: 'block_content:93ddc565-6360-4d82-b94f-d13df033ad47'
+  label: 'Global Header'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

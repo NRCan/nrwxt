@@ -1,0 +1,10 @@
+uuid: 0eaf1f56-7c23-4ed5-b322-554e021b4f08
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qwAGI0Lg5j5MpXStFlhlZVUvM6YHw-Yeq5NwJlUl5eQ
+id: brand
+label: Brand
+description: 'Brand Menu used for departmental specific links.'
+locked: false

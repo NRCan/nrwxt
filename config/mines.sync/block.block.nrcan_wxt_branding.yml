@@ -1,0 +1,29 @@
+uuid: 12612771-f537-4c24-8a7e-7579c38fee10
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: '-hAXzSO8SXf-pOnsa0T7cFRaHVAkLzAlYhwD6r8HhdM'
+id: nrcan_wxt_branding
+theme: nrcan_wxt
+region: branding
+weight: -13
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

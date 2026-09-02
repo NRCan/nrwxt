@@ -1,0 +1,19 @@
+uuid: 758a1bae-4833-40d0-89ff-6346f33275c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_news_link
+field_name: field_news_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

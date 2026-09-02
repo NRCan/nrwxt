@@ -1,0 +1,64 @@
+uuid: 9124c801-98f8-42a0-bc64-c54efebbbcfd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
+_core:
+  default_config_hash: _PJPct4U9Ohr9fzD0hzh5fkgMi63NjZQcRz_7lrg1uQ
+id: gcweb_ext_group
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Group
+migration_group: gcweb
+label: 'Json data for Groups'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  headers:
+    Accept: application/json
+  urls: 'http://open.canada.ca/data/api/action/organization_list?all_fields=true'
+  item_selector: result
+  fields:
+    -
+      name: machine_name
+      label: 'Machine Name'
+      selector: id
+    -
+      name: shortcode
+      label: Shortcode
+      selector: name
+    -
+      name: title
+      label: Label
+      selector: title
+  ids:
+    machine_name:
+      type: string
+process:
+  label:
+    -
+      plugin: explode
+      source: title
+      delimiter: '|'
+    -
+      plugin: extract
+      index:
+        - 0
+  type:
+    plugin: default_value
+    default_value: department
+  uid:
+    plugin: default_value
+    default_value: 1
+  langcode:
+    plugin: default_value
+    default_value: en
+  field_shortcode/value: shortcode
+destination:
+  plugin: 'entity:group'
+migration_dependencies: null

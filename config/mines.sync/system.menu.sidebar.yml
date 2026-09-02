@@ -1,0 +1,10 @@
+uuid: 1755e376-93d9-4d1f-af49-f172b0ae37d1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: A2XK0-4Quv0QQmgxvy7zDunBjqrMA7eJrTcY8Pgl6Gg
+id: sidebar
+label: Sidebar
+description: 'Sidebar links.'
+locked: true

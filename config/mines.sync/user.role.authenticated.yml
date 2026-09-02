@@ -1,0 +1,28 @@
+uuid: d30ee8a4-9140-4b04-a2af-c88e203cce35
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - contact
+    - file
+    - fontawesome
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'delete own files'
+  - 'post comments'
+  - 'view media'

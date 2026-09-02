@@ -1,0 +1,14 @@
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        components:
+          c62bbe2e-e1cb-48d6-803f-cf0f371d299b:
+            configuration:
+              label: 'Titre de page'
+          32338ff6-919d-414d-a91b-fa0310743e8c:
+            configuration:
+              label: Onglets
+          a9f455ac-7a75-4241-bb9e-52f56897df0a:
+            configuration:
+              label: Corps

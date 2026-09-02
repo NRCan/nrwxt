@@ -1,0 +1,47 @@
+uuid: 6022b034-ee1b-470a-8570-d0ad842c59fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media
+  module:
+    - inline_entity_form
+    - views
+    - wxt_ext_media
+_core:
+  default_config_hash: lhDmkjAezYTkAcM2OwGwqq-8eirVr3swO794giLiMGg
+name: image_browser
+label: 'Image browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select Image(s)'
+  auto_open: false
+  use_admin_theme: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  44d52e51-9627-43b5-a637-3b0462041d1c:
+    id: file_upload
+    uuid: 44d52e51-9627-43b5-a637-3b0462041d1c
+    label: Upload
+    weight: -9
+    settings:
+      target_bundles: {  }
+      upload_validators: {  }
+      submit_text: Select
+      form_mode: media_browser
+      return_file: true
+  1c9e69f4-e62f-4886-b109-a1e1c27227de:
+    id: view
+    uuid: 1c9e69f4-e62f-4886-b109-a1e1c27227de
+    label: Library
+    weight: -10
+    settings:
+      submit_text: Select
+      auto_select: false
+      view: media
+      view_display: entity_browser_2

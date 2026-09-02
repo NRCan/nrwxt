@@ -1,0 +1,32 @@
+uuid: 729cce92-b1ac-4546-862c-f15cd81bda0d
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - wxt_library
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  block_class:
+    classes: 'col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5'
+_core:
+  default_config_hash: oAJ2v-JRbwvEzuCgfpeYp-0i5mhI2AMJymJIkmQBylc
+id: nrcan_wxt_sharewidgetblock
+theme: nrcan_wxt
+region: content_footer
+weight: -10
+provider: null
+plugin: share_widget_block
+settings:
+  id: share_widget_block
+  label: 'Share widget block'
+  label_display: '0'
+  provider: wxt_library
+  share_settings:
+    share_widget: ''
+  share_widget:
+    facebook: facebook
+    gmail: gmail
+    twitter: twitter
+visibility: {  }

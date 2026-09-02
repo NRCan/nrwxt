@@ -1,0 +1,25 @@
+uuid: 7fff236c-cc36-4f6d-8d0b-8fe029b965bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - contact
+    - content_health
+    - media
+    - nrcan_adobeanalytics
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'administer adobeanalytics'
+  - 'content health admin'
+  - 'view media'

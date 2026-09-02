@@ -1,0 +1,27 @@
+uuid: 080758d1-2e0d-4577-a81e-a0e903a4de5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: seIUTJxFp2GDUSD1zSJEjubHoY9au6WXIHR0ZVhUU4g
+id: nrcan_wxt_account_menu
+theme: nrcan_wxt
+region: navigation_collapsible
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

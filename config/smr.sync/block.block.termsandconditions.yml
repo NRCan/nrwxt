@@ -1,0 +1,32 @@
+uuid: 398bffd7-61d2-4b10-bed0-88d5e095c6d1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c6fabecc-9be0-438e-a81a-b3872a3949d3'
+  module:
+    - block_content
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: termsandconditions
+theme: nrcan_wxt
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:c6fabecc-9be0-438e-a81a-b3872a3949d3'
+settings:
+  id: 'block_content:c6fabecc-9be0-438e-a81a-b3872a3949d3'
+  label: 'Terms and Conditions'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login

@@ -1,0 +1,14 @@
+uuid: 8bba84c1-825c-441c-a1ee-ebd0ec15013a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: v3jWwrPbIcP7Hl2E5apHIgqU6o4GGCXnTITpXAtcyCM
+id: welcome
+label: Welcome
+description: ''
+use_admin_theme: false
+path: /welcome
+access_logic: and
+access_conditions: {  }
+parameters: {  }

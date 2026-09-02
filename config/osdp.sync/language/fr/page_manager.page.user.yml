@@ -1,0 +1,4 @@
+label: Utilisateur
+parameters:
+  user:
+    label: Utilisateur

@@ -1,0 +1,10 @@
+uuid: a669dec2-1439-4f6a-a71d-4053751f1167
+langcode: en
+status: true
+dependencies: {  }
+id: page
+label: page
+config_type: 0
+config_key: node
+config_value:
+  page: page

@@ -1,0 +1,27 @@
+uuid: c96a47b3-15d8-447b-930a-8ed5bcfe9654
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+_core:
+  default_config_hash: rv0fqrQmadrdnE4cuOMhmqqjUcHRyWvmtgzl-3yv-wU
+id: user
+label: User
+description: ''
+use_admin_theme: false
+path: '/user/{user}'
+access_logic: and
+access_conditions:
+  -
+    id: request_path
+    pages: |-
+      /user/login
+      /user/register
+    negate: true
+    context_mapping: {  }
+parameters:
+  user:
+    machine_name: user
+    type: 'entity:user'
+    label: User

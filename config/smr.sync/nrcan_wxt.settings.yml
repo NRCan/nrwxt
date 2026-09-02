@@ -1,0 +1,49 @@
+_core:
+  default_config_hash: X6at6z2v1hqgufP6vxNtxLXYDM0i3oOtPZw4ypA0Fqw
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: themes/custom/nrcan_wxt/favicon.ico
+  url: /profiles/wxt/favicon.ico
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: profiles/wxt/wxt.svg
+  url: ''
+  use_default: false
+schemas:
+  bootstrap: 8000
+  wxt_bootstrap: 8000
+  nrcan_wxt: 8000
+wxt_skip_link_primary_text: 'Skip to main content'
+wxt_skip_link_secondary_text: 'Skip to "About government"'
+wxt_facets_collapsible: 0
+table_responsive: '-1'
+region_wells:
+  branding: ''
+  breadcrumb: ''
+  language_toggle: ''
+  banner: ''
+  search: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  content_footer: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+cdn_theme: ''
+cdn_cache_ttl_versions: 0
+cdn_cache_ttl_themes: 0
+cdn_cache_ttl_assets: 0
+cdn_cache_ttl_library: 0
+reset: 'Reset Broken Cache'
+apply: Apply
+reset_http_request_cache: ''
+table: ''

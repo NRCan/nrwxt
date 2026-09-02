@@ -1,0 +1,27 @@
+_core:
+  default_config_hash: X6at6z2v1hqgufP6vxNtxLXYDM0i3oOtPZw4ypA0Fqw
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: profiles/wxt/favicon.ico
+  url: /themes/custom/nrcan_wxt/favicon.ico
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: profiles/wxt/wxt.svg
+  url: ''
+  use_default: false
+breadcrumb_title: 0
+schemas:
+  bootstrap: 8000
+  wxt_bootstrap: 8000
+  nrcan_wxt: 8000
+wxt_gcweb_cdn: 0
+wxt_facets_collapsible: 0
+reset: 'Reset Broken Cache'
+apply: Apply
+reset_http_request_cache: ''
+table: ''

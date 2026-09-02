@@ -1,0 +1,35 @@
+uuid: 15faca9c-b492-4be8-9491-f4f294baacb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand_fr
+  module:
+    - language
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: or-rHJo_7pGBJ6n3SOlhmrCMWg80CPz9V3ZnYIS8gl4
+id: brand_fr
+theme: wxt_bootstrap
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand_fr'
+settings:
+  id: 'system_menu_block:brand_fr'
+  label: 'À propos de ce site'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

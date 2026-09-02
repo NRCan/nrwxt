@@ -1,0 +1,251 @@
+uuid: 3a6b5838-b445-42dd-a2bf-2d65e55f8135
+langcode: en
+status: open
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_webform
+_core:
+  default_config_hash: FO6KnpZP0X1o2Ah_2V-yAMOoCDtotm6Y7Pj7WSlu0gY
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: gcweb_did_you_find
+title: 'GCWeb - Did you find what you were looking for'
+description: ''
+categories: {  }
+elements: |-
+  did_you_find_answer:
+    '#type': hidden
+    '#title': 'Did you find what you were looking for?'
+  initial_page:
+    '#type': webform_wizard_page
+    '#title': 'Initial page'
+    actions_02:
+      '#type': webform_actions
+      '#title': 'Submit button (No)'
+      '#submit_hide': true
+      '#update_hide': true
+      '#wizard_prev_hide': true
+      '#wizard_next__label': 'No'
+      '#wizard_next__attributes':
+        class:
+          - 'btn btn-primary'
+  no_page:
+    '#type': webform_wizard_page
+    '#title': 'No page'
+    what_was_wrong:
+      '#type': radios
+      '#title': 'What was wrong?'
+      '#options':
+        problem1: 'The answer I need is missing'
+        problem2: 'The information isn’t clear'
+        problem3: 'I’m not in the right place'
+        problem4: 'Something is broken or incorrect'
+        problem5: 'Other reason'
+    problem6:
+      '#type': textarea
+      '#title': 'Please provide more details'
+      '#description': |-
+        <p>(Don&rsquo;t include any personal information. Note that you will not receive a reply.)</p>
+
+        <p class="small">Maximum 300 characters</p>
+      '#description_display': before
+    actions_01:
+      '#type': webform_actions
+      '#title': 'Submit button'
+      '#submit__label': Submit
+      '#submit__attributes':
+        class:
+          - 'btn btn-primary'
+      '#update_hide': true
+      '#wizard_prev_hide': true
+      '#wizard_next_hide': true
+css: ''
+javascript: ''
+settings:
+  ajax: true
+  ajax_scroll_top: form
+  ajax_progress_type: throbber
+  ajax_effect: ''
+  ajax_speed: null
+  page: false
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: "<div class=\"gc-pg-hlpfl-thnk\">\r\n<p class=\"h3 mrgn-tp-sm mrgn-bttm-sm\"><span class=\"far fa-check-circle text-success mrgn-rght-sm\" aria-hidden=\"true\"> </span>Thank you for your feedback</p>\r\n</div>"
+  confirmation_attributes: {  }
+  confirmation_back: false
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

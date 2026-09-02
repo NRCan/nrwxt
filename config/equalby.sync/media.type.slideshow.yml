@@ -1,0 +1,17 @@
+uuid: 1e719968-fea1-4d8c-b526-d4ffb37fe41f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_slideshow
+_core:
+  default_config_hash: eItgwpcxZTJzUpyJJbUVZHlCEOXUwKdzSR4xzuk5Ri0
+id: slideshow
+label: Slideshow
+description: 'Slideshows of media items.'
+source: slideshow
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: slideshow_items
+field_map: {  }

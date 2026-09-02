@@ -1,0 +1,17 @@
+uuid: 00592824-a468-41b5-9deb-756a6d59aab9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: lUeqE-8XpugxHVXonz57bhRmibnaQo78l_cJZyTeHKU
+id: media.small
+label: Small
+description: ''
+targetEntityType: media
+cache: true

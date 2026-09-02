@@ -1,0 +1,18 @@
+uuid: 1c293043-40d2-4487-b98f-c9dc2b0c7deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.langcode
+field_name: langcode
+entity_type: node
+bundle: landing_page
+label: Language
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: language

@@ -1,0 +1,32 @@
+uuid: 10261f1e-c9cd-4bde-8a64-e8999414861b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e3ecdf63-1277-4c1d-ad9f-5b8bf3fd7b94'
+  module:
+    - block_content
+    - node
+  theme:
+    - nrcan_wxt
+id: menutest
+theme: nrcan_wxt
+region: breadcrumb
+weight: -11
+provider: null
+plugin: 'block_content:e3ecdf63-1277-4c1d-ad9f-5b8bf3fd7b94'
+settings:
+  id: 'block_content:e3ecdf63-1277-4c1d-ad9f-5b8bf3fd7b94'
+  label: 'Main Menu'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+      page: page

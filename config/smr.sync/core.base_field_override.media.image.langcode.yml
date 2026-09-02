@@ -1,0 +1,18 @@
+uuid: f70cb259-5d74-4ade-af2e-ff794860b308
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.langcode
+field_name: langcode
+entity_type: media
+bundle: image
+label: Language
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: language

@@ -1,0 +1,25 @@
+uuid: 9e722cd5-a038-416b-a385-9808b49b0e23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_slideshow_style
+    - media.type.slideshow
+  module:
+    - options
+_core:
+  default_config_hash: 4m0YYD6RnZpxJied6GpQGuOAvQfbsva6XR1exmFzsCQ
+id: media.slideshow.field_slideshow_style
+field_name: field_slideshow_style
+entity_type: media
+bundle: slideshow
+label: 'SlideShow Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

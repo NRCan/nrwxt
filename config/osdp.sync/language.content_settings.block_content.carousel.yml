@@ -1,0 +1,20 @@
+uuid: 82b11f1d-e88c-4f70-9ef3-f2bbbaa4e7fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: bAB687NK1DwGdY_gQZBBo3foJIr9vatoNp_KoQRwfIg
+id: block_content.carousel
+target_entity_type_id: block_content
+target_bundle: carousel
+default_langcode: site_default
+language_alterable: false

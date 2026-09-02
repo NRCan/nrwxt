@@ -1,0 +1,36 @@
+uuid: 1aa16eaa-7e18-4e97-9c34-f8b0c0cfe5a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d4656e31-052c-4320-90b3-94eba67c3834'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - nrcan_wxt
+id: contactusbanner
+theme: nrcan_wxt
+region: breadcrumb
+weight: -9
+provider: null
+plugin: 'block_content:d4656e31-052c-4320-90b3-94eba67c3834'
+settings:
+  id: 'block_content:d4656e31-052c-4320-90b3-94eba67c3834'
+  label: 'Contact Us- Banner'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/node/5\r\n"

@@ -1,0 +1,50 @@
+uuid: f0c1d8d4-4323-4d8b-90ba-ae20e207343e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.action.body
+    - field.field.node.action.field_action_id
+    - field.field.node.action.field_action_status
+    - field.field.node.action.field_activity_pillar
+    - field.field.node.action.field_expected_results
+    - field.field.node.action.field_organization
+    - field.field.node.action.field_smr_rec_text
+    - node.type.action
+  module:
+    - text
+    - user
+id: node.action.teaser
+targetEntityType: node
+bundle: action
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_action_id: true
+  field_action_status: true
+  field_activity_pillar: true
+  field_expected_results: true
+  field_organization: true
+  field_smr_rec_text: true
+  footnotes_group: true
+  langcode: true
+  search_api_excerpt: true

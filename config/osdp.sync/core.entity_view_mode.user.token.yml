@@ -1,0 +1,15 @@
+uuid: b29b6b26-e4b9-4a43-9721-c83794898826
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: user.token
+label: Token
+description: ''
+targetEntityType: user
+cache: true

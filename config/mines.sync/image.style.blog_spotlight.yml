@@ -1,0 +1,17 @@
+uuid: 85833383-e33b-49bb-9177-c1964e0d857e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hofRdYFTA2ikoZT2y_v1kpWilVp2FKATGr7AVfKwOIM
+name: blog_spotlight
+label: 'Blog spotlight'
+effects:
+  b3b974e7-49c6-4097-a404-75af6bff54a7:
+    uuid: b3b974e7-49c6-4097-a404-75af6bff54a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 172
+      anchor: center-center

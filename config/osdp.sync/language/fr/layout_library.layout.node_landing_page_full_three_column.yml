@@ -1,0 +1,12 @@
+layout:
+  -
+    components:
+      5ad36b60-5439-4e3f-bb62-bb504ba9e67a:
+        configuration:
+          label: 'Titre de page'
+      75029cf4-e12d-4af2-9c8d-a6d9a97ded82:
+        configuration:
+          label: Onglets
+      45da81c5-2c0e-4903-acab-76f999c4cb66:
+        configuration:
+          label: Corps

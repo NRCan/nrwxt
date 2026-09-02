@@ -1,0 +1,17 @@
+uuid: eac6de7c-58a4-472f-80da-26c5dc772b58
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: m1XBH36vwCV9SyK5NKzHEX8kFvdfkqbPDPKbeFLoIwU
+id: media.medium
+label: Medium
+description: ''
+targetEntityType: media
+cache: true

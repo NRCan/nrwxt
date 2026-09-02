@@ -1,0 +1,17 @@
+uuid: 28da4865-138b-432c-8204-7a3eea9f5243
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: poV8ZRjkkAyGcT7u_dcKwbs4lKCG6q2-cTiTpTNCLEA
+name: spotlight
+label: 'Spotlight (360x167)'
+effects:
+  5e414783-b1db-409d-abd2-aacfd2f5d621:
+    uuid: 5e414783-b1db-409d-abd2-aacfd2f5d621
+    id: image_scale
+    weight: 1
+    data:
+      width: 360
+      height: 167
+      upscale: false

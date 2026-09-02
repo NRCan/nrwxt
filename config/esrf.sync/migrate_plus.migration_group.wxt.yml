@@ -1,0 +1,17 @@
+uuid: 046e10d0-3346-4edf-91c0-7d054698da83
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_migration
+_core:
+  default_config_hash: XP6pHQWoMxneFZCkRm2Nm6DkZh-3vkZzTOEY7qO8NEU
+id: wxt
+label: 'WxT Migrate'
+description: 'Provides default content and related configuration for Drupal WxT.'
+source_type: 'Embedded data'
+module: null
+shared_configuration:
+  source:
+    key: default

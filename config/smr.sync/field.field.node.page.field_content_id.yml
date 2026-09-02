@@ -1,0 +1,19 @@
+uuid: c07d356d-16a2-4777-861b-77fd9985bf96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_id
+    - node.type.page
+id: node.page.field_content_id
+field_name: field_content_id
+entity_type: node
+bundle: page
+label: 'Content ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

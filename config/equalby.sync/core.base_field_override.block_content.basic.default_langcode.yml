@@ -1,0 +1,22 @@
+uuid: 0630d4c4-d351-4789-9f79-572b86b508c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: block_content.basic.default_langcode
+field_name: default_langcode
+entity_type: block_content
+bundle: basic
+label: 'Default translation'
+description: 'A flag indicating whether this is the default translation.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

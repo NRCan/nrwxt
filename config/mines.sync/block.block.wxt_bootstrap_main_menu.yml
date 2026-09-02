@@ -1,0 +1,27 @@
+uuid: 3b555100-32f5-4fcb-b061-4cf5c0d51333
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: I4uZb4MsSTE13ag2UXqeYlR2ohUTh4LWyLbMvoj2TNc
+id: wxt_bootstrap_main_menu
+theme: wxt_bootstrap
+region: navigation
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

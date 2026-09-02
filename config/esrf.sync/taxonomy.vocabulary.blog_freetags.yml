@@ -1,0 +1,11 @@
+uuid: 56900853-72de-4a1e-8f6f-4c127d82e5c7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NA9MmHcMLTft6ZmcTT6KF-BHWIOEG68ZU7-xkKcR3Gc
+name: 'Blog FreeTags'
+vid: blog_freetags
+description: 'Blog with "Free Tagging" support.'
+weight: 0
+new_revision: false

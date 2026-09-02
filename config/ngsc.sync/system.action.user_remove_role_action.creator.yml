@@ -1,0 +1,16 @@
+uuid: ef2fed6a-4746-4030-8cda-30473bfb4970
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.creator
+  module:
+    - user
+_core:
+  default_config_hash: LwpfkL2xZ1NnkIiG82qk7boHb76Nbc6-ojtaPa47mXQ
+id: user_remove_role_action.creator
+label: 'Remove the Creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: creator

@@ -1,0 +1,4 @@
+content_health:
+  report_button_text: 'Signaler un problème ou une erreur sur cette page'
+  report_button_title: 'Signaler un problème sur cette page'
+  report_button_target_url: 'https://www.rncan.gc.ca/signaler-probleme'

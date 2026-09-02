@@ -1,0 +1,38 @@
+uuid: ab60bcff-7509-4019-ac44-7c7c2dfa6fc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - wxt_library
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: a3qnWLD-m6qhzTNN72uSUV9y1bJdhy2T0gZtGUxl6fU
+id: nrcan_wxt_local_tasks
+theme: nrcan_wxt
+region: header
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  panels_title:
+    id: panels_title
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    is_panelized:
+      enabled: 1
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: ZzlXC3T8lOI4fAdexDsRxOfnDHP0K0bo-EWl_AU-_Ng
+publish:
+  state:
+    published: published
+unpublish:
+  state:
+    archived: archived
+    draft: draft
+archive:
+  state:
+    archived: archived
+enable_dialog_node_edit_form: true
+enable_dialog_admin_content: true

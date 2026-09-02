@@ -1,0 +1,23 @@
+uuid: f38ce893-c9ea-4845-97a9-766d4e3b8fdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wxt_ext_workflow
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wxt_ext_workflow:
+    workflow: editorial
+_core:
+  default_config_hash: lAsSeyXubmK2IkeUpyslxuNVzt0VRj82Y3MuuaL18EU
+name: 'Basic page'
+type: page
+description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

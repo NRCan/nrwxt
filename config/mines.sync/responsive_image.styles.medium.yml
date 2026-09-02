@@ -1,0 +1,37 @@
+uuid: 58b84fb6-57d0-4a98-8c48-32bdb0b9cdd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.responsive_desktop_medium
+    - image.style.responsive_mobile_full_width
+    - image.style.responsive_tabled_medium
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: lg6YuYwzFRM5peR-5zYRMjYCO680ipYbwkEcNRO3Dm8
+id: medium
+label: Medium
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: responsive_desktop_medium
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: responsive_tabled_medium
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: responsive_tabled_medium
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: responsive_mobile_full_width
+breakpoint_group: bootstrap
+fallback_image_style: responsive_tabled_medium

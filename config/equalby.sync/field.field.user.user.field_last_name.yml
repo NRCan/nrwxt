@@ -1,0 +1,22 @@
+uuid: 97099a2a-1bd0-4658-85e6-5ace837463ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_last_name
+  module:
+    - user
+_core:
+  default_config_hash: 4U-FLXqa1BPtucY-stMakIt_Jk5M-KU-kyXbQvcK2BA
+id: user.user.field_last_name
+field_name: field_last_name
+entity_type: user
+bundle: user
+label: 'Last Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

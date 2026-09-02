@@ -1,0 +1,13 @@
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        components:
+          93a5dffd-8824-423d-8b9b-cd478f089227:
+            configuration:
+              label: 'Dernières mises à jour'
+              views_label: 'Dernières mises à jour'
+          de4b18d0-c1cb-4074-b239-3895f7747260:
+            configuration:
+              label: 'Créé récemment'
+              views_label: 'Créé récemment'

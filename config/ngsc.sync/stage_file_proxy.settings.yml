@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: LqXuXXQCTd1NWw7dGLef0PCi3_aEEWQuogAblo4hHaE
+hotlink: false
+origin: 'https://www.geologicalsurveys.ca'
+origin_dir: sites/ngsc/files
+proxy_headers: ''
+use_imagecache_root: true
+verify: false
+excluded_extensions: ''

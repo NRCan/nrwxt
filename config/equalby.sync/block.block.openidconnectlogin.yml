@@ -1,0 +1,29 @@
+uuid: ca5482b1-8fd0-4014-86b7-8146db0c4d12
+langcode: en
+status: false
+dependencies:
+  module:
+    - openid_connect
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: openidconnectlogin
+theme: nrcan_wxt
+region: content
+weight: -10
+provider: null
+plugin: openid_connect_login
+settings:
+  id: openid_connect_login
+  label: 'OpenID Connect login'
+  label_display: '0'
+  provider: openid_connect
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user\r\n/user/login"

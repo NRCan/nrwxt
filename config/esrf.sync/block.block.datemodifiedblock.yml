@@ -1,0 +1,29 @@
+uuid: 6a5c3c53-d32d-4f50-8415-2563a1cc36ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - wxt_library
+  theme:
+    - wxt_bootstrap
+third_party_settings:
+  block_class:
+    classes: col-md-12
+_core:
+  default_config_hash: 0tbnpDe4lDmzX8R-oZnej549njgAHBGcuaEqAsGHTZs
+id: datemodifiedblock
+theme: wxt_bootstrap
+region: content_footer
+weight: -7
+provider: null
+plugin: date_modified_block
+settings:
+  id: date_modified_block
+  label: 'Date Modified'
+  label_display: '0'
+  provider: wxt_library
+  date_format:
+    page: page
+  date_modified: tiny
+visibility: {  }

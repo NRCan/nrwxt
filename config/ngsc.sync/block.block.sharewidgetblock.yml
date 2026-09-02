@@ -1,0 +1,32 @@
+uuid: 32dd706a-52c8-4538-afb0-bbf9c5e2ef54
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - wxt_library
+  theme:
+    - wxt_bootstrap
+third_party_settings:
+  block_class:
+    classes: 'col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5'
+_core:
+  default_config_hash: oAJ2v-JRbwvEzuCgfpeYp-0i5mhI2AMJymJIkmQBylc
+id: sharewidgetblock
+theme: wxt_bootstrap
+region: content_footer
+weight: -8
+provider: null
+plugin: share_widget_block
+settings:
+  id: share_widget_block
+  label: 'Share widget block'
+  label_display: '0'
+  provider: wxt_library
+  share_settings:
+    share_widget: ''
+  share_widget:
+    facebook: facebook
+    gmail: gmail
+    twitter: twitter
+visibility: {  }

@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+definitions:
+  user__page:
+    menu_name: account
+    parent: 'menu_link_content:7c462e47-cb19-4c67-83fa-ad472f930550'
+    weight: -10
+    expanded: false
+    enabled: true
+  user__logout:
+    menu_name: account
+    parent: 'menu_link_content:7c462e47-cb19-4c67-83fa-ad472f930550'
+    weight: 10
+    expanded: false
+    enabled: true
+  wxt__front_page:
+    menu_name: main
+    parent: ''
+    weight: -50
+    expanded: false
+    enabled: true

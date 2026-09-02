@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: uNOHaKWnoIbi-Q7d7NTqX2PeF_cwCaM9tTmwBoM2COA
+langcode: en
+uuid: b9714d6a-4cc8-42ba-a877-47bb99bb9516
+name: "Canada's Small Modular Reactor Action Plan"
+mail: eric.goodwin@nrcan-rncan.gc.ca
+slogan: ''
+page:
+  403: /system/404
+  404: /system/404
+  front: /node/3
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

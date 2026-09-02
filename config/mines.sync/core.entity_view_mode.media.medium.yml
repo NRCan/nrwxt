@@ -1,0 +1,17 @@
+uuid: 4a109ab9-f253-4801-93fd-7cccb8967b77
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: m1XBH36vwCV9SyK5NKzHEX8kFvdfkqbPDPKbeFLoIwU
+id: media.medium
+label: Medium
+description: ''
+targetEntityType: media
+cache: true

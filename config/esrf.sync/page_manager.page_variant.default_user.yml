@@ -1,0 +1,136 @@
+uuid: 622451d6-b899-4949-bece-dbd9adfdac73
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.user
+    - system.menu.account
+  module:
+    - ctools
+    - panels
+    - system
+    - user
+_core:
+  default_config_hash: wSDPwhenoTtR35xTBf-kn7gqp5wumHImD7BrmMPpFD0
+id: default_user
+label: 'Default User'
+variant: panels_variant
+variant_settings:
+  blocks:
+    142d3558-5fee-442f-9300-a5cf52f2b6a2:
+      id: 'entity_view:user'
+      label: 'Entity view (User)'
+      label_display: '0'
+      provider: ctools
+      view_mode: full
+      region: top_right
+      weight: 1
+      uuid: 142d3558-5fee-442f-9300-a5cf52f2b6a2
+      context_mapping:
+        entity: current_user
+    81f4cd78-b164-4f03-bbf0-f69de1d57b14:
+      id: page_title_block
+      label: 'Page title'
+      label_display: '0'
+      provider: core
+      region: top_right
+      weight: -1
+      uuid: 81f4cd78-b164-4f03-bbf0-f69de1d57b14
+      context_mapping: {  }
+    c24d4207-94ed-4c91-abe4-5e2536a064de:
+      id: local_tasks_block
+      label: Tabs
+      label_display: '0'
+      provider: core
+      primary: true
+      secondary: true
+      region: top_right
+      weight: 0
+      uuid: c24d4207-94ed-4c91-abe4-5e2536a064de
+      context_mapping: {  }
+    ec02fb86-f8f5-4e85-8c4d-25a59169b086:
+      id: 'system_menu_block:account'
+      label: 'User account menu'
+      label_display: visible
+      provider: system
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: top_left
+      weight: -1
+      uuid: ec02fb86-f8f5-4e85-8c4d-25a59169b086
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 1c74464e-5b9d-41e7-8825-371a214b4620
+  label: null
+  weight: 0
+  layout: bs_2col_bricked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      top_left:
+        wrapper: div
+        classes:
+          col-sm-3: col-sm-3
+        add_region_classes: 1
+        attributes: ''
+      top_right:
+        wrapper: div
+        classes:
+          col-sm-9: col-sm-9
+        add_region_classes: 1
+        attributes: ''
+      middle:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom_left:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom_right:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'My account'
+  storage_type: page_manager
+  storage_id: default_user
+  builder: ipe
+  css_classes: {  }
+  html_id: ''
+  css_styles: ''
+page: user
+weight: -7
+selection_criteria:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: current_user
+selection_logic: and
+static_context: {  }

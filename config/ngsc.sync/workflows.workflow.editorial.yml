@@ -1,0 +1,81 @@
+uuid: 7cd9f530-f2ca-499e-ae75-3b4c06b8ecbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+  module:
+    - content_moderation
+_core:
+  default_config_hash: kHP0C2QV92HmFF5csSzZCYD9e7HG8ULzrnR_LnSR7UE
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Unpublished
+      weight: 5
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: -5
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 0
+      published: true
+      default_revision: true
+    review:
+      label: 'In review'
+      weight: -1
+      published: false
+      default_revision: false
+  transitions:
+    archive:
+      label: Unpublish
+      from:
+        - published
+      to: archived
+      weight: 2
+    archived_published:
+      label: 'Restore from unpublished'
+      from:
+        - archived
+      to: published
+      weight: 4
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - archived
+        - draft
+        - published
+        - review
+      to: draft
+      weight: 0
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+        - review
+      to: published
+      weight: 1
+    review:
+      label: 'Send to review'
+      from:
+        - draft
+        - review
+      to: review
+      weight: 0
+  entity_types:
+    node:
+      - article
+      - landing_page
+      - page
+  default_moderation_state: draft
+  translation_default_moderation_state_behavior: current

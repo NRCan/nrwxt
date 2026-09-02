@@ -1,0 +1,35 @@
+uuid: aa7d3656-1c04-4bdc-b2bf-51febb87b282
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spotlight
+    - field.field.block_content.spotlight.body
+    - field.field.block_content.spotlight.field_spotlight_media
+  module:
+    - text
+_core:
+  default_config_hash: b-TpyBlU_b89yEcxelckhv-cpKaiVC_X3glZ7kCszVU
+id: block_content.spotlight.default
+targetEntityType: block_content
+bundle: spotlight
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_spotlight_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: linked
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,16 @@
+uuid: f3a7dfe7-9bdc-4d27-84c2-ff086c019835
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Z3y5qa33ZG1fi1NQSzBdZlwbh2C_2BrfSq2VPQy2lx8
+id: media
+label: Media
+type: 'canonical_entities:media'
+pattern: 'media/[media:bundle:target_id]/[media:mid]'
+selection_criteria: {  }
+selection_logic: and
+weight: -7
+relationships: {  }

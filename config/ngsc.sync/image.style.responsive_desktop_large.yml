@@ -1,0 +1,17 @@
+uuid: 04659830-6fc6-4fb7-b445-ab2e32c93fea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c3ljDtV4LhPelPpGM6EHitTsyP9aQK_bib9iBtT7sbk
+name: responsive_desktop_large
+label: 'Responsive desktop large (752 x 752)'
+effects:
+  85a7f639-b377-4f57-8a5a-02af50829d0d:
+    uuid: 85a7f639-b377-4f57-8a5a-02af50829d0d
+    id: image_scale
+    weight: 1
+    data:
+      width: 752
+      height: 752
+      upscale: false

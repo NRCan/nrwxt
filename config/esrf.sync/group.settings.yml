@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: 7ujYgPMshWo2inOv1E6h_dmEuM5Omp70qXXHujCrwpc
+langcode: en
+use_admin_theme: true
+redirect_to: entity

@@ -1,0 +1,28 @@
+uuid: 4309d767-b301-477c-8dae-b558a1c3b8a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:35909f69-47d6-4717-821e-9ca964f8d80d'
+  module:
+    - block_content
+    - system
+  theme:
+    - nrcan_wxt
+id: pancanadiangeosciencestrategybanner
+theme: nrcan_wxt
+region: breadcrumb
+weight: -8
+provider: null
+plugin: 'block_content:35909f69-47d6-4717-821e-9ca964f8d80d'
+settings:
+  id: 'block_content:35909f69-47d6-4717-821e-9ca964f8d80d'
+  label: 'Pan-Canadian Geoscience Strategy -banner'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/7

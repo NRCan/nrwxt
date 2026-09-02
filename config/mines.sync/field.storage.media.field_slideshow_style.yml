@@ -1,0 +1,29 @@
+uuid: 1565cc33-eb5c-45ea-bb61-6eee1f01232f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+_core:
+  default_config_hash: u1az_CHPLXnzqFUw6DvNHl3blBJB4BqJg1O3aJLn-HQ
+id: media.field_slideshow_style
+field_name: field_slideshow_style
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: Default
+    -
+      value: thumbs
+      label: Thumbs
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

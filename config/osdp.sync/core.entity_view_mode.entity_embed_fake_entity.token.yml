@@ -1,0 +1,15 @@
+uuid: fbac52d1-e243-4cd7-b831-7bbd561f4e41
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_embed
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: entity_embed_fake_entity.token
+label: Token
+description: ''
+targetEntityType: entity_embed_fake_entity
+cache: true

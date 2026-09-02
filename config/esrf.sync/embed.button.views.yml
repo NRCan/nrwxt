@@ -1,0 +1,18 @@
+uuid: 2a913a36-e0a8-4743-8ee8-3c25f2c3265e
+langcode: en
+status: true
+dependencies:
+  module:
+    - views_entity_embed
+_core:
+  default_config_hash: 0BydJklqraV-2N6VFdl8Lxnm7z2oUu4nHOLSc3LqFZM
+label: Views
+id: views
+type_id: embed_views
+type_settings:
+  filter_views: 0
+  views_options: {  }
+  filter_displays: 0
+  display_options: {  }
+icon: {  }
+icon_uuid: null

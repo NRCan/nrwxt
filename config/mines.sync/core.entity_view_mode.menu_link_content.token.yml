@@ -1,0 +1,15 @@
+uuid: de53a841-889b-430b-85fa-2907ce405592
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: menu_link_content.token
+label: Token
+description: ''
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,25 @@
+uuid: 7d8dc087-446f-41df-ab41-8bfface1d6a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+  module:
+    - node
+_core:
+  default_config_hash: SD9VbGcfE7LVVXD4NRvp2UWOWhr6jqoTrccCucapilI
+id: blog
+label: Blog
+type: 'canonical_entities:node'
+pattern: '/blog/[node:title]'
+selection_criteria:
+  c1618a16-cc16-41ec-b893-7b0336d91971:
+    id: 'entity_bundle:node'
+    bundles:
+      blog_post: blog_post
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -9
+relationships: {  }

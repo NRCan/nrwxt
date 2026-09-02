@@ -1,0 +1,45 @@
+uuid: bb0f7e27-723c-4b86-818a-74ddd36574b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_relationship.department-group_membership.group_roles
+    - group.relationship_type.department-group_membership
+  module:
+    - path
+_core:
+  default_config_hash: xzMYCdtLwD9RFUlE_ap81sEbe3ETewGSYBUpCLrPfsU
+id: group_relationship.department-group_membership.default
+targetEntityType: group_relationship
+bundle: department-group_membership
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  group_roles:
+    type: options_buttons
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

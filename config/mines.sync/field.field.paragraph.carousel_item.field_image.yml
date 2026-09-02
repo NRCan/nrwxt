@@ -1,0 +1,31 @@
+uuid: 86bfc0ca-2267-465d-93ee-55d1fcafad4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.carousel_item
+_core:
+  default_config_hash: SF1I-Dt-MYGH30dLJITEL8lQmlAnn4RmsCmCTXH1AXs
+id: paragraph.carousel_item.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: carousel_item
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

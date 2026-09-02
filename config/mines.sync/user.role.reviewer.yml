@@ -1,0 +1,50 @@
+uuid: 9b9afbeb-b4ad-4512-9644-a7cd3f1aeb86
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.footnote
+    - filter.format.full_html
+    - filter.format.rich_text
+    - filter.format.rich_text_ck5
+  module:
+    - comment
+    - contact
+    - content_moderation
+    - contextual
+    - dropzonejs
+    - file
+    - filter
+    - node
+    - shortcut
+    - system
+    - toolbar
+_core:
+  default_config_hash: xF24hpnhpORt2oU3MUmjRcOlrWn3MHWmq-qT5SB9vTw
+id: reviewer
+label: Reviewer
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'delete all revisions'
+  - 'delete own files'
+  - 'dropzone upload files'
+  - 'edit own comments'
+  - 'revert all revisions'
+  - 'use text format footnote'
+  - 'use text format full_html'
+  - 'use text format rich_text'
+  - 'use text format rich_text_ck5'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'

@@ -1,0 +1,21 @@
+uuid: b882c538-3f51-4e3e-9c17-3341f8b9dcca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expected_results
+    - node.type.action
+  module:
+    - text
+id: node.action.field_expected_results
+field_name: field_expected_results
+entity_type: node
+bundle: action
+label: 'Expected Results'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

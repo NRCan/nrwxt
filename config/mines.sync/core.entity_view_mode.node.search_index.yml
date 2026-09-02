@@ -1,0 +1,17 @@
+uuid: aed2037c-e962-4f8d-82bc-a8bd62d6928d
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+_core:
+  default_config_hash: fVFfJv_GzBRE-wpRHbfD5a3VjnhbEOXG6lvRd3uaccY
+id: node.search_index
+label: 'Search index'
+description: ''
+targetEntityType: node
+cache: true

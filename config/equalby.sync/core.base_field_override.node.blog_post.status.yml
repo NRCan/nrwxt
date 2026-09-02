@@ -1,0 +1,22 @@
+uuid: b3d26cda-ce7f-4fde-8c92-c854fa619f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.status
+field_name: status
+entity_type: node
+bundle: blog_post
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

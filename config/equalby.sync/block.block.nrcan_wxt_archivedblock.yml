@@ -1,0 +1,30 @@
+uuid: b169b39f-22cd-4a89-aa22-c48814361f86
+langcode: en
+status: true
+dependencies:
+  module:
+    - wxt_ext_archived
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: IKhh6etNj28hJ_fTgWexfnTsBCeZpOhCNJAze1CVCxI
+id: nrcan_wxt_archivedblock
+theme: nrcan_wxt
+region: content
+weight: -12
+provider: null
+plugin: wxt_archived_block
+settings:
+  id: wxt_archived_block
+  label: 'Archived block'
+  label_display: '0'
+  provider: wxt_ext_archived
+  archived_title: 'This page has been archived on the Web'
+  archived_text: 'Information identified as archived is provided for reference, research or recordkeeping purposes. It is not subject to the Government of Canada Web Standards and has not been altered or updated since it was archived. Please contact us to request a format other than those available.'
+visibility:
+  wxt_is_archived:
+    id: wxt_is_archived
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    enable_archived: 1

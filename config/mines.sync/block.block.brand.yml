@@ -1,0 +1,34 @@
+uuid: ae0f429c-57a8-4850-b827-32008eae670e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand
+  module:
+    - block_class
+    - system
+    - wxt_ext_blocks
+  theme:
+    - wxt_bootstrap
+third_party_settings:
+  block_class:
+    classes: 'col-md-10 ftr-urlt-lnk'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: yA2ceTKyWYK9PAZQ8NriHRNrt6TpcuCuWbo4nI-EKCk
+id: brand
+theme: wxt_bootstrap
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand'
+settings:
+  id: 'system_menu_block:brand'
+  label: Brand
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

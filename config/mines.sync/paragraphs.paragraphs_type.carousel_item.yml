@@ -1,0 +1,12 @@
+uuid: 371adad7-d79d-4385-b362-d27caad396be
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pfhLEmLdiYNWtCndCBschKBZQvVQs3kHWbAyDsf8fYQ
+id: carousel_item
+label: 'Carousel item'
+icon_uuid: null
+icon_default: null
+description: 'An image and link to display in a carousel.'
+behavior_plugins: {  }

@@ -1,0 +1,17 @@
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        components:
+          62dd7b94-9f49-4b61-ad40-f65d365a7f46:
+            configuration:
+              label: 'Titre de page'
+          e58e904b-8890-4559-9582-222b7ca445a9:
+            configuration:
+              label: Onglets
+          2ba0359c-af3f-4bd7-a6d6-a6e93f680883:
+            configuration:
+              label: Corps
+          e18fc4d1-7588-47ae-97b7-69379a6f2e0d:
+            configuration:
+              label: "Menu du compte de l'utilisateur"

@@ -1,0 +1,22 @@
+uuid: 095f21f6-0ba4-4f09-b160-8defb4e85f98
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.slideshow
+id: media.slideshow.status
+field_name: status
+entity_type: media
+bundle: slideshow
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

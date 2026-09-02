@@ -1,0 +1,35 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Rechercher
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: "‹\_précédent"
+            next: "suivant\_›"
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Rechercher
+      title: Rechercher
+      fields:
+        title:
+          separator: ', '
+        uid:
+          separator: ', '
+        created:
+          separator: ', '
+        body:
+          separator: ', '
+  page_1:
+    display_title: Page

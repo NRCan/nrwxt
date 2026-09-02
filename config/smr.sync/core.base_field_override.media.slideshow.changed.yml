@@ -1,0 +1,18 @@
+uuid: cce728cc-e99d-46e0-b28d-558fca302049
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.slideshow
+id: media.slideshow.changed
+field_name: changed
+entity_type: media
+bundle: slideshow
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

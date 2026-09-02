@@ -1,0 +1,27 @@
+uuid: 8b8cff21-8eb5-4cf7-9489-1189d3ae5877
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:13d521cf-6e52-4501-bbe1-a69fa475aa90'
+  module:
+    - block_content
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: reportandshare
+theme: nrcan_wxt
+region: content_footer
+weight: -14
+provider: null
+plugin: 'block_content:13d521cf-6e52-4501-bbe1-a69fa475aa90'
+settings:
+  id: 'block_content:13d521cf-6e52-4501-bbe1-a69fa475aa90'
+  label: 'Report and Share'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: 5d7052ee-88e3-4883-8cd6-2565ad4bbaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer_fr
+  module:
+    - language
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: k-u79ESm0KXAIHOjWiHTulaIYIJxBkSqV747fjiJmx8
+id: wxt_bootstrap_footer_fr
+theme: wxt_bootstrap
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer_fr'
+settings:
+  id: 'system_menu_block:footer_fr'
+  label: 'Pied de page'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

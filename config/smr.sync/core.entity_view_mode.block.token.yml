@@ -1,0 +1,15 @@
+uuid: c25cc740-c3da-4708-84ae-afc6c22dc5ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: block.token
+label: Token
+description: ''
+targetEntityType: block
+cache: true

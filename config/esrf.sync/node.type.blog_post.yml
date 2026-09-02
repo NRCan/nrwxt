@@ -1,0 +1,22 @@
+uuid: f3738b38-dc27-4243-910a-7cabfcbd110d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wxt_ext_workflow
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: 'main:'
+  wxt_ext_workflow:
+    workflow: editorial
+_core:
+  default_config_hash: IItH_Wf2_RJ2NVXnRW7GXWQVY1lehZyGCaI7fgSkMDo
+name: 'Blog post'
+type: blog_post
+description: 'Use for multi-user blogs. Every user gets a personal blog.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

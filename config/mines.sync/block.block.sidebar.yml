@@ -1,0 +1,35 @@
+uuid: ec488d76-8c53-4fc7-b958-9b8891d8fc83
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sidebar
+  module:
+    - node
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: vYfhg01TGuydiQE8651UK9ZT2J2wwB5QmBDTc81bv88
+id: sidebar
+theme: wxt_bootstrap
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'system_menu_block:sidebar'
+settings:
+  id: 'system_menu_block:sidebar'
+  label: Sidebar
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

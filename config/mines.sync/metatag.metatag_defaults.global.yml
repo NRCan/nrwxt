@@ -1,0 +1,17 @@
+uuid: 65afd8b8-f9fc-455c-94ed-a450513e2d0f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  dcterms_access_rights: '2'
+  dcterms_creator: 'Natural Resources Canada'
+  dcterms_language: eng
+  dcterms_publisher: 'Natural Resources Canada'
+  dcterms_service: NRCan-RNCan_CMMP-PCMM
+  dcterms_title: '[current-page:title]'
+  title: '[current-page:title]'

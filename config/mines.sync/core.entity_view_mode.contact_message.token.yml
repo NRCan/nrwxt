@@ -1,0 +1,15 @@
+uuid: f7eca200-0d72-4a2f-a884-5066b63422cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: contact_message.token
+label: Token
+description: ''
+targetEntityType: contact_message
+cache: true

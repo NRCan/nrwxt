@@ -1,0 +1,4 @@
+label: 'Statut de publication'
+settings:
+  on_label: Activé
+  off_label: Désactivé

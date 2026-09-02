@@ -1,0 +1,35 @@
+uuid: 76427232-84b7-4273-a497-c078884b4428
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand-fr
+  module:
+    - language
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: dhX8uUSfjBim00m-R6v0ZD2CcDqerl1HdtkjqVnMyAE
+id: brand_fr
+theme: wxt_bootstrap
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand-fr'
+settings:
+  id: 'system_menu_block:brand-fr'
+  label: 'Organisation du gouvernement du Canada'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

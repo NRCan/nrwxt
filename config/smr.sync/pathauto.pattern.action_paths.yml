@@ -1,0 +1,23 @@
+uuid: c41de128-cf38-4b15-b977-b8432c4c7129
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.action
+  module:
+    - node
+id: action_paths
+label: 'Action paths'
+type: 'canonical_entities:node'
+pattern: '/action/[node:field_action_id]'
+selection_criteria:
+  b194c315-91d4-46d9-bd21-23f367fa80b8:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      action: action
+selection_logic: and
+weight: -5
+relationships: {  }

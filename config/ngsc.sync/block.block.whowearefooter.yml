@@ -1,0 +1,32 @@
+uuid: f5f0011d-43b9-40b5-a656-7524835c6f91
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3d955a3d-b997-4a55-9c88-553c1c537229'
+  module:
+    - block_content
+    - node
+  theme:
+    - nrcan_wxt
+id: whowearefooter
+theme: nrcan_wxt
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:3d955a3d-b997-4a55-9c88-553c1c537229'
+settings:
+  id: 'block_content:3d955a3d-b997-4a55-9c88-553c1c537229'
+  label: 'Flags - Footer'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+      page: page

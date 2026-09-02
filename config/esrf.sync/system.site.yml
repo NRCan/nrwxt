@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: uNOHaKWnoIbi-Q7d7NTqX2PeF_cwCaM9tTmwBoM2COA
+langcode: en
+uuid: f81e682c-6ccd-41b2-b628-8e9bcc25e009
+name: 'The Environmental Studies Research Fund'
+mail: eric.goodwin@NRCan-RNCan.gc.ca
+slogan: 'The Environmental Studies Research Fund (ESRF) is a research program that sponsors environmental and social studies.'
+page:
+  403: /system/404
+  404: /system/404
+  front: /node/6
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

@@ -1,0 +1,223 @@
+uuid: c5bfd4da-4919-4dde-b296-0ff1fdfb3333
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
+  module:
+    - blazy
+    - editor
+    - entity_embed
+    - footnotes
+    - linkit
+    - media
+    - slick
+    - toc_filter
+    - token_filter
+    - url_embed
+_core:
+  default_config_hash: Gh5wdYHxxMQRw4rMKEGEiSKHvF3-WyRlwbm33oxi5tc
+name: 'WYSIWYG Editor 5'
+format: rich_text_ck5
+weight: -9
+filters:
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: -34
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -44
+    settings: {  }
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: -46
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -48
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -39
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_footnotes:
+    id: filter_footnotes
+    provider: footnotes
+    status: true
+    weight: 0
+    settings:
+      footnotes_collapse: false
+      footnotes_css: false
+      footnotes_dialog: false
+      footnotes_dialog_prevent_bubbling: false
+      footnotes_footer_disable: false
+      footnotes_preview_show_text: true
+      footnotes_preview_character: ''
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -41
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -40
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -38
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -45
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -43
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: -43
+    settings:
+      filter_url_length: 128
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -50
+    settings:
+      title: true
+      media_substitution: metadata
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: -42
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        full_width: full_width
+        large: large
+        medium: medium
+        small: small
+      allowed_media_types: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      optionset: default
+      layout: ''
+      admin_uri: '/en/admin/config/content/formats/manage/rich_text_ck5?destination=/en/admin/config/content/formats'
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      responsive_image_style: ''
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      skin: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      preserve_keys: false
+      visible_items: null
+  toc_filter:
+    id: toc_filter
+    provider: toc_filter
+    status: true
+    weight: -35
+    settings:
+      type: wxt
+      auto: ''
+      block: false
+      exclude_above: false
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: -49
+    settings:
+      replace_empty: false
+  url_embed:
+    id: url_embed
+    provider: url_embed
+    status: false
+    weight: -37
+    settings:
+      enable_responsive: true
+      default_ratio: '66.7'
+  url_embed_convert_links:
+    id: url_embed_convert_links
+    provider: url_embed
+    status: false
+    weight: -36
+    settings:
+      url_prefix: ''

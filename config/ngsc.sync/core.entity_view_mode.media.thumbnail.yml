@@ -1,0 +1,17 @@
+uuid: e8a4d701-6302-4851-a120-c8c6f4245b7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+_core:
+  default_config_hash: f_DojbcC2b9kUiXE-CtRR_l61_Njy68gJMsP4M_6F6w
+id: media.thumbnail
+label: Thumbnail
+description: ''
+targetEntityType: media
+cache: true

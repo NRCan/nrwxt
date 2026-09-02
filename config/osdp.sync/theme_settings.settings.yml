@@ -1,0 +1,35 @@
+_core:
+  default_config_hash: M0wAZtDCz_16ubG2ik0iZKAT9NZIXu9zyNSKC-c6Iao
+settings:
+  block_update_date: 'off'
+  bootstrap_cards: 'off'
+  osdp: 'off'
+  equalby30: 'off'
+  smr: 'off'
+  ngsc: 'off'
+  custom_bullets: 'on'
+  match_height: 'on'
+  custom_ga_links: 'on'
+  left_menu: 'on'
+  admin_css: 'on'
+splash:
+  site_name:
+    en: ''
+    fr: ''
+  splash_bg: '<div id="bg"><img alt="" class="img-responsive" src="https://www.nrcan.gc.ca/sites/all/themes/canadaca/assets/splash/sp-bg-4.png" /></div>'
+  tc_link:
+    en: 'https://www.canada.ca/en/transparency/terms.html'
+    fr: 'https://www.canada.ca/fr/transparence/avis.html'
+bootstrap_cards: 'on'
+left_menu: 'off'
+admin_css: 'off'
+block_update_date: 'off'
+match_height: 'on'
+custom_bullets: 'off'
+custom_ga_links: 'off'
+osdp: 'on'
+equalby30: 'off'
+smr: 'off'
+ngsc: 'off'
+minescanada: 'off'
+hide_gc_menu: 'off'

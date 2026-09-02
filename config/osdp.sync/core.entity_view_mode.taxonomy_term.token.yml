@@ -1,0 +1,15 @@
+uuid: 20b0cab8-25f6-45bb-9e61-204d079b5888
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: taxonomy_term.token
+label: Token
+description: ''
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,50 @@
+uuid: 1c575d87-861f-40d2-9dd2-74c050a9deea
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidebar_fr
+  module:
+    - language
+    - menu_block
+    - node
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: PLNnP3tVfCH5t7fgnm2k-WUKWo8FFaH286kGT511cBg
+id: nrcan_wxt_sidebar_fr
+theme: nrcan_wxt
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:sidebar_fr'
+settings:
+  id: 'menu_block:sidebar_fr'
+  label: 'Barre latérale'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'sidebar_fr:'
+  suggestion: sidebar_fr
+  expand: true
+visibility:
+  node_type:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

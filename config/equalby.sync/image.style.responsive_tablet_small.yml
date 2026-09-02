@@ -1,0 +1,17 @@
+uuid: 60025c56-6ac9-470e-b348-9f9fdf923efe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: g86GzDZdJ33X3I0aX0qDgYSDaARaRQ943ZG7uRhanXo
+name: responsive_tablet_small
+label: 'Responsive tablet small (228 x 228)'
+effects:
+  49944325-53cc-446e-8c5d-9acd1f296bd5:
+    uuid: 49944325-53cc-446e-8c5d-9acd1f296bd5
+    id: image_scale
+    weight: 1
+    data:
+      width: 228
+      height: 228
+      upscale: false

@@ -1,0 +1,35 @@
+uuid: a3a6f600-2795-4459-8f89-7004b74bb1fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - language
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: bZ9wahqEwJz8ZiVrMIaXHhtk-QaHQqaQferLao7af8A
+id: nrcan_wxt_main_menu
+theme: nrcan_wxt
+region: navigation
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

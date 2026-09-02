@@ -1,0 +1,27 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  module:
+    - slick
+name: Footnote
+format: footnote
+weight: -7
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <strong> <em> <a href>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

@@ -1,0 +1,31 @@
+uuid: e931e316-77fb-4cab-a229-95ee01263f2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: bDzObGld8xhHRRwNmSEl2EAm_zypl0KeVNZtzc_Jo-U
+id: nrcan_wxt_groupoperations
+theme: nrcan_wxt
+region: sidebar_first
+weight: -10
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  label_display: visible
+  provider: group
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility:
+  'entity_bundle:group':
+    id: 'entity_bundle:group'
+    negate: false
+    context_mapping:
+      group: '@group.group_route_context:group'
+    bundles:
+      department: department

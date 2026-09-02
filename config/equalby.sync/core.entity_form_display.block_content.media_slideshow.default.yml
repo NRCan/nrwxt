@@ -1,0 +1,38 @@
+uuid: 7bd85735-0830-403a-be96-7ede743dc0d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+    - field.field.block_content.media_slideshow.field_slideshow_items
+  module:
+    - media_library
+_core:
+  default_config_hash: jrGDPI0_y8itSPHyQZwPdU9K5DcOvPiwbbGC9NjMiR0
+id: block_content.media_slideshow.default
+targetEntityType: block_content
+bundle: media_slideshow
+mode: default
+content:
+  field_slideshow_items:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

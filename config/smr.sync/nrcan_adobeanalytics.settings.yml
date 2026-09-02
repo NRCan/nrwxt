@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: r45VLX3f5PchMa07SFLRvZsPng7rZ0eZMKJIBYAIq6I
+nrcan_adobeanalytics:
+  enabled: false
+  page_title: '<script src="//assets.adobedtm.com/be5dfd287373/0127575cd23a/launch-f7c3e6060667.min.js"></script>'
+  source_text: '<script type="text/javascript">_satellite.pageBottom();</script>'

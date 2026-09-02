@@ -1,0 +1,14 @@
+uuid: 5bbb39d0-eb82-4287-a708-e0581964593e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hdD-WDMvAxGYRGX536Md6cwGccpdVVVgN7qpd9rRn2U
+id: gcweb_translation
+label: 'GCWEB Migrate'
+description: 'Provides default content and related configuration for Drupal WxT.'
+source_type: 'Embedded data'
+module: null
+shared_configuration:
+  source:
+    key: default

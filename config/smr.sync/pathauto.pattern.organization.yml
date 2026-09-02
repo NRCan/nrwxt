@@ -1,0 +1,23 @@
+uuid: 53ff06ef-509a-4979-83ac-3312f202f99d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.organization
+  module:
+    - node
+id: organization
+label: Organization
+type: 'canonical_entities:node'
+pattern: '/content/[node:title]'
+selection_criteria:
+  f624cd97-0f8e-4a3a-a707-68f325348397:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      organization: organization
+selection_logic: and
+weight: -5
+relationships: {  }

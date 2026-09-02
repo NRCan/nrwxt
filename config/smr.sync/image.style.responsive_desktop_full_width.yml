@@ -1,0 +1,17 @@
+uuid: 5876acaf-9dc0-4ecc-a9b1-120297e6270f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jUl3F_qCgDWplgBXbqQRQpfj7eA4AHI1aWqTniuAdmk
+name: responsive_desktop_full_width
+label: 'Responsive desktop full width (1200 x 1200)'
+effects:
+  dd26d040-def7-4834-9c28-2173f6add3d3:
+    uuid: dd26d040-def7-4834-9c28-2173f6add3d3
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: 1200
+      upscale: false

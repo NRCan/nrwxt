@@ -1,0 +1,35 @@
+uuid: 1dafaf1d-8bda-46fc-8d04-c8b1b8a671f8
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer-contextual
+  module:
+    - language
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: sMzhTQ1iYAvzLShJsvqty9H7AzG7vIaWzH_XqkKWr7k
+id: nrcan_wxt_footer_contextual
+theme: nrcan_wxt
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer-contextual'
+settings:
+  id: 'system_menu_block:footer-contextual'
+  label: '[Contextual footer header]'
+  label_display: '1'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

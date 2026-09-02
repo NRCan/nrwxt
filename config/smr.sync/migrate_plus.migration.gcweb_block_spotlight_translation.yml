@@ -1,0 +1,88 @@
+uuid: 45ff46df-df13-49f6-a9cc-62d167464e71
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - entityqueue
+      - wxt_ext_migration
+_core:
+  default_config_hash: GDMNip6t3uFEzoBFSmG2q1ypFMkKKtYybgnNWaJoi4M
+id: gcweb_block_spotlight_translation
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Core
+migration_group: gcweb_translation
+label: 'Embedded data import for custom block types (spotlight)'
+source:
+  plugin: embedded_data
+  translations: true
+  default_lang: false
+  data_rows:
+    -
+      bid: feature_block_1
+      language: fr
+      title: '[Lien à l’élément en vedette]'
+      body: |
+        <p>Brève description de l’élément en vedette.</p>
+      fid:
+        -
+          id: 360x203
+    -
+      bid: feature_block_2
+      language: fr
+      title: '[Lien à l’élément en vedette]'
+      body: |
+        <p>Brève description de l’élément en vedette.</p>
+      fid:
+        -
+          id: 360x203
+    -
+      bid: feature_block_3
+      language: fr
+      title: '[Lien à l’élément en vedette]'
+      body: |
+        <p>Brève description de l’élément en vedette.</p>
+      fid:
+        -
+          id: 360x203
+  ids:
+    bid:
+      type: string
+process:
+  id:
+    plugin: migration_lookup
+    migration: gcweb_block_spotlight
+    source: bid
+  info: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  field_spotlight_media:
+    plugin: sub_process
+    source: fid
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: wxt_media
+        source: id
+  content_translation_source:
+    plugin: default_value
+    default_value: en
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: spotlight
+  no_stub: true
+  translations: true
+migration_dependencies:
+  required:
+    - wxt_file
+    - wxt_media
+    - gcweb_block_spotlight

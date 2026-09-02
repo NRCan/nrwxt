@@ -1,0 +1,37 @@
+uuid: 9c4ade8d-988e-42d2-a6dc-85916ce45dfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+    - wxt_ext_blocks
+    - wxt_library
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  block_class:
+    classes: col-sm-12
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: 0tbnpDe4lDmzX8R-oZnej549njgAHBGcuaEqAsGHTZs
+id: nrcan_wxt_datemodifiedblock
+theme: nrcan_wxt
+region: content_footer
+weight: -7
+provider: null
+plugin: date_modified_block
+settings:
+  id: date_modified_block
+  label: 'Date Modified'
+  label_display: '0'
+  provider: wxt_library
+  date_format:
+    page: page
+  date_modified: tiny
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

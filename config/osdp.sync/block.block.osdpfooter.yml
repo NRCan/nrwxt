@@ -1,0 +1,35 @@
+uuid: d1e62c18-7460-4e22-b724-cc84bc1fc726
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:063bbb06-9059-4fc5-81e6-532d45c2fc38'
+  module:
+    - block_content
+    - user
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: osdpfooter
+theme: nrcan_wxt
+region: footer
+weight: -15
+provider: null
+plugin: 'block_content:063bbb06-9059-4fc5-81e6-532d45c2fc38'
+settings:
+  id: 'block_content:063bbb06-9059-4fc5-81e6-532d45c2fc38'
+  label: 'OSDP footer'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

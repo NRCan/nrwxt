@@ -1,0 +1,23 @@
+uuid: 9f36faa3-beb6-43f4-8b15-45ee18efe25c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - node
+id: menued_page
+label: 'Menued Page'
+type: 'canonical_entities:node'
+pattern: '/[node:menu-link:parent:url:path]/[node:title]'
+selection_criteria:
+  b177e168-75fd-47e8-b915-dc4fd49c63c4:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -10
+relationships: {  }

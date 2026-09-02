@@ -1,0 +1,36 @@
+uuid: 592e2db8-d26d-43b2-963d-7cc89e748b01
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+    - wxt_library
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: 8GCJO4MuQrCj0KIZ5iPdCU5Z5YaZskWJVAAA_oDzv_I
+id: nrcan_wxt_user_account_block
+theme: nrcan_wxt
+region: breadcrumb
+weight: -13
+provider: null
+plugin: user_account_block
+settings:
+  id: user_account_block
+  label: 'User Account'
+  label_display: '0'
+  provider: wxt_library
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

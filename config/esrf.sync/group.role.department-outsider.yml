@@ -1,0 +1,19 @@
+uuid: c7041cd9-b303-40ec-b8ef-f0c8b16c1086
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.department
+_core:
+  default_config_hash: 8ziAC7Syzk1nLHWsS8Q2qNoUtpxKGxAEOqFGUUpnlfM
+id: department-outsider
+label: Outsider
+weight: -101
+group_type: department
+permissions:
+  - 'view group'
+  - 'view group_node:blog_post entity'
+  - 'view group_node:consultation entity'
+admin: false
+scope: outsider
+global_role: authenticated

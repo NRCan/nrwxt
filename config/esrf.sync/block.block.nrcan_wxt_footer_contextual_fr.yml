@@ -1,0 +1,35 @@
+uuid: 8d169226-b1a0-43d0-a931-50b7270b0acb
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer-contextual-fr
+  module:
+    - language
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: 7R17_x0_Foop0923NkFtLb86Pbz7uujaqUtck6dvODg
+id: nrcan_wxt_footer_contextual_fr
+theme: nrcan_wxt
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer-contextual-fr'
+settings:
+  id: 'system_menu_block:footer-contextual-fr'
+  label: '[Bande du pied de page contextuel]'
+  label_display: '1'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

@@ -1,0 +1,17 @@
+uuid: 2f9eff67-cb10-4532-a286-c22974b5aa5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: _fmbxM2mEISnDC0TY-YCqmyMlMT5E8TbwR0K4-66xAE
+id: block_content.featured
+label: Featured
+description: ''
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,23 @@
+uuid: f11d75a1-52a0-4645-bd27-28f3d3139d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text_ck5
+  module:
+    - file
+    - filter
+    - redirect
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: 'Developer specific Admin permissions'
+id: developer
+label: Developer
+weight: 5
+is_admin: null
+permissions:
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'delete own files'
+  - 'use text format rich_text_ck5'

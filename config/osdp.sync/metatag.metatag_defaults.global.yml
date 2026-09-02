@@ -1,0 +1,17 @@
+uuid: 47a1e96a-fd95-495f-bada-95d2be260847
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  dcterms_access_rights: '2'
+  dcterms_creator: '[site:name]'
+  dcterms_language: '[language:langcode]'
+  dcterms_service: NRCAN-RNCAN
+  dcterms_spatial: Canada
+  dcterms_title: '[current-page:title]'
+  title: '[current-page:title] - [site:name]'

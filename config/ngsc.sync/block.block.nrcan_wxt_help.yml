@@ -1,0 +1,22 @@
+uuid: 00877fbc-a089-4a1e-8bb5-a6a48d6157d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: 4eMiBJNSNMAbB-qQ8aoD-BtvjkUpZ7YUN9uBZty2724
+id: nrcan_wxt_help
+theme: nrcan_wxt
+region: help
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

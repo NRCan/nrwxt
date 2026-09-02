@@ -1,0 +1,22 @@
+uuid: 86a93652-e9a7-4edf-a211-dde3ce32c28d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_freetags
+id: taxonomy_term.blog_freetags.status
+field_name: status
+entity_type: taxonomy_term
+bundle: blog_freetags
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

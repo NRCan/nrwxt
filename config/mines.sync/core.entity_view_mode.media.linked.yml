@@ -1,0 +1,17 @@
+uuid: 94af5b9f-82b6-450f-9054-86bbda04521a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+_core:
+  default_config_hash: 4I2Xrl8NBtB88WeWRX-3Awf2mY06uPkc1LkH1McV8RM
+id: media.linked
+label: Linked
+description: ''
+targetEntityType: media
+cache: true

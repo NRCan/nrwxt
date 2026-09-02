@@ -1,0 +1,27 @@
+uuid: b60c915a-9d6a-4a15-b121-153b4bfc2341
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1531d968-1923-4de9-a35b-687930e06343'
+  module:
+    - block_content
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: footerblock
+theme: nrcan_wxt
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:1531d968-1923-4de9-a35b-687930e06343'
+settings:
+  id: 'block_content:1531d968-1923-4de9-a35b-687930e06343'
+  label: 'Footer Block'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

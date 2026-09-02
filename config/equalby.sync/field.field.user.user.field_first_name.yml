@@ -1,0 +1,22 @@
+uuid: 6b50158c-2abc-4205-84bc-ecac6c16985a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_first_name
+  module:
+    - user
+_core:
+  default_config_hash: lUxtc0y8Gka095HttRc3AMTt6U4kbH43157C2hChP7Y
+id: user.user.field_first_name
+field_name: field_first_name
+entity_type: user
+bundle: user
+label: 'First Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

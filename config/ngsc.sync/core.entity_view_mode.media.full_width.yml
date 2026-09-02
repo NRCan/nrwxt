@@ -1,0 +1,17 @@
+uuid: 4ad94f85-4101-40d6-8096-ccebdd697ae0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    description: ''
+_core:
+  default_config_hash: 0klH_T2GzM9WVcj6IFxv876DeFx3HT_jfd-Rv-V8JSA
+id: media.full_width
+label: 'Full width'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,21 @@
+uuid: abc4896a-33f3-4eb8-ada0-fd9ec6168171
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wxt_ext_workflow
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wxt_ext_workflow:
+    workflow: editorial
+name: News
+type: news
+description: 'News entry'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

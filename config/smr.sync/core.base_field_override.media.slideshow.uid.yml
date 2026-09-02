@@ -1,0 +1,20 @@
+uuid: 7d7ac013-313e-44f7-9419-1e324a7552a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.slideshow
+id: media.slideshow.uid
+field_name: uid
+entity_type: media
+bundle: slideshow
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

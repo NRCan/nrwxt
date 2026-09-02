@@ -1,0 +1,10 @@
+uuid: 855e35d6-5c30-4474-b661-68cf2d209347
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 68qz_e3O1WDhD4IGphBKOepKr3G2J881viqSFZayOgY
+id: spotlight
+label: 'Spotlight block'
+revision: true
+description: 'A spotlight block contains content, and image.'

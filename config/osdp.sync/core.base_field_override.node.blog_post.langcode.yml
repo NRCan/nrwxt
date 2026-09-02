@@ -1,0 +1,18 @@
+uuid: 85f3deda-e04d-4871-ba31-19a8a930f65c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.langcode
+field_name: langcode
+entity_type: node
+bundle: blog_post
+label: Language
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: language

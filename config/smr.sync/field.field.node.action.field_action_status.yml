@@ -1,0 +1,33 @@
+uuid: 062b0cbb-2957-4fab-a34e-833ebaed6d87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action_status
+    - node.type.action
+    - taxonomy.vocabulary.action_status
+  content:
+    - 'taxonomy_term:action_status:2f1d8d74-97f5-4354-976c-497e7ea10fde'
+id: node.action.field_action_status
+field_name: field_action_status
+entity_type: node
+bundle: action
+label: Status
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 2f1d8d74-97f5-4354-976c-497e7ea10fde
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      action_status: action_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

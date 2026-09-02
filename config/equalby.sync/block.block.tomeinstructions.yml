@@ -1,0 +1,40 @@
+uuid: 1e724faa-d632-4a51-bed7-f44268a11b1f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:29cd905f-38e4-4866-bc72-cd9986c864a3'
+  module:
+    - block_content
+    - system
+    - user
+    - wxt_ext_blocks
+  theme:
+    - claro
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: tomeinstructions
+theme: claro
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:29cd905f-38e4-4866-bc72-cd9986c864a3'
+settings:
+  id: 'block_content:29cd905f-38e4-4866-bc72-cd9986c864a3'
+  label: 'Tome Instructions'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/content*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

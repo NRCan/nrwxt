@@ -1,0 +1,20 @@
+uuid: c48a09f2-54bc-42d4-b2b0-425dba6c78cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+  module:
+    - path
+id: node.landing_page.path
+field_name: path
+entity_type: node
+bundle: landing_page
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,28 @@
+uuid: b4caf1b7-c7ca-4ceb-a70a-7bfe42ad709d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ab63f410-fbca-4523-ad99-d6d3f2f4030a'
+  module:
+    - block_content
+    - system
+  theme:
+    - nrcan_wxt
+id: publicationsandresourcesbanner
+theme: nrcan_wxt
+region: breadcrumb
+weight: -7
+provider: null
+plugin: 'block_content:ab63f410-fbca-4523-ad99-d6d3f2f4030a'
+settings:
+  id: 'block_content:ab63f410-fbca-4523-ad99-d6d3f2f4030a'
+  label: 'Publications and resources - banner'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/8

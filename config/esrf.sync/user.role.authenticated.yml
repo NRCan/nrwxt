@@ -1,0 +1,35 @@
+uuid: 626edf62-1420-4be9-81a5-1ab7ecd0db31
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+  module:
+    - comment
+    - content_moderation
+    - file
+    - filter
+    - fontawesome
+    - google_analytics
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'access shortcuts'
+  - 'access user profiles'
+  - 'delete own files'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'use text format webform_default'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view media'

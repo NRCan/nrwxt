@@ -1,0 +1,27 @@
+uuid: af46621a-5c4a-4248-8231-f64a04eada8c
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: _4IB0gMqOCSV5tNCp1rR94KUtiXDqokh-30vZMi6s0M
+id: nrcan_wxt_footer
+theme: nrcan_wxt
+region: footer
+weight: -12
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

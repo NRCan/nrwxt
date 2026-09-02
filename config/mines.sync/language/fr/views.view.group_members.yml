@@ -1,0 +1,43 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        name:
+          label: Utilisateur
+          separator: ', '
+        group_roles:
+          label: Rôles
+          empty: Aucun(e)
+          separator: ', '
+        changed:
+          label: 'Mis à jour'
+          separator: ', '
+        created:
+          separator: ', '
+        dropbutton:
+          label: Actions
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        gid:
+          exception:
+            title: Tout
+  page_1:
+    display_title: Page

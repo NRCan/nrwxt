@@ -1,0 +1,25 @@
+uuid: 6eac58be-a268-4aae-ad72-2221c6732f57
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: Ay7JxVDkyzI58DHuuz5I5ZzGsktewzwPp8AorHybNkQ
+id: nrcan_wxt_sitebranding
+theme: nrcan_wxt
+region: banner
+weight: -11
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

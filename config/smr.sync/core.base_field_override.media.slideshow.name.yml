@@ -1,0 +1,20 @@
+uuid: ab39c501-6de0-48a3-a568-8f693bd451fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.slideshow
+id: media.slideshow.name
+field_name: name
+entity_type: media
+bundle: slideshow
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

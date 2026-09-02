@@ -1,0 +1,22 @@
+uuid: 95bb7cc6-8367-4816-8c3a-aa4ac41f2a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.default_langcode
+field_name: default_langcode
+entity_type: node
+bundle: blog_post
+label: 'Default translation'
+description: 'A flag indicating whether this is the default translation.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

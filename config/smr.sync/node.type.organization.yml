@@ -1,0 +1,21 @@
+uuid: 6c2187af-b74e-491f-a228-52d7b65e10ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wxt_ext_workflow
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  wxt_ext_workflow:
+    workflow: editorial
+name: Organization
+type: organization
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

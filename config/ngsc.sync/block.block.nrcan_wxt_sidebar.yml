@@ -1,0 +1,35 @@
+uuid: 3da2e18c-8670-4659-9297-1c3540a7fe6a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidebar
+  module:
+    - node
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: vYfhg01TGuydiQE8651UK9ZT2J2wwB5QmBDTc81bv88
+id: nrcan_wxt_sidebar
+theme: nrcan_wxt
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'system_menu_block:sidebar'
+settings:
+  id: 'system_menu_block:sidebar'
+  label: Sidebar
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

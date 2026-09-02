@@ -1,0 +1,19 @@
+uuid: e4a09417-6059-4b99-89c2-8cb4c66d0fb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.department
+_core:
+  default_config_hash: 0lKf3IUrjOP9pqjb9EhxsFqCGlTajjeKsn-HPb6y3N8
+id: department-anonymous
+label: Anonymous
+weight: -102
+group_type: department
+permissions:
+  - 'view group'
+  - 'view group_node:blog_post entity'
+  - 'view group_node:consultation entity'
+admin: false
+scope: outsider
+global_role: anonymous

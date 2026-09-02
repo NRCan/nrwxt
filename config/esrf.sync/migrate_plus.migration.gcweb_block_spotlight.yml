@@ -1,0 +1,79 @@
+uuid: cb6c243e-cd2e-4ab9-88d4-5b84f7e8c925
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - entityqueue
+      - wxt_ext_migration
+_core:
+  default_config_hash: uShXhjm31e0fbNygNbSuEKQc44pU-EzMhcs2viPsQxU
+id: gcweb_block_spotlight
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - Core
+migration_group: gcweb
+label: 'Embedded data import for custom block types (spotlight)'
+source:
+  plugin: embedded_data
+  default_lang: true
+  data_rows:
+    -
+      bid: feature_block_1
+      language: en
+      title: '[Feature hyperlink text]'
+      body: |
+        <p>Brief description of the feature being promoted.</p>
+      fid:
+        -
+          id: 360x203
+    -
+      bid: feature_block_2
+      language: en
+      title: '[Feature hyperlink text]'
+      body: |
+        <p>Brief description of the feature being promoted.</p>
+      fid:
+        -
+          id: 360x203
+    -
+      bid: feature_block_3
+      language: en
+      title: '[Feature hyperlink text]'
+      body: |
+        <p>Brief description of the feature being promoted.</p>
+      fid:
+        -
+          id: 360x203
+  ids:
+    bid:
+      type: string
+process:
+  id: bid
+  info: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  field_spotlight_media:
+    plugin: sub_process
+    source: fid
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: wxt_media
+        source: id
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: spotlight
+  no_stub: true
+migration_dependencies:
+  required:
+    - wxt_file
+    - wxt_media

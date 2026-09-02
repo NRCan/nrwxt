@@ -1,0 +1,36 @@
+uuid: 630cd0f3-c6fb-4d33-94b9-248076fe56aa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3354fded-6ccc-4339-a55a-2bf93d63fdda'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - nrcan_wxt
+id: whowearebannerimage
+theme: nrcan_wxt
+region: breadcrumb
+weight: -10
+provider: null
+plugin: 'block_content:3354fded-6ccc-4339-a55a-2bf93d63fdda'
+settings:
+  id: 'block_content:3354fded-6ccc-4339-a55a-2bf93d63fdda'
+  label: 'Who we are - banner image'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/6

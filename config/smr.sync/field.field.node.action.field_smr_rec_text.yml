@@ -1,0 +1,19 @@
+uuid: 6d123a62-0e5e-4274-88f7-cd2458bac367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smr_rec_text
+    - node.type.action
+id: node.action.field_smr_rec_text
+field_name: field_smr_rec_text
+entity_type: node
+bundle: action
+label: 'Responds to SMR Roadmap Recommendations'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,39 @@
+uuid: d875bc10-2e99-425e-b66e-9d2383175f36
+langcode: en
+status: false
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - block_class
+    - wxt_ext_webform
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-5 col-lg-4'
+_core:
+  default_config_hash: mB9tvJ1UHyTFfTG-tCGMD0Oy9QeuMr9hLJGz2cikKqs
+id: nrcan_wxt_reportproblemblock
+theme: nrcan_wxt
+region: content_footer
+weight: -11
+provider: null
+plugin: report_problem_block
+settings:
+  id: report_problem_block
+  label: 'Report Problem block'
+  label_display: '0'
+  provider: wxt_ext_webform
+  webform_id: contact
+  inline_webform: ''
+  report_problem_settings:
+    webform_id: ''
+    default_data: ''
+    redirect: false
+  default_data:
+    webform_id: contact
+    default_data: ''
+    redirect: true
+  redirect: true
+visibility: {  }

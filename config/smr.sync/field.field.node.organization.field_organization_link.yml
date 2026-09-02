@@ -1,0 +1,23 @@
+uuid: 0dae444f-1f57-496b-9728-76bee4e6e32c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_link
+    - node.type.organization
+  module:
+    - link
+id: node.organization.field_organization_link
+field_name: field_organization_link
+entity_type: node
+bundle: organization
+label: Organization
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link

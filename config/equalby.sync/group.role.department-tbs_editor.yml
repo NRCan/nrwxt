@@ -1,0 +1,34 @@
+uuid: d3c688b9-12df-4bcb-8c94-5fe4861b90e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.department
+_core:
+  default_config_hash: 2nTLMnWpimLQnttGtkvPcdyIhii8cfN59RmW4B7ZpAc
+id: department-tbs_editor
+label: 'TBS Editor'
+weight: 101
+group_type: department
+permissions:
+  - 'access group_node overview'
+  - 'create group_node:blog_post entity'
+  - 'create group_node:consultation entity'
+  - 'delete any group_node:blog_post entity'
+  - 'delete any group_node:consultation entity'
+  - 'delete own group_node:blog_post entity'
+  - 'delete own group_node:consultation entity'
+  - 'update any group_node:blog_post entity'
+  - 'update any group_node:consultation entity'
+  - 'update own group_membership content'
+  - 'update own group_node:blog_post entity'
+  - 'update own group_node:consultation entity'
+  - 'view group'
+  - 'view group_node:blog_post content'
+  - 'view group_node:blog_post entity'
+  - 'view group_node:consultation content'
+  - 'view group_node:consultation entity'
+  - 'view unpublished group_node:blog_post entity'
+  - 'view unpublished group_node:consultation entity'
+admin: false
+scope: individual

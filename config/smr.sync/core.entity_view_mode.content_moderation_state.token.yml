@@ -1,0 +1,15 @@
+uuid: e4507324-c42a-416a-8abf-3d1acd4be44e
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: content_moderation_state.token
+label: Token
+description: ''
+targetEntityType: content_moderation_state
+cache: true

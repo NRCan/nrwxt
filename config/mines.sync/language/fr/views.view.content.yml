@@ -1,0 +1,61 @@
+display:
+  default:
+    display_options:
+      fields:
+        moderation_state:
+          admin_label: 'État de modération'
+          label: 'État de modération'
+          separator: ', '
+        title:
+          label: Titre
+        type:
+          label: 'Type de contenu'
+          separator: ', '
+        name:
+          label: Auteur
+        changed:
+          label: 'Mis à jour'
+        operations:
+          label: Actions
+      filters:
+        moderation_state:
+          expose:
+            label: 'État de modération'
+        title:
+          expose:
+            label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
+        langcode:
+          expose:
+            label: Langue
+      title: Contenu
+      pager:
+        options:
+          tags:
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Aucun contenu disponible.'
+    display_title: 'Par défaut'
+  page_1:
+    display_title: Page
+    display_options:
+      menu:
+        title: Contenu
+      tab_options:
+        title: Contenu
+        description: 'Trouver et gérer le contenu'
+label: Contenu
+description: 'Trouver et gérer le contenu.'

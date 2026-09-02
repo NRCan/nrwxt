@@ -1,0 +1,20 @@
+uuid: cd9701f4-2553-4bb0-919d-434eee58e33f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: JxXlQS3R8D6zfE1vBzGrCGFktAtNi6J6Qr_cjcp-fiU
+id: nrcan_wxt_local_actions
+theme: nrcan_wxt
+region: header
+weight: -12
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

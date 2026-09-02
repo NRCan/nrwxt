@@ -1,0 +1,17 @@
+uuid: 45372c8a-95b5-4b95-8b0b-cdcdd3de0d86
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+_core:
+  default_config_hash: vlYzr-rp2f9NMp-Qlr4sFjlqRq-90mco5-afLNGwCrU
+id: node.rss
+label: RSS
+description: ''
+targetEntityType: node
+cache: true

@@ -1,0 +1,17 @@
+uuid: 51ce26ae-fb10-4ced-9f90-e2db487b5ec0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wFdJl7WaqXhQ1bRNMJFafSub5J9g2-tvbgUb4nkExfc
+name: responsive_desktop_small
+label: 'Responsive desktop small (270 x 270)'
+effects:
+  3e737c49-fbde-4a26-b406-70e375d97944:
+    uuid: 3e737c49-fbde-4a26-b406-70e375d97944
+    id: image_scale
+    weight: 1
+    data:
+      width: 270
+      height: 270
+      upscale: false

@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: GL7ygb-sUJwtEtFI_8Z3Qd8mBJpr2h5lTL6DIOQKs98
+smtp_host: email-smtp.ca-central-1.amazonaws.com
+smtp_hostbackup: ''
+smtp_port: 25
+smtp_protocol: tls
+smtp_username: AKIA4DJHEGSUAYD4CPNJ
+smtp_password: BJlOkeqbzmvkhMGFYJJPSu1/a9sn1CFzhd2Eto5JMnto
+smtp_hide_password: false
+smtp_authentication_type: basic_auth
+smtp_fromname: 'NRCan | RNCan'
+smtp_always_replyto: false
+smtp_keepalive: false
+smtp_debug: 0
+smtp_debug_log: false
+phpmailer_smtp_test: ''
+smtp_ssl_verify_peer: true
+smtp_ssl_verify_peer_name: true
+smtp_ssl_allow_self_signed: false
+smtp_envelope_sender_option: other
+smtp_envelope_sender: nrcan.cms.donotreply-nepasrepondre.sgc.rncan@nrcan-rncan.gc.ca
+smtp_ehlo_host: ''
+smtp_timeout: 30

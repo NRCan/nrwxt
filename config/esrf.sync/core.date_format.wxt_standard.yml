@@ -1,0 +1,10 @@
+uuid: 4b74dad0-edd5-41ce-9c18-b57b8cdb6d4b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2ASeU6FN1lL2SDapAv_uiBC-lE-cdzZWVI-S7Z3Atx0
+id: wxt_standard
+label: 'Standard (WxT)'
+locked: false
+pattern: 'F d, Y'

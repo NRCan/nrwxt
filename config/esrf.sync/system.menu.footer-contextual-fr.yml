@@ -1,0 +1,10 @@
+uuid: 5ac14569-1919-4935-b328-0b4c885b2495
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: APFkEOBDRNL6lvOu8DbWAeoZnnNdPf7ALcaCgi0aQj8
+id: footer-contextual-fr
+label: 'Pied de page contextuel GC'
+description: 'Menu de pied de page contextuel à afficher au-dessus des menus de pied de page globaux.'
+locked: false

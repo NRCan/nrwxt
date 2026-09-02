@@ -1,0 +1,36 @@
+label: Blocs
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        field_spotlight_media:
+          separator: ', '
+        field_image_link:
+          separator: ', '
+        info:
+          separator: ', '
+        body:
+          separator: ', '
+      arguments:
+        queue:
+          exception:
+            title: Tout
+  block_2:
+    display_options:
+      fields:
+        field_spotlight_media:
+          separator: ', '
+        field_image_link:
+          separator: ', '
+        info:
+          separator: ', '
+        body:
+          separator: ', '

@@ -1,0 +1,13 @@
+uuid: a5d0e298-f467-4f5a-b38f-099bc6a53b11
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - wxt_ext_media_slideshow
+_core:
+  default_config_hash: DOCE3JAwBsCapePLXVs039256ZYqyOp_0alqPGCknx4
+id: media_slideshow
+label: Slideshow
+revision: false
+description: 'A slideshow or carousel of media items.'

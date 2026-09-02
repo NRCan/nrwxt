@@ -1,0 +1,162 @@
+uuid: 15621585-1cd4-4022-b26f-4088189d698c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_media_document
+    - field.field.media.document.field_media_in_library
+    - image.style.thumbnail
+    - media.type.document
+  module:
+    - file
+    - media_pdf_thumbnail
+    - user
+_core:
+  default_config_hash: YGWt8yFP6V5UsxLpSFHltx8Fkpf4bl2DJEKluu5dIes
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: ''
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  thumbnail:
+    type: media_pdf_thumbnail_image_field_formatter
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+      image_loading:
+        attribute: lazy
+      pdf_file_field: ''
+      pdf_page: 1
+      image_link_attributes_download: ''
+      image_link_attributes_target: ''
+      image_link_attributes_rel: ''
+      use_cron: ''
+      image_format: ''
+      audio_page: ''
+      audio_field: ''
+      audio_enable: ''
+      audio_link: ''
+      audio_attributes_download: ''
+      audio_attributes_target: ''
+      audio_attributes_rel: ''
+      audio_use_cron: ''
+      audio_format: ''
+      audio_image_style: ''
+      document_page: ''
+      document_field: ''
+      document_enable: ''
+      document_link: ''
+      document_attributes_download: ''
+      document_attributes_target: ''
+      document_attributes_rel: ''
+      document_use_cron: ''
+      document_format: ''
+      document_image_style: ''
+      image_page: ''
+      image_field: ''
+      image_enable: ''
+      image_attributes_download: ''
+      image_attributes_target: ''
+      image_attributes_rel: ''
+      image_use_cron: ''
+      image_image_style: ''
+      instagram_page: ''
+      instagram_field: ''
+      instagram_enable: ''
+      instagram_link: ''
+      instagram_attributes_download: ''
+      instagram_attributes_target: ''
+      instagram_attributes_rel: ''
+      instagram_use_cron: ''
+      instagram_format: ''
+      instagram_image_style: ''
+      remote_video_page: ''
+      remote_video_field: ''
+      remote_video_enable: ''
+      remote_video_link: ''
+      remote_video_attributes_download: ''
+      remote_video_attributes_target: ''
+      remote_video_attributes_rel: ''
+      remote_video_use_cron: ''
+      remote_video_format: ''
+      remote_video_image_style: ''
+      slideshow_page: ''
+      slideshow_field: ''
+      slideshow_enable: ''
+      slideshow_link: ''
+      slideshow_attributes_download: ''
+      slideshow_attributes_target: ''
+      slideshow_attributes_rel: ''
+      slideshow_use_cron: ''
+      slideshow_format: ''
+      slideshow_image_style: ''
+      tweet_page: ''
+      tweet_field: ''
+      tweet_enable: ''
+      tweet_link: ''
+      tweet_attributes_download: ''
+      tweet_attributes_target: ''
+      tweet_attributes_rel: ''
+      tweet_use_cron: ''
+      tweet_format: ''
+      tweet_image_style: ''
+      video_page: ''
+      video_field: ''
+      video_enable: ''
+      video_link: ''
+      video_attributes_download: ''
+      video_attributes_target: ''
+      video_attributes_rel: ''
+      video_use_cron: ''
+      video_format: ''
+      video_image_style: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_media_in_library: true
+  langcode: true
+  search_api_excerpt: true

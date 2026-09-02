@@ -1,0 +1,30 @@
+uuid: dc7bb769-597c-4352-bf37-e3e3fa16b818
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.field.block_content.carousel.field_carousel_item
+    - field.field.block_content.carousel.field_transition_type
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: uyIeOeeekMnNE6_4jUsqL9dYppcHosfK0MIjDyyQbzc
+id: block_content.carousel.default
+targetEntityType: block_content
+bundle: carousel
+mode: default
+content:
+  field_carousel_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_transition_type: true
+  langcode: true
+  search_api_excerpt: true

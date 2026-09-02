@@ -1,0 +1,21 @@
+uuid: cce9c543-0f94-4019-9eec-79938b79dc4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_search_placeholder
+_core:
+  default_config_hash: 1NgFbmaZb3Pl9PO2wWW7vSTHG97xyJ8E0WU3RQhhAR8
+id: block_content.search.field_search_placeholder
+field_name: field_search_placeholder
+entity_type: block_content
+bundle: search
+label: Placeholder
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

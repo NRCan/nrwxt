@@ -1,0 +1,15 @@
+uuid: 6941f759-b2b7-4e9c-994f-428bcbb8e591
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.department
+_core:
+  default_config_hash: 8F3I9y5TPc5sjk2gS9JtE3kx35aufS7Dana9fSO3Y_E
+id: department-admin
+label: Admin
+weight: 100
+group_type: department
+permissions: {  }
+admin: true
+scope: individual

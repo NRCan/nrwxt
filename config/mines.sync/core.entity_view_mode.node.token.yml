@@ -1,0 +1,15 @@
+uuid: 51a7d2ec-088c-4005-ad5e-a7016731ab04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: node.token
+label: Token
+description: ''
+targetEntityType: node
+cache: true

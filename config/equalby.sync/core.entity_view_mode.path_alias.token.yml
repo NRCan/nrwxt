@@ -1,0 +1,15 @@
+uuid: 6ae87579-b516-4090-bf21-16e76151f283
+langcode: en
+status: true
+dependencies:
+  module:
+    - path_alias
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: path_alias.token
+label: Token
+description: ''
+targetEntityType: path_alias
+cache: true

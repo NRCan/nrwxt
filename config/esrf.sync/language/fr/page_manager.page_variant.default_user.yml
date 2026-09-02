@@ -1,0 +1,9 @@
+variant_settings:
+  blocks:
+    81f4cd78-b164-4f03-bbf0-f69de1d57b14:
+      label: 'Titre de page'
+    c24d4207-94ed-4c91-abe4-5e2536a064de:
+      label: Onglets
+    ec02fb86-f8f5-4e85-8c4d-25a59169b086:
+      label: "Menu du compte de l'utilisateur"
+  page_title: 'Mon compte'

@@ -1,0 +1,21 @@
+uuid: afe04a2d-0e89-47f8-a842-d61c24e6c276
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_builder
+    - node
+_core:
+  default_config_hash: ivVESKMPYoUb2vmcVJadSUtMRb6UI9_oo8p_ja-BEKE
+id: node.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+type: layout_section
+settings: {  }
+module: layout_builder
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

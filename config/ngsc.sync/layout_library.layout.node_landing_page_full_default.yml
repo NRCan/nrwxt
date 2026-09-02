@@ -1,0 +1,71 @@
+uuid: 1f7636a7-9204-4710-9b56-e5995c3ba425
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ySjKWCY-rV98J8gt9NElBkVqvj44p2dwskokGZF81mU
+id: node_landing_page_full_default
+label: 'Single Column'
+targetEntityType: node
+targetBundle: landing_page
+layout:
+  -
+    layout_id: bs_1col
+    layout_settings:
+      label: ''
+      layout:
+        wrapper: div
+        classes:
+          row: row
+        add_layout_class: 1
+        attributes: ''
+      regions:
+        main:
+          wrapper: div
+          classes:
+            col-sm-12: col-sm-12
+          add_region_classes: 1
+          attributes: ''
+    components:
+      398ddd2d-fe84-40e8-9120-37bc2e866efa:
+        uuid: 398ddd2d-fe84-40e8-9120-37bc2e866efa
+        region: main
+        configuration:
+          id: page_title_block
+          label: 'Page title'
+          label_display: '0'
+          provider: core
+          context_mapping: {  }
+        weight: -1
+        additional: {  }
+      d32f81b0-722f-4094-9397-e508fce0be86:
+        uuid: d32f81b0-722f-4094-9397-e508fce0be86
+        region: main
+        configuration:
+          id: local_tasks_block
+          label: Tabs
+          label_display: '0'
+          provider: core
+          context_mapping: {  }
+          primary: true
+          secondary: true
+        weight: 0
+        additional: {  }
+      53c78586-ebb9-4749-b0f4-7b0846043c9d:
+        uuid: 53c78586-ebb9-4749-b0f4-7b0846043c9d
+        region: main
+        configuration:
+          id: 'field_block:node:landing_page:body'
+          label: Body
+          label_display: '0'
+          provider: layout_builder
+          context_mapping:
+            entity: layout_builder.entity
+          formatter:
+            type: text_default
+            label: hidden
+            settings: {  }
+            third_party_settings: {  }
+        weight: 1
+        additional: {  }
+    third_party_settings: {  }

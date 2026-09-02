@@ -1,0 +1,15 @@
+uuid: 62da07ca-6419-4841-86fc-10ebb7054510
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: block.token
+label: Token
+description: ''
+targetEntityType: block
+cache: true

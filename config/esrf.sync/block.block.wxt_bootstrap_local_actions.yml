@@ -1,0 +1,20 @@
+uuid: d413c7e5-85c1-4125-b256-0c87700fbc2b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: JxXlQS3R8D6zfE1vBzGrCGFktAtNi6J6Qr_cjcp-fiU
+id: wxt_bootstrap_local_actions
+theme: wxt_bootstrap
+region: header
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

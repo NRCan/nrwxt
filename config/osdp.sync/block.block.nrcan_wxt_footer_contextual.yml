@@ -1,0 +1,39 @@
+uuid: 1dafaf1d-8bda-46fc-8d04-c8b1b8a671f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-contextual
+  module:
+    - language
+    - system
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: sMzhTQ1iYAvzLShJsvqty9H7AzG7vIaWzH_XqkKWr7k
+id: nrcan_wxt_footer_contextual
+theme: nrcan_wxt
+region: footer
+weight: -14
+provider: null
+plugin: 'system_menu_block:footer-contextual'
+settings:
+  id: 'system_menu_block:footer-contextual'
+  label: 'Open Science and Data Platform (OSDP)'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

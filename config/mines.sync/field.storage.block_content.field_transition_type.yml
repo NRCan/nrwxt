@@ -1,0 +1,32 @@
+uuid: 08f98d9e-52f5-4bab-aa14-db1dfec5d276
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: 6Drlk2FxbZ0Q1khIVS_8AfY-lKudc70oGSoHECJsruk
+id: block_content.field_transition_type
+field_name: field_transition_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fade
+      label: Fade
+    -
+      value: slide
+      label: Slide
+    -
+      value: slidevert
+      label: 'Slide vertical'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

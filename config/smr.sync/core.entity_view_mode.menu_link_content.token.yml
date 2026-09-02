@@ -1,0 +1,15 @@
+uuid: e349e2d2-ee01-46b3-a6a7-5c2da0d14b1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: menu_link_content.token
+label: Token
+description: ''
+targetEntityType: menu_link_content
+cache: true

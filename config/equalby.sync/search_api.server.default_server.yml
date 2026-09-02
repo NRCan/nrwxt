@@ -1,0 +1,20 @@
+uuid: 8610c1b4-01da-44c1-a28d-ea2fed609377
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: UeCgJletSA_k7BgiZameQ_0Q3Qiu4LZa-mm8f5oomXg
+id: default_server
+name: 'Database Server'
+description: 'Default database server created by the Database Search Defaults module'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
+  phrase: disabled

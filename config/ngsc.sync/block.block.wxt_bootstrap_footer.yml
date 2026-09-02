@@ -1,0 +1,27 @@
+uuid: f37760c7-ea3b-44af-b72f-5f4b423f839f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: _4IB0gMqOCSV5tNCp1rR94KUtiXDqokh-30vZMi6s0M
+id: wxt_bootstrap_footer
+theme: wxt_bootstrap
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

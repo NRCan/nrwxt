@@ -1,0 +1,20 @@
+uuid: 7f89e83d-0646-4c18-be1f-7787be373b32
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.menu_link_content.revision_translation_affected
+field_name: revision_translation_affected
+entity_type: menu_link_content
+bundle: menu_link_content
+label: 'Revision translation affected'
+description: 'Indicates if the last edit of a translation belongs to current revision.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

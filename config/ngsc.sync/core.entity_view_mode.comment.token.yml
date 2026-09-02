@@ -1,0 +1,15 @@
+uuid: f832db71-86a0-4c01-9fd1-0a1aa1656816
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: comment.token
+label: Token
+description: ''
+targetEntityType: comment
+cache: true

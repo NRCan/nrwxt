@@ -1,0 +1,80 @@
+uuid: fed00d50-b6e8-435d-9437-471434f62e9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.slideshow.field_media_in_library
+    - field.field.media.slideshow.field_slideshow_style
+    - field.field.media.slideshow.slideshow_items
+    - media.type.slideshow
+  module:
+    - media_library
+    - path
+_core:
+  default_config_hash: ieLAk9fBy8EeQRywXdgNLSBp8seL5zWAOi7QlEZ66t0
+id: media.slideshow.default
+targetEntityType: media
+bundle: slideshow
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_slideshow_style:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+  slideshow_items:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_media_in_library: true
+  langcode: true

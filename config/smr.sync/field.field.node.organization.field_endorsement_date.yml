@@ -1,0 +1,21 @@
+uuid: 8ffa7562-8fef-4b71-8eb6-6765a072e6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endorsement_date
+    - node.type.organization
+  module:
+    - datetime
+id: node.organization.field_endorsement_date
+field_name: field_endorsement_date
+entity_type: node
+bundle: organization
+label: 'Endorsement date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,18 @@
+uuid: cabaa6c4-f5fe-45d3-9c73-cf25cedc6294
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: node
+bundle: landing_page
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

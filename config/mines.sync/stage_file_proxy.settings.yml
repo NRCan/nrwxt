@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: LqXuXXQCTd1NWw7dGLef0PCi3_aEEWQuogAblo4hHaE
+hotlink: false
+origin: 'https://www.minescanada.ca/en'
+origin_dir: sites/minescanada/files
+proxy_headers: ''
+use_imagecache_root: true
+verify: false
+excluded_extensions: ''

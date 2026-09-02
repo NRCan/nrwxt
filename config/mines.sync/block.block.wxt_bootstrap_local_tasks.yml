@@ -1,0 +1,37 @@
+uuid: 4727a31b-1896-4daf-af64-0747592155dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - wxt_library
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: LpECI1copMtq6SWS-6NIfdDhPZ6zfjC5SCDlJhArVSU
+id: wxt_bootstrap_local_tasks
+theme: wxt_bootstrap
+region: header
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  panels_title:
+    id: panels_title
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    is_panelized: {  }
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

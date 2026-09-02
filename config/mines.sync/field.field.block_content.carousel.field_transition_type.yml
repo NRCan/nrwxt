@@ -1,0 +1,25 @@
+uuid: fe4bdcec-4f41-42df-8023-167b0f5861c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.storage.block_content.field_transition_type
+  module:
+    - options
+_core:
+  default_config_hash: oKwBN2ZJ19YXujG1d3Fic03cD0NkWhJV6_1sRakqcRw
+id: block_content.carousel.field_transition_type
+field_name: field_transition_type
+entity_type: block_content
+bundle: carousel
+label: 'Transition type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: fade
+default_value_callback: ''
+settings: {  }
+field_type: list_string

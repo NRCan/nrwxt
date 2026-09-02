@@ -1,0 +1,33 @@
+uuid: 677010b5-f3a1-4af3-8ee9-8a867c15b06d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.slideshow.field_media_in_library
+    - field.field.media.slideshow.field_slideshow_style
+    - field.field.media.slideshow.slideshow_items
+    - media.type.slideshow
+_core:
+  default_config_hash: rFstANbX1a3u9FUUVcM4TFmAXaNEKo1KgeNF-qS9H0w
+id: media.slideshow.default
+targetEntityType: media
+bundle: slideshow
+mode: default
+content:
+  slideshow_items:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: linked
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  field_slideshow_style: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

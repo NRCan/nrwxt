@@ -1,0 +1,38 @@
+uuid: eaa30e7f-a6d2-4d84-86e0-dec9e03b6043
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_banner
+    - node.type.page
+  module:
+    - image
+id: node.page.field_page_banner
+field_name: field_page_banner
+entity_type: node
+bundle: page
+label: 'Page Banner'
+description: 'Optional Page banner that is rendered full width above the content and below the menu'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

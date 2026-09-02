@@ -1,0 +1,55 @@
+uuid: ca0304e2-6e93-4285-9465-a593f7396c85
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.user
+  module:
+    - ctools
+    - panels
+    - user
+_core:
+  default_config_hash: wSDPwhenoTtR35xTBf-kn7gqp5wumHImD7BrmMPpFD0
+id: default_user
+label: 'Default User'
+weight: -7
+variant: panels_variant
+variant_settings:
+  id: panels_variant
+  label: null
+  weight: 0
+  uuid: 1c74464e-5b9d-41e7-8825-371a214b4620
+  blocks:
+    142d3558-5fee-442f-9300-a5cf52f2b6a2:
+      id: 'entity_view:user'
+      label: 'Entity view (User)'
+      label_display: '0'
+      provider: ctools
+      context_mapping:
+        entity: current_user
+      region: content
+      weight: 3
+      uuid: 142d3558-5fee-442f-9300-a5cf52f2b6a2
+      view_mode: full
+  page_title: 'My account'
+  layout: layout_onecol
+  layout_settings:
+    label: ''
+  builder: ipe
+  storage_type: page_manager
+  storage_id: default_user
+  css_classes:
+    - ''
+  html_id: ''
+  css_styles: ''
+page: user
+selection_criteria:
+  -
+    id: user_role
+    negate: false
+    context_mapping:
+      user: current_user
+    roles:
+      authenticated: authenticated
+selection_logic: and
+static_context: {  }

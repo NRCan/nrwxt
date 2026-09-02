@@ -1,0 +1,20 @@
+uuid: 494c3cdf-2927-4254-bc28-c0c88416246e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.revision_translation_affected
+field_name: revision_translation_affected
+entity_type: media
+bundle: image
+label: 'Revision translation affected'
+description: 'Indicates if the last edit of a translation belongs to current revision.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

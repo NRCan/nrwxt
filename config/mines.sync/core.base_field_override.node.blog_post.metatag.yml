@@ -1,0 +1,18 @@
+uuid: f782cf81-9c10-47a7-9aa5-ff1ea5d14f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.metatag
+field_name: metatag
+entity_type: node
+bundle: blog_post
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,25 @@
+uuid: 83428eb9-be81-4c6d-8b89-8b03e2436482
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: Y_pIi6D1GDshxQJwBXU4O9R8OPR94A8cnXKtcDX2dnE
+id: block_content.search.body
+field_name: body
+entity_type: block_content
+bundle: search
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

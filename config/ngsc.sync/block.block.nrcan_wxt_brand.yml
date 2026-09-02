@@ -1,0 +1,31 @@
+uuid: 275f1558-fa25-4302-8966-1e7b82d7f8dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.brand
+  module:
+    - block_class
+    - system
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  block_class:
+    classes: 'col-md-10 ftr-urlt-lnk'
+_core:
+  default_config_hash: yA2ceTKyWYK9PAZQ8NriHRNrt6TpcuCuWbo4nI-EKCk
+id: nrcan_wxt_brand
+theme: nrcan_wxt
+region: branding
+weight: 0
+provider: null
+plugin: 'system_menu_block:brand'
+settings:
+  id: 'system_menu_block:brand'
+  label: Brand
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

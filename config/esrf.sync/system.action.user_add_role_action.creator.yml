@@ -1,0 +1,16 @@
+uuid: 0411a204-6296-467d-b03a-8c8aede07c89
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.creator
+  module:
+    - user
+_core:
+  default_config_hash: PYHNeu0_cj_pQ1_nbkg_KHBKAqXL4dayQ0SQuU3_MgM
+id: user_add_role_action.creator
+label: 'Add the Creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: creator

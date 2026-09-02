@@ -1,0 +1,28 @@
+uuid: 1aa24abd-c727-4794-b655-7684b39a2f1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - openid_connect_windows_aad
+id: nrcan_azure_ad
+label: 'NRCan Azure AD'
+plugin: windows_aad
+settings:
+  client_id: c33542a5-63dc-40c8-9a4f-464d1e524ca5
+  client_secret: nrcan_azure_ad_secret
+  authorization_endpoint_wa: 'https://login.microsoftonline.com/05c95b33-90ca-49d5-b644-288b930b912b/oauth2/authorize'
+  token_endpoint_wa: 'https://login.microsoftonline.com/05c95b33-90ca-49d5-b644-288b930b912b/oauth2/token'
+  userinfo_endpoint_wa: ''
+  map_ad_groups_to_roles: false
+  group_mapping:
+    method: 0
+    mappings: ''
+    strict: false
+  userinfo_graph_api_wa: 2
+  userinfo_graph_api_use_other_mails: false
+  userinfo_update_email: true
+  hide_email_address_warning: false
+  subject_key: sub
+  end_session_endpoint: 'https://login.microsoftonline.com/common/oauth2/logout'
+  iss_allowed_domains: "admin.esrfunds.org\r\nadmin.fondsee.org"
+  front_channel_logout_url: ''

@@ -1,0 +1,18 @@
+uuid: 05d3efca-24f0-4a72-8fd8-73c8252f37ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_freetags
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.blog_freetags
+target_entity_type_id: taxonomy_term
+target_bundle: blog_freetags
+default_langcode: site_default
+language_alterable: false

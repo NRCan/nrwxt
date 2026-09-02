@@ -1,0 +1,22 @@
+uuid: 167df489-b521-44b7-98df-59eb425ceeca
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nrcan_wxt
+_core:
+  default_config_hash: Jx3NwD_ieAzJWK8hQ-N23eqTllZrvEbm_slIFl0jf1g
+id: nrcan_wxt_breadcrumbs
+theme: nrcan_wxt
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: fec4e2b7-81df-42e7-ab43-a63af659eff2
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-contextual-fr
+label: 'Pied de page contextuel GC'
+description: 'Menu de pied de page contextuel à afficher au-dessus des menus de pied de page globaux.'
+locked: false

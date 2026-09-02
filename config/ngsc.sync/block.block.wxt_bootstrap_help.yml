@@ -1,0 +1,22 @@
+uuid: 4766d4f1-263d-4275-9f14-e68c71e5d278
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: 4eMiBJNSNMAbB-qQ8aoD-BtvjkUpZ7YUN9uBZty2724
+id: wxt_bootstrap_help
+theme: wxt_bootstrap
+region: help
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

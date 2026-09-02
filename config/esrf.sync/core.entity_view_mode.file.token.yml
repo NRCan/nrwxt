@@ -1,0 +1,15 @@
+uuid: de983bd8-582e-4221-bc86-3da03f06243a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - wxt_core
+third_party_settings:
+  wxt_core:
+    internal: true
+id: file.token
+label: Token
+description: ''
+targetEntityType: file
+cache: true

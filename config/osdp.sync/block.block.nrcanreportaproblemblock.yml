@@ -1,0 +1,28 @@
+uuid: a321b236-103c-41a6-9ca2-d2b919c4b33a
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - content_health
+    - wxt_ext_blocks
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-5 col-lg-4'
+  wxt_ext_blocks:
+    display_title_invisible: 0
+id: nrcanreportaproblemblock
+theme: nrcan_wxt
+region: content_footer
+weight: -16
+provider: null
+plugin: content_health_report_block
+settings:
+  id: content_health_report_block
+  label: 'NRCan Report a problem block'
+  label_display: '0'
+  provider: content_health
+  content_health_report_block_settings: null
+visibility: {  }

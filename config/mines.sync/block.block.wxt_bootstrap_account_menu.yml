@@ -1,0 +1,27 @@
+uuid: 76137938-0e1a-447c-95a8-d72a30921d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - wxt_bootstrap
+_core:
+  default_config_hash: seIUTJxFp2GDUSD1zSJEjubHoY9au6WXIHR0ZVhUU4g
+id: wxt_bootstrap_account_menu
+theme: wxt_bootstrap
+region: navigation_collapsible
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

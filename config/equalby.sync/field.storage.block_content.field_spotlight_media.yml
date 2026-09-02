@@ -1,0 +1,22 @@
+uuid: 43d16c5e-9460-4337-9f33-7c8810247623
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+_core:
+  default_config_hash: KMYsP2EFABtKW1Qpdee6JUuZw8MSI9bpV00p6fD2X_g
+id: block_content.field_spotlight_media
+field_name: field_spotlight_media
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

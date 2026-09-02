@@ -1,0 +1,10 @@
+uuid: 9cafb151-8506-462f-b602-34193a2c11bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1IjVvOIbMWV0HxkzA0-IH0_D2qIn_z7kI_cgjGuTgw0
+id: search
+label: 'Search block'
+revision: true
+description: 'A search block contains a placeholder, link and filters.'

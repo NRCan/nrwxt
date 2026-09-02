@@ -1,0 +1,26 @@
+uuid: 86bc8252-3eca-45dd-9751-2f3d8828014c
+langcode: en
+status: false
+dependencies:
+  module:
+    - wxt_ext_blocks
+    - wxt_library
+  theme:
+    - nrcan_wxt
+third_party_settings:
+  wxt_ext_blocks:
+    display_title_invisible: 0
+_core:
+  default_config_hash: e-ho1_W6GSM0obUJGLkn2mFRlOBVAcKka5NvLTHdopI
+id: nrcan_wxt_wxtsearchform
+theme: nrcan_wxt
+region: search
+weight: -7
+provider: null
+plugin: wxt_search_form_block
+settings:
+  id: wxt_search_form_block
+  label: 'WxT Search form'
+  label_display: visible
+  provider: wxt_library
+visibility: {  }

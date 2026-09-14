@@ -138,7 +138,6 @@ module:
   simple_sitemap: 0
   slick: 0
   slick_entityreference: 0
-  stage_file_proxy: 0
   system: 0
   taxonomy: 0
   text: 0

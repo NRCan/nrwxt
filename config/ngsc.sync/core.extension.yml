@@ -10,7 +10,6 @@ module:
   block: 0
   block_class: 0
   block_content: 0
-  blog: 0
   bootstrap_layouts: 0
   breakpoint: 0
   button_link: 0
@@ -160,7 +159,6 @@ module:
   wxt_core: 0
   wxt_ext_archived: 0
   wxt_ext_blocks: 0
-  wxt_ext_blog: 0
   wxt_ext_breadcrumb: 0
   wxt_ext_carousel: 0
   wxt_ext_comment: 0

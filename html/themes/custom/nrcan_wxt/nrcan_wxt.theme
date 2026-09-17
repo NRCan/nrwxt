@@ -7,6 +7,8 @@
  * Place your custom PHP code in this file.
  */
 
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
@@ -28,4 +30,60 @@ function nrcan_wxt_preprocess_language_selection_page_content(&$variables) {
   $variables['site_name_fr'] = $splash_config->get('site_name.fr');
   $variables['tc_link_en'] = $splash_config->get('tc_link.en');
   $variables['tc_link_fr'] = $splash_config->get('tc_link.fr');
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function nrcan_wxt_preprocess_page(&$variables) {
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name == 'entity.user.canonical' || $route_name == 'view.dashboard_search.page_1') {
+    $variables['full_width'] = TRUE;
+  }
+
+  // Check if this page is a node.
+  // If not, bail out.
+  if (empty($variables['node'])) {
+    return;
+  }
+
+  $node = $variables['node'];
+
+  // Ensure $node is a fully loaded node obejct.
+  if (!($node instanceof NodeInterface)) {
+    return;
+  }
+
+  if ($node->hasField('field_node_secondary_title') && !$node->get('field_node_secondary_title')->isEmpty()) {
+    $variables['lead_title'] = $node->get('field_node_secondary_title')->getString();
+  }
+}
+
+/**
+* Implements hook_preprocess_page_title().
+*/
+function nrcan_wxt_preprocess_page_title(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  // Ensure $node is a fully loaded node obejct.
+  if (!($node instanceof NodeInterface)) {
+    return;
+  }
+
+  $langcode = $node->language()->getId();
+  $variables['language'] = $langcode;
+
+  // If the node is translatable and a translation exists for the current language.
+  if ($node->isTranslatable() && $node->hasTranslation($langcode)) {
+    $variables['node'] = $node->getTranslation($langcode);
+    $node = $node->getTranslation($langcode);
+  }
+
+  $checkFieldName = 'field_node_secondary_title';
+  if ($node instanceof NodeInterface) {
+    if ($node->hasField($checkFieldName) && !$node->get($checkFieldName)->isEmpty()) {
+      $variables['lead_title'] = $node->get($checkFieldName)->first()->getString();
+    }
+  }
 }

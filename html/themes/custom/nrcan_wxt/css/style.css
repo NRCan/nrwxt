@@ -244,3 +244,12 @@ ul.feeds-cont li a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#drupal-off-canvas-wrapper {
+  --off-canvas-background-color: var(--off-canvas-background-color-light);
+} 
+  
+#drupal-off-canvas-wrapper a {
+  color: #fff;
+  text-decoration: none;
+} 

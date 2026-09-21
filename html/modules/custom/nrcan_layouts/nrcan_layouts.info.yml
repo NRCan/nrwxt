@@ -1,0 +1,7 @@
+name: NRCan layouts
+type: module
+description: 'Custom layouts for the CPS NRCan WxT site.'
+package: NRCan
+core_version_requirement: ^10 || ^11
+dependencies:
+ - drupal:layout_builder

@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes }}>
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('col-md-3', 'small') }}>
+        <details open>
+          <summary class="btn-primary">
+            <h2 class="h4">{{ 'Filter your results'|t }}</h2>
+          </summary>
+          {{ content.first }}
+        </details>
+      </div>
+    {% endif %}
+
+    {% if content.first and content.second %}
+      <div {{ region_attributes.second.addClass('col-md-9') }}>
+        {{ content.second }}
+      </div>
+    {% elseif not content.first and content.second %}
+      <div {{ region_attributes.second.addClass('col-md-12') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}
+

@@ -252,4 +252,121 @@ ul.feeds-cont li a {
 #drupal-off-canvas-wrapper a {
   color: #fff;
   text-decoration: none;
+}
+
+/* NRCan two column faceted search layout styles. */
+.layout--twocol-section-nrcan div.col-md-3 {
+  padding-left: 0px;
+  padding-right: 0px;
 } 
+@media (min-width: 992px) {
+  .layout--twocol-section-nrcan div.col-md-3 {
+    padding-left: 0px;
+    padding-right: 30px;
+  } 
+} 
+.layout--twocol-section-nrcan div.col-md-9 {
+  padding-left: 0px;
+  padding-right: 0px;
+}   
+.layout--twocol-section-nrcan div.col-md-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}   
+.layout--twocol-section-nrcan div.col-sm-8 {
+  padding-left: 0px;
+}
+.layout--twocol-section-nrcan div.col-sm-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.layout--twocol-section-nrcan div.col-sm-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.layout--twocol-section-nrcan div.brdr-bttm {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.layout--twocol-section-nrcan details summary {
+  border: none;
+  text-indent: 0;
+}
+.layout--twocol-section-nrcan details .block-facets {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.facet-border-top {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: rgb(221, 221, 221) !important;
+}
+
+.layout--twocol-section-nrcan .panel {
+  box-shadow: none;
+}
+.layout--twocol-section-nrcan .panel-title {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+.layout--twocol-section-nrcan .item-list__checkbox .facet-item {
+  border-bottom: none;
+}
+.layout--twocol-section-nrcan .badge {
+  white-space: normal;
+}
+.layout--twocol-section-nrcan .block-facets-summary li {
+  margin-right: 5px;
+  margin-bottom: 1em;
+}
+.layout--twocol-section-nrcan .block-facets-summary a {
+  color: #fff;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.layout--twocol-section-nrcan .block-facets-summary li:last-child {
+  background: none;
+  clear: both;
+}
+.layout--twocol-section-nrcan .block-facets-summary li:last-child a {
+  color: #284162;
+  font-weight: normal;
+  text-decoration: underline;
+  text-wrap: nowrap;
+}
+.layout--twocol-section-nrcan .block-facets-summary li:last-child a:visited {
+  color: #7834bc;
+  font-weight: normal;
+}
+.layout--twocol-section-nrcan input[type=checkbox] {
+  height: 16px;
+  width: 16px;
+}
+.layout--twocol-section-nrcan div.view-header {
+  float: left;
+  width: calc(100% - 218px);
+  min-width: 300px;
+  padding-right: 10px;
+  margin-bottom: 1em;
+}
+.layout--twocol-section-nrcan .bef-exposed-form .form--inline > .form-item-sort-bef-combine {
+  float: left;
+  text-align: left;
+  width: 218px;
+  margin-bottom: 1em;
+}
+
+.h3, h3 {
+  font-size: 1.2em;
+}
+
+.h4, h4 {
+  font-size: 1.1em;
+}

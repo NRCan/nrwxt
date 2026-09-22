@@ -1,0 +1,9 @@
+uuid: 7cdbc5fb-8ba4-4237-aa08-c670f4cf6eea
+langcode: en
+status: true
+dependencies: {  }
+name: 'Story collection'
+vid: story_collection
+description: 'Newsletter collection.'
+weight: 0
+new_revision: false

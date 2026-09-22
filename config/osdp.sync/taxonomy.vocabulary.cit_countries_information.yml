@@ -1,0 +1,9 @@
+uuid: db44cfa3-8cc8-4852-adfe-401bb58c2d4d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Countries information'
+vid: cit_countries_information
+description: 'Countries information like ISO2 code, ISO3 code, name, official name, numcode and continent.'
+weight: 0
+new_revision: false

@@ -1,0 +1,20 @@
+uuid: 5bc8ff4d-1bc4-47c2-ad79-7b5f2325c5bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - wxt_ext_workflow
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  wxt_ext_workflow:
+    workflow: editorial
+name: Story
+type: story
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

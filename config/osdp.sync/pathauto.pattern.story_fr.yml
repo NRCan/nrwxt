@@ -1,0 +1,33 @@
+uuid: 7e173dd1-ecaa-4fcd-939c-756c473e9fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.story
+  module:
+    - language
+    - node
+id: story_fr
+label: 'Story (fr)'
+type: 'canonical_entities:node'
+pattern: '/histoire/[node:field_story_collection]/[node:title]'
+selection_criteria:
+  484c88cb-2ed6-4d11-80df-2b9950673f78:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      story: story
+  7544c430-c426-4e71-8103-c0467c00b85f:
+    id: language
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

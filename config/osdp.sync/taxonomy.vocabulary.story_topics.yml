@@ -1,0 +1,9 @@
+uuid: 8d9e904e-0923-4757-8df0-79d10907ebf9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Story topic'
+vid: story_topics
+description: 'List of topics for Story, Publication and Project pages'
+weight: 0
+new_revision: false

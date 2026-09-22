@@ -1,0 +1,68 @@
+uuid: 33bd0f46-c426-4224-bf01-25f9d4392001
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.story.body
+    - field.field.node.story.field_archived
+    - field.field.node.story.field_node_date_modified
+    - field.field.node.story.field_node_date_published
+    - field.field.node.story.field_node_feature_image
+    - field.field.node.story.field_node_ia_folder
+    - field.field.node.story.field_node_secondary_title
+    - field.field.node.story.field_story_banner_image
+    - field.field.node.story.field_story_byline
+    - field.field.node.story.field_story_city
+    - field.field.node.story.field_story_collection
+    - field.field.node.story.field_story_country
+    - field.field.node.story.field_story_external_link
+    - field.field.node.story.field_story_province
+    - field.field.node.story.field_story_topics
+    - field.field.node.story.field_story_type
+    - node.type.story
+  module:
+    - text
+    - user
+id: node.story.search_index
+targetEntityType: node
+bundle: story
+mode: search_index
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_archived: true
+  field_node_date_modified: true
+  field_node_date_published: true
+  field_node_feature_image: true
+  field_node_ia_folder: true
+  field_node_secondary_title: true
+  field_story_banner_image: true
+  field_story_byline: true
+  field_story_city: true
+  field_story_collection: true
+  field_story_country: true
+  field_story_external_link: true
+  field_story_province: true
+  field_story_topics: true
+  field_story_type: true
+  footnotes_group: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

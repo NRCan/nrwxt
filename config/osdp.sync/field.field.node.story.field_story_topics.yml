@@ -1,0 +1,29 @@
+uuid: 65b6f8d0-c2ca-43b6-8907-1a5ac8fbcfa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_topics
+    - node.type.story
+    - taxonomy.vocabulary.story_topics
+id: node.story.field_story_topics
+field_name: field_story_topics
+entity_type: node
+bundle: story
+label: 'Story topics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      story_topics: story_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

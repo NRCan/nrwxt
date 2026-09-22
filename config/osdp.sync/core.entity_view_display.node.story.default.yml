@@ -1,0 +1,78 @@
+uuid: f0bb77b2-f65c-44f8-89a5-2fe771bba7e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.story.body
+    - field.field.node.story.field_archived
+    - field.field.node.story.field_node_date_modified
+    - field.field.node.story.field_node_date_published
+    - field.field.node.story.field_node_feature_image
+    - field.field.node.story.field_node_ia_folder
+    - field.field.node.story.field_node_secondary_title
+    - field.field.node.story.field_story_banner_image
+    - field.field.node.story.field_story_byline
+    - field.field.node.story.field_story_city
+    - field.field.node.story.field_story_collection
+    - field.field.node.story.field_story_country
+    - field.field.node.story.field_story_external_link
+    - field.field.node.story.field_story_province
+    - field.field.node.story.field_story_topics
+    - field.field.node.story.field_story_type
+    - node.type.story
+  module:
+    - text
+    - user
+id: node.story.default
+targetEntityType: node
+bundle: story
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_story_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full_width
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_story_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  content_moderation_control: true
+  field_archived: true
+  field_node_date_modified: true
+  field_node_date_published: true
+  field_node_feature_image: true
+  field_node_ia_folder: true
+  field_node_secondary_title: true
+  field_story_byline: true
+  field_story_city: true
+  field_story_collection: true
+  field_story_country: true
+  field_story_external_link: true
+  field_story_province: true
+  field_story_topics: true
+  footnotes_group: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

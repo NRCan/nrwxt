@@ -1,0 +1,9 @@
+uuid: 687b7db4-6ad6-4fac-b3d6-ce0edd6a8a44
+langcode: en
+status: true
+dependencies: {  }
+name: 'Provinces and Territories'
+vid: provinces_territories
+description: 'Provides a list of provinces and territories of Canada.'
+weight: 0
+new_revision: false

@@ -1,0 +1,29 @@
+uuid: faaa4e43-5737-41d0-b711-16ffe7e7c1d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_country
+    - node.type.story
+    - taxonomy.vocabulary.cit_countries_information
+id: node.story.field_story_country
+field_name: field_story_country
+entity_type: node
+bundle: story
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cit_countries_information: cit_countries_information
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

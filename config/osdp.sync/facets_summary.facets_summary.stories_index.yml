@@ -1,0 +1,50 @@
+uuid: 2513f750-72bd-4671-917d-1c7479f6d4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.story_collection
+    - facets.facet.story_date_published
+    - facets.facet.story_topics
+    - facets.facet.story_type
+    - search_api.index.stories_index
+    - views.view.stories_index
+  module:
+    - search_api
+id: stories_index
+name: 'Stories index'
+facet_source_id: 'search_api:views_block__stories_index__block_1'
+only_visible_when_facet_source_is_visible: true
+processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '30'
+    settings:
+      link_text: 'Clear all filters'
+      position: after
+facets:
+  story_collection:
+    checked: true
+    label: Collection
+    separator: ', '
+    show_count: false
+    weight: -10
+  story_type:
+    checked: true
+    label: 'Story type'
+    separator: ', '
+    show_count: false
+    weight: -9
+  story_topics:
+    checked: true
+    label: 'Story topics'
+    separator: ', '
+    show_count: false
+    weight: -8
+  story_date_published:
+    checked: true
+    label: 'Date published'
+    separator: ', '
+    show_count: false
+    weight: -7

@@ -1,0 +1,9 @@
+uuid: 1373b3d5-b449-446e-9d2e-6d58ea608ca2
+langcode: en
+status: true
+dependencies: {  }
+name: 'IA structure'
+vid: ia
+description: 'The IA virtual folders that pages are attached to. These form the URL path.'
+weight: -10
+new_revision: false

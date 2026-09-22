@@ -1,0 +1,19 @@
+uuid: 64b038c7-560b-4e2d-92d1-d46570954263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_byline
+    - node.type.story
+id: node.story.field_story_byline
+field_name: field_story_byline
+entity_type: node
+bundle: story
+label: 'Lead text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

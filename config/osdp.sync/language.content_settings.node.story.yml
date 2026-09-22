@@ -1,0 +1,16 @@
+uuid: b63ba41d-ec29-4583-a077-b31ade3de70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.story
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.story
+target_entity_type_id: node
+target_bundle: story
+default_langcode: site_default
+language_alterable: false

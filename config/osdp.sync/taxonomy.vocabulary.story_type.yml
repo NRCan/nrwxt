@@ -1,0 +1,9 @@
+uuid: e732f9e0-e902-49e1-aaa4-3ba1701c5708
+langcode: en
+status: true
+dependencies: {  }
+name: 'Story type'
+vid: story_type
+description: 'Provides a list of Story types.'
+weight: 0
+new_revision: false

@@ -31,9 +31,12 @@ module:
   content_moderation: 0
   contextual: 0
   core_context: 0
+  cshs: 0
+  csv_serialization: 0
   ctools: 0
   datetime: 0
   dblog: 0
+  default_content_deploy: 0
   diff: 0
   dropzonejs: 0
   dynamic_page_cache: 0
@@ -47,6 +50,8 @@ module:
   entity_embed: 0
   entity_reference_revisions: 0
   entityqueue: 0
+  facets: 0
+  facets_summary: 0
   fakeobjects: 0
   field: 0
   field_formatter: 0
@@ -57,6 +62,7 @@ module:
   flexible_permissions: 0
   fontawesome: 0
   footnotes: 0
+  hal: 0
   header_and_footer_scripts: 0
   image: 0
   inline_entity_form: 0
@@ -77,6 +83,7 @@ module:
   link: 0
   linkit: 0
   locale: 0
+  maxlength: 0
   media: 0
   media_entity_instagram: 0
   media_entity_slideshow: 0
@@ -98,6 +105,7 @@ module:
   node: 0
   nrcan_admin: 0
   nrcan_adobeanalytics: 0
+  nrcan_layouts: 0
   openid_connect: 0
   openid_connect_windows_aad: 0
   options: 0
@@ -117,6 +125,7 @@ module:
   redirect_404: 0
   redis: 0
   responsive_image: 0
+  rest: 0
   search_api: 0
   search_api_db: 0
   serialization: 0
@@ -139,6 +148,8 @@ module:
   url_embed: 0
   user: 0
   views_bootstrap: 0
+  views_bulk_operations: 0
+  views_data_export: 0
   views_entity_embed: 0
   views_ui: 0
   webform: 0

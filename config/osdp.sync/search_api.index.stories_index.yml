@@ -115,6 +115,13 @@ processor_settings:
     highlight: always
     highlight_partial: false
   language_with_fallback: {  }
+  number_field_boost:
+    weights:
+      preprocess_index: 0
+    boosts:
+      field_node_date_published:
+        boost_factor: 8.0
+        aggregation: max
   rendered_item: {  }
   stemmer:
     weights:

@@ -658,10 +658,10 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        search_api_relevance:
-          id: search_api_relevance
+        field_node_date_published:
+          id: field_node_date_published
           table: search_api_index_stories_index
-          field: search_api_relevance
+          field: field_node_date_published
           relationship: none
           group_type: group
           admin_label: ''
@@ -824,7 +824,7 @@ display:
           admin_label: ''
           plugin_id: result
           empty: false
-          content: 'Showing <strong>@start</strong> to <strong>@end</strong> of <strong>@total</strong> results.'
+          content: 'Showing <strong>@start</strong> to <strong>@end</strong> of <strong>@total</strong> stories.'
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -852,6 +852,7 @@ display:
         type: search_api_none
       defaults:
         cache: false
+      exposed_block: true
       display_extenders:
         metatag_display_extender:
           metatags: {  }

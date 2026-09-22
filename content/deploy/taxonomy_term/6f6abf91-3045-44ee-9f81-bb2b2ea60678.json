@@ -1,0 +1,259 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/home\/forests-forestry\/sustainable-forest-management\/term?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/home\/forests-forestry\/term?_format=hal_json"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/25?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/forests-forestry\/sustainable-forest-management?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 78
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6f6abf91-3045-44ee-9f81-bb2b2ea60678"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        },
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "ia"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-05-21T17:59:11+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "name": [
+        {
+            "value": "Sustainable forest management",
+            "lang": "en"
+        },
+        {
+            "value": "Am\u00e9nagement forestier durable",
+            "lang": "fr"
+        }
+    ],
+    "weight": [
+        {
+            "value": 5
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/home\/forests-forestry\/term?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e8a4f3d0-785d-4ae9-9a0a-afcfea5a4b03"
+                    }
+                ]
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dfc20790-1f74-45fe-83fc-d1fc8515474e"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/25?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5a808881-58f0-407f-bf9c-03ef49d3eb15"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/forests-forestry\/sustainable-forest-management?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/node\/page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dc88bae0-f53a-4350-af92-a324b386ef88"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/home\/forests-forestry\/sustainable-forest-management\/term",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home\/forests-forestry\/sustainable-forest-management\/term",
+            "pid": 8626,
+            "langcode": "en",
+            "lang": "en"
+        },
+        {
+            "alias": "\/accueil\/forets-foresterie\/amenagement-forestier-durable\/term",
+            "pid": 28039,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        },
+        {
+            "value": "en",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2024-05-21T17:59:11+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2024-12-02T20:39:21+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_path_name": [
+        {
+            "value": "sustainable-forest-management",
+            "lang": "en"
+        },
+        {
+            "value": "amenagement-forestier-durable",
+            "lang": "fr"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010242
+    }
+}

@@ -1,0 +1,259 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-data-statistics-analysis\/minerals-economy\/term?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-data-statistics-analysis\/term?_format=hal_json"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/13?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/minerals-mining\/mining-data-statistics-analysis\/minerals-economy?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 52
+        }
+    ],
+    "uuid": [
+        {
+            "value": "9d6a5332-1f75-461e-8f79-36929d656007"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        },
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "ia"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-05-21T05:14:41+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "name": [
+        {
+            "value": "Minerals and the economy",
+            "lang": "en"
+        },
+        {
+            "value": "Les min\u00e9raux et l\u2019\u00e9conomie",
+            "lang": "fr"
+        }
+    ],
+    "weight": [
+        {
+            "value": 6
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-data-statistics-analysis\/term?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a31e926e-ae41-49a1-a3a5-9b49c207da11"
+                    }
+                ]
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dfc20790-1f74-45fe-83fc-d1fc8515474e"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/13?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4aad4a11-4797-425e-82da-483e283498e9"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/minerals-mining\/mining-data-statistics-analysis\/minerals-economy?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/node\/page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ee66fb17-59a2-4df9-98a8-fcf9b081bb6d"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-data-statistics-analysis\/minerals-economy\/term",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home\/minerals-mining\/mining-data-statistics-analysis\/minerals-economy\/term",
+            "pid": 8680,
+            "langcode": "en",
+            "lang": "en"
+        },
+        {
+            "alias": "\/accueil\/mineraux-exploitation-miniere\/donnees-statistiques-analyses-exploitation-miniere\/mineraux-economie\/term",
+            "pid": 27960,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        },
+        {
+            "value": "en",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2024-05-21T05:14:41+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2024-11-27T18:59:04+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_path_name": [
+        {
+            "value": "minerals-economy",
+            "lang": "en"
+        },
+        {
+            "value": "mineraux-economie",
+            "lang": "fr"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010242
+    }
+}

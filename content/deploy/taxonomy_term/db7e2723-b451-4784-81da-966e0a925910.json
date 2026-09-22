@@ -1,0 +1,264 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/home\/science-data\/non-destructive-testing\/term?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/home\/science-data\/term?_format=hal_json"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/4?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/4?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/science-data\/non-destructive-testing?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 787
+        }
+    ],
+    "uuid": [
+        {
+            "value": "db7e2723-b451-4784-81da-966e0a925910"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        },
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "ia"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-01-30T21:58:10+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "name": [
+        {
+            "value": "Non-destructive testing",
+            "lang": "en"
+        },
+        {
+            "value": "Essais non destructifs",
+            "lang": "fr"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/home\/science-data\/term?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4c4e939e-9af9-4d20-a302-28a641e15072"
+                    }
+                ]
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/4?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d9af9e55-0768-4b32-be7d-eeac36a7a39f"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/4?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d9af9e55-0768-4b32-be7d-eeac36a7a39f"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/science-data\/non-destructive-testing?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/node\/landing_page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f0fd86ef-765c-47e1-b85e-a60bce70d2a7"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/home\/science-data\/non-destructive-testing\/term",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home\/science-data\/non-destructive-testing\/term",
+            "pid": 28744,
+            "langcode": "en",
+            "lang": "en"
+        },
+        {
+            "alias": "\/accueil\/science-donnees\/essais-non-destructifs\/term",
+            "pid": 28745,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        },
+        {
+            "value": "en",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2025-01-30T21:58:10+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2025-01-30T21:59:24+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_path_alias_exclude": [
+        {
+            "value": false
+        }
+    ],
+    "field_path_name": [
+        {
+            "value": "non-destructive-testing",
+            "lang": "en"
+        },
+        {
+            "value": "essais-non-destructifs",
+            "lang": "fr"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010239
+    }
+}

@@ -1,0 +1,259 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-policy-taxation-industry\/minerals-metals-policy\/term?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-policy-taxation-industry\/term?_format=hal_json"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/13?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/minerals-mining\/mining-policy-taxation-industry\/minerals-metals-policy-government-canada?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 59
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7c494e27-a1a7-4b09-97bf-f3c8b0234449"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        },
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "ia"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-05-21T17:34:15+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "name": [
+        {
+            "value": "The Minerals and Metals Policy",
+            "lang": "en"
+        },
+        {
+            "value": "Politique de l\u2019exploitation mini\u00e8re",
+            "lang": "fr"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-policy-taxation-industry\/term?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "14980a9e-dc35-499a-a5de-0126cae80da6"
+                    }
+                ]
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dfc20790-1f74-45fe-83fc-d1fc8515474e"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/13?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4aad4a11-4797-425e-82da-483e283498e9"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/minerals-mining\/mining-policy-taxation-industry\/minerals-metals-policy-government-canada?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/node\/publication_page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3c3e2005-fce1-4723-be00-3f020c1b3744"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-03T17:29:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/home\/minerals-mining\/mining-policy-taxation-industry\/minerals-metals-policy\/term",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home\/minerals-mining\/mining-policy-taxation-industry\/minerals-metals-policy\/term",
+            "pid": 8684,
+            "langcode": "en",
+            "lang": "en"
+        },
+        {
+            "alias": "\/accueil\/mineraux-exploitation-miniere\/exploitation-miniere-politique-fiscalite-industrie\/politique-exploitation-minere\/term",
+            "pid": 27966,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        },
+        {
+            "value": "en",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2024-05-21T17:34:15+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2024-11-27T19:41:06+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_path_name": [
+        {
+            "value": "minerals-metals-policy",
+            "lang": "en"
+        },
+        {
+            "value": "politique-exploitation-minere",
+            "lang": "fr"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010239
+    }
+}

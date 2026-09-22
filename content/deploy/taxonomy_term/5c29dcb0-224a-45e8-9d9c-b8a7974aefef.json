@@ -1,0 +1,264 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/home\/energy-sources\/renewable-energy\/offshore-wind-energy\/term?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/home\/energy-sources\/renewable-energy\/term?_format=hal_json"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/26?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/26?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/energy-sources\/renewable-energy\/offshore-wind-energy?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 937
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5c29dcb0-224a-45e8-9d9c-b8a7974aefef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        },
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "ia"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2026-06-22T12:28:02+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "name": [
+        {
+            "value": "Offshore wind energy",
+            "lang": "en"
+        },
+        {
+            "value": "L\u2019\u00e9nergie \u00e9olienne extrac\u00f4ti\u00e8re",
+            "lang": "fr"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/home\/energy-sources\/renewable-energy\/term?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/ia"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "738ed324-2c58-42d8-8f92-bde803b8469a"
+                    }
+                ]
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/26?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1a816b6e-d557-4df0-91bb-1ffc0ffcedea"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/26?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1a816b6e-d557-4df0-91bb-1ffc0ffcedea"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/ia\/field_ia_landing_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/energy-sources\/renewable-energy\/offshore-wind-energy?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/node\/landing_page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "19ea1f46-c3de-47d4-8525-50cdf413d39c"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2026-06-25T10:50:04+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-22T12:30:46+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        },
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/home\/energy-sources\/renewable-energy\/offshore-wind-energy\/term",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/home\/energy-sources\/renewable-energy\/offshore-wind-energy\/term",
+            "pid": 34336,
+            "langcode": "en",
+            "lang": "en"
+        },
+        {
+            "alias": "\/accueil\/source-energie\/energies-renouvelables\/energie-eolienne-extracotiere\/term",
+            "pid": 34337,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        },
+        {
+            "value": "en",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        },
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2026-06-22T12:28:02+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        },
+        {
+            "value": "2026-06-22T12:30:46+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_path_alias_exclude": [
+        {
+            "value": false
+        }
+    ],
+    "field_path_name": [
+        {
+            "value": "offshore-wind-energy",
+            "lang": "en"
+        },
+        {
+            "value": "energie-eolienne-extracotiere",
+            "lang": "fr"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010238
+    }
+}

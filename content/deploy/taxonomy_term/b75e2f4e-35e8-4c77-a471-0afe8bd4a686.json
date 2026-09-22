@@ -1,0 +1,172 @@
+{
+    "_links": {
+        "self": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/country-info\/BM?_format=hal_json"
+        },
+        "type": {
+            "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/taxonomy_term\/cit_countries_information"
+        },
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/cit_countries_information\/parent": [
+            null
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/cit_countries_information\/content_translation_uid": [
+            {
+                "href": "https:\/\/admin.natural-resources.canada.ca\/user\/0?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "tid": [
+        {
+            "value": 324
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b75e2f4e-35e8-4c77-a471-0afe8bd4a686"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "cit_countries_information"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-10-15T16:25:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Bermuda",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/cit_countries_information\/parent": [
+            null
+        ],
+        "https:\/\/admin.natural-resources.canada.ca\/rest\/relation\/taxonomy_term\/cit_countries_information\/content_translation_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/user\/0?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "https:\/\/admin.natural-resources.canada.ca\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b83b647c-6a51-4d0e-af3e-ba373ad66802"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2024-10-15T16:25:29+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "https:\/\/admin.natural-resources.canada.ca\/country-info\/BM",
+                "dcterms_creator": "Natural Resources Canada",
+                "dcterms_language": "en",
+                "dcterms_spatial": "Canada",
+                "dcterms_access_rights": "2",
+                "gcaaterms_sitename": "NRCAN-RNCAN"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/country-info\/BM",
+            "pid": 12323,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "en"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "content_translation_created": [
+        {
+            "value": "2024-10-15T16:25:29+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_citf_continent": [
+        {
+            "value": "NA"
+        }
+    ],
+    "field_citf_iso2_code": [
+        {
+            "value": "BM"
+        }
+    ],
+    "field_citf_iso3_code": [
+        {
+            "value": "BMU"
+        }
+    ],
+    "field_citf_iso_num_code": [
+        {
+            "value": 60
+        }
+    ],
+    "field_citf_official_name": [
+        {
+            "value": "Bermuda"
+        }
+    ],
+    "_dcd_metadata": {
+        "export_timestamp": 1790010289
+    }
+}

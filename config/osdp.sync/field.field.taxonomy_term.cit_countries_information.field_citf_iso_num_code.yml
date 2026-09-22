@@ -1,0 +1,23 @@
+uuid: e1c49767-04fa-4b17-a812-59558f21e8a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_citf_iso_num_code
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information.field_citf_iso_num_code
+field_name: field_citf_iso_num_code
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: 'ISO numeric-3 code'
+description: 'Specify an unique ISO numeric-3 code for this country.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

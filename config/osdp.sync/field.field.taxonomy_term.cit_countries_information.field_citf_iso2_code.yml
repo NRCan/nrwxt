@@ -1,0 +1,19 @@
+uuid: b8eee71f-7797-4b57-8d35-d45cf999b073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_citf_iso2_code
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information.field_citf_iso2_code
+field_name: field_citf_iso2_code
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: 'ISO alpha-2 code'
+description: 'Core country ISO alpha-2 codes.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

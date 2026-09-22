@@ -1,0 +1,45 @@
+uuid: f8d41a49-165d-474a-9642-56f20bef129a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_citf_continent
+field_name: field_citf_continent
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: AF
+      label: Africa
+    -
+      value: AN
+      label: Antarctica
+    -
+      value: AS
+      label: Asia
+    -
+      value: EU
+      label: Europe
+    -
+      value: SA
+      label: 'Latin America and the Caribbean'
+    -
+      value: NA
+      label: 'Northern America'
+    -
+      value: OC
+      label: Oceania
+    -
+      value: UN
+      label: Unknown
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

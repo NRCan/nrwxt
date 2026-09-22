@@ -1,0 +1,21 @@
+uuid: 756ef432-c129-4362-8b5c-e7d2ef9ece8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_path_alias_exclude
+    - taxonomy.vocabulary.ia
+id: taxonomy_term.ia.field_path_alias_exclude
+field_name: field_path_alias_exclude
+entity_type: taxonomy_term
+bundle: ia
+label: 'Exclude from path alias'
+description: 'When selected this term will not be used in the path alias of any pages.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: ee76c509-1c8e-4183-8efb-cc75f1fac377
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_citf_iso3_code
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information.field_citf_iso3_code
+field_name: field_citf_iso3_code
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: 'ISO alpha-3 code'
+description: 'Specify an unique ISO alpha-3 code for this country.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

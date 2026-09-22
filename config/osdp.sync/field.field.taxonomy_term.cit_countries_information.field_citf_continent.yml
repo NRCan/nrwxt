@@ -1,0 +1,21 @@
+uuid: 4b6f9985-0dbe-4722-bf13-40160edc1db2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_citf_continent
+    - taxonomy.vocabulary.cit_countries_information
+  module:
+    - options
+id: taxonomy_term.cit_countries_information.field_citf_continent
+field_name: field_citf_continent
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: Continent
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

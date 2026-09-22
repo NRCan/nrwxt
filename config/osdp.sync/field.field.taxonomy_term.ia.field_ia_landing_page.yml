@@ -1,0 +1,25 @@
+uuid: ad7a31ba-bb2e-4318-9b8b-a79e08d63e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ia_landing_page
+    - taxonomy.vocabulary.ia
+id: taxonomy_term.ia.field_ia_landing_page
+field_name: field_ia_landing_page
+entity_type: taxonomy_term
+bundle: ia
+label: 'IA Landing Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: list_potential_landing_pages
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

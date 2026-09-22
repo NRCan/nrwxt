@@ -1,0 +1,23 @@
+uuid: 54b6fc50-5102-400f-a758-ce6c473fc0c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_external_link
+    - taxonomy.vocabulary.ia
+  module:
+    - link
+id: taxonomy_term.ia.field_external_link
+field_name: field_external_link
+entity_type: taxonomy_term
+bundle: ia
+label: 'External link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

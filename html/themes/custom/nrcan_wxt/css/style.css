@@ -363,10 +363,20 @@ ul.feeds-cont li a {
   margin-bottom: 1em;
 }
 
-.h3, h3 {
-  font-size: 1.2em;
-}
-
-.h4, h4 {
-  font-size: 1.1em;
-}
+h1, .h1 {
+        font-size: 1.9em; }
+                
+h2, .h2 {
+        font-size: 1.8em; }
+                
+h3, .h3 {
+        font-size: 1.2em; }
+ 
+h4, .h4 {
+        font-size: 1.1em; }
+        
+h5, .h5 {
+        font-size: 1em; }
+        
+h6, .h6 {
+        font-size: 0.95em; }

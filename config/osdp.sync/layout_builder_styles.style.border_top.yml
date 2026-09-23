@@ -1,0 +1,12 @@
+uuid: de83a582-cec4-4122-8035-af3a39d5e252
+langcode: en
+status: true
+dependencies: {  }
+id: border_top
+label: 'Border top'
+classes: facet-border-top
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

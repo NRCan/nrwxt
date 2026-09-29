@@ -380,3 +380,7 @@ h5, .h5 {
         
 h6, .h6 {
         font-size: 0.95em; }
+
+#wb-info .gc-main-footer h4 {
+  margin-top: 1.5em;
+}  

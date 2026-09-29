@@ -64,10 +64,10 @@
 
     {%
       set navbar_classes = [
-      'navbar',
-      theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-      theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
-    ]
+        'navbar',
+        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
+      ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
       <div id="wb-bnr" class="container">
@@ -97,24 +97,6 @@
           {{ page.search }}
         </div>
       </div>
-      {% if nrwxt_hide_menu != true %}
-      {% if menu_type == 'default' %}
-        <nav class="gcweb-menu" data-trgt="mb-pnl" typeof="SiteNavigationElement">
-          <div class="container">
-            <h2 class="wb-inv">{{ 'Menu'|t }}</h2>
-            <button type="button" aria-haspopup="true" aria-expanded="false">{{ main_menu_label|raw }}</button>
-            {{ page.navigation }}
-          </div>
-        </nav>
-      {% elseif menu_type == 'horizontal' %}
-        <nav aria-labelledby="topicsMenu" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl">
-          <div class="pnl-strt {{ container }} nvbar">
-            <h2 id="topicsMenu" class="wb-inv">{{ 'Menu'|t }}</h2>
-            {{ page.navigation }}
-          </div>
-        </nav>
-      {% endif %}
-      {% endif %}
       {{ page.breadcrumb }}
     </header>
   {% endblock %}
@@ -123,8 +105,10 @@
 {# Main #}
 {% block main %}
 
+{% if full_width is empty %}
   <div class="{{ (is_front and wxt_homepage) ? "container-fluid" : container }}">
     <div class="row">
+{% endif %}
 
       {# Highlighted #}
       {% if page.highlighted %}
@@ -136,63 +120,100 @@
       {# Content #}
       {%
         set content_classes = [
-        page.sidebar_first and page.sidebar_second ? 'col-md-6 col-md-push-3',
-        page.sidebar_first and page.sidebar_second is empty ? 'col-md-9 col-md-push-3',
-        page.sidebar_second and page.sidebar_first is empty ? 'col-md-9',
-        page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-      ]
+          page.sidebar_first and page.sidebar_second ? 'col-md-6 col-md-push-3',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-md-9 col-md-push-3',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-md-9',
+          page.sidebar_first is empty and page.sidebar_second is empty and full_width is empty ? 'col-sm-12',
+          full_width is empty ? 'container'
+        ]
       %}
-      <main property="mainContentOfPage" {{ content_attributes.addClass(content_classes, 'main-container', container, 'js-quickedit-main-content') }}>
 
-        {# Header #}
-        {% if page.header %}
-          {% block header %}
+      <main property="mainContentOfPage" {{ content_attributes.addClass(content_classes, 'main-container', 'js-quickedit-main-content') }}>
+
+      {# Header #}
+      {% if page.header %}
+        {% block header %}
+          {% if node.field_node_secondary_title.value is not empty and node.field_node_section_navigation.value is not empty %}
+            {{ page.header|without('nrcan_wxt_page_title') }}
+          {% else %}
             {{ page.header }}
+          {% endif %}
+        {% endblock %}
+      {% endif %}
+
+      <section>
+
+        {# Breadcrumbs #}
+        {% if breadcrumb %}
+          {% block breadcrumb %}
+            {{ breadcrumb }}
           {% endblock %}
         {% endif %}
 
-        <section>
-
-          {# Breadcrumbs #}
-          {% if breadcrumb %}
-            {% block breadcrumb %}
-              {{ breadcrumb }}
-            {% endblock %}
-          {% endif %}
-
-          {# Action Links #}
-          {% if action_links %}
-            {% block action_links %}
-              <ul class="action-links">{{ action_links }}</ul>
-            {% endblock %}
-          {% endif %}
-
-          {# Help #}
-          {% if page.help %}
-            {% block help %}
-              {{ page.help }}
-            {% endblock %}
-          {% endif %}
-
-          {# Content #}
-          {% block content %}
-            <a id="main-content"></a>
-            {{ page.content }}
-            <div class="pagedetails-wrapper{{ (is_front and wxt_homepage) or theme.settings.fluid_container or fluid_container ? ' container' : '' }}">
-              {{ page.content_footer }}
-            </div>
+        {# Action Links #}
+        {% if action_links %}
+          {% block action_links %}
+            <ul class="action-links">{{ action_links }}</ul>
           {% endblock %}
-        </section>
+        {% endif %}
+
+        {# Help #}
+        {% if page.help %}
+          {% block help %}
+            {{ page.help }}
+          {% endblock %}
+        {% endif %}
+
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+
+          {% if node.field_node_secondary_title.value is not empty and node.field_node_section_navigation.value is not empty %}
+            <div class="mwsgeneric-base-html parbase section">
+              <div class="gc-subway-wrapper">
+                <nav class="provisional gc-subway wb-init gc-subway-inited no-blink" id="wb-auto-4">
+                  <hgroup>
+                    <h1 id="gc-document-nav">{{ node.field_node_secondary_title.value }}</h1>
+                    <p class="h3 hidden-xs visible-md visible-lg mrgn-tp-0">Sections</p>
+                  </hgroup>
+                  {{ node.field_node_section_navigation.value|raw }}
+                </nav>
+              </div>
+              <section class="gc-subway-section">
+                <hgroup>
+                  <p>{{ node.field_node_secondary_title.value }}</p>
+                  <h1 property="name" id="wb-cont" class="gc-thickline">{{ node.title.value }}</h1>
+                </hgroup>
+              </section>
+            </div>
+            <div class="row col-md-8">
+              {{ page.content }}
+            </div>
+          {% else %}
+            {{ page.content }}
+          {% endif %}
+ 
+          <div class="pagedetails-wrapper{{ (is_front and wxt_homepage) or theme.settings.fluid_container or fluid_container ? ' container' : '' }}">
+            {% if full_width is not empty %}
+              <div class="container">
+                {{ page.content_footer }}
+              </div>
+            {% else %}
+              {{ page.content_footer }}
+            {% endif %}
+          </div>
+        {% endblock %}
+      </section>
 
       </main>
 
       {# Sidebar First #}
       {%
         set sidebar_first_classes = [
-        page.sidebar_first and page.sidebar_second ? 'col-md-3 col-md-pull-6',
-        page.sidebar_first and page.sidebar_second is empty ? 'col-md-3 col-md-pull-9',
-        page.sidebar_second and page.sidebar_first is empty ? 'col-md-3 col-md-pull-9'
-      ]
+          page.sidebar_first and page.sidebar_second ? 'col-md-3 col-md-pull-6',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-md-3 col-md-pull-9',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-md-3 col-md-pull-9'
+        ]
       %}
       {# Sidebar First #}
       {% if page.sidebar_first %}
@@ -206,10 +227,10 @@
       {# Sidebar Second #}
       {%
         set sidebar_second_classes = [
-        page.sidebar_first and page.sidebar_second ? 'col-md-3',
-        page.sidebar_first and page.sidebar_second is empty ? 'col-md-3',
-        page.sidebar_second and page.sidebar_first is empty ? 'col-md-3'
-      ]
+          page.sidebar_first and page.sidebar_second ? 'col-md-3',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-md-3',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-md-3'
+        ]
       %}
       {# Sidebar Second #}
       {% if page.sidebar_second %}
@@ -219,9 +240,11 @@
           </nav>
         {% endblock %}
       {% endif %}
-
+  
+{% if full_width is empty %}
     </div>
   </div>
+{% endif %}
 
 {% endblock %}
 
@@ -246,17 +269,16 @@
     {% block footer %}
       <footer id="wb-info">
         <h2 class="wb-inv">{{ 'About this site'|t }}</h2>
-        <div class="landscape">
+        <div class="gc-main-footer">
           {{ page.footer }}
         </div>
-	<div class="gc-sub-footer">
-	  <div class="container d-flex align-items-center">
-              {{ page.branding }}
-              <div class="wtrmrk align-self-end">
-                {% if nrwxt_hide_menu != true %}
+        <div class="gc-sub-footer">
+          <div class="container d-flex align-items-center">
+            {{ page.branding }}
+            <div class="wtrmrk align-self-end">
+              {% if nrwxt_hide_menu != true %}
                 <img src='{{ logo_bottom_svg }}' alt='{{ 'Symbol of the Government of Canada'|t }}' />
-                {% endif %}
-              </div>
+              {% endif %}
             </div>
           </div>
         </div>

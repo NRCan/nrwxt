@@ -199,9 +199,6 @@
             "drupal/page_manager": {
                 "3438993 - Some mandatory parameters are missing for route entity.page.devel_load": "https://www.drupal.org/files/issues/2024-08-14/page-manager-3438993-MR34-24.patch"
             },
-            "drupal/views_entity_embed": {
-                "3472733 - Embed button no using SVG": "https://www.drupal.org/files/issues/2025-12-10/views_entity_embed-.patch-3472733-3.patch"
-            },
             "drupalwxt/wxt": {
                 "3619082 - Assertion error on node view": "https://git.drupalcode.org/project/wxt/-/merge_requests/38.diff"
             }

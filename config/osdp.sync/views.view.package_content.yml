@@ -6,10 +6,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_node_ia_folder
     - field.storage.node.field_node_secondary_title
+    - field.storage.node.field_package
     - system.menu.admin
+    - taxonomy.vocabulary.packages
   module:
     - node
     - nrcan_admin
+    - taxonomy
     - user
 _core:
   default_config_hash: KL90CnxyuSmwRQxyoeC7tOHjid9l8QoDs2XALMVmTJQ

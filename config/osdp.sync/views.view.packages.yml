@@ -785,7 +785,6 @@ display:
         - url
         - url.query_args
         - user.permissions
-        - user.tac_lite_grants
       tags:
         - 'config:field.storage.taxonomy_term.field_package_status'
         - 'config:field.storage.taxonomy_term.field_package_upload'
@@ -817,7 +816,6 @@ display:
         - url
         - url.query_args
         - user.permissions
-        - user.tac_lite_grants
       tags:
         - 'config:field.storage.taxonomy_term.field_package_status'
         - 'config:field.storage.taxonomy_term.field_package_upload'

@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nrcan_dcd
+  config:
+    - field.field.taxonomy_term.packages.field_package_status
+    - taxonomy.vocabulary.packages
+  module:
+    - text
+id: taxonomy_term.packages.default
+targetEntityType: taxonomy_term
+bundle: packages
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_package_status:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

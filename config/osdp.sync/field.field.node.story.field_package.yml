@@ -1,0 +1,29 @@
+uuid: 64f7153d-091b-4638-a13f-083089dea085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_package
+    - node.type.story
+    - taxonomy.vocabulary.packages
+id: node.story.field_package
+field_name: field_package
+entity_type: node
+bundle: story
+label: Package
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      packages: packages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

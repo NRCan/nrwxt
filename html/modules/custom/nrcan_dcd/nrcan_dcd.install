@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Update hooks for nrcan_dcd.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function nrcan_dcd_install() {
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function nrcan_dcd_uninstall() {
+}

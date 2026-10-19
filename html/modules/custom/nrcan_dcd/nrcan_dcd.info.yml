@@ -1,0 +1,9 @@
+name: NRCan default content deploy
+description: Extends UI of Default Content Deploy 
+package: NRCan
+type: module
+version: 1.0
+core_version_requirement: ^9 || ^10 || ^11
+configure: nrcan_dcd_settings.admin_config_nrcan
+dependencies:
+  - default_content_deploy:default_content_deploy

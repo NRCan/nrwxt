@@ -1,0 +1,23 @@
+uuid: 479d394c-af6d-431d-9cf0-f41e639c00fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - nrcan_dcd
+_core:
+  default_config_hash: rUOi0s1RmvdxgTE02_OwmGfVnCQgZmFMxd3iHn7BsEY
+id: taxonomy_term.field_package_status
+field_name: field_package_status
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

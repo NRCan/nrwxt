@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nrcan_dcd
+name: Packages
+vid: packages
+description: 'Used for deploying content in batches (packages)'
+weight: 0

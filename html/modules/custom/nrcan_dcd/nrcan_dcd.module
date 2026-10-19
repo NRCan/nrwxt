@@ -1,0 +1,127 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for nrcan_dcd.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\user\Entity\User;
+use Drupal\default_content_deploy\Exporter;
+use Drupal\default_content_deploy\Importer;
+
+/**
+ * Implements hook_cron().
+ */
+function nrcan_dcd_cron() {
+  // Safely switch to admin before executing cron.
+  $accountSwitcher = Drupal::service('account_switcher');
+  $account = User::load(1);
+  $accountSwitcher->switchTo($account);
+
+  // On production scan for new release taxonomy terms on the filesystem.
+  $enable_release_scan = \Drupal::config('nrcan_dcd.settings')->get('enable_release_scan');
+  if ($enable_release_scan) {
+    \Drupal::logger('nrcan_dcd')->info('Scanning filesystem for new packages.');
+    nrcan_dcd_scan_for_releases();
+  }
+
+  // Restore user account.
+  $accountSwitcher->switchBack();
+}
+
+/**
+ * Scan the content deploy directory for new releases (uuids).
+ */
+function nrcan_dcd_scan_for_releases():void {
+  // Get all the uuids of existing releases from the DB.
+  $vid = 'packages';
+  $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid, 0, NULL, TRUE);
+  $existing_releases = [];
+  foreach ($terms as $term) {
+    $existing_releases[] = $term->uuid();
+  }
+
+  // Scan the filesystem for UUIDs that are not in the existing array.
+  $file_system = \Drupal::service('file_system');
+  $scandir = \Drupal::config('nrcan_dcd.settings')->get('deployment_directory');
+  $pattern = '/^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/';
+  $files = $file_system->scanDirectory($scandir, $pattern, ['recurse' => FALSE]);
+
+  $import_files = [];
+  foreach ($files as $file) {
+    if (!in_array($file->filename, $existing_releases)) {
+      // Build a file object for DCD.
+      $uri = $scandir . '/' . $file->filename . '/' . 'taxonomy_term/' . $file->filename . '.json';
+      if (file_exists($uri)) {
+        $import_file = new \stdClass();
+        $import_file->name = $file->filename;
+        $import_file->uri = $scandir . '/' . $file->filename . '/' . 'taxonomy_term/' . $file->filename . '.json';
+        $import_files[$import_file->uri] = $import_file;
+      }
+    }
+  }
+
+  // Import new releases (terms).
+  _nrcan_dcd_import_release($import_files);
+}
+
+/**
+ * Import a release.
+ */
+function _nrcan_dcd_import_release($import_files): void {
+  $serializer = \Drupal::service('serializer');
+  foreach ($import_files as $uuid => $file) {
+    // Get the term file and decode it.
+    $parsed_data = file_get_contents($file->uri);
+    $decode = $serializer->decode($parsed_data, 'hal_json');
+
+    // Create the new release term.
+    $term = Term::create([
+      'vid' => 'packages',
+      'uuid' => $decode['uuid'][0]['value'],
+      'name' => $decode['name'][0]['value'],
+    ]);
+
+    // Set the field values.
+    $term->set('field_package_status', $decode['field_package_status'][0]['value']);
+
+    $term->enforceIsNew();
+    $term->save();
+  }
+}
+
+/**
+ * Update either the status or the scheduled date based on the release period.
+ */
+function _nrcan_dcd_update_release_info($term, $action):void {
+}
+
+/*
+ * Implements hook_toolbar_alter()
+ */
+function nrcan_dcd_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'nrcan_dcd/toolbar-icon';
+}
+
+/*
+ * Implements hook_batch_alter()
+ */
+function nrcan_dcd_batch_alter(&$batch) {
+  // This causes problems for DCD batch import.
+  foreach($batch['sets'] as $key => $set) {
+    $finish = $set['finished'][0];
+
+    if ($finish instanceof Importer || $finish instanceof Exporter) {
+      $batch['batch_redirect'] = 'admin/deployment/packages';
+    }
+  }
+}

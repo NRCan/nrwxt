@@ -1,0 +1,14 @@
+uuid: 7eca6eb1-7af0-4804-a859-9bf0899ea965
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nrcan_dcd
+_core:
+  default_config_hash: KhYw5nVBN6lPeQTywWYYiEG1nXIOjVfNWnfr_UNGtNs
+name: Packages
+vid: packages
+description: 'Used for deploying content in batches (packages)'
+weight: 0
+new_revision: false

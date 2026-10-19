@@ -105,6 +105,7 @@ module:
   node: 0
   nrcan_admin: 0
   nrcan_adobeanalytics: 0
+  nrcan_dcd: 0
   nrcan_layouts: 0
   openid_connect: 0
   openid_connect_windows_aad: 0

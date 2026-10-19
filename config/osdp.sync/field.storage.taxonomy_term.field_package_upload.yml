@@ -1,0 +1,25 @@
+uuid: 31544b7d-5ed1-49d4-9e01-3b809a18ff35
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - taxonomy
+_core:
+  default_config_hash: ubAX9Tn755O2UlQL3JGx7Rxt7SFTqZ3xCxFESuQcVjY
+id: taxonomy_term.field_package_upload
+field_name: field_package_upload
+entity_type: taxonomy_term
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

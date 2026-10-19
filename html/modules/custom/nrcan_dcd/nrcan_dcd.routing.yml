@@ -1,0 +1,70 @@
+nrcan_dcd.main:
+  path: '/admin/deployment'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Deployment'
+  requirements:
+    _permission: 'administer deployments'
+
+nrcan_dcd.admin_config_nrcan:
+  path: '/admin/config/nrcan_dcd'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'NRCan DCD'
+  requirements:
+    _permission: 'administer deployments'
+
+nrcan_dcd_settings.admin_config_nrcan:
+  path: '/admin/config/nrcan_dcd/nrcan_dcd'
+  defaults:
+    _title: 'NRCan DCD module settings'
+    _form: '\Drupal\nrcan_dcd\Form\NrcanDcdSettingsForm'
+  requirements:
+    _permission: 'administer deployments'
+
+nrcan_dcd.deploy_release: 
+  path: '/admin/nrcan-dcd/deploy/{taxonomy_term}'
+  defaults:
+    _title: 'Confirm deploy'
+    _form: '\Drupal\nrcan_dcd\Form\BatchExportForm'
+  requirements:
+    _permission: 'administer deployments'
+  options:
+    parameters:
+      taxonomy_term:
+        type: 'entity:taxonomy_term'
+
+nrcan_dcd.import_release:
+  path: '/admin/nrcan-dcd/import/{taxonomy_term}'
+  defaults:
+    _title: 'Confirm import'
+    _form: '\Drupal\nrcan_dcd\Form\BatchImportForm'
+  requirements:
+    _permission: 'administer deployments'
+  options:
+    parameters:
+      taxonomy_term:
+        type: 'entity:taxonomy_term'
+
+nrcan_dcd.revert_release:
+  path: '/admin/nrcan-dcd/revert/{taxonomy_term}'
+  defaults:
+    _title: 'Confirm revert'
+    _form: '\Drupal\nrcan_dcd\Form\BatchRevertForm'
+  requirements:
+    _permission: 'administer deployments'
+  options:
+    parameters:
+      taxonomy_term:
+        type: 'entity:taxonomy_term'
+
+nrcan_dcd.download_release:
+  path: '/admin/nrcan-dcd/download/{taxonomy_term}'
+  defaults:
+    _controller: '\Drupal\nrcan_dcd\Controller\DownloadController::downloadCompressedContent'
+  requirements:
+    _permission: 'administer deployments'
+  options:
+    parameters:
+      taxonomy_term:
+        type: 'entity:taxonomy_term'

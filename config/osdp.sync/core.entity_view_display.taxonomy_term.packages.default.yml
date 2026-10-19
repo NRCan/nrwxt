@@ -1,0 +1,42 @@
+uuid: ba8f5df7-b887-4bc0-adef-ade9a31e6df6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.packages.field_package_status
+    - field.field.taxonomy_term.packages.field_package_upload
+    - taxonomy.vocabulary.packages
+  module:
+    - text
+  enforced:
+    module:
+      - nrcan_dcd
+_core:
+  default_config_hash: X7D3FwD-QCzC6uheC8e808A98jJU_izd7w7OBnyX1vI
+id: taxonomy_term.packages.default
+targetEntityType: taxonomy_term
+bundle: packages
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_package_status:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_package_upload: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

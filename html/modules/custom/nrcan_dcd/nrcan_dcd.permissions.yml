@@ -1,0 +1,3 @@
+'administer deployments':
+  title: 'Administer packages and content deployments'
+  description: 'Allows users to administer the deployment of content from staging to production'

@@ -1,0 +1,21 @@
+uuid: b97dfb0e-9a34-49e1-9422-d8c60e44c011
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.packages
+  module:
+    - content_translation
+  enforced:
+    module:
+      - nrcan_dcd
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: p4C6ZyWI0uha8IsyrTJRvZieiRQMeUkbAJKC4o1hmo8
+id: taxonomy_term.packages
+target_entity_type_id: taxonomy_term
+target_bundle: packages
+default_langcode: site_default
+language_alterable: false

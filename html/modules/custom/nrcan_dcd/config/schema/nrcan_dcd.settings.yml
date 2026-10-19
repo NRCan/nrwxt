@@ -1,0 +1,22 @@
+nrcan_dcd.settings:
+  type: config_object
+  label: NRCan DCD settings
+  mapping:
+    mode:
+      type: integer 
+      label: 'Server mode'
+    deployment_directory:
+      type: string 
+      label: 'Deployment directory'
+    enable_release_scan:
+      type: boolean
+      label: 'Enable release scan cron'
+    enable_auto_import:
+      type: boolean
+      label: 'Enable automatic import cron'
+    enable_import_revert:
+      type: boolean
+      label: 'Enable import revert'
+    revert_directory:
+      type: string 
+      label: 'Import revert directory'

@@ -1,0 +1,18 @@
+nrcan_dcd.admin_dcd:
+  title: Deployment 
+  description: 'Content related to release packages.'
+  route_name: nrcan_dcd.main
+  parent: system.admin
+  weight: 20 
+
+nrcan_dcd.admin_config_nrcan:
+  title: NRCan DCD
+  parent: system.admin_config
+  route_name: nrcan_dcd.admin_config_nrcan
+
+nrcan_dcd_settings.admin_config_nrcan:
+  title: NRCan DCD settings
+  description: 'Settings specific to NRCan DCD module.'
+  parent: nrcan_dcd.admin_config_nrcan
+  route_name: nrcan_dcd_settings.admin_config_nrcan
+  weight: -10

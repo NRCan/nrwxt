@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.story.field_node_feature_image
     - field.field.node.story.field_node_ia_folder
     - field.field.node.story.field_node_secondary_title
+    - field.field.node.story.field_package
     - field.field.node.story.field_story_banner_image
     - field.field.node.story.field_story_byline
     - field.field.node.story.field_story_city
@@ -54,6 +55,7 @@ hidden:
   field_node_feature_image: true
   field_node_ia_folder: true
   field_node_secondary_title: true
+  field_package: true
   field_story_banner_image: true
   field_story_byline: true
   field_story_city: true

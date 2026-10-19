@@ -1,0 +1,60 @@
+uuid: e01636cd-3f11-48f0-ab58-7259eb5a4ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.packages.field_package_status
+    - field.field.taxonomy_term.packages.field_package_upload
+    - taxonomy.vocabulary.packages
+  enforced:
+    module:
+      - nrcan_dcd
+_core:
+  default_config_hash: WIReDtt9HaJKJRtRs0fejXmakhhUwsc8UIK7aVylJG4
+id: taxonomy_term.packages.default
+targetEntityType: taxonomy_term
+bundle: packages
+mode: default
+content:
+  field_package_status:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_package_upload: true
+  path: true

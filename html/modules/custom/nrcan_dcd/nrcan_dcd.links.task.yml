@@ -1,0 +1,9 @@
+nrcan_dcd.packages:
+  title: 'Packages'
+  route_name: view.packages.list 
+  base_route: view.packages.list 
+
+nrcan_dcd.deployment:
+  title: 'Package content'
+  route_name: view.package_content.list 
+  base_route: view.packages.list 

@@ -1,0 +1,27 @@
+uuid: b00d2234-1b22-4e9c-9a01-ad23f58d0127
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_package_upload
+    - taxonomy.vocabulary.packages
+  module:
+    - file
+id: taxonomy_term.packages.field_package_upload
+field_name: field_package_upload
+entity_type: taxonomy_term
+bundle: packages
+label: 'Package upload'
+description: 'Optionally, upload an XLSX file with node ids to be included in the package in the first column.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: package_uploads
+  file_extensions: xlsx
+  max_filesize: ''
+  description_field: false
+field_type: file

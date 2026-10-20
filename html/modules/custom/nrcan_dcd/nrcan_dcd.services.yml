@@ -5,3 +5,10 @@ services:
   nrcan_dcd.release_import:
     class: Drupal\nrcan_dcd\Services\ReleaseImportService
     arguments: ['@default_content_deploy.importer', '@default_content_deploy.exporter', '@messenger', '@config.factory', '@entity.repository', '@serializer', '@file_system']
+
+  nrcan_dcd.preserialize:
+    # Event subscriber class that will listen for the events.
+    class: '\Drupal\nrcan_dcd\EventSubscriber\PreserializeEventsSubscriber'
+    # Tagged as an event_subscriber to register this subscriber with the event_dispatch service.
+    tags:
+      - { name: 'event_subscriber' }

@@ -199,6 +199,9 @@
             "drupal/page_manager": {
                 "3438993 - Some mandatory parameters are missing for route entity.page.devel_load": "https://www.drupal.org/files/issues/2024-08-14/page-manager-3438993-MR34-24.patch"
             },
+            "drupal/toolbar": {
+                "Libraries key missing": "patches/toolbar-theme-key.patch"
+            },
             "drupalwxt/wxt": {
                 "3619082 - Assertion error on node view": "https://git.drupalcode.org/project/wxt/-/merge_requests/38.diff"
             }

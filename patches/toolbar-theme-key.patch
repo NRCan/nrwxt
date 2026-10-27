@@ -1,0 +1,32 @@
+diff --git a/src/Hook/ToolbarThemeHooks.php b/src/Hook/ToolbarThemeHooks.php
+index 093d7be..541c5c2 100644
+--- a/src/Hook/ToolbarThemeHooks.php
++++ b/src/Hook/ToolbarThemeHooks.php
+@@ -156,17 +156,21 @@ class ToolbarThemeHooks {
+       $claro_toolbar_overrides = $claro_info['libraries-override']['toolbar/toolbar'];
+       foreach ($claro_toolbar_overrides['css'] as $concern => $overrides) {
+         foreach ($claro_toolbar_overrides['css'][$concern] as $key => $value) {
+-          $config = $libraries['toolbar']['css'][$concern][$key];
+-          $libraries['toolbar']['css'][$concern][$path_prefix . $value] = $config;
+-          unset($libraries['toolbar']['css'][$concern][$key]);
++          if (isset($libraries['toolbar']['css'][$concern][$key])) {
++            $config = $libraries['toolbar']['css'][$concern][$key];
++            $libraries['toolbar']['css'][$concern][$path_prefix . $value] = $config;
++            unset($libraries['toolbar']['css'][$concern][$key]);
++          }
+         }
+       }
+       $claro_toolbar_menu_overrides = $claro_info['libraries-override']['toolbar/toolbar.menu'];
+       foreach ($claro_toolbar_menu_overrides['css'] as $concern => $overrides) {
+         foreach ($claro_toolbar_menu_overrides['css'][$concern] as $key => $value) {
+-          $config = $libraries['toolbar.menu']['css'][$concern][$key];
+-          $libraries['toolbar.menu']['css'][$concern][$path_prefix . $value] = $config;
+-          unset($libraries['toolbar.menu']['css'][$concern][$key]);
++          if (isset($libraries['toolbar.menu']['css'][$concern][$key])) {
++            $config = $libraries['toolbar.menu']['css'][$concern][$key];
++            $libraries['toolbar.menu']['css'][$concern][$path_prefix . $value] = $config;
++            unset($libraries['toolbar.menu']['css'][$concern][$key]);
++          }
+         }
+       }
+     }

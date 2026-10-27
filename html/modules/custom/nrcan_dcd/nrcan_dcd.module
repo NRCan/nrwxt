@@ -109,7 +109,7 @@ function _nrcan_dcd_update_release_info($term, $action):void {
  * Implements hook_toolbar_alter()
  */
 function nrcan_dcd_toolbar_alter(&$items) {
-  $items['administration']['#attached']['library'][] = 'nrcan_dcd/toolbar-icon';
+  $items['administration']['#attached']['library'][] = 'nrcan_dcd/nrcan-toolbar-icon';
 }
 
 /*

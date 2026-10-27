@@ -122,6 +122,10 @@ class ReleaseImportService {
       $import_dir = $config->get('deployment_directory') . '/' . $taxonomy_term->uuid();
     }
 
+    // Delete any users that were exported.
+    $path = $import_dir . '/user';
+    $result = $this->fileSystem->deleteRecursive($path);
+
     $this->importer->setFolder($import_dir);
 
     $revert_base = $config->get('revert_directory');
@@ -323,9 +327,8 @@ class ReleaseImportService {
    *   The uuid of the release taxonomy term.
    */
   public function deleteReleaseTerm(string $import_dir, string $uuid) : void {
-    $file_system = \Drupal::service('file_system');
     $path = $import_dir . '/taxonomy_term/' . $uuid . '.json';
-    $result = $file_system->delete($path);
+    $result = $this->fileSystem->delete($path);
     if ($result) {
       $message = 'Preventing import of release term: {term}';
       $context = ['term' => $uuid];
